@@ -1,0 +1,16 @@
+.counter_time_container {
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--primary-background-color);
+
+    border-radius: 6px;
+}
+.counter_time_container p {
+    color: white;
+    font-size: 12px;
+
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+}

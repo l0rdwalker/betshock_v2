@@ -1,0 +1,18 @@
+
+.round_select_container {
+    height: 50%;
+    width: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.padded_content {
+    width: 95%;
+    height: 90%;
+
+    background-color: var(--thirdly-background-color);
+
+
+}

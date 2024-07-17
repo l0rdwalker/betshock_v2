@@ -1,0 +1,70 @@
+.next_2_tile_container {
+    margin-right: 8px;
+    width: 240px;
+    min-width: 240px;
+    height: 100%;
+    background-color: var(--thirdly-background-color);
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    display: flex;
+}
+
+div::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.next_2_tile_image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.next_2_tile_image svg {
+    width: 50%;
+    height: 50%;
+    fill: var(--primary-background-color);
+}
+
+.next_2_tile_details {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    
+    justify-items: center;
+    justify-content: center;
+}
+.next_2_gp_ele {
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.next_2_tile_details .title {
+    width: 100%;
+}
+.next_2_tile_details .title p {
+    width: 100%;
+    font-size: 13px;
+}
+.next_2_tile_details .time {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    border-radius: 7px;
+
+    width: fit-content;
+    height: 20px;
+    background-color: var(--primary-background-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time .txt_wpr {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 1px;
+}
+.next_2_tile_details .time p {
+    color: white;
+    font-size: 10px;
+}

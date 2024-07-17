@@ -1,0 +1,26 @@
+.test_container {
+    max-width: 900px;
+    height: 200px;
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+:root {
+    --primary-background-color: rgb(15, 107, 161);
+    --secondary-background-color: rgb(209, 222, 252);
+    --thirdly-background-color: rgb(255, 255, 255);
+
+    --seccondary-color: white;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(223, 223, 223);
+}

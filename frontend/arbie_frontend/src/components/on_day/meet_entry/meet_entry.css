@@ -1,0 +1,50 @@
+
+.meet_entry_container {
+    height: 125px;
+    background-color: black;
+    width: 100%;
+
+    display: flex;
+}
+
+.meet_entry {
+    background-color: var(--secondary-background-color);
+    flex:3;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.meet_deets {
+    background-color: var(--secondary-background-color);
+    flex:1;
+
+    display: flex;
+}
+
+.meet_deets_flex_container {
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+.meet_name {
+    height: fit-content;
+    max-width: calc(4 / (1 + 4) * 100%);
+    margin-right: 10px;
+}
+.meet_name p {
+    font-size: 20;
+}
+.meet_flag {
+    height: 100%;
+    max-width: calc(1 / (1 + 4) * 100%);
+}
+
+.meet_flag svg {
+    width: 20px;
+    height: 20px;
+}

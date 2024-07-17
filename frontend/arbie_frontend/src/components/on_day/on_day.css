@@ -1,0 +1,55 @@
+
+
+.on_day_container {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.on_day_header {
+    background-color: var(--primary-background-color);
+    flex: 5;
+    max-height: 43.3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.on_day_header .center {
+    flex:10;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center .date_wpr {
+    width: fit-content;
+    height: fit-content;
+}
+.date_wpr p {
+    color: white;
+    font-weight: 500;
+}
+
+.on_day_header .btn_container {
+    flex:1;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.btn_container SVG {
+    fILL: var(--thirdly-background-color);
+    width: 100%;
+    height: 90%;
+}
+
+
+.on_day_body {
+    flex: 10;
+}
