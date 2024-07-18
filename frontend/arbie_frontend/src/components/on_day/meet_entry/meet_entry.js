@@ -4,8 +4,9 @@ import './meet_entry.css'
 import RoundSelect from './round_select/round_select';
 import Australia from './flags/australia';
 
-const MeetEntry = () => {
-  const [list_test, set_list_test] = useState([1,1,1,1,1,1,1])
+const MeetEntry = (props) => {
+  const [track_name,set_track_name] = useState(props.race_data['Track_name']);
+  const [list_test, set_list_test] = useState(props.race_data['Races']);
 
   return (
     <div class='meet_entry_container'>
@@ -13,7 +14,7 @@ const MeetEntry = () => {
 
         <div class='meet_deets_flex_container'>
           <div class='meet_name'>
-            <p>Sunshine</p>
+            <p>{track_name}</p>
           </div>
           <div class='meet_flag'>
             <Australia />
@@ -24,7 +25,7 @@ const MeetEntry = () => {
       <div class='meet_entry'>
 
         {list_test.map((race, index) => (
-          <RoundSelect />
+          <RoundSelect round={index+1}/>
         ))}
         
       </div>

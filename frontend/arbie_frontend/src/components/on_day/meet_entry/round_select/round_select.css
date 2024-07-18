@@ -14,5 +14,25 @@
 
     background-color: var(--thirdly-background-color);
 
+    display: flex;
+    flex-direction: column;
+}
 
+.vertical_divide {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical_divide .title_wpr {
+    width: fit-content;
+    height: fit-content;
+}
+
+.title_wpr p {
+    font-size: 17px;
+    margin-top: 5px;
 }

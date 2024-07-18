@@ -3,6 +3,14 @@ import MeetEntry from './meet_entry/meet_entry';
 import './on_day.css'
 
 const OnDay = () => {
+  const [races, set_races] = useState([]);
+
+  useEffect(() => {
+    fetch('http://127.0.0.1:8080/get_day_races')
+    .then(response => response.json())
+    .then(res => set_races(res))
+    .catch(error => console.error(error))
+  },[]);
 
   return (
     <div class='on_day_container'>
@@ -25,7 +33,9 @@ const OnDay = () => {
       </div>
 
       <div class='on_day_body'>
-        <MeetEntry />
+        {races.map((race, index) => (
+            <MeetEntry race_data={race}/>
+        ))}
       </div>
 
     </div>
