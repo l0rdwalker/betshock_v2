@@ -44,14 +44,20 @@ func init_connection(c *gin.Context) *sql.DB {
 	return db
 }
 
+func close_connection(db *sql.DB, c *gin.Context) {
+	db.Close()
+}
+
 func exec_query(query string, c *gin.Context) *sql.Rows {
 	db := init_connection(c)
 
 	rows, err := db.Query(query)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"message": "Failed to execute query"})
+		close_connection(db, c)
+		return nil
 	}
-
+	close_connection(db, c)
 	return rows
 }
 
@@ -82,26 +88,26 @@ func Get_Day_Races(c *gin.Context, date int) {
 	isoFormat := dateTime.Format(time.RFC3339)
 
 	rows := exec_query("SELECT DISTINCT track_name FROM race JOIN track ON race.track_id = track.track_id WHERE DATE(start_time) = DATE('"+isoFormat+"');", c)
-
 	races := make([]on_day_meet, 0)
-	for rows.Next() {
-		var single_race_name on_day_meet
-		if err := rows.Scan(&single_race_name.Track_name); err != nil {
-			return
-		}
-
-		meet_race := make([]race, 0)
-		meet_race_rows := exec_query("SELECT track_name,round,start_time FROM race JOIN track ON race.track_id = track.track_id WHERE DATE(start_time) = DATE(NOW()) AND track_name = '"+single_race_name.Track_name+"' ORDER BY round ASC;", c)
-		for meet_race_rows.Next() {
-			var cur_race race
-			if err := meet_race_rows.Scan(&cur_race.Track_name, &cur_race.Round, &cur_race.Start_time); err != nil {
+	if rows != nil {
+		for rows.Next() {
+			var single_race_name on_day_meet
+			if err := rows.Scan(&single_race_name.Track_name); err != nil {
 				return
 			}
-			meet_race = append(meet_race, cur_race)
-		}
-		single_race_name.Races = meet_race
-		races = append(races, single_race_name)
-	}
 
+			meet_race := make([]race, 0)
+			meet_race_rows := exec_query("SELECT track_name,round,start_time FROM race JOIN track ON race.track_id = track.track_id WHERE DATE(start_time) = DATE('"+isoFormat+"') AND track_name = '"+single_race_name.Track_name+"' ORDER BY round ASC;", c)
+			for meet_race_rows.Next() {
+				var cur_race race
+				if err := meet_race_rows.Scan(&cur_race.Track_name, &cur_race.Round, &cur_race.Start_time); err != nil {
+					return
+				}
+				meet_race = append(meet_race, cur_race)
+			}
+			single_race_name.Races = meet_race
+			races = append(races, single_race_name)
+		}
+	}
 	c.IndentedJSON(http.StatusOK, races)
 }

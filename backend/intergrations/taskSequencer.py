@@ -52,48 +52,75 @@ class taskSchedular:
         return currentTask['driver'].whenNextRun() 
     
     def processData(self,update_data):
-        dates_record = {}
-        
-        self.database.initConnection()
-        for entry in update_data:
-            platform_id = self.database.impose_platform(entry['platform'])
-            if not (entry['data'] == None):
-                for race in entry['data']:
-                    round_and_name = race['name'].split(" ")
-                    
-                    round = int(round_and_name.pop(0).replace("R",""))
-                    name = " ".join(round_and_name)
-
-                    track_id = self.database.impose_track(name)
-                    race_id = self.database.impose_race(track_id,race['startTime'],round)
+        try:
+            refined_race_data = {}
+            for entry in update_data:
+                if not (entry['data'] == None):
+                    for race in entry['data']:
+                        round_and_name = race['name'].split(" ")
+                        round = int(round_and_name.pop(0).replace("R",""))
+                        name = " ".join(round_and_name)
+                        
+                        collective_name = ""
+                        
+                        for entrant in race['teams']:
+                            horse_name = entrant['name'].replace("'","").replace(" ","")
+                            collective_name += horse_name.lower()
+                            entrant['name'] = entrant['name'].replace("'","").strip().lower()
+                        temp_id = hash( "".join(sorted(collective_name.split())))
+                        if not str(temp_id) in refined_race_data:
+                            refined_race_data[str(temp_id)] = [{'track':name,'round':round, "entrants":race['teams'], 'platform':entry['platform'], 'start_time':race['startTime']}]
+                        else:
+                            refined_race_data[str(temp_id)].append({'track':name,'round':round, "entrants":race['teams'], 'platform':entry['platform'], 'start_time':race['startTime']})
+            
+            location_and_rounds = {}
+            for hash_var,meet_round in refined_race_data.items():
+                key = None
+                for platform in meet_round:
+                    key = platform['track'] + " " + str(platform['round'])
+                    break
+                if not key in location_and_rounds:
+                    location_and_rounds[key] = meet_round
+                else:
+                    if (len(meet_round) > len(location_and_rounds[key])):
+                        location_and_rounds[key] = meet_round
+            
+            dates_record = {}
+            self.database.initConnection()
+            for key,meet in location_and_rounds.items():
+                for platform_offers in meet:
+                    platform_id = self.database.impose_platform(platform_offers['platform'])
+                    track_id = self.database.impose_track(platform_offers['track'])
+                    race_id = self.database.impose_race(track_id,platform_offers['start_time'],platform_offers['round'])
                     
                     if not str(race_id) in dates_record:
-                        dates_record[str(race_id)] = [race['startTime']]
+                        dates_record[str(race_id)] = [platform_offers['start_time']]
                     else:
-                        dates_record[str(race_id)].append(race['startTime'])
-                    
-                    for entrant in race['teams']:
-                        horse_id = self.database.impose_horse(entrant['name'].replace("'",""))
+                        dates_record[str(race_id)].append(platform_offers['start_time'])
+                   
+                    for entrant in platform_offers['entrants']:
+                        horse_id = self.database.impose_horse(entrant['name'])
                         entrant_id = self.database.impose_entrant(horse_id,race_id)
                         self.database.impose_odds(entrant_id,platform_id,entrant['odds'])
-        
-        #####Time correction
-        for race_id,date_list in dates_record.items():
-            date_occurence = {}
-            for date in date_list:
-                if not date in date_occurence:
-                    date_occurence[date] = 1
-                else:
-                    date_occurence[date] += 1
-            frequent_date = None
-            frequency = 0
-            for date,date_frequency in date_occurence.items():
-                if frequent_date == None or date_frequency > frequency:
-                     frequency = date_frequency
-                     frequent_date = date
-            self.database.correct_race_start_time(race_id,frequent_date)
-        
-        self.database.closeConnection()
+
+            for race_id,date_list in dates_record.items():
+                date_occurence = {}
+                for date in date_list:
+                    if not date in date_occurence:
+                        date_occurence[date] = 1
+                    else:
+                        date_occurence[date] += 1
+                frequent_date = None
+                frequency = 0
+                for date,date_frequency in date_occurence.items():
+                    if frequent_date == None or date_frequency > frequency:
+                        frequency = date_frequency
+                        frequent_date = date
+                self.database.correct_race_start_time(race_id,frequent_date)
+            self.database.closeConnection()
+        except Exception as e:
+            print(e)
+            self.database.closeConnection()
 
     def searchFunctions(self,data,searchData=None):
         if searchData == None:

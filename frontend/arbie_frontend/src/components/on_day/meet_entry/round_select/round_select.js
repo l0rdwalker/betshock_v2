@@ -11,8 +11,12 @@ const RoundSelect = (props) => {
     set_round(props.round);
   },[props.round])
 
+  const on_day_trigger = (element) => {
+    console.log(element);
+  }
+
   return (
-    <div class='round_select_container'>
+    <div class={'round_select_container'}>
       <div class='padded_content'>
 
         
@@ -23,9 +27,8 @@ const RoundSelect = (props) => {
         </div>
 
         <div class='vertical_divide'>
-          <CounterTime target_time={new Date(props.race_data['Start_time'])}/>
+          <CounterTime trigger_function={() => on_day_trigger(this)} target_time={new Date(props.race_data['Start_time'])}/>
         </div>
-
 
       </div>
     </div>

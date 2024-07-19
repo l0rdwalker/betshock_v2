@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import Next2go from './components/next_to_go/next_2_go'
 import OnDay from './components/on_day/on_day';
+import SvgManager from './components/svg_manager/SvgManager';
 
 import {TimeContextProvider} from './components/counter_time_context/current_time_context';
 
@@ -18,6 +19,9 @@ root.render(
           <Next2go />
           <br></br>
           <OnDay />
+          <br></br>
+
+          <br></br>
         </div>
     </React.StrictMode>
   </TimeContextProvider>

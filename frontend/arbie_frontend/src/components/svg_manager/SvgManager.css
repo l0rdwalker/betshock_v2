@@ -1,0 +1,9 @@
+.svg_manager {
+    height: 50px;
+    width: 60%;
+}
+
+.svg_manager svg {
+    width: 100%;
+    height: 100%;
+}

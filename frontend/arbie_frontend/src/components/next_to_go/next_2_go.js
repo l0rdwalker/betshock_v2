@@ -4,7 +4,7 @@ import Next2GoTile from './next_2_go_tile/next_2_go_tile.js'
 import './next_2_go.css'
 
 const Next2go = () => {
-  const [data,setData] = useState([{'Track_name':'None','Round':0,'Start_time':"idk"}]);
+  const [data,setData] = useState([]);
 
   useEffect(() => {
     fetch('http://127.0.0.1:8080/next_2_go')
@@ -15,7 +15,7 @@ const Next2go = () => {
 
   useEffect(() => {
     console.log(data);
-  },data);
+  },[data]);
 
   return (
     <div class='next_2_go_container'>
@@ -27,7 +27,7 @@ const Next2go = () => {
         <div class='next_2_go_content'>
             <div class='next_2_go_content_padding'>
                 {data.map((race, index) => (
-                  <Next2GoTile key={index} race_data={race} />
+                  <Next2GoTile key={race[2]} race_data={race} />
                 ))}
             </div>
         </div>
