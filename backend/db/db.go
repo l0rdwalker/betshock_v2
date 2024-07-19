@@ -26,7 +26,7 @@ const (
 	port     = 5432
 	user     = "postgres"
 	password = "test"
-	dbname   = "races"
+	dbname   = "arbie_v3.1"
 )
 
 func init_connection(c *gin.Context) *sql.DB {
@@ -56,7 +56,7 @@ func exec_query(query string, c *gin.Context) *sql.Rows {
 }
 
 func Get_Next_2_Go_Races(c *gin.Context) {
-	rows := exec_query("SELECT track_name,round,start_time FROM race JOIN track ON race.track_id = track.track_id WHERE start_time > '2020-06-27T09:34:01Z' LIMIT 10;", c)
+	rows := exec_query("SELECT track_name,round,start_time FROM race JOIN track ON race.track_id = track.track_id WHERE start_time > NOW() ORDER BY start_time ASC;", c)
 
 	all_races := make([]race, 0)
 	for rows.Next() {
@@ -75,8 +75,13 @@ func Get_Next_2_Go_Races(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, all_races)
 }
 
-func Get_Day_Races(c *gin.Context) {
-	rows := exec_query("SELECT DISTINCT track_name FROM race JOIN track ON race.track_id = track.track_id WHERE DATE(start_time) = '2020-06-27';", c)
+func Get_Day_Races(c *gin.Context, date int) {
+	timestamp := int64(date)
+	seconds := timestamp / 1000
+	dateTime := time.Unix(seconds, 0)
+	isoFormat := dateTime.Format(time.RFC3339)
+
+	rows := exec_query("SELECT DISTINCT track_name FROM race JOIN track ON race.track_id = track.track_id WHERE DATE(start_time) = DATE('"+isoFormat+"');", c)
 
 	races := make([]on_day_meet, 0)
 	for rows.Next() {
@@ -86,7 +91,7 @@ func Get_Day_Races(c *gin.Context) {
 		}
 
 		meet_race := make([]race, 0)
-		meet_race_rows := exec_query("SELECT track_name,round,start_time FROM race JOIN track ON race.track_id = track.track_id WHERE DATE(start_time) = '2020-06-27' AND track_name = '"+single_race_name.Track_name+"' ORDER BY round ASC;", c)
+		meet_race_rows := exec_query("SELECT track_name,round,start_time FROM race JOIN track ON race.track_id = track.track_id WHERE DATE(start_time) = DATE(NOW()) AND track_name = '"+single_race_name.Track_name+"' ORDER BY round ASC;", c)
 		for meet_race_rows.Next() {
 			var cur_race race
 			if err := meet_race_rows.Scan(&cur_race.Track_name, &cur_race.Round, &cur_race.Start_time); err != nil {

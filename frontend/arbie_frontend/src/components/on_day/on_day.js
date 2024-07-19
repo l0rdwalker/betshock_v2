@@ -4,9 +4,10 @@ import './on_day.css'
 
 const OnDay = () => {
   const [races, set_races] = useState([]);
+  const cur_date = new Date()
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8080/get_day_races')
+    fetch(`http://127.0.0.1:8080/get_day_races/${cur_date.getTime()}`)
     .then(response => response.json())
     .then(res => set_races(res))
     .catch(error => console.error(error))

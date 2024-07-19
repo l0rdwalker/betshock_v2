@@ -23,7 +23,7 @@ const RoundSelect = (props) => {
         </div>
 
         <div class='vertical_divide'>
-          <CounterTime/>
+          <CounterTime target_time={new Date(props.race_data['Start_time'])}/>
         </div>
 
 

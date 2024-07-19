@@ -25,7 +25,7 @@ const MeetEntry = (props) => {
       <div class='meet_entry'>
 
         {list_test.map((race, index) => (
-          <RoundSelect round={index+1}/>
+          <RoundSelect race_data={race} round={index+1}/>
         ))}
         
       </div>

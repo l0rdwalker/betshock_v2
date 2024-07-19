@@ -5,6 +5,9 @@
 
     border-radius: 6px;
 }
+.inactive {
+    background-color: var(--secondary-background-color);
+}
 .counter_time_container p {
     color: white;
     font-size: 12px;
@@ -13,4 +16,7 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 3px;
+}
+.inactive p {
+    color: black;
 }

@@ -4,9 +4,8 @@ import './next_2_go_tile.css'
 import CounterTime from '../../counter_time/counter_time';
 
 const Next2GoTile = (props) => {
-
-  let name = props.race_data['Track_name']
-  let round = props.race_data['Round'] 
+  const [name, set_name] = useState(props.race_data['Track_name']);
+  const [round, set_round] = useState(props.race_data['Round'] )
 
   let title = name + " R" + round.toString()
 
@@ -20,7 +19,7 @@ const Next2GoTile = (props) => {
           <p>{title}</p>
         </div>
         <div class='next_2_gp_ele time'>
-          <CounterTime />
+          <CounterTime target_time={new Date(props.race_data['Start_time'])}/>
         </div>
       </div>
     </div>

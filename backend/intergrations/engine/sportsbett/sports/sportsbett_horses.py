@@ -35,6 +35,7 @@ class sportsbett_horses(scraper):
             
     def convertTime(self,timeTxt):
         startTime = datetime.fromtimestamp(timeTxt,tz=timezone.utc)
+        #No time zone found with key Australia/Sydney
         startTime = startTime.astimezone(ZoneInfo("Australia/Sydney"))
         startTime = startTime.replace(tzinfo=None)    
         return startTime
