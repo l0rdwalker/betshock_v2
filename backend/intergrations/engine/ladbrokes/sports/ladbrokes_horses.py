@@ -13,47 +13,58 @@ class ladbrokes_horses(scraper):
         self.globalUrl = "https://api.ladbrokes.com.au/graphql"
 
     def getAllMarkets(self):
-        payload = {
-            "operationName": "RacingExtraMarketsList",
-            "extensions": { "persistedQuery": {
-                    "version": 1,
-                    "sha256Hash": "fc75ea1bf3825a06e28028128e8850b9dbcf48d0b40d3ab0bc603114f2b927ec"
-                } }
-        }
+        cur_date = datetime.now()
         headers = {
-            "content-type": "application/json",
-            "host": "api.ladbrokes.com.au",
-            "accept-encoding": "gzip",
-            "user-agent": "okhttp/4.9.2"
+            'accept': '*/*',
+            'accept-language': 'en-AU,en-US;q=0.9,en-GB;q=0.8,en;q=0.7',
+            'content-type': 'application/json',
+            'dnt': '1',
+            'if-modified-since': 'Fri, 19 Jul 2024 10:31:31 GMT',
+            'origin': 'https://www.ladbrokes.com.au',
+            'priority': 'u=1, i',
+            'referer': 'https://www.ladbrokes.com.au/',
+            'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-site',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
         }
-        data = requests.post(self.globalUrl, json=payload, headers=headers).text
-        data = json.loads(data)
-        return data['data']['racingExtraMarkets']['nodes']
 
-    def getRaceListForLocation(self,id):
-        payload = {
-            "variables": {
-                "id": id,
-                "promotions": True,
-                "promotionEligibility": ["ATL"],
-                "walletType": "PERSONAL",
-                "isLoggedIn": False
-            },
-            "operationName": "RacingMeetingRacesList",
-            "extensions": { "persistedQuery": {
-                    "version": 1,
-                    "sha256Hash": "549386b3f261894dd969f87019078822c31a1464c23e975f30c0245a62ed5fff"
-                } }
+        params = {
+            'date': cur_date.strftime("%Y-%m-%d"),
+            'region': 'domestic',
+            'timezone': 'Australia/Sydney',
         }
+
+        response = requests.get('https://api.ladbrokes.com.au/v2/racing/meeting', params=params, headers=headers)
+        return json.loads(response.text)
+
+    def get_race_details(self,id):
         headers = {
-            "content-type": "application/json",
-            "host": "api.ladbrokes.com.au",
-            "accept-encoding": "gzip",
-            "user-agent": "okhttp/4.9.2"
+            'accept': '*/*',
+            'accept-language': 'en-AU,en-US;q=0.9,en-GB;q=0.8,en;q=0.7',
+            'content-type': 'application/json',
+            'dnt': '1',
+            'origin': 'https://www.ladbrokes.com.au',
+            'priority': 'u=1, i',
+            'referer': 'https://www.ladbrokes.com.au/',
+            'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-site',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
         }
-
-        return json.loads(requests.post(self.globalUrl, json=payload, headers=headers).text)['data']['meeting']['races']['nodes']
-
+        params = {
+            'method': 'racecard',
+            'id': f'{id}',
+        }
+        response = requests.get('https://api.ladbrokes.com.au/rest/v1/racing/', params=params, headers=headers)
+        return json.loads(response.text)
+        
     def getRaceRoundDetails(self,id:str):
         id = id.replace('RacingMarket:','')
 
@@ -75,14 +86,16 @@ class ladbrokes_horses(scraper):
         data = json.loads(response)['data']['race']['finalFieldMarket']['nodes'][0]
         return data
 
-    def findAssociatedOdds(self,prices,searchID):
+    def find_associated_odds(self,prices,searchID):
         winID = '940b8704-e497-4a76-b390-00918ff7d282'
         placeID = '7cf3eea6-5654-42be-9c2e-6de280e7bb34'
-        for price in prices:
-            if price['id'] == f'{searchID}:{winID}:':
-                odds = (float(price['odds']['numerator'])/float(price['odds']['denominator']))+1
+
+        if f'{searchID}:{winID}:' in prices:
+            odds_json = prices[f'{searchID}:{winID}:']
+            if ('numerator' in odds_json['odds'] and 'denominator' in odds_json['odds']):
+                odds = (float(odds_json['odds']['numerator'])/float(odds_json['odds']['denominator']))+1
                 return odds
-        raise Exception("couldn't find odds.")
+        return -1
 
     def convertTime(self,timeTxt):
         startTime = datetime.strptime(timeTxt, '%Y-%m-%dT%H:%M:%S.%fZ')
@@ -106,16 +119,27 @@ class ladbrokes_horses(scraper):
 
     def aquireOdds(self):
         markets = self.getAllMarkets()
-        races = []
-        for location in markets:
-            if (location['category'] == 'HORSE'):
-                LOC = location['name']
-                rounds = self.getRaceListForLocation(location['id'])
-                for x in range(0,len(rounds)):
-                    roundDetails = self.getRaceRoundDetails(rounds[x]['id'])
-                    horces = self.collectOdds(roundDetails['entrants']['nodes'],roundDetails['prices'])
-                    if len(horces) > 0:
-                        startTime = self.convertTime(roundDetails['actualStart'])
-                        races.append({'name': f'R{x+1} {LOC}', 'participants': len(horces),'startTime':startTime.isoformat(),'teams':horces})
-                        self.addStartTime(startTime)
-        return races
+        race_data = []
+        for event in markets['meetings'].items():
+            event = event[1]
+            if (event['category_id'] == '4a2788f8-e825-4d36-9894-efd4baf1cfae'):
+                LOC = event['name']
+                round = 1
+                for race_id in event['race_ids']:
+                    race_details = self.get_race_details(race_id)
+                    START_TIME = None
+                    for key,item in race_details['data']['meetings'].items():
+                        START_TIME = datetime.fromtimestamp(item['advertised_date']['seconds'])
+                        break
+                    
+                    entrants = []
+                    for key,entrant in race_details['data']['entrants'].items():
+                        if "barrier" in entrant and not 'is_scratched' in entrant:
+                            HORSE_NAME = entrant['name']
+                            ODDS = self.find_associated_odds(race_details['data']['prices'],entrant['id'])
+                            if (ODDS != -1):
+                                entrants.append({'name':HORSE_NAME,'odds':ODDS})
+                    if (len(entrants) > 0):
+                        race_data.append({'name': f'R{round} {LOC}', 'participants': len(entrants),'startTime':START_TIME.isoformat(),'teams':entrants})
+                        round += 1
+        return race_data
