@@ -111,12 +111,11 @@ class boombet_horses(scraper):
         horces = []
         raceCard = self.getRaceCard(id)
         for horce in raceCard['runners']:
-            if horce['isEliminated'] == False:
-                NAME = horce['name']
-                ODDS = None
-                for odd in horce['odds']:
-                    if odd['product']['betType'] == 'Win':
-                        ODDS = odd['value']
-                        break
-                horces.append({'name':NAME,'odds':ODDS})
+            NAME = horce['name']
+            ODDS = None
+            for odd in horce['odds']:
+                if odd['product']['betType'] == 'Win':
+                    ODDS = odd['value']
+                    break
+            horces.append({'name':NAME,'odds':ODDS,'scratched':horce['isEliminated'] == False})
         return horces

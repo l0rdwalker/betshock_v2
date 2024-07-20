@@ -8,58 +8,51 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class betm_horses(scraper):
-    def getVenues(self,token):
-        url = "https://api.betm.com.au/v1/fixtures/races/today/A"
-
+    def getVenues(self):
         headers = {
-            "user-agent": "Dart/3.2 (dart:io)",
-            "x-client-version": "5.6.0",
-            "accept-encoding": "gzip",
-            "x-client-model": "Pixel 3",
-            "x-csrf-token": f"{token}",
-            "host": "api.betm.com.au",
-            "x-client-platform": "android"
+            'accept': 'application/json, text/plain, */*',
+            'accept-language': 'en-AU,en-US;q=0.9,en-GB;q=0.8,en;q=0.7',
+            'dnt': '1',
+            'origin': 'https://betm.com.au',
+            'priority': 'u=1, i',
+            'referer': 'https://betm.com.au/',
+            'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-site',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+            'x-client-platform': 'web',
+            'x-client-version': '5.18.0',
         }
 
-        response = requests.get(url, headers=headers)
-        response = response.text
-        response = json.loads(response)
-        return response
+        response = requests.get('https://api.betm.com.au/v1/fixtures/races/today/T', headers=headers)
+        return json.loads(response.text)
 
-    def getcsrf_token(self):
-        url = "https://api.betm.com.au/v1/csrf_token"
-
+    def getRaceCard(self,id):
         headers = {
-            "user-agent": "Dart/3.2 (dart:io)",
-            "x-client-version": "5.6.0",
-            "accept-encoding": "gzip",
-            "x-client-model": "Pixel 3",
-            "host": "api.betm.com.au",
-            "x-client-platform": "android"
+            'accept': 'application/json, text/plain, */*',
+            'accept-language': 'en-AU,en-US;q=0.9,en-GB;q=0.8,en;q=0.7',
+            'dnt': '1',
+            'origin': 'https://betm.com.au',
+            'priority': 'u=1, i',
+            'referer': 'https://betm.com.au/',
+            'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-site',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+            'x-client-platform': 'web',
+            'x-client-version': '5.18.0',
         }
-
-        response = requests.get(url, headers=headers)
-        response = response.text
-        response = json.loads(response)
-        return response
-
-    def getRaceCard(self,token,id):
-        url = f"https://api.betm.com.au/v1/fixtures/races/{id}"
-
-        headers = {
-            "user-agent": "Dart/3.2 (dart:io)",
-            "x-client-version": "5.6.0",
-            "accept-encoding": "gzip",
-            "x-client-model": "Pixel 3",
-            "x-csrf-token": f"{token}",
-            "host": "api.betm.com.au",
-            "x-client-platform": "android"
+        params = {
+            'is_future': 'false',
         }
-
-        response = requests.get(url, headers=headers)
-        response = response.text
-        response = json.loads(response)
-        return response
+        response = requests.get(f'https://api.betm.com.au/v1/fixtures/races/{id}', params=params, headers=headers)
+        return json.loads(response.text)
 
     def convertTime(self,timeTxt):
         startTime = datetime.strptime(timeTxt, '%Y-%m-%dT%H:%M:%SZ')
@@ -71,25 +64,27 @@ class betm_horses(scraper):
     def aquireOdds(self):
         raceData = []
         AustralianStates = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA']
-        token = self.getcsrf_token()['token']#'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDczNzE3MjMsImlhdCI6MTcwNzM2ODEyMywic3ViIjoiMTIwLjE4LjEwNC4xNjgifQ.0Yi_AL3DWBOPl9kXhco18utUHtEVspP_YuT_TqTQsBo'#
-        venues = self.getVenues(token)['race_cards']
+        venues = self.getVenues()['race_cards']
         for venue in venues:
-            if venue['race_type'] == 'T' and venue['race_state'] in AustralianStates:
-                LOC = venue['meeting_name']
-                raceNumber = 1
-                for race in venue['races']:
-                    horces,startTime = self.getEntrants(token,race['event_id'])
-                    raceData.append({'name': f'R{raceNumber} {LOC}', 'participants': len(horces),'startTime':startTime.isoformat(),'teams':horces})
-                    self.addStartTime(startTime)
-                    raceNumber += 1
+            try:
+                if venue['race_type'] == 'T' and venue['race_state'] in AustralianStates:
+                    LOC = venue['meeting_name']
+                    raceNumber = 1
+                    for race in venue['races']:
+                        horces,startTime = self.getEntrants(race['event_id'])
+                        raceData.append({'name': f'R{raceNumber} {LOC}', 'participants': len(horces),'startTime':startTime.isoformat(),'teams':horces})
+                        self.addStartTime(startTime)
+                        raceNumber += 1
+            except Exception as e:
+                print(e)
+                continue
         return raceData             
 
-    def getEntrants(self,token,id):
+    def getEntrants(self,id):
         horces = []
-        entrants = self.getRaceCard(token,id)
+        entrants = self.getRaceCard(id)
         for entrant in entrants['race']['runners']:
-            if entrant['scratched_at'] == None:
-                NAME = entrant['name']
-                ODDS = entrant['fwin']
-                horces.append({'name':NAME,'odds':ODDS})
+            NAME = entrant['name']
+            ODDS = entrant['fwin']
+            horces.append({'name':NAME,'odds':ODDS,'scratched':entrant['scratched_at'] == None})
         return horces,self.convertTime(entrants['race']['starts_at'])

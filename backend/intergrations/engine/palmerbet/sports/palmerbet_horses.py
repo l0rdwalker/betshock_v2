@@ -126,7 +126,7 @@ class palmerbet_horses(scraper):
         data = self.getVenus(datetime.now())
         for meeting in data['meetings']:
             if 'country' in meeting:
-                if not (meeting["country"] == 'AU'):
+                if (meeting["country"] == 'AU'):
                     venueName = meeting['venue']['title']
                     raceCount = 1
                     for race in meeting['races']:
@@ -144,6 +144,7 @@ class palmerbet_horses(scraper):
                             raceCount += 1
                         except:
                             continue
+        return races
 
     def collectEntrants(self,preliminaryID):
         horces = []

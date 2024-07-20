@@ -72,7 +72,7 @@ class pointsbet_horses(scraper):
                     raceNumber = race['raceNumber']
                     raceId = race['raceId']
                     horces,startTime = self.getEntrants(raceId)
-                    raceData.append({'name': f'R{raceNumber} {LOC}', 'participants': len(horces),'startTime':startTime.isoformat(),'teams':horces})
+                    raceData.append({'round':raceNumber,'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces})
                     self.addStartTime(startTime)
         return raceData 
             
@@ -81,8 +81,7 @@ class pointsbet_horses(scraper):
         raceCard = self.getRaceCard(id)
         startTime = self.convertTime(raceCard["advertisedStartTimeUtc"])
         for entrant in raceCard['runners']:
-            if entrant["isScratched"] == False:
-                NAME = entrant["runnerName"]
-                ODDS = entrant['fluctuations']['current']
-                horces.append({'name':NAME,'odds':ODDS})
+            NAME = entrant["runnerName"]
+            ODDS = entrant['fluctuations']['current']
+            horces.append({'name':NAME,'odds':ODDS,'scratched':entrant["isScratched"]})
         return horces,startTime

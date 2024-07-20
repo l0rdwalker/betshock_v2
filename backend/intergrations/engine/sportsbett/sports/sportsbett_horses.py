@@ -52,7 +52,7 @@ class sportsbett_horses(scraper):
                         teams = self.assembleMatch(event['httpLink'])
                         if (len(teams) > 0):
                             startTime = self.convertTime(event['startTime'])
-                            races.append({'name': event['displayName'], 'participants': len(teams),'startTime': startTime.isoformat(),'teams':teams})
+                            races.append({'name': meeting['name'], 'round': event['raceNumber'],'start_time': startTime.isoformat(),'entrants':teams})
                             self.addStartTime(startTime)
                     except:
                         continue
@@ -64,7 +64,7 @@ class sportsbett_horses(scraper):
         for hourse in self.conditionalDrillDown(markets,'name',self.marketTypes)['selections']: 
             HOURSENAME = hourse['name']
             prices = self.conditionalDrillDown(hourse['prices'],'priceCode','L')
-            if ('placePrice' in prices and hourse['result'] != 'V'):#winPrice placePrice
+            if ('placePrice' in prices):#winPrice placePrice
                 WIN_ODDS = self.conditionalDrillDown(hourse['prices'],'priceCode','L')['winPrice']
-                horses.append({'name':HOURSENAME,'odds':WIN_ODDS})
+                horses.append({'name':HOURSENAME,'odds':WIN_ODDS,'scratched':hourse['result'] == 'V'})
         return horses

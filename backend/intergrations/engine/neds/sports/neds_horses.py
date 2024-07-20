@@ -10,30 +10,30 @@ from abstract_scraper import scraper
 class neds_horses(scraper):
     def getRaceCard(self,id):
         headers = {
-            'authority': 'api.neds.com.au',
-            'accept': '*/*',
+            'accept': 'application/json, text/plain, */*',
             'accept-language': 'en-AU,en-US;q=0.9,en-GB;q=0.8,en;q=0.7',
-            'content-type': 'application/json',
             'dnt': '1',
-            'if-modified-since': 'Tue, 06 Feb 2024 01:25:21 GMT',
-            'origin': 'https://www.neds.com.au',
+            'origin': 'https://betm.com.au',
             'priority': 'u=1, i',
-            'referer': 'https://www.neds.com.au/',
-            'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+            'referer': 'https://betm.com.au/',
+            'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'same-site',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+            'x-client-platform': 'web',
+            'x-client-version': '5.18.0',
         }
+
         params = {
-            'method': 'racecard',
-            'id': id,
+            'is_future': 'false',
         }
-        response = requests.get('https://api.neds.com.au/rest/v1/racing/', params=params, headers=headers)
-        response = response.text
-        return json.loads(response)
+
+        response = requests.get(f'https://api.betm.com.au/v1/fixtures/races/{id}', params=params, headers=headers)
+        response = json.loads(response.text)
+        return response
 
     def getVenues(self,date:datetime):
         headers = {
@@ -69,6 +69,7 @@ class neds_horses(scraper):
 
     def aquireOdds(self):
         races = []
+        return races
         data = self.getVenues(datetime.now())['meetings']
         for key,value in data.items():
             if 'country' in value:
@@ -79,27 +80,19 @@ class neds_horses(scraper):
                         raceName = f'R{raceCount} {venueName}'
                         try:
                             horses,startTime = self.collectEntrants(raceId)
-                            raceCount += 1
-                            races.append({'name': raceName, 'participants': len(horses),'startTime':startTime.isoformat(),'teams':horses})
-                            self.addStartTime(startTime)
-                        except:
+                            if (len(horses) > 0):
+                                raceCount += 1
+                                races.append({'name': raceName, 'participants': len(horses),'startTime':startTime.isoformat(),'teams':horses})
+                                self.addStartTime(startTime)
+                        except Exception as e:
+                            print(e)
                             continue
         return races
 
-    def collectEntrants(self,raceId):
+    def collectEntrants(self,raceId): 
         data = self.getRaceCard(raceId)['data']
-        entrants = data['entrants']
-        prices = data['prices']
-        horses = []
-        for entrant in entrants.items():
-            entrant = entrant[1]
-            if not 'is_scratched' in entrant:
-                NAME = entrant['name']
-                entrantID = entrant['id']
-                ODDS = prices[f'{entrantID}:940b8704-e497-4a76-b390-00918ff7d282:']
-                ODDS = 1+ODDS['odds']['numerator']/ODDS['odds']['denominator']
-                horses.append({'name':NAME,'odds':ODDS})
         
+                            
         startTime = None
         for key,time in data['races'].items():
             startTime = time['advertised_start']['seconds']

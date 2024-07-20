@@ -120,26 +120,32 @@ class ladbrokes_horses(scraper):
     def aquireOdds(self):
         markets = self.getAllMarkets()
         race_data = []
+        
         for event in markets['meetings'].items():
-            event = event[1]
-            if (event['category_id'] == '4a2788f8-e825-4d36-9894-efd4baf1cfae'):
-                LOC = event['name']
-                round = 1
-                for race_id in event['race_ids']:
-                    race_details = self.get_race_details(race_id)
-                    START_TIME = None
-                    for key,item in race_details['data']['meetings'].items():
-                        START_TIME = datetime.fromtimestamp(item['advertised_date']['seconds'])
-                        break
-                    
-                    entrants = []
-                    for key,entrant in race_details['data']['entrants'].items():
-                        if "barrier" in entrant and not 'is_scratched' in entrant:
-                            HORSE_NAME = entrant['name']
-                            ODDS = self.find_associated_odds(race_details['data']['prices'],entrant['id'])
-                            if (ODDS != -1):
-                                entrants.append({'name':HORSE_NAME,'odds':ODDS})
-                    if (len(entrants) > 0):
-                        race_data.append({'name': f'R{round} {LOC}', 'participants': len(entrants),'startTime':START_TIME.isoformat(),'teams':entrants})
-                        round += 1
+            try:
+                event = event[1]
+                if (event['category_id'] == '4a2788f8-e825-4d36-9894-efd4baf1cfae'):
+                    LOC = event['name']
+                    round = 1
+                    for race_id in event['race_ids']:
+                        race_details = self.get_race_details(race_id)
+                        START_TIME = None
+                        for key,item in race_details['data']['meetings'].items():
+                            START_TIME = datetime.fromtimestamp(item['advertised_date']['seconds'])
+                            break
+                        
+                        entrants = []
+                        for key,entrant in race_details['data']['entrants'].items():
+                            if "barrier" in entrant:
+                                HORSE_NAME = entrant['name']
+                                ODDS = self.find_associated_odds(race_details['data']['prices'],entrant['id'])
+                                if (ODDS != -1):
+                                    entrants.append({'name':HORSE_NAME,'odds':ODDS, 'scratched':'is_scratched' in entrant})
+                        if (len(entrants) > 0):
+                            race_data.append({'round': round,'name': f'{LOC}','start_time':START_TIME.isoformat(),'entrants':entrants})
+                            round += 1
+            except Exception as e:
+                print(e)
+                continue
+
         return race_data

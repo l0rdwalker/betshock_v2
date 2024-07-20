@@ -168,7 +168,8 @@ class taskSchedular:
         print(f'{colorCode}{message}{blackCode}\n',end=" ")
 
 customSearchJson = {
-    'sport':'horses'
+    'sport':'horses',
+    'platform':'playup'
 }
 getResults = {
     'type':'getResults'
