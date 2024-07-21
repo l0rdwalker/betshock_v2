@@ -1,7 +1,6 @@
 import os
 import json
 import dataManagement as dm
-from database.databaseOperations import databaseOperations
 from datetime import datetime, timedelta
 from priorityQueue import queue
 from engine.multiTask import multitask
@@ -14,8 +13,6 @@ class taskSchedular:
         self.functions = []
         self.threads = []
         self.currentDatetime = datetime.now()
-        
-        self.database:databaseOperations = databaseOperations()
 
         self.log('Initalizeing task schedular')
         sportObjectsDir = os.path.join(self.file,'engine')
@@ -44,7 +41,7 @@ class taskSchedular:
             self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
             data = currentTask['driver'].init(currentTask['data'])
             self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
-            if currentTask['type'] == 'scrape' or currentTask['type'] == 'multiTask':
+            if currentTask['type'] == 'scrape':
                 self.processData(data)
         except Exception as e:
             self.log(e,error=True)
@@ -52,50 +49,7 @@ class taskSchedular:
         return currentTask['driver'].whenNextRun() 
     
     def processData(self,update_data):
-        try:
-            date_race_store = {}
-            scratched_horses = {}
-            self.database.initConnection()
-            
-            for platform in update_data:
-                if (platform['platform'] == 'diamondbet'):
-                    continue
-                platform_id = self.database.impose_platform(platform['platform'])
-                for race in platform['data']:
-                    track_id = self.database.impose_track(race['name'])
-                    race_id = self.database.impose_race(track_id,race['start_time'],race['round'])
-                    for entrant in race['entrants']:
-                        horse_name = entrant['name'].replace("'","").strip().lower()
-                        horse_id = self.database.impose_horse(horse_name)
-                        entrant_id = self.database.impose_entrant(horse_id,race_id,entrant['scratched'])
-                        
-                        self.database.impose_odds(entrant_id,platform_id,entrant['odds'])
-                        
-                        if (entrant['scratched']):
-                            scratched_horses[str(entrant_id)] = 1
-                        if not str(race_id) in date_race_store:
-                            date_race_store[str(race_id)] = [race['start_time']]
-                        else:
-                            date_race_store[str(race_id)].append(race['start_time'])
-            
-            for race_id,date_list in date_race_store.items():
-                date_occurence = {}
-                for date in date_list:
-                    if not date in date_occurence:
-                        date_occurence[date] = 1
-                    else:
-                        date_occurence[date] += 1
-                frequent_date = None
-                frequency = 0
-                for date,date_frequency in date_occurence.items():
-                    if frequent_date == None or date_frequency > frequency:
-                        frequency = date_frequency
-                        frequent_date = date
-                self.database.correct_race_start_time(race_id,frequent_date)
-            self.database.closeConnection()
-        except Exception as e:
-            print(e)
-            self.database.closeConnection()
+        pass
 
     def searchFunctions(self,data,searchData=None):
         if searchData == None:
@@ -162,9 +116,9 @@ test = taskSchedular()
 functions:list = test.searchFunctions(customSearchJson)
 #
 postScrapeTasks = []
-postScrapeTasks.extend(test.searchFunctions(getUpdater))
-#postScrapeTasks.extend(test.searchFunctions(getArbUpdater))
-postScrapeTasks.extend(test.searchFunctions(getResults))
+#postScrapeTasks.extend(test.searchFunctions(getUpdater))
+postScrapeTasks.extend(test.searchFunctions(getArbUpdater))
+#postScrapeTasks.extend(test.searchFunctions(getResults))
 ##postScrapeTasks.extend(test.searchFunctions(getOddGuard))
 #
 horces = multitask(functions,postScrapeTasks)

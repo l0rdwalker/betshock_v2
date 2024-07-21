@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 import os
 from datetime import datetime,timedelta
-import dataManagement
 from abstract_task import task
 
 class database(task):
