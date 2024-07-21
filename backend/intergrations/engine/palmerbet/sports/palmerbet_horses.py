@@ -43,22 +43,21 @@ class palmerbet_horses(scraper):
         response = response.text
         return json.loads(response)
 
-    def getRaceCard(self,id):
+    def get_race_card(self,id):
         headers = {
-            'authority': 'fixture.palmerbet.online',
             'accept': 'application/json, text/plain, */*',
             'accept-language': 'en-AU,en-US;q=0.9,en-GB;q=0.8,en;q=0.7',
             'dnt': '1',
             'origin': 'https://www.palmerbet.com',
             'priority': 'u=1, i',
             'referer': 'https://www.palmerbet.com/',
-            'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+            'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'cross-site',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
         }
 
         params = {
@@ -70,25 +69,23 @@ class palmerbet_horses(scraper):
             params=params,
             headers=headers,
         )
-        response = response.text
-        return json.loads(response)
+        return json.loads(response.text)
 
-    def getPrelimRaceCard(self,id):
+    def get_prelim_race_card(self,link):
         headers = {
-            'authority': 'fixture.palmerbet.online',
             'accept': 'application/json, text/plain, */*',
             'accept-language': 'en-AU,en-US;q=0.9,en-GB;q=0.8,en;q=0.7',
             'dnt': '1',
             'origin': 'https://www.palmerbet.com',
             'priority': 'u=1, i',
             'referer': 'https://www.palmerbet.com/',
-            'sec-ch-ua': '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
+            'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
             'sec-ch-ua-mobile': '?0',
             'sec-ch-ua-platform': '"Windows"',
             'sec-fetch-dest': 'empty',
             'sec-fetch-mode': 'cors',
             'sec-fetch-site': 'cross-site',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
         }
 
         params = {
@@ -96,12 +93,11 @@ class palmerbet_horses(scraper):
         }
 
         response = requests.get(
-            f'https://fixture.palmerbet.online{id}',
+            f'https://fixture.palmerbet.online/{link}',
             params=params,
             headers=headers,
         )
-        response = response.text
-        return json.loads(response)
+        return json.loads(response.text)
 
     def conditionalDrillDown(self,array,key,searchValue):
             def compareItems(subject,searchTerms):
@@ -128,45 +124,37 @@ class palmerbet_horses(scraper):
             if 'country' in meeting:
                 if (meeting["country"] == 'AU'):
                     venueName = meeting['venue']['title']
-                    raceCount = 1
                     for race in meeting['races']:
                         try:
-                            id = race['_links'][0]['href'].split('/')
-                            id[len(id)-2] = '%20'.join(venueName.split(' '))
-                            id = '/'.join(id)
-                            horces,winner = self.collectEntrants(id)
+                            horces = self.collectEntrants(race['_links'][0]['href'])
                             startTime = self.convertTime(race['startTime'])
                             
-                            tempData = {'winner': winner, 'name': f'R{raceCount} {venueName}', 'participants': len(horces),'startTime': startTime.isoformat(),'teams':horces}
-                            print(json.dumps(tempData))
+                            tempData = {'round':race['number'], 'name': venueName, 'start_time': startTime.isoformat(),'entrants':horces}
+
                             races.append(tempData)
                             self.addStartTime(startTime)
-                            raceCount += 1
-                        except:
+                        except Exception as e:
+                            print(e)
                             continue
         return races
 
     def collectEntrants(self,preliminaryID):
         horces = []
-        prelimData = self.getPrelimRaceCard(preliminaryID)
-        id = None
-        winner = prelimData['race']['result']['first'][0]
-        for market in prelimData['race']['markets']:
-            if market['title'] == 'Win':
-                id = market['id']
+        prelim_data = self.get_prelim_race_card(preliminaryID)
+        win_price_id = None
+        for item in prelim_data['race']['markets']:
+            if item['title'] == 'Win':
+                win_price_id = item['id']
                 break
-
-        racers = set()
-        for horce in prelimData['race']['runners']:
-            if horce['isScratched'] == False:
-                if horce['number'] == winner:
-                    winner = horce['name']
-                racers.add(horce['name'])
-        
-        entrants = self.getRaceCard(id)['market']['outcomes']
-        for entrant in entrants:
-            NAME = entrant['title']
-            if NAME in racers:
-                ODDS = self.conditionalDrillDown(entrant['prices'],'name','Fixed')['priceSnapshot']['current']
-                horces.append({'name':NAME,'odds':ODDS})
-        return horces,winner
+        if win_price_id != None:
+            entrants = self.get_race_card(win_price_id)['market']['outcomes']
+            for entrant in entrants:
+                NAME = entrant['title']
+                ODDS = -1
+                for price in entrant['prices']:
+                    if price['name'] == 'Fixed':
+                        if 'priceSnapshot' in price:
+                            ODDS = price['priceSnapshot']['current']
+                        break
+                horces.append({'name':NAME,'odds':ODDS,'scratched':not entrant["status"]=='Active'})
+        return horces

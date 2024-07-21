@@ -136,7 +136,13 @@ class databaseOperations:
             WHERE race_id={race_id};
         """)
         
-    def impose_entrant(self,horse_id,race_id):
+    def impose_entrant(self,horse_id,race_id,is_scratched):
+        scratched_int = 0
+        if is_scratched:
+            scratched_int = 1
+        else:
+            scratched_int = 0
+        
         existing_entrant = self.pushQuery(f"""
             SELECT * FROM entrant WHERE
                 horse_id = {horse_id} AND race_id={race_id}
@@ -144,16 +150,22 @@ class databaseOperations:
         """)
         if (len(existing_entrant) == 0):
             return self.pushQuery(f"""
-            WITH ins AS (
                 INSERT INTO public.entrant(
-                    horse_id, jocky_id, trainer_id, race_id, jocky_weight)
-                VALUES ({horse_id}, 0, 0, {race_id}, 0)
+                    horse_id, jocky_id, trainer_id, race_id, jocky_weight, is_scratched)
+                VALUES ({horse_id}, 0, 0, {race_id}, 0, {scratched_int})
                     ON CONFLICT DO NOTHING
                 RETURNING entrant_id 
-            )
-            SELECT entrant_id FROM ins
-                UNION ALL
-            SELECT entrant_id FROM public.entrant WHERE horse_id = {horse_id} AND race_id = {race_id}
-                LIMIT 1;
             """)[0][0]
+        self.pushQuery(f"""
+            UPDATE public.entrant
+                SET is_scratched={scratched_int}
+            WHERE horse_id={horse_id} AND race_id={race_id};
+        """)
         return existing_entrant[0][0]
+
+    def update_scratched(self,entrant_id):
+        self.pushQuery(f"""
+            UPDATE public.entrant
+                SET is_scratched=1
+            WHERE entrant_id={entrant_id};
+                       """)

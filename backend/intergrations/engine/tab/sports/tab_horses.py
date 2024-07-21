@@ -94,7 +94,7 @@ class tab_horses(scraper):
                 for race in races['races']:
                     raceNumber = race['number']
                     horces,startTime = self.getEntrants(meetingDate,location,raceNumber)
-                    raceData.append({'round':{raceNumber}, 'name': f'{name}', 'start_time': startTime.isoformat(),'entrants':horces})
+                    raceData.append({'round':raceNumber, 'name': f'{name}', 'start_time': startTime.isoformat(),'entrants':horces})
                     self.addStartTime(startTime)
         return raceData
 

@@ -125,6 +125,8 @@ class ladbrokes_horses(scraper):
             try:
                 event = event[1]
                 if (event['category_id'] == '4a2788f8-e825-4d36-9894-efd4baf1cfae'):
+                    if (not event['country'] == 'AUS'):
+                        continue
                     LOC = event['name']
                     round = 1
                     for race_id in event['race_ids']:

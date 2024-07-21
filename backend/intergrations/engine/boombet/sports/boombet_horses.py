@@ -102,7 +102,7 @@ class boombet_horses(scraper):
                     raceID = race['eventId']
                     horces = self.getEntrants(raceID)
                     startTime = self.convertTime(race['jumpTime'][:-6])
-                    raceData.append({'name': f'R{raceNumber} {LOC}', 'participants': len(horces),'startTime':startTime.isoformat(),'teams':horces})
+                    raceData.append({'round':raceNumber, 'name': LOC, 'start_time':startTime.isoformat(),'entrants':horces})
                     self.addStartTime(startTime)
 
         return raceData
@@ -112,7 +112,7 @@ class boombet_horses(scraper):
         raceCard = self.getRaceCard(id)
         for horce in raceCard['runners']:
             NAME = horce['name']
-            ODDS = None
+            ODDS = -1
             for odd in horce['odds']:
                 if odd['product']['betType'] == 'Win':
                     ODDS = odd['value']

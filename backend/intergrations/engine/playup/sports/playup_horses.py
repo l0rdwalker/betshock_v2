@@ -82,6 +82,8 @@ class playup_horses(scraper):
         
         for meet in meets['meetings']:
             try:
+                if not meet['regionName'] == 'Australia':
+                    continue
                 LOC = meet['name']
                 for event in meet['events']:
                     entrants = []
@@ -89,7 +91,7 @@ class playup_horses(scraper):
                     start_time = datetime.fromtimestamp(event['startTime'])
                     race_card = self.get_race_card(event['httpLink'])
                     for market in race_card['markets']:
-                        if market['name'] == 'Win or Place':
+                        if market['name'] == 'Win or Place' and market['international'] == False:
                             for entrant in market['selections']:
                                 NAME = entrant['name']
                                 for price in entrant['prices']:

@@ -24,7 +24,7 @@ class scraper(task):
         self.startTimes.append(date)
         
     def whenNextRun(self):
-        return self.nextScheduledRun
+        return datetime.now() + timedelta(minutes=5)
         
     def selectNextRunTime(self):
         try:

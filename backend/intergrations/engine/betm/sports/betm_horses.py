@@ -69,12 +69,10 @@ class betm_horses(scraper):
             try:
                 if venue['race_type'] == 'T' and venue['race_state'] in AustralianStates:
                     LOC = venue['meeting_name']
-                    raceNumber = 1
                     for race in venue['races']:
                         horces,startTime = self.getEntrants(race['event_id'])
-                        raceData.append({'name': f'R{raceNumber} {LOC}', 'participants': len(horces),'startTime':startTime.isoformat(),'teams':horces})
+                        raceData.append({'round':race['race_number'], 'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces})
                         self.addStartTime(startTime)
-                        raceNumber += 1
             except Exception as e:
                 print(e)
                 continue
@@ -86,5 +84,7 @@ class betm_horses(scraper):
         for entrant in entrants['race']['runners']:
             NAME = entrant['name']
             ODDS = entrant['fwin']
-            horces.append({'name':NAME,'odds':ODDS,'scratched':entrant['scratched_at'] == None})
+            if (ODDS == None):
+                ODDS = -1
+            horces.append({'name':NAME,'odds':ODDS,'scratched':not entrant['scratched_at'] == None})
         return horces,self.convertTime(entrants['race']['starts_at'])

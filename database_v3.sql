@@ -38,6 +38,7 @@ CREATE TABLE entrant (
     trainer_id int,
     race_id int,
     jocky_weight float,
+    is_scratched int,
     FOREIGN KEY (horse_id) REFERENCES horse(horse_id),
     FOREIGN KEY (jocky_id) REFERENCES jocky(jocky_id),
     FOREIGN KEY (trainer_id) REFERENCES trainer(trainer_id),

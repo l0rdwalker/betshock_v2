@@ -82,6 +82,8 @@ class pointsbet_horses(scraper):
         startTime = self.convertTime(raceCard["advertisedStartTimeUtc"])
         for entrant in raceCard['runners']:
             NAME = entrant["runnerName"]
-            ODDS = entrant['fluctuations']['current']
+            ODDS = -1
+            if entrant["isScratched"] == False:
+                ODDS = entrant['fluctuations']['current']
             horces.append({'name':NAME,'odds':ODDS,'scratched':entrant["isScratched"]})
         return horces,startTime
