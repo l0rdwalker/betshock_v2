@@ -8,6 +8,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class tab_horses(scraper):
+    def __init__(self, attributes) -> None:
+        super().__init__(attributes)
+        self.flex_dates = True
+    
     def getVenues(self,date:datetime):
         url = f'https://api.beta.tab.com.au/v1/bff-racing/{date.strftime("%Y-%m-%d")}'
         querystring = {
@@ -79,10 +83,10 @@ class tab_horses(scraper):
         startTime = startTime.replace(tzinfo=None)    
         return startTime
 
-    def aquireOdds(self):
+    def aquireOdds(self,race_date_obj:timedelta):
         AustralianStates = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA']
         raceData = []
-        venues = self.getVenues(datetime.now())
+        venues = self.getVenues(datetime.now()+race_date_obj)
         for venue in venues['meetings']['R']:
             name:str = venue['meetingName']
             prelimName = name.split('(')

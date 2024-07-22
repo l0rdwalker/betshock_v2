@@ -27,7 +27,8 @@ class platformManager(ABC):
                     'platform':self.name,
                     'type':item.operation,
                     'data':{
-                        'sport':key
+                        'sport':key,
+                        'function_cofigs':item.get_function_config()
                     }
                 }
             )

@@ -46,29 +46,36 @@ class taskSchedular:
         except Exception as e:
             self.log(e,error=True)
             self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
-        return currentTask['driver'].whenNextRun() 
+        return datetime.now() + timedelta(minutes=5)
     
     def processData(self,update_data):
         pass
 
+    def contains_key(self,key_value,search_data):
+        match_status = False
+        for key,value in search_data.items():
+            if match_status:
+                return match_status
+            if isinstance(value, dict):
+                match_status = self.contains_key(key_value,value)
+            elif key_value[0] == key and key_value[1] == value:
+                match_status = True
+        return match_status
+            
     def searchFunctions(self,data,searchData=None):
         if searchData == None:
             searchData = self.functions
         
         if len(data) > 0:
             for key,item in data.items():
-                keyData = (key,item)
+                key_data = (key,item)
                 data.pop(key)
                 break
             
             releventFunctions = []
             for function in searchData:
-                if keyData[0] in function:
-                    if function[keyData[0]] == keyData[1]:
-                        releventFunctions.append(function)
-                elif keyData[0] in function['data']:
-                    if function['data'][keyData[0]] == keyData[1]:
-                        releventFunctions.append(function)
+                if self.contains_key(key_data,function):
+                    releventFunctions.append(function)
             return self.searchFunctions(data,releventFunctions)
         else:
             return searchData
@@ -96,24 +103,35 @@ class taskSchedular:
 
         print(f'{colorCode}{message}{blackCode}\n',end=" ")
 
-customSearchJson = {
-    'sport':'horses'
+flex_dates = {
+    'sport':'horses',
+    'flex_dates' : True
 }
-getResults = {
-    'type':'getResults'
+non_flex_dates = {
+    'sport':'horses',
+    'flex_dates' : False
 }
-getUpdater = {
-    'type':'update'
-}
+
 getArbUpdater = {
     'type':'arbUpdate'
 }
-#getOddGuard = {
-#    'type':'oddGuard'
-#}
 
 test = taskSchedular()
-functions:list = test.searchFunctions(customSearchJson)
+
+on_day_functions:list = []
+on_day_param = timedelta(days=0)
+
+nxt_day_functions:list = []
+nxt_day_param = timedelta(days=1)
+
+flex_functions:list = test.searchFunctions(flex_dates)
+non_flex_functions:list = test.searchFunctions(non_flex_dates)
+for function in flex_functions:
+    on_day_functions.append((function,on_day_param))
+    nxt_day_functions.append((function,nxt_day_param))
+for function in non_flex_functions:
+    on_day_functions.append((function,on_day_param))
+
 #
 postScrapeTasks = []
 #postScrapeTasks.extend(test.searchFunctions(getUpdater))
@@ -121,9 +139,13 @@ postScrapeTasks.extend(test.searchFunctions(getArbUpdater))
 #postScrapeTasks.extend(test.searchFunctions(getResults))
 ##postScrapeTasks.extend(test.searchFunctions(getOddGuard))
 #
-horces = multitask(functions,postScrapeTasks)
-horces = horces.returnFunctionConfig()
-test.addFunction(horces)
+horces_on_day = multitask(on_day_functions,postScrapeTasks)
+horces_on_day = horces_on_day.returnFunctionConfig()
+test.addFunction(horces_on_day)
+
+horces_nxt_day = multitask(nxt_day_functions,postScrapeTasks)
+horces_nxt_day = horces_nxt_day.returnFunctionConfig()
+test.addFunction(horces_nxt_day)
 
 while True:
     test.step()

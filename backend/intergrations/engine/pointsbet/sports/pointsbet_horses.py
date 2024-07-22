@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 import json
 import os
 import sys
@@ -8,6 +8,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class pointsbet_horses(scraper):
+    def __init__(self, attributes) -> None:
+        super().__init__(attributes)
+        self.flex_dates = False
+    
     def getVenues(self):
         url = "https://api.au.pointsbet.com/api/racing/v3/meetings"
         querystring = {
@@ -62,7 +66,7 @@ class pointsbet_horses(scraper):
         startTime = startTime.replace(tzinfo=None)    
         return startTime
 
-    def aquireOdds(self):
+    def aquireOdds(self,race_date_obj:timedelta):
         raceData = []
         venues = self.getVenues()[0]['meetings']
         for venue in venues:

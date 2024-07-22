@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from zoneinfo import ZoneInfo
 import json
 import os
@@ -8,6 +8,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class boombet_horses(scraper):
+    def __init__(self, attributes) -> None:
+        super().__init__(attributes)
+        self.flex_dates = True
+    
     def getVenues(self):
         url = "https://sb-saturn.azurefd.net/api/v2.0/race/GetRaceMeetingsAll"
         headers = {
@@ -76,10 +80,10 @@ class boombet_horses(scraper):
         startTime = startTime.replace(tzinfo=None)    
         return startTime
 
-    def aquireOdds(self):
+    def aquireOdds(self,race_date_obj:timedelta):
         AustralianStates = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA']
         days = self.getVenues()
-        currentDate = datetime.now()
+        currentDate = datetime.now() + race_date_obj
         todaysData = None
         for day in days:
             date_string_no_tz = day['date'][:-6]

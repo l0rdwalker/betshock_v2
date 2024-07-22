@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from zoneinfo import ZoneInfo
 import json
 import os
@@ -11,6 +11,7 @@ class sportsbett_horses(scraper):
     def __init__(self,attributes) -> None:
         super().__init__(attributes)
         self.marketTypes = ['Win or Place']
+        self.flex_dates = True
 
     def getter(welf,url):
         headers = {
@@ -40,8 +41,8 @@ class sportsbett_horses(scraper):
         startTime = startTime.replace(tzinfo=None)    
         return startTime
 
-    def aquireOdds(self):
-        todaysDate = datetime.now().strftime("%Y-%m-%d")
+    def aquireOdds(self,race_date_obj:timedelta):
+        todaysDate = (datetime.now() + race_date_obj).strftime("%Y-%m-%d")
         races = []
         data = self.getter(f"https://gwapi.sportsbet.com.au/sportsbook-racing/Sportsbook/Racing/AllRacing/{todaysDate}")['dates'][0]['sections']
         meetings = self.conditionalDrillDown(data,'raceType','horse')['meetings']

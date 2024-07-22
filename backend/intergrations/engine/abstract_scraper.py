@@ -9,11 +9,16 @@ class scraper(task):
         super().__init__(attributes)
         self.startTimes = []
         self.operation = 'scrape'
-            
-    def init(self,data=None):
-        data = None
+        self.flex_dates = False
+        
+    def get_function_config(self):
+        return {
+            'flex_dates':self.flex_dates
+        }
+                    
+    def init(self,data):
         try:
-            data = self.aquireOdds()
+            data = self.aquireOdds(data)
             self.selectNextRunTime()
         except Exception as e:
             print(e)
@@ -25,6 +30,9 @@ class scraper(task):
         
     def whenNextRun(self):
         return datetime.now() + timedelta(minutes=5)
+    
+    def get_flex_date_status(self):
+        return self.flex_dates
         
     def selectNextRunTime(self):
         try:

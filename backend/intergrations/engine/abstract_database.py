@@ -14,4 +14,7 @@ class database(task):
     
     def whenNextRun(self):
         return datetime.now()+timedelta(hours=1)
+    
+    def get_function_config(self):
+        return None
         

@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from zoneinfo import ZoneInfo
 import json
 import os
@@ -117,7 +117,7 @@ class ladbrokes_horses(scraper):
                 continue
         return horces
 
-    def aquireOdds(self):
+    def aquireOdds(self,race_date_obj:timedelta):
         markets = self.getAllMarkets()
         race_data = []
         

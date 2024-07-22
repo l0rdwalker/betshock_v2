@@ -8,6 +8,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class playup_horses(scraper):
+    def __init__(self, attributes) -> None:
+        super().__init__(attributes)
+        self.flex_dates = True
+    
     def get_meets(self,date:datetime):
         headers = {
             'accept': 'application/json',
@@ -69,9 +73,9 @@ class playup_horses(scraper):
         startTime = startTime.replace(tzinfo=None)    
         return startTime    
 
-    def aquireOdds(self):
+    def aquireOdds(self,race_date_obj:timedelta):
         raceData = []
-        meets = self.get_meets(datetime.now())
+        meets = self.get_meets(datetime.now() + race_date_obj)
         
         for date in meets['dates']:
             for sport in date['sections']:

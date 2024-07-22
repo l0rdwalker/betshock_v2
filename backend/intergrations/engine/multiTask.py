@@ -12,17 +12,18 @@ class multitask(platformManager):
     def __init__(self,functions:list,postTasks=[]) -> None:
         self.functions = functions
         self.postTasks = postTasks
+        
         self.threads = []
         self.operation = 'multiTask'
         self.name = 'Arbie'
         self.nextScheduledRun = datetime.now()
         
-    def triggerDriver(self,driver,updater):
-        data = driver.init()
+    def triggerDriver(self,driver,params,updater):
+        data = driver.init(params)
         updater()
         return data
         
-    def init(self,data=None):
+    def init(self,data):
         with alive_bar(len(self.functions)) as bar:
             data = self.runTaks(updater=bar)
     
@@ -46,7 +47,9 @@ class multitask(platformManager):
     
     def runTaks(self,updater):
         with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.functions)) as executor:
-            tasks = ((obj['driver'],updater) for obj in self.functions)
+            tasks = []
+            for task_idx in range(0,len(self.functions)):
+                tasks.append((self.functions[task_idx][0]['driver'],self.functions[task_idx][1],updater))
             results = list(executor.map(lambda args: self.triggerDriver(*args),tasks))
         return results
     

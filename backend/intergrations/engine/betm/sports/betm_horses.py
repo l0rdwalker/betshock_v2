@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from zoneinfo import ZoneInfo
 import json
 import os
@@ -61,7 +61,7 @@ class betm_horses(scraper):
         startTime = startTime.replace(tzinfo=None)    
         return startTime
 
-    def aquireOdds(self):
+    def aquireOdds(self,race_date_obj:timedelta):
         raceData = []
         AustralianStates = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA']
         venues = self.getVenues()['race_cards']

@@ -8,6 +8,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class palmerbet_horses(scraper):
+    def __init__(self, attributes) -> None:
+        super().__init__(attributes)
+        self.flex_dates = True
+    
     def cacheData(self,data):
         file = os.path.dirname(os.path.abspath(__file__))
         file = os.path.join(file,'temp.txt')
@@ -117,9 +121,9 @@ class palmerbet_horses(scraper):
         startTime = startTime.replace(tzinfo=None)    
         return startTime
 
-    def aquireOdds(self):
+    def aquireOdds(self,race_date_obj:timedelta):
         races = []
-        data = self.getVenus(datetime.now())
+        data = self.getVenus(datetime.now() + race_date_obj)
         for meeting in data['meetings']:
             if 'country' in meeting:
                 if (meeting["country"] == 'AU'):

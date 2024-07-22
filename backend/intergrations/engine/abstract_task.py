@@ -16,4 +16,8 @@ class task(ABC):
     @abstractmethod
     def whenNextRun(self):
         pass
+    
+    @abstractmethod
+    def get_function_config():
+        pass
         
