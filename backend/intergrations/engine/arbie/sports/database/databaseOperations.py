@@ -38,7 +38,7 @@ class databaseOperations:
         query = query.strip()
         query = query.split()
         query = ' '.join(query)
-        print(query)
+        #print(query)
         data = None
         try:
             data = self.cursor.execute(query)
@@ -102,6 +102,28 @@ class databaseOperations:
             """)[0][0]
         else:
             return existing_race[0][0]
+        
+    def get_race_entrant_ids(self, race_id):
+        return self.pushQuery(f"""
+            SELECT entrant_id FROM entrant WHERE race_id = {race_id};               
+                              """)
+        
+    def get_round_and_track_name_by_id(self,race_id):
+        data = self.pushQuery(f"""
+            SELECT track.track_name, race.round FROM
+                race JOIN track
+                    ON race.track_id = track.track_id
+                WHERE race.race_id = {race_id};
+                              """)
+        return data[0]
+        
+    def delete_by_entrant_id(self,entrant_id):
+        self.pushQuery(f"""DELETE FROM public.odds WHERE entrant_id={entrant_id};""")
+        
+        self.pushQuery(f"""
+            DELETE FROM public.entrant
+	            WHERE entrant_id = {entrant_id};
+                       """)
     
     def impose_track(self,track_name):
         return self.pushQuery(f"""
@@ -118,16 +140,12 @@ class databaseOperations:
         """)[0][0]
         
     def impose_odds(self,entrant_id,platform_name,odds):
-        exists = self.pushQuery(f"""
-            SELECT EXISTS(SELECT 1 FROM odds WHERE entrant_id={entrant_id} AND platform_name='{platform_name}' AND odds={odds});
-        """)[0][0]
-        if not (exists):
-            self.pushQuery(f"""
-                INSERT INTO public.odds(
-                    entrant_id, platform_name, odds, record_time)
-                VALUES ({entrant_id}, '{platform_name}', {odds}, NOW())
-                    ON CONFLICT DO NOTHING;
-            """)
+        self.pushQuery(f"""
+            INSERT INTO public.odds(
+                entrant_id, platform_name, odds, record_time)
+            VALUES ({entrant_id}, '{platform_name}', {odds}, NOW())
+                ON CONFLICT DO NOTHING;
+        """)
             
     def correct_race_start_time(self,race_id, start_time):
         self.pushQuery(f"""
@@ -163,9 +181,9 @@ class databaseOperations:
         """)
         return existing_entrant[0][0]
 
-    def update_scratched(self,entrant_id):
+    def update_scratched(self,entrant_id,is_scratched):
         self.pushQuery(f"""
             UPDATE public.entrant
-                SET is_scratched=1
+                SET is_scratched={is_scratched}
             WHERE entrant_id={entrant_id};
                        """)

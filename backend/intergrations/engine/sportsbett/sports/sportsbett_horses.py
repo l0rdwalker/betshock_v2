@@ -42,7 +42,11 @@ class sportsbett_horses(scraper):
         return startTime
 
     def aquireOdds(self,race_date_obj:timedelta):
-        todaysDate = (datetime.now() + race_date_obj).strftime("%Y-%m-%d")
+        set_date = datetime.now()
+        if isinstance(race_date_obj,timedelta):
+            set_date += race_date_obj
+        
+        todaysDate = (set_date).strftime("%Y-%m-%d")
         races = []
         data = self.getter(f"https://gwapi.sportsbet.com.au/sportsbook-racing/Sportsbook/Racing/AllRacing/{todaysDate}")['dates'][0]['sections']
         meetings = self.conditionalDrillDown(data,'raceType','horse')['meetings']

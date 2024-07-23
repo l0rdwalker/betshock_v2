@@ -122,8 +122,12 @@ class palmerbet_horses(scraper):
         return startTime
 
     def aquireOdds(self,race_date_obj:timedelta):
+        set_date = datetime.now()
+        if isinstance(race_date_obj,timedelta):
+            set_date += race_date_obj
+        
         races = []
-        data = self.getVenus(datetime.now() + race_date_obj)
+        data = self.getVenus(set_date)
         for meeting in data['meetings']:
             if 'country' in meeting:
                 if (meeting["country"] == 'AU'):

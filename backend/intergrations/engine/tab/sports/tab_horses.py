@@ -84,9 +84,13 @@ class tab_horses(scraper):
         return startTime
 
     def aquireOdds(self,race_date_obj:timedelta):
+        set_date = datetime.now()
+        if isinstance(race_date_obj,timedelta):
+            set_date = set_date+race_date_obj
+        
         AustralianStates = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA']
         raceData = []
-        venues = self.getVenues(datetime.now()+race_date_obj)
+        venues = self.getVenues(set_date)
         for venue in venues['meetings']['R']:
             name:str = venue['meetingName']
             prelimName = name.split('(')

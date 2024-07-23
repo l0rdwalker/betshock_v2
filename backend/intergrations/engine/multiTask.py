@@ -23,7 +23,7 @@ class multitask(platformManager):
         updater()
         return data
         
-    def init(self,data):
+    def init(self,data=None):
         with alive_bar(len(self.functions)) as bar:
             data = self.runTaks(updater=bar)
     
@@ -43,7 +43,7 @@ class multitask(platformManager):
         return data
         
     def whenNextRun(self):
-        return self.nextScheduledRun
+        return datetime.now()
     
     def runTaks(self,updater):
         with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.functions)) as executor:

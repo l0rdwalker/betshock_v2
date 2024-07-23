@@ -75,7 +75,11 @@ class playup_horses(scraper):
 
     def aquireOdds(self,race_date_obj:timedelta):
         raceData = []
-        meets = self.get_meets(datetime.now() + race_date_obj)
+        set_date = datetime.now()
+        if isinstance(race_date_obj,timedelta):
+            set_date += race_date_obj
+        
+        meets = self.get_meets(set_date)
         
         for date in meets['dates']:
             for sport in date['sections']:

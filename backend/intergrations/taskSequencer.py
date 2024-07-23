@@ -37,15 +37,15 @@ class taskSchedular:
                 self.tasks.enqueue((mextRun,currentTask))
             
     def performTask(self,currentTask):
-        try:
-            self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
-            data = currentTask['driver'].init(currentTask['data'])
-            self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
-            if currentTask['type'] == 'scrape':
-                self.processData(data)
-        except Exception as e:
-            self.log(e,error=True)
-            self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
+        #try:
+        self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
+        data = currentTask['driver'].init(currentTask['data'])
+        self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
+        if currentTask['type'] == 'scrape':
+            self.processData(data)
+        #except Exception as e:
+        #    self.log(e,error=True)
+        #    self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
         return datetime.now() + timedelta(minutes=5)
     
     def processData(self,update_data):
@@ -118,34 +118,45 @@ getArbUpdater = {
 
 test = taskSchedular()
 
-on_day_functions:list = []
-on_day_param = timedelta(days=0)
 
-nxt_day_functions:list = []
-nxt_day_param = timedelta(days=1)
-
-flex_functions:list = test.searchFunctions(flex_dates)
-non_flex_functions:list = test.searchFunctions(non_flex_dates)
-for function in flex_functions:
-    on_day_functions.append((function,on_day_param))
-    nxt_day_functions.append((function,nxt_day_param))
-for function in non_flex_functions:
-    on_day_functions.append((function,on_day_param))
+#on_day_functions:list = []
+#on_day_param = timedelta(days=0)
+#
+#nxt_day_functions:list = []
+#nxt_day_param = timedelta(days=1)
+#
+#flex_functions:list = test.searchFunctions(flex_dates)
+#non_flex_functions:list = test.searchFunctions(non_flex_dates)
+#for function in flex_functions:
+#    on_day_functions.append((function,on_day_param))
+#    nxt_day_functions.append((function,nxt_day_param))
+#for function in non_flex_functions:
+#    on_day_functions.append((function,on_day_param))
 
 #
+
+specific_platform = {
+    'sport':'horses',
+    'platform':'betm'
+}
+
 postScrapeTasks = []
-#postScrapeTasks.extend(test.searchFunctions(getUpdater))
+
+individual_platform = [(test.searchFunctions(specific_platform)[0],None)]
 postScrapeTasks.extend(test.searchFunctions(getArbUpdater))
+single_search = multitask(individual_platform,postScrapeTasks)
+test.addFunction(single_search.returnFunctionConfig())
+
 #postScrapeTasks.extend(test.searchFunctions(getResults))
 ##postScrapeTasks.extend(test.searchFunctions(getOddGuard))
 #
-horces_on_day = multitask(on_day_functions,postScrapeTasks)
-horces_on_day = horces_on_day.returnFunctionConfig()
-test.addFunction(horces_on_day)
-
-horces_nxt_day = multitask(nxt_day_functions,postScrapeTasks)
-horces_nxt_day = horces_nxt_day.returnFunctionConfig()
-test.addFunction(horces_nxt_day)
+#horces_on_day = multitask(on_day_functions,postScrapeTasks)
+#horces_on_day = horces_on_day.returnFunctionConfig()
+#test.addFunction(horces_on_day)
+#
+#horces_nxt_day = multitask(nxt_day_functions,postScrapeTasks)
+#horces_nxt_day = horces_nxt_day.returnFunctionConfig()
+#test.addFunction(horces_nxt_day)
 
 while True:
     test.step()

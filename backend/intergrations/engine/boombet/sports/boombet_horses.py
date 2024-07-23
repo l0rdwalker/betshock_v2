@@ -81,9 +81,13 @@ class boombet_horses(scraper):
         return startTime
 
     def aquireOdds(self,race_date_obj:timedelta):
+        set_date = datetime.now()
+        if isinstance(race_date_obj,timedelta):
+            set_date += race_date_obj
+        
         AustralianStates = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA']
         days = self.getVenues()
-        currentDate = datetime.now() + race_date_obj
+        currentDate = set_date
         todaysData = None
         for day in days:
             date_string_no_tz = day['date'][:-6]
