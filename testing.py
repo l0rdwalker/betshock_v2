@@ -1,13 +1,13 @@
 from backend.intergrations.engine.arbie.sports.database.databaseOperations import databaseOperations
 import matplotlib.pyplot as plt 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 def get_races(database):
     query = """
     SELECT race.race_id, track.track_name
     FROM race
     JOIN track ON race.track_id = track.track_id
-    WHERE DATE(race.start_time) < DATE(NOW());
+    WHERE DATE(race.start_time) < DATE('2024-07-23');
     """
     return database.pushQuery(query)
 
@@ -97,9 +97,12 @@ for race in races:
             record_times = []
             num_prices = max(num_prices,len(prices))
             for entry in prices:
-                odds.append(entry[0])
-                #.timestamp()
-                record_times.append(entry[1])
+                if len(odds) >= 1:
+                    odds.append(odds[len(odds)-1])
+                    record_times.append(entry[1] - timedelta(seconds=1))
+                if entry[0] != -1:
+                    odds.append(entry[0])
+                    record_times.append(entry[1])
             if record_times and odds:
                 plt.plot(record_times, odds, label=platform_name, **{'marker': 'o'})
         
@@ -110,7 +113,7 @@ for race in races:
             plt.legend()
             plt.show()
         else:
-            plt.clf()
+            plt.clf()   
 
         entrant_price_details.append({'entrant_name': get_horse_name(database, entrant_id), 'entrant_id': entrant_id, 'platform_offerings': platform_price_details})
 

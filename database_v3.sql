@@ -74,5 +74,14 @@ CREATE TABLE odds (
     odds float,
     record_time TIMESTAMP,
     PRIMARY KEY (entrant_id, record_time),
-    FOREIGN KEY (platform_name) REFERENCES platforms(platform_name)
+    FOREIGN KEY (platform_name) REFERENCES platforms(platform_name),
+    FOREIGN KEY (entrant_id) REFERENCES entrant(entrant_id)
+);
+
+CREATE TABLE market_conditions (
+    entrant_id int,
+    price float,
+    record_time TIMESTAMP,
+    PRIMARY KEY (entrant_id, record_time),
+    FOREIGN KEY (entrant_id) REFERENCES entrant(entrant_id)
 );
