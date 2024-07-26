@@ -72,7 +72,6 @@ class betm_horses(scraper):
                     for race in venue['races']:
                         horces,startTime = self.getEntrants(race['event_id'])
                         raceData.append({'round':race['race_number'], 'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces})
-                        self.addStartTime(startTime)
             except Exception as e:
                 print(e)
                 continue

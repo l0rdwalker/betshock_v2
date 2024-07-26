@@ -211,6 +211,8 @@ class databaseOperations:
                 track.track_name = '{track_name}' 
             AND 
                 race.start_time > '{start_time}'
+            AND
+                DATE(race.start_time) = DATE(start_time)
             ORDER BY time_dif ASC
             LIMIT 1;
         """)

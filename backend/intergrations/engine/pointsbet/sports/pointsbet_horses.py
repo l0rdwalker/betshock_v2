@@ -77,7 +77,6 @@ class pointsbet_horses(scraper):
                     raceId = race['raceId']
                     horces,startTime = self.getEntrants(raceId)
                     raceData.append({'round':raceNumber,'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces})
-                    self.addStartTime(startTime)
         return raceData 
             
     def getEntrants(self,id):

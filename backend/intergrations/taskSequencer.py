@@ -9,7 +9,7 @@ class taskSchedular:
     def __init__(self) -> None:
         self.file = os.path.dirname(os.path.abspath(__file__))
 
-        self.tasks = queue()
+        self.tasks = [] #queue()
         self.functions = []
         self.threads = []
         self.currentDatetime = datetime.now()
@@ -26,30 +26,26 @@ class taskSchedular:
                 self.log(e)
                 
     def addFunction(self,function):
-        self.tasks.enqueue((function['driver'].whenNextRun(),function))
+        self.tasks.append((datetime.now(),function))
 
     def step(self) -> None:
         self.currentDatetime = datetime.now()
-        if self.tasks.peek() != None:
-            if self.tasks.peek()[0] < self.currentDatetime:
-                priority,currentTask = self.tasks.dequeue()
+        self.tasks = sorted(self.tasks, key=lambda x: x[0])
+        if self.tasks[0] != None:
+            if self.tasks[0][0] < self.currentDatetime:
+                priority,currentTask = self.tasks.pop(0)
                 mextRun = self.performTask(currentTask)
-                self.tasks.enqueue((mextRun,currentTask))
+                self.tasks.append((mextRun,currentTask))
             
     def performTask(self,currentTask):
         try:
             self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
             data = currentTask['driver'].init(currentTask['data'])
             self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
-            if currentTask['type'] == 'scrape':
-                self.processData(data)
         except Exception as e:
             self.log(e,error=True)
             self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
-        return datetime.now() + timedelta(minutes=10)
-    
-    def processData(self,update_data):
-        pass
+        return currentTask['driver'].get_next_run()
 
     def contains_key(self,key_value,search_data):
         match_status = False
@@ -115,6 +111,9 @@ non_flex_dates = {
 getArbUpdater = {
     'type':'arbUpdate'
 }
+get_date_reviser = {
+    'type':'revise_dates'
+}
 getMarket_updater = {
     'type':'arbie_updateMarkets'
 }
@@ -140,6 +139,7 @@ for function in non_flex_functions:
     on_day_functions.append((function,on_day_param))
 
 postScrapeTasks = []
+postScrapeTasks.extend(test.searchFunctions(get_date_reviser))
 postScrapeTasks.extend(test.searchFunctions(getArbUpdater))
 
 market_update_arbie = test.searchFunctions(getMarket_updater)
@@ -158,5 +158,4 @@ test.addFunction(horces_nxt_day)
 now_time = datetime.now() + timedelta(hours=6)
 
 while True:
-    if datetime.now() > now_time:
-        test.step()
+    test.step()

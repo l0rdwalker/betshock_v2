@@ -14,7 +14,7 @@ class task(ABC):
         pass
     
     @abstractmethod
-    def whenNextRun(self):
+    def get_next_run(self):
         pass
     
     @abstractmethod

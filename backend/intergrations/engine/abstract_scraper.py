@@ -7,9 +7,11 @@ from abstract_task import task
 class scraper(task):
     def __init__(self,attributes) -> None:
         super().__init__(attributes)
-        self.startTimes = []
         self.operation = 'scrape'
         self.flex_dates = False
+        
+        self.next_run_procedure = None
+        self.next_run_time = datetime.now()
         
     def get_function_config(self):
         return {
@@ -19,43 +21,38 @@ class scraper(task):
     def init(self,data):
         try:
             data = self.aquireOdds(data)
-            self.selectNextRunTime()
+            if self.next_run_procedure == None:
+                self.establish_next_run(data)
         except Exception as e:
             print(e)
         finally:
+            self.establish_next_run(None)
             return {'data':data, 'platform': self.platformName, 'sport': self.sport}
-    
-    def addStartTime(self,date:datetime):
-        self.startTimes.append(date)
-        
-    def whenNextRun(self):
-        return datetime.now() + timedelta(minutes=5)
     
     def get_flex_date_status(self):
         return self.flex_dates
+    
+    def get_next_run(self):
+        return self.next_run_time
         
-    def selectNextRunTime(self):
-        try:
-            currentTime = datetime.now()
-            smallest = currentTime + timedelta(days=1)
-            smallest = smallest.replace(hour=6,minute=0,second=0,microsecond=0)
-            for date in self.startTimes:
-                if date > currentTime:
-                    if smallest > date:
-                        smallest = date
-            self.startTimes = []
-            nextToGo =  smallest
-        except:
-            nextToGo = currentTime
-            
-        timeElapsed = nextToGo - currentTime
-        halfWayPoint = timeElapsed/2
-        nextScheduled = currentTime + halfWayPoint
-
-        if nextToGo - nextScheduled > timedelta(minutes=10):
-            self.nextScheduledRun = nextScheduled
+    def establish_next_run(self,data):
+        curr_date = datetime.now()
+        if data == None:
+            return curr_date + timedelta(hours=1) 
+        
+        next_race = None
+        for race in data:
+            race_start_time_obj = datetime.strptime(race['start_time'], '%Y-%m-%dT%H:%M:%S')
+            if next_race == None:
+                next_race = race_start_time_obj
+                continue
+            if race_start_time_obj > curr_date:
+                if race_start_time_obj < next_race:
+                    next_race = race_start_time_obj
+        if next_race == None:
+            self.next_run_time = None
         else:
-            self.nextScheduledRun = currentTime + timedelta(minutes=11)
+            self.next_run_time = next_race + timedelta(minutes=5)
         
     @abstractmethod
     def aquireOdds(self):

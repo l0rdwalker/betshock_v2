@@ -58,7 +58,6 @@ class sportsbett_horses(scraper):
                         if (len(teams) > 0):
                             startTime = self.convertTime(event['startTime'])
                             races.append({'name': meeting['name'], 'round': event['raceNumber'],'start_time': startTime.isoformat(),'entrants':teams})
-                            self.addStartTime(startTime)
                     except:
                         continue
         return races

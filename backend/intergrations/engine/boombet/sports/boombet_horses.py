@@ -111,7 +111,6 @@ class boombet_horses(scraper):
                     horces = self.getEntrants(raceID)
                     startTime = self.convertTime(race['jumpTime'][:-6])
                     raceData.append({'round':raceNumber, 'name': LOC, 'start_time':startTime.isoformat(),'entrants':horces})
-                    self.addStartTime(startTime)
 
         return raceData
 

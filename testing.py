@@ -7,7 +7,7 @@ def get_races(database):
     SELECT race.race_id, track.track_name
     FROM race
     JOIN track ON race.track_id = track.track_id
-    WHERE DATE(race.start_time) < DATE('2024-07-23');
+    WHERE DATE(race.start_time) > DATE(NOW());
     """
     return database.pushQuery(query)
 
@@ -88,6 +88,8 @@ for race in races:
         platform_price_details = []
         num_prices = 0
 
+        race_entrants_timeseries = []
+        
         for platform in platform_names:
             platform_name = platform[0]
             prices = get_entrant_prices(database, entrant_id, race_id, platform_name)
@@ -103,8 +105,22 @@ for race in races:
                 if entry[0] != -1:
                     odds.append(entry[0])
                     record_times.append(entry[1])
-            if record_times and odds:
-                plt.plot(record_times, odds, label=platform_name, **{'marker': 'o'})
+                    
+            race_entrants_timeseries.append([odds,record_times,platform_name])
+        
+        latest_time = None
+        for entrant_timeseries in race_entrants_timeseries:
+            last_time_entry = entrant_timeseries[1][len(entrant_timeseries[1])-1]
+            if latest_time == None:
+                latest_time = last_time_entry
+            elif last_time_entry > latest_time:
+                latest_time = last_time_entry
+                
+        for entrant_timeseries in race_entrants_timeseries:
+            entrant_timeseries[0].append(entrant_timeseries[0][len(entrant_timeseries[0])-1])
+            entrant_timeseries[1].append(latest_time)
+            
+            plt.plot(entrant_timeseries[1], entrant_timeseries[0], label=entrant_timeseries[2], **{'marker': 'o'})
         
         if num_prices > 1:
             plt.xlabel('Time (timestamp)')
@@ -119,7 +135,7 @@ for race in races:
 
     track_details = database.get_round_and_track_name_by_id(race_id)
     race_details.append({'track': track_details[0], 'round': track_details[1], 'race_id': race_id, 'track_name': track_name, 'entrants': entrant_price_details})
-
+    
 database.closeConnection()
 
 arbs = []

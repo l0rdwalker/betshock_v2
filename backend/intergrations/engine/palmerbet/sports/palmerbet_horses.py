@@ -140,7 +140,6 @@ class palmerbet_horses(scraper):
                             tempData = {'round':race['number'], 'name': venueName, 'start_time': startTime.isoformat(),'entrants':horces}
 
                             races.append(tempData)
-                            self.addStartTime(startTime)
                         except Exception as e:
                             print(e)
                             continue

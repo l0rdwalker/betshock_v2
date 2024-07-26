@@ -85,7 +85,7 @@ class betfair_markets(scraper):
         for race in races['races']:
             curr_race = []
             date_object = datetime.strptime(race['startTime'], '%Y-%m-%dT%H:%M:%S.%fZ')
-            if date_object > curr and date_object < curr + timedelta(days=1) and 'AUS' in race['meetingName']:
+            if date_object.date() == curr.date() and 'AUS' in race['meetingName']:
                 race_data = self.get_race_markets(race['winMarketId'])
                 
                 race_data = race_data['eventTypes'][0]['eventNodes'][0]

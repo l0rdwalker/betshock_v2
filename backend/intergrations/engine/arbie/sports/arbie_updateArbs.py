@@ -16,6 +16,9 @@ class arbie_updateArbs(database):
         self.operation = 'arbUpdate'
         self.database = databaseOperations()
         
+    def get_next_run(self):
+        return datetime.now()
+        
     def init(self, update_data=None) -> None:
         try:
             date_race_store = {}

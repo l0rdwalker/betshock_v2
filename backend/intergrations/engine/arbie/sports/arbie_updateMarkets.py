@@ -16,6 +16,9 @@ class arbie_updateMarkets(database):
         self.operation = 'arbie_updateMarkets'
         self.database = databaseOperations()
         
+    def get_next_run(self):
+        return datetime.now()
+        
     def init(self, update_data=None) -> None:
         if (update_data == None):
             return None
@@ -26,12 +29,13 @@ class arbie_updateMarkets(database):
         self.database.initConnection()
         for race in update_data['data']:
             race_id = self.database.deduce_race_id(race['track'],race['start_time'])
-            for entrant in race['entrants']:
-                horse_name = entrant['name'].replace("'","").strip().lower()
-                horse_id = self.database.impose_horse(horse_name)
-                entrant_id = self.database.deduce_entrant_id(race_id,horse_id)
-                if not entrant_id == None:
-                    self.database.impose_market_condition(entrant_id,entrant['market_size'])
+            if not race_id == None:
+                for entrant in race['entrants']:
+                    horse_name = entrant['name'].replace("'","").strip().lower()
+                    horse_id = self.database.impose_horse(horse_name)
+                    entrant_id = self.database.deduce_entrant_id(race_id,horse_id)
+                    if not entrant_id == None:
+                        self.database.impose_market_condition(entrant_id,entrant['market_size'])
         self.database.closeConnection()
         
         
