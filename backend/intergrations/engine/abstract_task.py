@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 import os
-from datetime import datetime,timedelta
+from datetime import datetime,timedelta,timezone
 import dataManagement
 
 class task(ABC):
@@ -8,6 +8,7 @@ class task(ABC):
         self.platformName = attributes[0]
         self.sport = attributes[1]
         self.operation = None
+        self.next_run_time = datetime.now().astimezone(timezone.utc)
     
     @abstractmethod
     def init(self,data=None):
@@ -20,4 +21,7 @@ class task(ABC):
     @abstractmethod
     def get_function_config():
         pass
+    
+    def local_print(self,msg:str):
+        print(f"{self.platformName}:{msg}")
         

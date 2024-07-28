@@ -85,6 +85,7 @@ class boombet_horses(scraper):
         if isinstance(race_date_obj,timedelta):
             set_date += race_date_obj
         
+        
         AustralianStates = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA']
         days = self.getVenues()
         currentDate = set_date
@@ -102,27 +103,35 @@ class boombet_horses(scraper):
         
         raceData = []
         for location in todaysData['raceMeetings']:
-            if location['raceType'] == 4 and location['state'] in AustralianStates:
-                LOC = location['meetingName']
-                races = self.getRaces(dayCode,LOC)
-                for race in races['races']:
-                    raceNumber = race['raceNumber']
-                    raceID = race['eventId']
-                    horces = self.getEntrants(raceID)
-                    startTime = self.convertTime(race['jumpTime'][:-6])
-                    raceData.append({'round':raceNumber, 'name': LOC, 'start_time':startTime.isoformat(),'entrants':horces})
-
+            try:
+                if location['raceType'] == 4 and location['state'] in AustralianStates:
+                    LOC = location['meetingName']
+                    races = self.getRaces(dayCode,LOC)
+                    for race in races['races']:
+                        try:
+                            raceNumber = race['raceNumber']
+                            raceID = race['eventId']
+                            horces = self.getEntrants(raceID)
+                            startTime = self.convertTime(race['jumpTime'][:-6])
+                            raceData.append({'round':raceNumber, 'name': LOC, 'start_time':startTime.isoformat(),'entrants':horces})
+                        except Exception as e:
+                            self.local_print(e)
+            except Exception as e:
+                self.local_print(e)
         return raceData
 
     def getEntrants(self,id):
         horces = []
         raceCard = self.getRaceCard(id)
         for horce in raceCard['runners']:
-            NAME = horce['name']
-            ODDS = -1
-            for odd in horce['odds']:
-                if odd['product']['betType'] == 'Win':
-                    ODDS = odd['value']
-                    break
-            horces.append({'name':NAME,'odds':ODDS,'scratched':horce['isEliminated'] == False})
+            try:
+                NAME = horce['name']
+                ODDS = -1
+                for odd in horce['odds']:
+                    if odd['product']['betType'] == 'Win':
+                        ODDS = odd['value']
+                        break
+                horces.append({'name':NAME,'odds':ODDS,'scratched':horce['isEliminated'] == False})
+            except Exception as e:
+                self.local_print(e)
         return horces

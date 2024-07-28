@@ -4,7 +4,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from abstract_platform import platformManager
 from alive_progress import alive_bar
-from datetime import datetime,timedelta
+from datetime import datetime,timedelta,timezone
 import json
 import threading
 
@@ -16,7 +16,7 @@ class multitask(platformManager):
         self.threads = []
         self.operation = 'multiTask'
         self.name = 'Arbie'
-        self.next_run = datetime.now()
+        self.next_run = datetime.now(timezone.utc)
         
     def triggerDriver(self,driver,params,updater):
         data = driver.init(params)
@@ -32,42 +32,41 @@ class multitask(platformManager):
             if not return_data == None:
                 data = return_data
         
-        self.configure_next_run()
+        self.configure_next_run(data)
         
         return data
     
     def get_next_run(self):
         return self.next_run
     
-    def configure_next_run(self):
-        try:
-            min_date = None
-            max_date = None
-            for function in self.functions:
-                curr_date = function[0]['driver'].get_next_run()
-                if curr_date == None:
-                    curr_date = max_date
-                if min_date == None or max_date == None:
-                    min_date = curr_date
-                    max_date = curr_date
-                    continue
-                if curr_date > max_date:
-                    max_date = curr_date
-                if curr_date < min_date:
-                    min_date = curr_date
-            curr_date = datetime.now()
-            if min_date < curr_date < max_date:
-                self.next_run = curr_date + timedelta(minutes=5)
-            elif min_date > curr_date:
-                self.next_run = min_date - timedelta(minutes=5)
-            else:
-                tomorrow = curr_date + timedelta(days=1)
-                tomorrow_at_6_am = tomorrow.replace(hour=6, minute=0, second=0, microsecond=0)
-                self.next_run = tomorrow_at_6_am
-        except Exception as e:
-            print(f'Multi-task: {e}')
-            self.next_run = datetime.now() + timedelta(minutes=5)
-    
+    def configure_next_run(self,data):
+        current_time = datetime.now().astimezone(timezone.utc)
+        current_time
+        system_dates = []
+        
+        for platform_entry in data:
+            for race in platform_entry['data']:
+                time_instance = datetime.fromisoformat(race['start_time'])
+                time_instance = time_instance.astimezone(timezone.utc)
+                system_dates.append(time_instance)
+
+        system_dates = sorted(system_dates)
+        set_date = False
+        for date in system_dates:
+            time_difference = date - current_time
+            time_dif_delt = timedelta(hours=1)
+            if time_difference > timedelta(0):
+                if time_difference < time_dif_delt:
+                    self.next_run = current_time + timedelta(minutes=5)
+                    set_date = True
+                    break
+        
+        if set_date == False:
+            for date in system_dates:
+                if date > current_time:
+                    self.next_run = date-timedelta(hours=1)
+                    break
+
     def runTaks(self,updater):
         with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.functions)) as executor:
             tasks = []

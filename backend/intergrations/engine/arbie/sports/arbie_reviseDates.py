@@ -28,6 +28,7 @@ class arbie_reviseDates(database):
                 else:
                     race_start_time_options[key].append(race['start_time'])
         
+
         for key,time_options in race_start_time_options.items():
             race_time_frequencys = {}
             for time_option in time_options:

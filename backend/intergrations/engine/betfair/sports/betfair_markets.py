@@ -83,27 +83,32 @@ class betfair_markets(scraper):
         race_profile = []
         races = self.get_day_races()
         for race in races['races']:
-            curr_race = []
-            date_object = datetime.strptime(race['startTime'], '%Y-%m-%dT%H:%M:%S.%fZ')
-            if date_object.date() == curr.date() and 'AUS' in race['meetingName']:
-                race_data = self.get_race_markets(race['winMarketId'])
-                
-                race_data = race_data['eventTypes'][0]['eventNodes'][0]
-                venue_info = race_data['event']
-                VENUE_NAME = venue_info['venue']
-                
-                entrants = race_data['marketNodes'][0]['runners']
-                for entrant in entrants:
-                    NAME = "".join((entrant['description']['runnerName'].split('. ')[1]))
-                    TOTAL_PRICE = 0
-                    try:
-                        if not 'availableToBack' in entrant['exchange']:
-                            print(VENUE_NAME)
-                            return race_profile
-                        for price in entrant['exchange']['availableToBack']:
-                            TOTAL_PRICE += price['size']
-                        curr_race.append({'name':NAME,'market_size':TOTAL_PRICE})
-                    except Exception as e:
-                        print(e)
-                race_profile.append({'track':VENUE_NAME,'round':-1,'start_time':date_object.isoformat(),'entrants':curr_race})
+            try:
+                curr_race = []
+                date_object = datetime.strptime(race['startTime'], '%Y-%m-%dT%H:%M:%S.%fZ')
+                ajusted_date_object = date_object.replace(tzinfo=ZoneInfo('UTC'))
+                ajusted_date_object = ajusted_date_object.astimezone(ZoneInfo('Australia/Sydney'))
+                if 'AUS' in race['meetingName'] and date_object < (curr+timedelta(days=2)):
+                    race_data = self.get_race_markets(race['winMarketId'])
+                    
+                    race_data = race_data['eventTypes'][0]['eventNodes'][0]
+                    venue_info = race_data['event']
+                    VENUE_NAME = venue_info['venue']
+
+                    entrants = race_data['marketNodes'][0]['runners']
+                    for entrant in entrants:
+                        NAME = "".join((entrant['description']['runnerName'].split('. ')[1]))
+                        TOTAL_PRICE = 0
+                        try:
+                            if 'availableToBack' in entrant['exchange']:
+                                for price in entrant['exchange']['availableToBack']:
+                                    TOTAL_PRICE += price['price']
+                                curr_race.append({'name':NAME,'market_size':TOTAL_PRICE/len(entrant['exchange']['availableToBack'])})
+                        except Exception as e:
+                            print(f'betfair: {e}')
+                            continue
+                    race_profile.append({'track':VENUE_NAME,'round':-1,'start_time':ajusted_date_object.isoformat(),'entrants':curr_race})
+            except Exception as e:
+                print(f'betfair: {e}')
+                continue
         return race_profile

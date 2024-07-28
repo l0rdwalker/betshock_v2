@@ -28,7 +28,13 @@ class arbie_updateMarkets(database):
         
         self.database.initConnection()
         for race in update_data['data']:
-            race_id = self.database.deduce_race_id(race['track'],race['start_time'])
+            entrant_names = []
+            for entrant in race['entrants']:
+                horse_name = entrant['name'].replace("'","").strip().lower()
+                entrant_names.append(horse_name)
+            if len(entrant_names) == 0:
+                continue
+            race_id = self.database.deduce_race_id_by_entrant(entrant_names,race['start_time'])
             if not race_id == None:
                 for entrant in race['entrants']:
                     horse_name = entrant['name'].replace("'","").strip().lower()

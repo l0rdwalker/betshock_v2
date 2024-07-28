@@ -73,7 +73,7 @@ class betm_horses(scraper):
                         horces,startTime = self.getEntrants(race['event_id'])
                         raceData.append({'round':race['race_number'], 'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces})
             except Exception as e:
-                print(e)
+                self.local_print(e)
                 continue
         return raceData             
 
@@ -81,9 +81,12 @@ class betm_horses(scraper):
         horces = []
         entrants = self.getRaceCard(id)
         for entrant in entrants['race']['runners']:
-            NAME = entrant['name']
-            ODDS = entrant['fwin']
-            if (ODDS == None):
-                ODDS = -1
-            horces.append({'name':NAME,'odds':ODDS,'scratched':not entrant['scratched_at'] == None})
+            try:
+                NAME = entrant['name']
+                ODDS = entrant['fwin']
+                if (ODDS == None):
+                    ODDS = -1
+                horces.append({'name':NAME,'odds':ODDS,'scratched':not entrant['scratched_at'] == None})
+            except Exception as e:
+                self.local_print(e)
         return horces,self.convertTime(entrants['race']['starts_at'])

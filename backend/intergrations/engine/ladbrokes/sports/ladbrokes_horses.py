@@ -136,18 +136,25 @@ class ladbrokes_horses(scraper):
                             START_TIME = datetime.fromtimestamp(item['advertised_date']['seconds'])
                             break
                         
-                        entrants = []
-                        for key,entrant in race_details['data']['entrants'].items():
-                            if "barrier" in entrant:
-                                HORSE_NAME = entrant['name']
-                                ODDS = self.find_associated_odds(race_details['data']['prices'],entrant['id'])
-                                if (ODDS != -1):
-                                    entrants.append({'name':HORSE_NAME,'odds':ODDS, 'scratched':'is_scratched' in entrant})
+                        entrants = self.collect_entrants(race_details)
                         if (len(entrants) > 0):
                             race_data.append({'round': round,'name': f'{LOC}','start_time':START_TIME.isoformat(),'entrants':entrants})
                             round += 1
             except Exception as e:
-                print(e)
+                print(f'ladbrokes: {e}')
                 continue
 
         return race_data
+    
+    def collect_entrants(self,race_details):
+        entrants = []
+        for key,entrant in race_details['data']['entrants'].items():
+            try:
+                if "barrier" in entrant:
+                    HORSE_NAME = entrant['name']
+                    ODDS = self.find_associated_odds(race_details['data']['prices'],entrant['id'])
+                    if (ODDS != -1):
+                        entrants.append({'name':HORSE_NAME,'odds':ODDS, 'scratched':'is_scratched' in entrant})
+            except Exception as e:
+                self.local_print(e)
+        return entrants

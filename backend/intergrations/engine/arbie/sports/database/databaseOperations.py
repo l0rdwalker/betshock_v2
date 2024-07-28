@@ -144,18 +144,12 @@ class databaseOperations:
     def impose_odds(self,entrant_id,platform_name,odds):
         if odds == -1:
             return None
-        existing_entry = self.pushQuery(f"""
-            SELECT odds FROM odds WHERE entrant_id={entrant_id} AND platform_name='{platform_name}'
-                ORDER BY record_time DESC
-            LIMIT 1;
-            """)
-        if len(existing_entry) == 0 or not (existing_entry[0][0] == odds):
-            self.pushQuery(f"""
-                INSERT INTO public.odds(
-                    entrant_id, platform_name, odds, record_time)
-                VALUES ({entrant_id}, '{platform_name}', {odds}, NOW())
-                    ON CONFLICT DO NOTHING;
-            """)
+        self.pushQuery(f"""
+            INSERT INTO public.odds(
+                entrant_id, platform_name, odds, record_time)
+            VALUES ({entrant_id}, '{platform_name}', {odds}, NOW())
+                ON CONFLICT DO NOTHING;
+        """)
             
     def correct_race_start_time(self,race_id, start_time):
         self.pushQuery(f"""
@@ -198,24 +192,22 @@ class databaseOperations:
             WHERE entrant_id={entrant_id};
                        """)
         
-    def deduce_race_id(self,track_name,start_time):
+    def deduce_race_id_by_entrant(self,entrants,start_time):
+        entrant_list = "("
+        for entrant_idx in range(0,len(entrants)):
+            if entrant_idx+1 < len(entrants):
+                entrant_list += f"'{entrants[entrant_idx]}',"
+            else:
+                entrant_list += f"'{entrants[entrant_idx]}')"
+        
         race_id_data = self.pushQuery(f"""
-            SELECT race.race_id,race.round,race.start_time-'{start_time}' as time_dif FROM
-                race JOIN entrant
-                ON race.race_id = entrant.race_id
-                JOIN track
-                ON track.track_id = race.track_id
-                JOIN horse
-                ON horse.horse_id = entrant.horse_id
-            WHERE 
-                track.track_name = '{track_name}' 
-            AND 
-                race.start_time > '{start_time}'
-            AND
-                DATE(race.start_time) = DATE(start_time)
-            ORDER BY time_dif ASC
-            LIMIT 1;
+            SELECT race.race_id FROM entrant
+                JOIN horse ON entrant.horse_id = horse.horse_id
+                JOIN race ON race.race_id = entrant.race_id
+            WHERE horse.name IN {entrant_list} AND DATE(race.start_time) = DATE('{start_time}');
         """)
+        if race_id_data == None:
+            return None
         if len(race_id_data) == 0:
             return None
         return race_id_data[0][0]
@@ -234,3 +226,9 @@ class databaseOperations:
 	            entrant_id, price, record_time)
 	        VALUES ({entrant_id}, {price}, NOW());
                        """)
+        
+    def is_imposed(self,entrant_id):
+        data = self.pushQuery(f"""SELECT is_scratched FROM entrant WHERE entrant_id = {entrant_id};""")
+        if len(data) == 0:
+            return None
+        return data[0][0]

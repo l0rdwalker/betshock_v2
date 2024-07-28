@@ -11,7 +11,6 @@ class scraper(task):
         self.flex_dates = False
         
         self.next_run_procedure = None
-        self.next_run_time = datetime.now()
         
     def get_function_config(self):
         return {
@@ -24,9 +23,9 @@ class scraper(task):
             if self.next_run_procedure == None:
                 self.establish_next_run(data)
         except Exception as e:
-            print(e)
+            self.next_run_time = datetime.now() + timedelta(hours=1) 
+            print(f"""{self.platformName}: {e}""")
         finally:
-            self.establish_next_run(None)
             return {'data':data, 'platform': self.platformName, 'sport': self.sport}
     
     def get_flex_date_status(self):

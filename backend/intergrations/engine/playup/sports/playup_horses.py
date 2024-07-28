@@ -94,23 +94,31 @@ class playup_horses(scraper):
                     continue
                 LOC = meet['name']
                 for event in meet['events']:
-                    entrants = []
                     round = event['raceNumber']
                     start_time = datetime.fromtimestamp(event['startTime'])
-                    race_card = self.get_race_card(event['httpLink'])
-                    for market in race_card['markets']:
-                        if market['name'] == 'Win or Place' and market['international'] == False:
-                            for entrant in market['selections']:
-                                NAME = entrant['name']
-                                for price in entrant['prices']:
-                                    if price['priceCode'] == 'L':
-                                        ODDS = -1
-                                        if 'winPrice' in price:
-                                            ODDS = price['winPriceNum'] / price['winPriceDen']
-                                            ODDS += 1
-                                        entrants.append({'name':NAME,'odds':ODDS,'scratched':entrant['result']=='V'})
-                                        break
+                    entrants = self.get_entrants(event)
                     raceData.append({'round':round,'name': f'{LOC}', 'start_time':start_time.isoformat(),'entrants':entrants})
             except Exception as e:
+                self.local_print(e)
                 continue
         return raceData
+    
+    def get_entrants(self,event):
+        entrants = []
+        race_card = self.get_race_card(event['httpLink'])
+        for market in race_card['markets']:
+            if market['name'] == 'Win or Place' and market['international'] == False:
+                for entrant in market['selections']:
+                    try:
+                        NAME = entrant['name']
+                        for price in entrant['prices']:
+                            if price['priceCode'] == 'L':
+                                ODDS = -1
+                                if 'winPrice' in price:
+                                    ODDS = price['winPriceNum'] / price['winPriceDen']
+                                    ODDS += 1
+                                entrants.append({'name':NAME,'odds':ODDS,'scratched':entrant['result']=='V'})
+                    except Exception as e:
+                        self.local_print(e)
+                        continue
+        return entrants

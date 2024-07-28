@@ -88,5 +88,5 @@ class arbie_updateArbs(database):
                 
             self.database.closeConnection()
         except Exception as e:
-            print(e)
+            self.local_print(e)
             self.database.closeConnection()

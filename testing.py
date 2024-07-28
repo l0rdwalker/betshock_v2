@@ -24,11 +24,12 @@ def get_platform_names(database, race_id):
 
 def get_entrant_ids(database, race_id):
     query = f"""
-    SELECT DISTINCT entrant.entrant_id
+    SELECT DISTINCT entrant.entrant_id, horse.name
     FROM race
     JOIN track ON race.track_id = track.track_id
     JOIN entrant ON entrant.race_id = race.race_id
     JOIN odds ON odds.entrant_id = entrant.entrant_id
+    JOIN horse ON horse.horse_id = entrant.horse_id
     WHERE race.race_id = {race_id};
     """
     return database.pushQuery(query)

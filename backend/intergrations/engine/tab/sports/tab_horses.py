@@ -90,19 +90,33 @@ class tab_horses(scraper):
         
         AustralianStates = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA']
         raceData = []
-        venues = self.getVenues(set_date)
+        
+        try:
+            venues = self.getVenues(set_date)
+        except Exception as e:
+            self.local_print(e)
+            return raceData
+        if not 'meetings' in venues:
+            return raceData
+        elif not 'R' in venues['meetings']:
+            return raceData
+        
         for venue in venues['meetings']['R']:
-            name:str = venue['meetingName']
-            prelimName = name.split('(')
-            if prelimName[1].replace(')','') in AustralianStates:
-                name = prelimName[0].strip()
-                location = venue['venueMnemonic']
-                meetingDate = venue['meetingDate']
-                races = self.getRaces(meetingDate,location)
-                for race in races['races']:
-                    raceNumber = race['number']
-                    horces,startTime = self.getEntrants(meetingDate,location,raceNumber)
-                    raceData.append({'round':raceNumber, 'name': f'{name}', 'start_time': startTime.isoformat(),'entrants':horces})
+            try:
+                name:str = venue['meetingName']
+                prelimName = name.split('(')
+                if prelimName[1].replace(')','') in AustralianStates:
+                    name = prelimName[0].strip()
+                    location = venue['venueMnemonic']
+                    meetingDate = venue['meetingDate']
+                    races = self.getRaces(meetingDate,location)
+                    for race in races['races']:
+                        raceNumber = race['number']
+                        horces,startTime = self.getEntrants(meetingDate,location,raceNumber)
+                        raceData.append({'round':raceNumber, 'name': f'{name}', 'start_time': startTime.isoformat(),'entrants':horces})
+            except Exception as e:
+                self.local_print(e)
+                continue
         return raceData
 
     def getEntrants(self,meetingDate,location,raceNumber):
@@ -111,7 +125,11 @@ class tab_horses(scraper):
         startTime = self.convertTime(race['raceDetail']['summary']['startTime'])
         entrants = race['raceDetail']['runners']
         for entrant in entrants:
-            NAME = entrant['runnerName']
-            ODDS = entrant['fixedOdds']['returnWin']
-            horces.append({'name':NAME,'odds':ODDS,'scratched':('cratched' in entrant['fixedOdds']['bettingStatus'])})
+            try:
+                NAME = entrant['runnerName']
+                ODDS = entrant['fixedOdds']['returnWin']
+                horces.append({'name':NAME,'odds':ODDS,'scratched':('cratched' in entrant['fixedOdds']['bettingStatus'])})
+            except Exception as e:
+                self.local_print(e)
+                continue
         return horces,startTime

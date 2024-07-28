@@ -1,7 +1,7 @@
 import os
 import json
 import dataManagement as dm
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from priorityQueue import queue
 from engine.multiTask import multitask
 
@@ -26,10 +26,10 @@ class taskSchedular:
                 self.log(e)
                 
     def addFunction(self,function):
-        self.tasks.append((datetime.now(),function))
+        self.tasks.append((datetime.now().astimezone(timezone.utc),function))
 
     def step(self) -> None:
-        self.currentDatetime = datetime.now()
+        self.currentDatetime = datetime.now().astimezone(timezone.utc)
         self.tasks = sorted(self.tasks, key=lambda x: x[0])
         if self.tasks[0] != None:
             if self.tasks[0][0] < self.currentDatetime:

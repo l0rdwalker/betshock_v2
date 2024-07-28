@@ -141,7 +141,7 @@ class palmerbet_horses(scraper):
 
                             races.append(tempData)
                         except Exception as e:
-                            print(e)
+                            self.local_print(e)
                             continue
         return races
 
@@ -149,6 +149,7 @@ class palmerbet_horses(scraper):
         horces = []
         prelim_data = self.get_prelim_race_card(preliminaryID)
         win_price_id = None
+
         for item in prelim_data['race']['markets']:
             if item['title'] == 'Win':
                 win_price_id = item['id']

@@ -36,7 +36,6 @@ class sportsbett_horses(scraper):
             
     def convertTime(self,timeTxt):
         startTime = datetime.fromtimestamp(timeTxt,tz=timezone.utc)
-        #No time zone found with key Australia/Sydney
         startTime = startTime.astimezone(ZoneInfo("Australia/Sydney"))
         startTime = startTime.replace(tzinfo=None)    
         return startTime
@@ -48,18 +47,21 @@ class sportsbett_horses(scraper):
         
         todaysDate = (set_date).strftime("%Y-%m-%d")
         races = []
-        data = self.getter(f"https://gwapi.sportsbet.com.au/sportsbook-racing/Sportsbook/Racing/AllRacing/{todaysDate}")['dates'][0]['sections']
-        meetings = self.conditionalDrillDown(data,'raceType','horse')['meetings']
-        for meeting in meetings:
-            if meeting['regionName'] == 'Australia':
-                for event in meeting['events']:
-                    try:
-                        teams = self.assembleMatch(event['httpLink'])
-                        if (len(teams) > 0):
-                            startTime = self.convertTime(event['startTime'])
-                            races.append({'name': meeting['name'], 'round': event['raceNumber'],'start_time': startTime.isoformat(),'entrants':teams})
-                    except:
-                        continue
+        try:
+            data = self.getter(f"https://gwapi.sportsbet.com.au/sportsbook-racing/Sportsbook/Racing/AllRacing/{todaysDate}")['dates'][0]['sections']
+            meetings = self.conditionalDrillDown(data,'raceType','horse')['meetings']
+            for meeting in meetings:
+                if meeting['regionName'] == 'Australia':
+                    for event in meeting['events']:
+                        try:
+                            teams = self.assembleMatch(event['httpLink'])
+                            if (len(teams) > 0):
+                                startTime = self.convertTime(event['startTime'])
+                                races.append({'name': meeting['name'], 'round': event['raceNumber'],'start_time': startTime.isoformat(),'entrants':teams})
+                        except Exception as e:
+                            self.local_print(e)
+        except Exception as e:
+            self.local_print(e)
         return races
 
     def assembleMatch(self,link):

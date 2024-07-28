@@ -68,15 +68,27 @@ class pointsbet_horses(scraper):
 
     def aquireOdds(self,race_date_obj:timedelta):
         raceData = []
-        venues = self.getVenues()[0]['meetings']
+        try:
+            venues = self.getVenues()[0]['meetings']
+        except Exception as e:
+            self.local_print(e)
+            return raceData    
+        
         for venue in venues:
-            if venue['racingType'] == 1 and venue['countryName'] == 'Australia':
-                LOC = venue['venue']
-                for race in venue['races']:
-                    raceNumber = race['raceNumber']
-                    raceId = race['raceId']
-                    horces,startTime = self.getEntrants(raceId)
-                    raceData.append({'round':raceNumber,'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces})
+            try:
+                if venue['racingType'] == 1 and venue['countryName'] == 'Australia':
+                    LOC = venue['venue']
+                    for race in venue['races']:
+                        try:
+                            raceNumber = race['raceNumber']
+                            raceId = race['raceId']
+                            horces,startTime = self.getEntrants(raceId)
+                            raceData.append({'round':raceNumber,'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces})
+                        except Exception as e:
+                            self.local_print(e)
+            except Exception as e:
+                self.local_print(e)
+                continue
         return raceData 
             
     def getEntrants(self,id):
@@ -84,9 +96,13 @@ class pointsbet_horses(scraper):
         raceCard = self.getRaceCard(id)
         startTime = self.convertTime(raceCard["advertisedStartTimeUtc"])
         for entrant in raceCard['runners']:
-            NAME = entrant["runnerName"]
-            ODDS = -1
-            if entrant["isScratched"] == False:
-                ODDS = entrant['fluctuations']['current']
-            horces.append({'name':NAME,'odds':ODDS,'scratched':entrant["isScratched"]})
+            try:
+                NAME = entrant["runnerName"]
+                ODDS = -1
+                if entrant["isScratched"] == False:
+                    if 'current' in entrant['fluctuations']:
+                        ODDS = entrant['fluctuations']['current']
+                horces.append({'name':NAME,'odds':ODDS,'scratched':entrant["isScratched"]})
+            except Exception as e:
+                self.local_print(e)
         return horces,startTime
