@@ -110,19 +110,22 @@ class boombet_horses(scraper):
                     for race in races['races']:
                         try:
                             raceNumber = race['raceNumber']
-                            raceID = race['eventId']
-                            horces = self.getEntrants(raceID)
+                            
+                            race_identidyer = {'race_id':race['eventId']}
+                            
+                            horces = self.get_entrants(race_identidyer)
                             startTime = self.convertTime(race['jumpTime'][:-6])
-                            raceData.append({'round':raceNumber, 'name': LOC, 'start_time':startTime.isoformat(),'entrants':horces})
+                            raceData.append({'round':raceNumber, 'name': LOC, 'start_time':startTime.isoformat(),'entrants':horces, 'race_id':race_identidyer})
                         except Exception as e:
                             self.local_print(e)
             except Exception as e:
                 self.local_print(e)
         return raceData
 
-    def getEntrants(self,id):
+    def get_entrants(self,race_identidyer):
         horces = []
-        raceCard = self.getRaceCard(id)
+        raceCard = self.getRaceCard(race_identidyer['race_id'])
+        record_time = datetime.now()
         for horce in raceCard['runners']:
             try:
                 NAME = horce['name']
@@ -131,7 +134,7 @@ class boombet_horses(scraper):
                     if odd['product']['betType'] == 'Win':
                         ODDS = odd['value']
                         break
-                horces.append({'name':NAME,'odds':ODDS,'scratched':horce['isEliminated'] == False})
+                horces.append({'name':NAME,'odds':ODDS,'scratched':horce['isEliminated'] == False,'record_time':record_time.isoformat()})
             except Exception as e:
                 self.local_print(e)
         return horces

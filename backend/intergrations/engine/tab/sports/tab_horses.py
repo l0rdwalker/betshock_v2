@@ -112,23 +112,29 @@ class tab_horses(scraper):
                     races = self.getRaces(meetingDate,location)
                     for race in races['races']:
                         raceNumber = race['number']
-                        horces,startTime = self.getEntrants(meetingDate,location,raceNumber)
-                        raceData.append({'round':raceNumber, 'name': f'{name}', 'start_time': startTime.isoformat(),'entrants':horces})
+                        
+                        race_identifyer = {'meeting_date':meetingDate,'location':location,'round':raceNumber}
+                        
+                        horces,startTime = self.get_entrants(race_identifyer)
+                        raceData.append({'round':raceNumber, 'name': f'{name}', 'start_time': startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer})
             except Exception as e:
                 self.local_print(e)
                 continue
         return raceData
 
-    def getEntrants(self,meetingDate,location,raceNumber):
+    def get_entrants(self,race_identifyer):
         horces = []
-        race = self.getRaceCard(meetingDate,location,raceNumber)
+        race = self.getRaceCard(race_identifyer['meeting_date'],race_identifyer['location'],race_identifyer['round'])
+        
+        record_time = datetime.now()
+        
         startTime = self.convertTime(race['raceDetail']['summary']['startTime'])
         entrants = race['raceDetail']['runners']
         for entrant in entrants:
             try:
                 NAME = entrant['runnerName']
                 ODDS = entrant['fixedOdds']['returnWin']
-                horces.append({'name':NAME,'odds':ODDS,'scratched':('cratched' in entrant['fixedOdds']['bettingStatus'])})
+                horces.append({'name':NAME,'odds':ODDS,'scratched':('cratched' in entrant['fixedOdds']['bettingStatus']),'record_time':record_time.isoformat()})
             except Exception as e:
                 self.local_print(e)
                 continue

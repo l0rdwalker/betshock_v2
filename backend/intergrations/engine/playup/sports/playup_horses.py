@@ -96,16 +96,20 @@ class playup_horses(scraper):
                 for event in meet['events']:
                     round = event['raceNumber']
                     start_time = datetime.fromtimestamp(event['startTime'])
-                    entrants = self.get_entrants(event)
-                    raceData.append({'round':round,'name': f'{LOC}', 'start_time':start_time.isoformat(),'entrants':entrants})
+                    
+                    race_identifyer = {'race_id':event['httpLink']}
+                    
+                    entrants = self.get_entrants(race_identifyer)
+                    raceData.append({'round':round,'name': f'{LOC}', 'start_time':start_time.isoformat(),'entrants':entrants, 'race_id':race_identifyer})
             except Exception as e:
                 self.local_print(e)
                 continue
         return raceData
     
-    def get_entrants(self,event):
+    def get_entrants(self,race_identifyer):
         entrants = []
-        race_card = self.get_race_card(event['httpLink'])
+        race_card = self.get_race_card(race_identifyer['race_id'])
+        record_time = datetime.now()
         for market in race_card['markets']:
             if market['name'] == 'Win or Place' and market['international'] == False:
                 for entrant in market['selections']:
@@ -117,7 +121,7 @@ class playup_horses(scraper):
                                 if 'winPrice' in price:
                                     ODDS = price['winPriceNum'] / price['winPriceDen']
                                     ODDS += 1
-                                entrants.append({'name':NAME,'odds':ODDS,'scratched':entrant['result']=='V'})
+                                entrants.append({'name':NAME,'odds':ODDS,'scratched':entrant['result']=='V','record_time':record_time.isoformat()})
                     except Exception as e:
                         self.local_print(e)
                         continue

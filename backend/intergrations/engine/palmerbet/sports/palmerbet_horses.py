@@ -134,10 +134,12 @@ class palmerbet_horses(scraper):
                     venueName = meeting['venue']['title']
                     for race in meeting['races']:
                         try:
-                            horces = self.collectEntrants(race['_links'][0]['href'])
+                            race_identifyer = {'race_id':race['_links'][0]['href']}
+                            
+                            horces = self.get_entrants(race_identifyer)
                             startTime = self.convertTime(race['startTime'])
                             
-                            tempData = {'round':race['number'], 'name': venueName, 'start_time': startTime.isoformat(),'entrants':horces}
+                            tempData = {'round':race['number'], 'name': venueName, 'start_time': startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer}
 
                             races.append(tempData)
                         except Exception as e:
@@ -145,9 +147,10 @@ class palmerbet_horses(scraper):
                             continue
         return races
 
-    def collectEntrants(self,preliminaryID):
+    def get_entrants(self,race_identifyer):
         horces = []
-        prelim_data = self.get_prelim_race_card(preliminaryID)
+        prelim_data = self.get_prelim_race_card(race_identifyer['race_id'])
+        record_time = datetime.now()
         win_price_id = None
 
         for item in prelim_data['race']['markets']:
@@ -164,5 +167,5 @@ class palmerbet_horses(scraper):
                         if 'priceSnapshot' in price:
                             ODDS = price['priceSnapshot']['current']
                         break
-                horces.append({'name':NAME,'odds':ODDS,'scratched':not entrant["status"]=='Active'})
+                horces.append({'name':NAME,'odds':ODDS,'scratched':not entrant["status"]=='Active','record_time':record_time.isoformat()})
         return horces

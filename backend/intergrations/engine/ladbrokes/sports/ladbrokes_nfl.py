@@ -56,3 +56,6 @@ class ladbrokes_nfl(scraper):
         teamOdds = 1 + (team['price']['odds']['numerator']/team['price']['odds']['denominator'])
 
         return {'name':name,'odds':teamOdds}
+
+    def get_entrants(self):
+        pass

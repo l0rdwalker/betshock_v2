@@ -130,15 +130,10 @@ class ladbrokes_horses(scraper):
                     LOC = event['name']
                     round = 1
                     for race_id in event['race_ids']:
-                        race_details = self.get_race_details(race_id)
-                        START_TIME = None
-                        for key,item in race_details['data']['meetings'].items():
-                            START_TIME = datetime.fromtimestamp(item['advertised_date']['seconds'])
-                            break
-                        
-                        entrants = self.collect_entrants(race_details)
-                        if (len(entrants) > 0):
-                            race_data.append({'round': round,'name': f'{LOC}','start_time':START_TIME.isoformat(),'entrants':entrants})
+                        race_identidyer = {'race_id':race_id}
+                        entrants,START_TIME = self.get_entrants(race_identidyer)
+                        if (len(entrants) > 0 and not START_TIME == None):
+                            race_data.append({'round': round,'name': f'{LOC}','start_time':START_TIME.isoformat(),'entrants':entrants,'race_id':race_identidyer})
                             round += 1
             except Exception as e:
                 print(f'ladbrokes: {e}')
@@ -146,7 +141,14 @@ class ladbrokes_horses(scraper):
 
         return race_data
     
-    def collect_entrants(self,race_details):
+    def get_entrants(self,race_identifyer):
+        race_details = self.get_race_details(race_identifyer['race_id'])
+        read_time = datetime.now()
+        START_TIME = None
+        for key,item in race_details['data']['meetings'].items():
+            START_TIME = datetime.fromtimestamp(item['advertised_date']['seconds'])
+            break
+        
         entrants = []
         for key,entrant in race_details['data']['entrants'].items():
             try:
@@ -154,7 +156,7 @@ class ladbrokes_horses(scraper):
                     HORSE_NAME = entrant['name']
                     ODDS = self.find_associated_odds(race_details['data']['prices'],entrant['id'])
                     if (ODDS != -1):
-                        entrants.append({'name':HORSE_NAME,'odds':ODDS, 'scratched':'is_scratched' in entrant})
+                        entrants.append({'name':HORSE_NAME,'odds':ODDS, 'scratched':'is_scratched' in entrant, 'record_time':read_time.isoformat()})
             except Exception as e:
                 self.local_print(e)
-        return entrants
+        return entrants, START_TIME

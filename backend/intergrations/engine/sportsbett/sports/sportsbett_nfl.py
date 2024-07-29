@@ -41,3 +41,5 @@ class sportsbett_nfl(scraper):
         cleanedData['participants'] = len(cleanedData['data'])
         return cleanedData
             
+    def get_entrants(self):
+        pass

@@ -44,3 +44,6 @@ class tab_nfl(scraper):
                         }
                     )
         return cleanedData
+    
+    def get_entrants(self):
+        pass

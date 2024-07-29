@@ -85,3 +85,12 @@ CREATE TABLE market_conditions (
     PRIMARY KEY (entrant_id, record_time),
     FOREIGN KEY (entrant_id) REFERENCES entrant(entrant_id)
 );
+
+CREATE TABLE race_platform_links(
+    race_api_identifyer varchar(200),
+    platform_name varchar(80),
+    race_id int,
+    FOREIGN KEY (race_id) REFERENCES race(race_id),
+    FOREIGN KEY (platform_name) REFERENCES platforms(platform_name),
+    PRIMARY KEY (race_id,platform_name)
+)

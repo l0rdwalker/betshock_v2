@@ -70,23 +70,25 @@ class betm_horses(scraper):
                 if venue['race_type'] == 'T' and venue['race_state'] in AustralianStates:
                     LOC = venue['meeting_name']
                     for race in venue['races']:
-                        horces,startTime = self.getEntrants(race['event_id'])
-                        raceData.append({'round':race['race_number'], 'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces})
+                        race_identifyer = {'race_id':race['event_id']}
+                        horces,startTime = self.get_entrants(race_identifyer)
+                        raceData.append({'round':race['race_number'], 'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer})
             except Exception as e:
                 self.local_print(e)
                 continue
         return raceData             
 
-    def getEntrants(self,id):
+    def get_entrants(self,race_identifyer):
         horces = []
-        entrants = self.getRaceCard(id)
+        entrants = self.getRaceCard(race_identifyer['race_id'])
+        record_time = datetime.now()
         for entrant in entrants['race']['runners']:
             try:
                 NAME = entrant['name']
                 ODDS = entrant['fwin']
                 if (ODDS == None):
                     ODDS = -1
-                horces.append({'name':NAME,'odds':ODDS,'scratched':not entrant['scratched_at'] == None})
+                horces.append({'name':NAME,'odds':ODDS,'scratched':not entrant['scratched_at'] == None,'record_time':record_time.isoformat()})
             except Exception as e:
                 self.local_print(e)
         return horces,self.convertTime(entrants['race']['starts_at'])

@@ -20,6 +20,7 @@ class databaseOperations:
         
         self.credentials = json.loads(" ".join(credentials))
         self.commands = []
+        self.connection_open = False
 
     def initConnection(self):
         self.conn = psycopg2.connect(
@@ -29,9 +30,11 @@ class databaseOperations:
             password=self.credentials['password']
         )
         self.cursor = self.conn.cursor()
+        self.connection_open = True
 
     def closeConnection(self):
         self.conn.close()
+        self.connection_open = False
 
     def pushQuery(self,query):
         query = query.replace("\n","")
@@ -105,8 +108,21 @@ class databaseOperations:
         
     def get_race_entrant_ids(self, race_id):
         return self.pushQuery(f"""
-            SELECT entrant_id FROM entrant WHERE race_id = {race_id};               
+            SELECT entrant.entrant_id, horse.name FROM entrant
+                JOIN horse ON horse.horse_id = entrant.horse_id
+            WHERE race_id = {race_id};               
                               """)
+        
+    def get_specific_entrant_id_by_name_and_race(self,race_id,horse_name):
+        data = self.pushQuery(f"""
+            SELECT entrant_id FROM entrant
+                JOIN horse ON horse.horse_id = entrant.horse_id
+            WHERE race_id = {race_id} AND horse.name = '{horse_name}'
+            LIMIT 1;
+        """)
+        if len(data) == 0:
+            return None
+        return data[0][0]
         
     def get_round_and_track_name_by_id(self,race_id):
         data = self.pushQuery(f"""
@@ -141,15 +157,19 @@ class databaseOperations:
             LIMIT 1;
         """)[0][0]
         
-    def impose_odds(self,entrant_id,platform_name,odds):
+    def impose_odds(self,entrant_id,platform_name,odds,record_time):
         if odds == -1:
             return None
-        self.pushQuery(f"""
-            INSERT INTO public.odds(
-                entrant_id, platform_name, odds, record_time)
-            VALUES ({entrant_id}, '{platform_name}', {odds}, NOW())
-                ON CONFLICT DO NOTHING;
-        """)
+        existing_entry = self.pushQuery(f"""
+            SELECT odds FROM odds WHERE entrant_id={entrant_id} ORDER BY record_time DESC LIMIT 1;
+                                        """)
+        if not existing_entry[0][0] == odds:
+            self.pushQuery(f"""
+                INSERT INTO public.odds(
+                    entrant_id, platform_name, odds, record_time)
+                VALUES ({entrant_id}, '{platform_name}', {odds}, '{record_time}')
+                    ON CONFLICT DO NOTHING;
+            """)
             
     def correct_race_start_time(self,race_id, start_time):
         self.pushQuery(f"""
@@ -232,3 +252,43 @@ class databaseOperations:
         if len(data) == 0:
             return None
         return data[0][0]
+    
+    def impose_platform_race_identifyer(self,identifyer,platform_name,race_id):
+        existing_entry = self.pushQuery(f"""
+            SELECT race_api_identifyer, platform_name, race_id
+                FROM public.race_platform_links
+            WHERE platform_name = '{platform_name}' AND race_id = {race_id};
+            """)
+        if len(existing_entry) > 0:
+            self.pushQuery(f"""
+            UPDATE public.race_platform_links
+                SET race_api_identifyer='{json.dumps(identifyer)}'
+            WHERE race_id = {race_id} AND platform_name = '{platform_name}';        
+            """)
+        else:
+            self.pushQuery(f"""
+            INSERT INTO public.race_platform_links(
+                race_api_identifyer, platform_name, race_id)
+            VALUES ('{json.dumps(identifyer)}', '{platform_name}', {race_id});
+            """)
+            
+    def get_platform_api_links(self,race_id):
+        return self.pushQuery(f""" 
+            SELECT * FROM race_platform_links WHERE race_id = {race_id};        
+                              """)
+        
+    def get_future_races(self):
+        return self.pushQuery(f"""
+            SELECT * FROM race WHERE start_time > NOW();
+                              """)
+        
+    def get_entrant_platform_offerings(self,entrant_id):
+        return self.pushQuery(f"""
+            SELECT DISTINCT platform_name FROM odds WHERE entrant_id={entrant_id};
+                              """)
+    
+    def get_entrant_odds_by_platform(self,entrant_id,platform_name):
+        return self.pushQuery(f"""
+            SELECT odds, record_time FROM odds WHERE entrant_id={entrant_id} AND platform_name='{platform_name}'
+            ORDER BY record_time DESC; 
+                              """)

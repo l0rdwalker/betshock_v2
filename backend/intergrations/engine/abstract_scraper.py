@@ -9,7 +9,6 @@ class scraper(task):
         super().__init__(attributes)
         self.operation = 'scrape'
         self.flex_dates = False
-        
         self.next_run_procedure = None
         
     def get_function_config(self):
@@ -54,7 +53,17 @@ class scraper(task):
             self.next_run_time = next_race + timedelta(minutes=5)
         
     @abstractmethod
-    def aquireOdds(self):
+    def aquireOdds(self,data):
         pass
+    
+    @abstractmethod
+    def get_entrants(self, race_id):
+        pass
+    
+    def get_race_by_id(self,race_id):
+        data = self.get_entrants(race_id)
+        if len(data) == 2:
+            data = data[0]
+        return {'data':data, 'platform': self.platformName, 'sport': self.sport}
     
     

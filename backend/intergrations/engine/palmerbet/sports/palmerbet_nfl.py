@@ -44,3 +44,6 @@ class palmerbet_nfl(scraper):
         name = data['title']
         odds = data['win']['price']
         return {'name':name,'odds':odds}
+    
+    def get_entrants(self,data):
+        pass

@@ -5,39 +5,22 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from abstract_platform import platformManager
 from alive_progress import alive_bar
 from datetime import datetime,timedelta,timezone
+import pytz
 import json
 import threading
+from multiTask_common import multitask_common
 
-class multitask(platformManager):
+class multitask(multitask_common):
     def __init__(self,functions:list,postTasks=[]) -> None:
-        self.functions = functions
-        self.postTasks = postTasks
-        
-        self.threads = []
-        self.operation = 'multiTask'
-        self.name = 'Arbie'
-        self.next_run = datetime.now(timezone.utc)
+        super().__init__(functions,postTasks)
         
     def triggerDriver(self,driver,params,updater):
         data = driver.init(params)
         updater()
         return data
-        
-    def init(self,data=None):
-        with alive_bar(len(self.functions)) as bar:
-            data = self.runTaks(updater=bar)
-                
-        for postTask in self.postTasks:
-            return_data = postTask['driver'].init(data)
-            if not return_data == None:
-                data = return_data
-        
-        self.configure_next_run(data)
-        
-        return data
     
-    def get_next_run(self):
-        return self.next_run
+    def trigger_post_scrape(self,postTask,data):
+        postTask['driver'].init(data)
     
     def configure_next_run(self,data):
         current_time = datetime.now().astimezone(timezone.utc)
@@ -57,7 +40,7 @@ class multitask(platformManager):
             time_dif_delt = timedelta(hours=1)
             if time_difference > timedelta(0):
                 if time_difference < time_dif_delt:
-                    self.next_run = current_time + timedelta(minutes=5)
+                    self.next_run = current_time + timedelta(minutes=30)
                     set_date = True
                     break
         
@@ -66,29 +49,5 @@ class multitask(platformManager):
                 if date > current_time:
                     self.next_run = date-timedelta(hours=1)
                     break
-
-    def runTaks(self,updater):
-        with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.functions)) as executor:
-            tasks = []
-            for task_idx in range(0,len(self.functions)):
-                tasks.append((self.functions[task_idx][0]['driver'],self.functions[task_idx][1],updater))
-            results = list(executor.map(lambda args: self.triggerDriver(*args),tasks))
-        return results
-    
-    def getFunctions(self):
-        return self.functions
-    
-    def returnFunctionConfig(self):
-        return (
-            {                                
-                'driver':self,
-                'platform':self.name,
-                'type':self.operation,
-                'data':{}
-            }
-        )
-    
-    def setPlatformName(self):
-        self.name = 'All Platforms - Horces'
     
 

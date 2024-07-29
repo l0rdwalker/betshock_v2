@@ -54,23 +54,26 @@ class sportsbett_horses(scraper):
                 if meeting['regionName'] == 'Australia':
                     for event in meeting['events']:
                         try:
-                            teams = self.assembleMatch(event['httpLink'])
+                            race_identidyer = {'race_id':event['httpLink']}
+                            
+                            teams = self.get_entrants(race_identidyer)
                             if (len(teams) > 0):
                                 startTime = self.convertTime(event['startTime'])
-                                races.append({'name': meeting['name'], 'round': event['raceNumber'],'start_time': startTime.isoformat(),'entrants':teams})
+                                races.append({'name': meeting['name'], 'round': event['raceNumber'],'start_time': startTime.isoformat(),'entrants':teams, 'race_id':race_identidyer})
                         except Exception as e:
                             self.local_print(e)
         except Exception as e:
             self.local_print(e)
         return races
 
-    def assembleMatch(self,link):
+    def get_entrants(self,race_identidyer):
         horses = []
-        markets = self.getter(f'https://gwapi.sportsbet.com.au/sportsbook-racing/{link}')['markets']
+        markets = self.getter(f'https://gwapi.sportsbet.com.au/sportsbook-racing/{race_identidyer["race_id"]}')['markets']
+        record_time = datetime.now()
         for hourse in self.conditionalDrillDown(markets,'name',self.marketTypes)['selections']: 
             HOURSENAME = hourse['name']
             prices = self.conditionalDrillDown(hourse['prices'],'priceCode','L')
             if ('placePrice' in prices):#winPrice placePrice
                 WIN_ODDS = self.conditionalDrillDown(hourse['prices'],'priceCode','L')['winPrice']
-                horses.append({'name':HOURSENAME,'odds':WIN_ODDS,'scratched':hourse['result'] == 'V'})
+                horses.append({'name':HOURSENAME,'odds':WIN_ODDS,'scratched':hourse['result'] == 'V', 'record_time':record_time.isoformat()})
         return horses

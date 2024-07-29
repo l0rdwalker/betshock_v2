@@ -4,6 +4,7 @@ import dataManagement as dm
 from datetime import datetime, timedelta, timezone
 from priorityQueue import queue
 from engine.multiTask import multitask
+from engine.better import better
 
 class taskSchedular:
     def __init__(self) -> None:
@@ -38,13 +39,13 @@ class taskSchedular:
                 self.tasks.append((mextRun,currentTask))
             
     def performTask(self,currentTask):
-        try:
-            self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
-            data = currentTask['driver'].init(currentTask['data'])
-            self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
-        except Exception as e:
-            self.log(e,error=True)
-            self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
+        #try:
+        self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
+        data = currentTask['driver'].init(currentTask['data'])
+        self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
+        #except Exception as e:
+        #    self.log(e,error=True)
+        #    self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
         return currentTask['driver'].get_next_run()
 
     def contains_key(self,key_value,search_data):
@@ -122,6 +123,10 @@ get_market_updater = {
     'platform' : 'betfair'
 }
 
+get_focus_updater = {
+    'type':'arbUpdateFocus'
+}
+
 test = taskSchedular()
 
 on_day_functions:list = []
@@ -141,6 +146,10 @@ for function in non_flex_functions:
 postScrapeTasks = []
 postScrapeTasks.extend(test.searchFunctions(get_date_reviser))
 postScrapeTasks.extend(test.searchFunctions(getArbUpdater))
+
+
+my_better = better(on_day_functions,test.searchFunctions(get_focus_updater))
+test.addFunction(my_better.returnFunctionConfig())
 
 market_update_arbie = test.searchFunctions(getMarket_updater)
 market_update_scrape = [(test.searchFunctions(get_market_updater)[0],on_day_param)]

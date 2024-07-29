@@ -34,6 +34,7 @@ class arbie_updateArbs(database):
                 for race in platform['data']:
                     track_id = self.database.impose_track(race['name'])
                     race_id = self.database.impose_race(track_id,race['start_time'],race['round'])
+                    self.database.impose_platform_race_identifyer(race['race_id'],platform['platform'],race_id)
                     
                     existing_entrant_ids_set = set()
                     existing_entrant_ids_list = self.database.get_race_entrant_ids(race_id)
@@ -47,7 +48,7 @@ class arbie_updateArbs(database):
                         entrant_id = self.database.impose_entrant(horse_id,race_id,entrant['scratched'])
                         
                         construct_entrant_set.add(entrant_id)
-                        self.database.impose_odds(entrant_id,platform_id,entrant['odds'])
+                        self.database.impose_odds(entrant_id,platform_id,entrant['odds'],entrant['record_time'])
                             
                         if not str(entrant_id) in scratched_horses:
                             scratched_horses[str(entrant_id)] = {'scratched':0,'not_scratched':0}
