@@ -1,5 +1,6 @@
 import psycopg2
 from datetime import datetime, timedelta
+from threading import Lock, Thread
 import json
 import os
 
@@ -17,6 +18,7 @@ class databaseOperations:
     def __init__(self) -> None:
         self.file = os.path.dirname(os.path.abspath(__file__))
         credentials:list = readCache(os.path.join(self.file,"credentials.json"))
+        self.lock = Lock()
         
         self.credentials = json.loads(" ".join(credentials))
         self.commands = []
@@ -41,17 +43,17 @@ class databaseOperations:
         query = query.strip()
         query = query.split()
         query = ' '.join(query)
-        #print(query)
         data = None
-        try:
-            data = self.cursor.execute(query)
-            if query.strip().lower().startswith('select') or 'returning' in query.strip().lower():
-                data = self.cursor.fetchall()
-            self.conn.commit()
-        except Exception as e:
-            print(e)
-            print("\033[91m" + query + "\033[0m")
-            self.conn.rollback()
+        with self.lock:
+            try:
+                data = self.cursor.execute(query)
+                if query.strip().lower().startswith('select') or 'returning' in query.strip().lower():
+                    data = self.cursor.fetchall()
+                self.conn.commit()
+            except Exception as e:
+                print(e)
+                print("\033[91m" + query + "\033[0m")
+                self.conn.rollback()
         return data
     
     def impose_platform(self,platform_name):
@@ -161,9 +163,16 @@ class databaseOperations:
         if odds == -1:
             return None
         existing_entry = self.pushQuery(f"""
-            SELECT odds FROM odds WHERE entrant_id={entrant_id} ORDER BY record_time DESC LIMIT 1;
+            SELECT odds FROM odds WHERE entrant_id={entrant_id} AND platform_name='{platform_name}' ORDER BY record_time DESC LIMIT 1;
                                         """)
-        if not existing_entry[0][0] == odds:
+        
+        apply_update = False
+        if len(existing_entry) == 0:
+            apply_update = True
+        elif not existing_entry[0][0] == odds:
+            apply_update = True
+        
+        if apply_update:
             self.pushQuery(f"""
                 INSERT INTO public.odds(
                     entrant_id, platform_name, odds, record_time)
@@ -288,7 +297,10 @@ class databaseOperations:
                               """)
     
     def get_entrant_odds_by_platform(self,entrant_id,platform_name):
-        return self.pushQuery(f"""
+        data = self.pushQuery(f"""
             SELECT odds, record_time FROM odds WHERE entrant_id={entrant_id} AND platform_name='{platform_name}'
             ORDER BY record_time DESC; 
                               """)
+        if len(data) == 0:
+            return None
+        return data

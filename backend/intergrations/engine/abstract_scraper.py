@@ -5,8 +5,8 @@ import dataManagement
 from abstract_task import task
 
 class scraper(task):
-    def __init__(self,attributes) -> None:
-        super().__init__(attributes)
+    def __init__(self,attributes,database) -> None:
+        super().__init__(attributes,database)
         self.operation = 'scrape'
         self.flex_dates = False
         self.next_run_procedure = None

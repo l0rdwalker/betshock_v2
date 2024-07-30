@@ -6,13 +6,11 @@ import json
 import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...')))
-from abstract_database import database
+from abstract_task import task
 
-from database.databaseOperations import databaseOperations
-
-class arbie_reviseDates(database):
-    def __init__(self, attributes) -> None:
-        super().__init__(attributes)
+class arbie_reviseDates(task):
+    def __init__(self, attributes, database) -> None:
+        super().__init__(attributes,database)
         self.operation = 'revise_dates'
         
     def get_next_run(self):

@@ -11,12 +11,8 @@ import threading
 from multiTask_common import multitask_common
 
 class multitask(multitask_common):
-    def __init__(self,functions:list,postTasks=[]) -> None:
-        super().__init__(functions,postTasks)
-        
-    def triggerDriver(self,driver,params,updater):
+    def triggerDriver(self,driver,params):
         data = driver.init(params)
-        updater()
         return data
     
     def trigger_post_scrape(self,postTask,data):

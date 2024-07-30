@@ -5,19 +5,25 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from abstract_platform import platformManager
 from alive_progress import alive_bar
+from abstract_task import task
 from datetime import datetime,timedelta,timezone
 import json
 import threading
 
-class multitask_common(platformManager):
-    def __init__(self,functions:list,postTasks=[]) -> None:
-        self.functions = functions
-        self.postTasks = postTasks
+class multitask_common(task):
+    def __init__(self) -> None:
+        self.functions = []
+        self.postTasks = []
         
-        self.threads = []
         self.operation = 'multiTask'
         self.name = 'Arbie'
         self.next_run = datetime.now(timezone.utc)
+        
+    def add_function(self,function:task,function_parameter=None):
+        self.functions.append([function,function_parameter])
+        
+    def add_post_task(self,post_task):
+        self.postTasks.append(post_task)
     
     @abstractmethod
     def triggerDriver(self,driver,params,updater):
@@ -37,8 +43,12 @@ class multitask_common(platformManager):
         pass
     
     def init(self,data=None):
-        with alive_bar(len(self.functions)) as bar:
-            data = self.runTaks(updater=bar)
+        data = None
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.functions)) as executor:
+            tasks = []
+            for task_idx in range(0,len(self.functions)):
+                tasks.append((self.functions[task_idx][0]['driver'],self.functions[task_idx][1]))
+            data = list(executor.map(lambda args: self.triggerDriver(*args),tasks))
                 
         for postTask in self.postTasks:
             return_data = self.trigger_post_scrape(postTask,data)
@@ -46,16 +56,7 @@ class multitask_common(platformManager):
                 data = return_data
         
         self.configure_next_run(data)
-        
         return data
-
-    def runTaks(self,updater):
-        with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.functions)) as executor:
-            tasks = []
-            for task_idx in range(0,len(self.functions)):
-                tasks.append((self.functions[task_idx][0]['driver'],self.functions[task_idx][1],updater))
-            results = list(executor.map(lambda args: self.triggerDriver(*args),tasks))
-        return results
     
     def getFunctions(self):
         return self.functions

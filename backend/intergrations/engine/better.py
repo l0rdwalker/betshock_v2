@@ -10,17 +10,21 @@ import threading
 from arbie.sports.database.databaseOperations import databaseOperations
 from multiTask_common import multitask_common
 
+from arb_manager import arb_manager
+
 class better(multitask_common):
-    def __init__(self,functions:list,postTasks=[]) -> None:
+    def __init__(self,functions:list,postTasks=[],race_id=None) -> None:
         super().__init__(functions,postTasks)
         self.all_functions = functions
         
-        self.database = databaseOperations()
-        self.race_id = None
-        self.api_links = {}
+        if race_id == None:
+            self.best_selections = self.set_race_watch()
+            self.race_id = self.best_selections['race_id']
+        else:
+            self.race_id = race_id
         
-        self.best_selections = self.set_race_watch()
-        self.race_id = self.best_selections['race_id']
+        self.database = databaseOperations()
+        self.api_links = {}
     
     def collect_api_links(self):
         self.database.initConnection()
@@ -28,36 +32,6 @@ class better(multitask_common):
         for entry in race_api_details:
             self.api_links[entry[1]] = json.loads(entry[0])
         self.database.closeConnection()
-    
-    def calculate_best_arb(self,race_id):
-        opened_new_connection = False
-        if self.database.connection_open == False:
-            self.database.initConnection()
-            opened_new_connection = True
-        
-        i_p = 0
-        entrant_selections = []
-        entrants = self.database.get_race_entrant_ids(race_id)
-        for entrant in entrants:
-            if self.database.is_imposed(entrant[0]):
-                continue
-            best_odds = 0
-            best_platform = None
-            platform_offerings = self.database.get_entrant_platform_offerings(entrant[0])
-            for platform in platform_offerings:
-                prices = self.database.get_entrant_odds_by_platform(entrant[0],platform[0])
-                if (best_platform == None or prices[0][0] > best_odds) and not prices[0][0] == 0:
-                    best_platform = platform[0]
-                    best_odds = prices[0][0]
-            if not best_platform == None:
-                entrant_selections.append({'platform':best_platform,'entrant_id':entrant[0],'horse_name':entrant[1],'odds':best_odds,'i_p':1/best_odds})
-                i_p += 1/best_odds
-            else:
-                i_p += 1
-            
-        if opened_new_connection:
-            self.database.closeConnection()
-        return {'race_id':race_id,'entrants':entrant_selections,'i_p':i_p}
     
     def activate_platform_watch(self):
         temp_functions = []
@@ -79,7 +53,8 @@ class better(multitask_common):
         possible_races = []
         for race in races:
             best_race_selections = self.calculate_best_arb(race[0])
-            possible_races.append(best_race_selections)
+            if not best_race_selections == None:
+                possible_races.append(best_race_selections)
         possible_races = sorted(possible_races, key=lambda x: x['i_p'])
         
         self.database.closeConnection()
@@ -88,9 +63,8 @@ class better(multitask_common):
     def trigger_post_scrape(self,postTask,data):
         postTask['driver'].init(data,self.race_id)
         
-    def triggerDriver(self,driver,params,updater):
+    def triggerDriver(self,driver,params):
         data = driver.get_race_by_id(params)
-        updater()
         return data
     
     def configure_next_run(self, data):

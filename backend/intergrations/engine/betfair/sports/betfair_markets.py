@@ -8,9 +8,6 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class betfair_markets(scraper):
-    def __init__(self, attributes) -> None:
-        super().__init__(attributes)
-
     def get_race_markets(self,market_id):
         headers = {
             'accept': 'application/json, text/plain, */*',

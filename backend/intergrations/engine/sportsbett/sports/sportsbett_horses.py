@@ -8,8 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class sportsbett_horses(scraper):
-    def __init__(self,attributes) -> None:
-        super().__init__(attributes)
+    def __init__(self,attributes,database) -> None:
+        super().__init__(attributes,database)
         self.marketTypes = ['Win or Place']
         self.flex_dates = True
 
@@ -73,7 +73,7 @@ class sportsbett_horses(scraper):
         for hourse in self.conditionalDrillDown(markets,'name',self.marketTypes)['selections']: 
             HOURSENAME = hourse['name']
             prices = self.conditionalDrillDown(hourse['prices'],'priceCode','L')
-            if ('placePrice' in prices):#winPrice placePrice
+            if ('winPrice' in prices):#winPrice placePrice
                 WIN_ODDS = self.conditionalDrillDown(hourse['prices'],'priceCode','L')['winPrice']
                 horses.append({'name':HOURSENAME,'odds':WIN_ODDS,'scratched':hourse['result'] == 'V', 'record_time':record_time.isoformat()})
         return horses

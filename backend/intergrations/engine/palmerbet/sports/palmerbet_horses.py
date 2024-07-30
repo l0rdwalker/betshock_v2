@@ -8,8 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class palmerbet_horses(scraper):
-    def __init__(self, attributes) -> None:
-        super().__init__(attributes)
+    def __init__(self,attributes,database) -> None:
+        super().__init__(attributes,database)
         self.flex_dates = True
     
     def cacheData(self,data):

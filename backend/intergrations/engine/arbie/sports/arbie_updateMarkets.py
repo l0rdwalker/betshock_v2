@@ -6,15 +6,12 @@ import json
 import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...')))
-from abstract_database import database
+from abstract_task import task
 
-from database.databaseOperations import databaseOperations
-
-class arbie_updateMarkets(database):
-    def __init__(self, attributes) -> None:
-        super().__init__(attributes)
+class arbie_updateMarkets(task):
+    def __init__(self, attributes, database_obj) -> None:
+        super().__init__(attributes, database_obj)
         self.operation = 'arbie_updateMarkets'
-        self.database = databaseOperations()
         
     def get_next_run(self):
         return datetime.now()
@@ -26,7 +23,6 @@ class arbie_updateMarkets(database):
             return None
         update_data = update_data[0]
         
-        self.database.initConnection()
         for race in update_data['data']:
             entrant_names = []
             for entrant in race['entrants']:
@@ -42,7 +38,6 @@ class arbie_updateMarkets(database):
                     entrant_id = self.database.deduce_entrant_id(race_id,horse_id)
                     if not entrant_id == None:
                         self.database.impose_market_condition(entrant_id,entrant['market_size'])
-        self.database.closeConnection()
         
         
         

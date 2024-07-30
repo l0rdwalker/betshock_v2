@@ -5,47 +5,65 @@ from datetime import datetime, timedelta, timezone
 from priorityQueue import queue
 from engine.multiTask import multitask
 from engine.better import better
+from threading import Thread, Lock
+from engine.arbie.sports.database.databaseOperations import databaseOperations
+
 
 class taskSchedular:
-    def __init__(self) -> None:
+    def __init__(self,max_threads=3) -> None:
         self.file = os.path.dirname(os.path.abspath(__file__))
-
-        self.tasks = [] #queue()
+        
+        self.max_threads = max_threads
+        self.lock = Lock()
+        self.tasks = []
         self.functions = []
         self.threads = []
         self.currentDatetime = datetime.now()
+        self.database = databaseOperations()
 
         self.log('Initalizeing task schedular')
         sportObjectsDir = os.path.join(self.file,'engine')
         for platform in [entry for entry in os.listdir(sportObjectsDir) if os.path.isdir(os.path.join(sportObjectsDir,entry))]:
             try:
-               platformDriver = dm.getModuleByPath(os.path.join(sportObjectsDir,platform),platform)
-               for function in platformDriver.getFunctions():
-                   self.functions.append(function)
-               self.log(f'Successfully imported {platform} dependencys')
+                platformDriver = dm.getModuleByPath(os.path.join(sportObjectsDir,platform),platform,self.database)
+                for function in platformDriver.getFunctions():
+                    self.functions.append(function)
+                self.log(f'Successfully imported {platform} dependencys')
             except Exception as e:
                 self.log(e)
                 
-    def addFunction(self,function):
-        self.tasks.append((datetime.now().astimezone(timezone.utc),function))
+    def enqueue(self,function,run_time=datetime.now().astimezone(timezone.utc)):
+        self.tasks.append((run_time,function.returnFunctionConfig()))
 
     def step(self) -> None:
+        self.threads = []
+        for _ in range(self.max_threads):
+            thread = Thread(target=self.allocate_tasks,args=())
+            thread.start()
+            self.threads.append(thread)
+        for thread in self.threads:
+            thread.join()
+                
+    def allocate_tasks(self):
         self.currentDatetime = datetime.now().astimezone(timezone.utc)
-        self.tasks = sorted(self.tasks, key=lambda x: x[0])
+        with self.lock:
+            self.tasks = sorted(self.tasks, key=lambda x: x[0])
         if self.tasks[0] != None:
             if self.tasks[0][0] < self.currentDatetime:
-                priority,currentTask = self.tasks.pop(0)
+                with self.lock:
+                    priority,currentTask = self.tasks.pop(0)
                 mextRun = self.performTask(currentTask)
-                self.tasks.append((mextRun,currentTask))
+                with self.lock:
+                    self.tasks.append((mextRun,currentTask))
             
     def performTask(self,currentTask):
-        #try:
-        self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
-        data = currentTask['driver'].init(currentTask['data'])
-        self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
-        #except Exception as e:
-        #    self.log(e,error=True)
-        #    self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
+        try:
+            self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
+            data = currentTask['driver'].init(currentTask['data'])
+            self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
+        except Exception as e:
+            self.log(e,error=True)
+            self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
         return currentTask['driver'].get_next_run()
 
     def contains_key(self,key_value,search_data):
@@ -100,71 +118,75 @@ class taskSchedular:
 
         print(f'{colorCode}{message}{blackCode}\n',end=" ")
 
-flex_dates = {
-    'sport':'horses',
-    'flex_dates' : True
-}
-non_flex_dates = {
-    'sport':'horses',
-    'flex_dates' : False
-}
-
-getArbUpdater = {
-    'type':'arbUpdate'
-}
-get_date_reviser = {
-    'type':'revise_dates'
-}
-getMarket_updater = {
-    'type':'arbie_updateMarkets'
-}
-
-get_market_updater = {
-    'platform' : 'betfair'
-}
-
-get_focus_updater = {
-    'type':'arbUpdateFocus'
-}
-
-test = taskSchedular()
-
-on_day_functions:list = []
-on_day_param = timedelta(days=0)
-
-nxt_day_functions:list = []
-nxt_day_param = timedelta(days=1)
-
-flex_functions:list = test.searchFunctions(flex_dates)
-non_flex_functions:list = test.searchFunctions(non_flex_dates)
-for function in flex_functions:
-    on_day_functions.append((function,on_day_param))
-    nxt_day_functions.append((function,nxt_day_param))
-for function in non_flex_functions:
-    on_day_functions.append((function,on_day_param))
-
-postScrapeTasks = []
-postScrapeTasks.extend(test.searchFunctions(get_date_reviser))
-postScrapeTasks.extend(test.searchFunctions(getArbUpdater))
-
-
-my_better = better(on_day_functions,test.searchFunctions(get_focus_updater))
-test.addFunction(my_better.returnFunctionConfig())
-
-market_update_arbie = test.searchFunctions(getMarket_updater)
-market_update_scrape = [(test.searchFunctions(get_market_updater)[0],on_day_param)]
-market_update_multitask = multitask(market_update_scrape,market_update_arbie)
-test.addFunction(market_update_multitask.returnFunctionConfig())
-
-horces_on_day = multitask(on_day_functions,postScrapeTasks)
-horces_on_day = horces_on_day.returnFunctionConfig()
-test.addFunction(horces_on_day)
-
-horces_nxt_day = multitask(nxt_day_functions,postScrapeTasks)
-horces_nxt_day = horces_nxt_day.returnFunctionConfig()
-test.addFunction(horces_nxt_day)
-
-now_time = datetime.now() + timedelta(hours=6)
-
-while True:
-    test.step()
+#flex_dates = {
+#    'sport':'horses',
+#    'flex_dates' : True
+#}
+#non_flex_dates = {
+#    'sport':'horses',
+#    'flex_dates' : False
+#}
+#
+#getArbUpdater = {
+#    'type':'arbUpdate'
+#}
+#get_date_reviser = {
+#    'type':'revise_dates'
+#}
+#getMarket_updater = {
+#    'type':'arbie_updateMarkets'
+#}
+#
+#get_market_updater = {
+#    'platform' : 'betfair'
+#}
+#
+#get_focus_updater = {
+#    'type':'arbUpdateFocus'
+#}
+#
+#test = taskSchedular()
+#
+#on_day_functions:list = []
+#on_day_param = timedelta(days=0)
+#
+#nxt_day_functions:list = []
+#nxt_day_param = timedelta(days=1)
+#
+#flex_functions:list = test.searchFunctions(flex_dates)
+#non_flex_functions:list = test.searchFunctions(non_flex_dates)
+#for function in flex_functions:
+#    on_day_functions.append((function,on_day_param))
+#    nxt_day_functions.append((function,nxt_day_param))
+#for function in non_flex_functions:
+#    on_day_functions.append((function,on_day_param))
+#
+##postScrapeTasks = []
+##postScrapeTasks.extend(test.searchFunctions(get_date_reviser))
+##postScrapeTasks.extend(test.searchFunctions(getArbUpdater))
+##
+##market_update_arbie = test.searchFunctions(getMarket_updater)
+##market_update_scrape = [(test.searchFunctions(get_market_updater)[0],on_day_param)]
+##market_update_multitask = multitask(market_update_scrape,market_update_arbie)
+##test.addFunction(market_update_multitask.returnFunctionConfig())
+#
+##horces_on_day = multitask(on_day_functions,postScrapeTasks)
+##horces_on_day = horces_on_day.returnFunctionConfig()
+##test.addFunction(horces_on_day)
+#
+#better_1 = better(on_day_functions,test.searchFunctions(get_focus_updater),race_id=1714)
+#better_2 = better(on_day_functions,test.searchFunctions(get_focus_updater),race_id=1714)
+#better_3 = better(on_day_functions,test.searchFunctions(get_focus_updater),race_id=1715)
+#
+#
+#betters = multitask([[better_1.returnFunctionConfig(),None],[better_2.returnFunctionConfig(),None],[better_3.returnFunctionConfig(),None]],[])
+#betters.init(None)
+#
+##horces_nxt_day = multitask(nxt_day_functions,postScrapeTasks)
+##horces_nxt_day = horces_nxt_day.returnFunctionConfig()
+##test.addFunction(horces_nxt_day)
+#
+#now_time = datetime.now() + timedelta(hours=6)
+#
+#while True:
+#    test.step()

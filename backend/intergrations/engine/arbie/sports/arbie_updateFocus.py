@@ -6,21 +6,18 @@ import json
 import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...')))
-from abstract_database import database
 
-from database.databaseOperations import databaseOperations
+from abstract_task import task
 
-class arbie_updateFocus(database):
-    def __init__(self, attributes) -> None:
-        super().__init__(attributes)
+class arbie_updateFocus(task):
+    def __init__(self, attributes,database) -> None:
+        super().__init__(attributes,database)
         self.operation = 'arbUpdateFocus'
-        self.database = databaseOperations()
         
     def get_next_run(self):
         return datetime.now()
         
     def init(self, update_data=None, race_id=0) -> None:
-        self.database.initConnection()
         for platform in update_data:
             platform_name = platform['platform']
             for entrant in platform['data']:
@@ -28,4 +25,3 @@ class arbie_updateFocus(database):
                 entrant_id = self.database.get_specific_entrant_id_by_name_and_race(race_id,horse_name) 
                 if not entrant_id == None:
                     self.database.impose_odds(entrant_id,platform_name,entrant['odds'],entrant['record_time'])
-        self.database.closeConnection()
