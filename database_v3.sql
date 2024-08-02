@@ -93,4 +93,11 @@ CREATE TABLE race_platform_links(
     FOREIGN KEY (race_id) REFERENCES race(race_id),
     FOREIGN KEY (platform_name) REFERENCES platforms(platform_name),
     PRIMARY KEY (race_id,platform_name)
-)
+);
+
+CREATE TABLE betters (
+    better_name varchar(50) PRIMARY KEY,
+    cur_race int,
+    better_id SERIAL,
+    FOREIGN KEY (cur_race) REFERENCES race(race_id)
+);

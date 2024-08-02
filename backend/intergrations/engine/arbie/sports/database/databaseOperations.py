@@ -304,3 +304,16 @@ class databaseOperations:
         if len(data) == 0:
             return None
         return data
+    
+    def create_new_better(self,better_name):
+        self.pushQuery(f"""
+        INSERT INTO public.betters(
+	        better_name, cur_race, better_id)
+	    VALUES ('{better_name}', NULL);               
+        """)
+        
+    def get_better_configs(self):
+        data = self.pushQuery(f"""
+            SELECT * FROM betters;
+                              """)
+        return data

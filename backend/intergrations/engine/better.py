@@ -13,25 +13,23 @@ from multiTask_common import multitask_common
 from arb_manager import arb_manager
 
 class better(multitask_common):
-    def __init__(self,functions:list,postTasks=[],race_id=None) -> None:
-        super().__init__(functions,postTasks)
-        self.all_functions = functions
+    def __init__(self,attributes,database,identifyer) -> None:
+        super().__init__(attributes,database)
+        self.identidyer = identifyer
+        #if race_id == None:
+        #    self.best_selections = self.set_race_watch()
+        #    self.race_id = self.best_selections['race_id']
+        #else:
+        #    self.race_id = race_id
+        #self.api_links = {}
         
-        if race_id == None:
-            self.best_selections = self.set_race_watch()
-            self.race_id = self.best_selections['race_id']
-        else:
-            self.race_id = race_id
-        
-        self.database = databaseOperations()
-        self.api_links = {}
+    def derive_identity(self):
+        pass
     
     def collect_api_links(self):
-        self.database.initConnection()
         race_api_details = self.database.get_platform_api_links(self.race_id)
         for entry in race_api_details:
             self.api_links[entry[1]] = json.loads(entry[0])
-        self.database.closeConnection()
     
     def activate_platform_watch(self):
         temp_functions = []
@@ -47,8 +45,6 @@ class better(multitask_common):
         data = super().init(data)
             
     def set_race_watch(self):
-        self.database.initConnection()
-        
         races = self.database.get_future_races()
         possible_races = []
         for race in races:
@@ -56,8 +52,6 @@ class better(multitask_common):
             if not best_race_selections == None:
                 possible_races.append(best_race_selections)
         possible_races = sorted(possible_races, key=lambda x: x['i_p'])
-        
-        self.database.closeConnection()
         return possible_races[0]
         
     def trigger_post_scrape(self,postTask,data):

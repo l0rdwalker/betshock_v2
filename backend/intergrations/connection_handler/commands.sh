@@ -1,0 +1,2 @@
+echo "hello"
+docker run -d --device=/dev/net/tun --cap-add=NET_ADMIN --dns=1.1.1.1 --dns=1.0.0.1 -e "OPENVPN_FILENAME=au-bne.prod.surfshark.comsurfshark_openvpn_tcp.ovpn" -e "LOCAL_NETWORK=192.168.1.0/24" -e "ONLINECHECK_DELAY=900" -v ./openvpn-config:/app/ovpn/config -p 8081:8081 andymeful/privoxy-openvpn

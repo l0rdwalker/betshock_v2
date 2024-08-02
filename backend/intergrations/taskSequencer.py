@@ -20,6 +20,7 @@ class taskSchedular:
         self.threads = []
         self.currentDatetime = datetime.now()
         self.database = databaseOperations()
+        self.database.initConnection()
 
         self.log('Initalizeing task schedular')
         sportObjectsDir = os.path.join(self.file,'engine')
@@ -34,6 +35,9 @@ class taskSchedular:
                 
     def enqueue(self,function,run_time=datetime.now().astimezone(timezone.utc)):
         self.tasks.append((run_time,function.returnFunctionConfig()))
+        
+    def get_database_obj(self):
+        return self.database
 
     def step(self) -> None:
         self.threads = []
@@ -117,76 +121,3 @@ class taskSchedular:
         dm.writeFile(self.dayLog,message)
 
         print(f'{colorCode}{message}{blackCode}\n',end=" ")
-
-#flex_dates = {
-#    'sport':'horses',
-#    'flex_dates' : True
-#}
-#non_flex_dates = {
-#    'sport':'horses',
-#    'flex_dates' : False
-#}
-#
-#getArbUpdater = {
-#    'type':'arbUpdate'
-#}
-#get_date_reviser = {
-#    'type':'revise_dates'
-#}
-#getMarket_updater = {
-#    'type':'arbie_updateMarkets'
-#}
-#
-#get_market_updater = {
-#    'platform' : 'betfair'
-#}
-#
-#get_focus_updater = {
-#    'type':'arbUpdateFocus'
-#}
-#
-#test = taskSchedular()
-#
-#on_day_functions:list = []
-#on_day_param = timedelta(days=0)
-#
-#nxt_day_functions:list = []
-#nxt_day_param = timedelta(days=1)
-#
-#flex_functions:list = test.searchFunctions(flex_dates)
-#non_flex_functions:list = test.searchFunctions(non_flex_dates)
-#for function in flex_functions:
-#    on_day_functions.append((function,on_day_param))
-#    nxt_day_functions.append((function,nxt_day_param))
-#for function in non_flex_functions:
-#    on_day_functions.append((function,on_day_param))
-#
-##postScrapeTasks = []
-##postScrapeTasks.extend(test.searchFunctions(get_date_reviser))
-##postScrapeTasks.extend(test.searchFunctions(getArbUpdater))
-##
-##market_update_arbie = test.searchFunctions(getMarket_updater)
-##market_update_scrape = [(test.searchFunctions(get_market_updater)[0],on_day_param)]
-##market_update_multitask = multitask(market_update_scrape,market_update_arbie)
-##test.addFunction(market_update_multitask.returnFunctionConfig())
-#
-##horces_on_day = multitask(on_day_functions,postScrapeTasks)
-##horces_on_day = horces_on_day.returnFunctionConfig()
-##test.addFunction(horces_on_day)
-#
-#better_1 = better(on_day_functions,test.searchFunctions(get_focus_updater),race_id=1714)
-#better_2 = better(on_day_functions,test.searchFunctions(get_focus_updater),race_id=1714)
-#better_3 = better(on_day_functions,test.searchFunctions(get_focus_updater),race_id=1715)
-#
-#
-#betters = multitask([[better_1.returnFunctionConfig(),None],[better_2.returnFunctionConfig(),None],[better_3.returnFunctionConfig(),None]],[])
-#betters.init(None)
-#
-##horces_nxt_day = multitask(nxt_day_functions,postScrapeTasks)
-##horces_nxt_day = horces_nxt_day.returnFunctionConfig()
-##test.addFunction(horces_nxt_day)
-#
-#now_time = datetime.now() + timedelta(hours=6)
-#
-#while True:
-#    test.step()

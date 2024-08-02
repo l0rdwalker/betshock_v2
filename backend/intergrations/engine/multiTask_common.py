@@ -7,11 +7,10 @@ from abstract_platform import platformManager
 from alive_progress import alive_bar
 from abstract_task import task
 from datetime import datetime,timedelta,timezone
-import json
-import threading
 
 class multitask_common(task):
-    def __init__(self) -> None:
+    def __init__(self,attributes,database) -> None:
+        super().__init__(attributes,database)
         self.functions = []
         self.postTasks = []
         

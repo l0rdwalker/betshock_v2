@@ -20,7 +20,6 @@ class arbie_updateArbs(task):
     def init(self, update_data=None) -> None:
         date_race_store = {}
         scratched_horses = {}
-        self.database.initConnection()
         
         for platform in update_data:
             if (platform['platform'] == 'diamondbet'):
@@ -57,8 +56,6 @@ class arbie_updateArbs(task):
         
         self.correct_race_start_time(date_race_store)
         self.correct_scratched(scratched_horses)
-        
-        self.database.closeConnection()
         
     def correct_scratched(self,scratched_horses):
         for entrant_id,value in scratched_horses.items():

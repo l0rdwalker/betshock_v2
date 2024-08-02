@@ -1,0 +1,6 @@
+confdir /app/privoxy
+
+listen-address  0.0.0.0:${LISTEN_PORT}
+
+debug   1    
+debug   4096 

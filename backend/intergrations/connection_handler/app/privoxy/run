@@ -1,0 +1,10 @@
+#!/bin/sh
+sleep 10
+
+gw=$(ip route | awk '/default/ {print $3}')
+
+ip route add ${LOCAL_NETWORK} via $gw dev eth0
+
+envsubst < /app/privoxy/config > /app/privoxy/config2
+
+privoxy /app/privoxy/config2
