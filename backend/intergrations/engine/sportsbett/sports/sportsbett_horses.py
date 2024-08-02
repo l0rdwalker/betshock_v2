@@ -28,15 +28,18 @@ class sportsbett_horses(scraper):
         return responce
 
     def conditionalDrillDown(self,array,key,searchValue):
-        def compareItems(subject,searchTerms):
-            if isinstance(searchTerms, list):
-                return subject in searchTerms
-            else:
-                return searchTerms == subject
-        for item in array:
-            testElement = item[key]
-            if compareItems(testElement,searchValue):
-                return item
+        try:
+            def compareItems(subject,searchTerms):
+                if isinstance(searchTerms, list):
+                    return subject in searchTerms
+                else:
+                    return searchTerms == subject
+            for item in array:
+                testElement = item[key]
+                if compareItems(testElement,searchValue):
+                    return item
+        except Exception as e:
+            return None
             
     def convertTime(self,timeTxt):
         startTime = datetime.fromtimestamp(timeTxt,tz=timezone.utc)
@@ -51,33 +54,51 @@ class sportsbett_horses(scraper):
         
         todaysDate = (set_date).strftime("%Y-%m-%d")
         races = []
-        try:
-            data = self.getter(f"https://gwapi.sportsbet.com.au/sportsbook-racing/Sportsbook/Racing/AllRacing/{todaysDate}")['dates'][0]['sections']
-            meetings = self.conditionalDrillDown(data,'raceType','horse')['meetings']
-            for meeting in meetings:
-                if meeting['regionName'] == 'Australia':
-                    for event in meeting['events']:
-                        try:
-                            race_identidyer = {'race_id':event['httpLink']}
-                            
-                            teams = self.get_entrants(race_identidyer)
-                            if (len(teams) > 0):
-                                startTime = self.convertTime(event['startTime'])
-                                races.append({'name': meeting['name'], 'round': event['raceNumber'],'start_time': startTime.isoformat(),'entrants':teams, 'race_id':race_identidyer})
-                        except Exception as e:
-                            self.local_print(e)
-        except Exception as e:
-            self.local_print(e)
+        #try:
+        data = self.getter(f"https://gwapi.sportsbet.com.au/sportsbook-racing/Sportsbook/Racing/AllRacing/{todaysDate}")
+        if data == None:
+            return races
+        data = data['dates'][0]['sections']
+        meetings = self.conditionalDrillDown(data,'raceType','horse')['meetings']
+        for meeting in meetings:
+            if meeting['regionName'] == 'Australia':
+                for event in meeting['events']:
+                    #try:
+                    race_identidyer = {'race_id':event['httpLink']}
+                    
+                    teams = self.get_entrants(race_identidyer)
+                    if teams == None:
+                        continue
+                    
+                    if (len(teams) > 0):
+                        startTime = self.convertTime(event['startTime'])
+                        races.append({'name': meeting['name'], 'round': event['raceNumber'],'start_time': startTime.isoformat(),'entrants':teams, 'race_id':race_identidyer})
+                    #except Exception as e:
+                    #    self.local_print(e)
+        #except Exception as e:
+        #    self.local_print(e)
         return races
 
     def get_entrants(self,race_identidyer):
         horses = []
-        markets = self.getter(f'https://gwapi.sportsbet.com.au/sportsbook-racing/{race_identidyer["race_id"]}')['markets']
+        markets = self.getter(f'https://gwapi.sportsbet.com.au/sportsbook-racing/{race_identidyer["race_id"]}')
+        if markets == None:
+            return horses
+        
+        markets = markets['markets']
         record_time = datetime.now()
-        for hourse in self.conditionalDrillDown(markets,'name',self.marketTypes)['selections']: 
+        
+        try:
+            entrants = self.conditionalDrillDown(markets,'name',self.marketTypes)['selections']
+        except:
+            return None
+        
+        for hourse in entrants: 
             HOURSENAME = hourse['name']
             prices = self.conditionalDrillDown(hourse['prices'],'priceCode','L')
-            if ('winPrice' in prices):#winPrice placePrice
+            if prices == None:
+                return None
+            if ('winPrice' in prices):
                 WIN_ODDS = self.conditionalDrillDown(hourse['prices'],'priceCode','L')['winPrice']
                 horses.append({'name':HOURSENAME,'odds':WIN_ODDS,'scratched':hourse['result'] == 'V', 'record_time':record_time.isoformat()})
         return horses

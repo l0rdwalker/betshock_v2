@@ -137,23 +137,25 @@ class palmerbet_horses(scraper):
                 if (meeting["country"] == 'AU'):
                     venueName = meeting['venue']['title']
                     for race in meeting['races']:
-                        try:
-                            race_identifyer = {'race_id':race['_links'][0]['href']}
-                            
-                            horces = self.get_entrants(race_identifyer)
-                            startTime = self.convertTime(race['startTime'])
-                            
-                            tempData = {'round':race['number'], 'name': venueName, 'start_time': startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer}
-
-                            races.append(tempData)
-                        except Exception as e:
-                            self.local_print(e)
-                            continue
+                        #try:
+                        race_identifyer = {'race_id':race['_links'][0]['href']}
+                        
+                        horces = self.get_entrants(race_identifyer)
+                        startTime = self.convertTime(race['startTime'])
+                        
+                        tempData = {'round':race['number'], 'name': venueName, 'start_time': startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer}
+                        races.append(tempData)
+                        #except Exception as e:
+                        #    self.local_print(e)
+                        #    continue
         return races
 
     def get_entrants(self,race_identifyer):
         horces = []
         prelim_data = self.get_prelim_race_card(race_identifyer['race_id'])
+        if prelim_data == None:
+            return horces
+        
         record_time = datetime.now()
         win_price_id = None
 
@@ -162,7 +164,10 @@ class palmerbet_horses(scraper):
                 win_price_id = item['id']
                 break
         if win_price_id != None:
-            entrants = self.get_race_card(win_price_id)['market']['outcomes']
+            entrants = self.get_race_card(win_price_id)
+            if entrants == None:
+                return horces
+            entrants = entrants['market']['outcomes']
             for entrant in entrants:
                 NAME = entrant['title']
                 ODDS = -1

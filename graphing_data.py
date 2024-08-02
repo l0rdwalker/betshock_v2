@@ -95,7 +95,7 @@ def get_recent_known_market(database,entrant_id,curr_time:datetime):
     """
     return database.pushQuery(query)
 
-race_id = 1714
+race_id = 1825
 
 while True:
     plt.clf()  # Clear the current figure

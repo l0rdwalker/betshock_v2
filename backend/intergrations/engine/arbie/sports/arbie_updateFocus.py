@@ -17,7 +17,7 @@ class arbie_updateFocus(task):
     def get_next_run(self):
         return datetime.now()
         
-    def init(self, update_data=None, race_id=0) -> None:
+    def init(self, update_data=None) -> None:
         for platform in update_data:
             platform_name = platform['platform']
             for entrant in platform['data']:

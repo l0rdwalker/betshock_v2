@@ -317,3 +317,12 @@ class databaseOperations:
             SELECT * FROM betters;
                               """)
         return data
+    
+    def get_my_better_config(self,better_id:int):
+        data = self.pushQuery(f"""
+            SELECT * FROM betters WHERE better_id = {better_id}     
+                              """)
+        if len(data) == 0:
+            return None
+        return data[0]
+        

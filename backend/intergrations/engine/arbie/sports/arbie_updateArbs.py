@@ -22,9 +22,9 @@ class arbie_updateArbs(task):
         scratched_horses = {}
         
         for platform in update_data:
-            if (platform['platform'] == 'diamondbet'):
-                continue
             platform_id = self.database.impose_platform(platform['platform'])
+            if platform['data'] == None:
+                continue
             for race in platform['data']:
                 track_id = self.database.impose_track(race['name'])
                 race_id = self.database.impose_race(track_id,race['start_time'],race['round'])

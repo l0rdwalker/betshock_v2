@@ -110,38 +110,41 @@ class boombet_horses(scraper):
         
         raceData = []
         for location in todaysData['raceMeetings']:
-            try:
-                if location['raceType'] == 4 and location['state'] in AustralianStates:
-                    LOC = location['meetingName']
-                    races = self.getRaces(dayCode,LOC)
-                    for race in races['races']:
-                        try:
-                            raceNumber = race['raceNumber']
-                            
-                            race_identidyer = {'race_id':race['eventId']}
-                            
-                            horces = self.get_entrants(race_identidyer)
-                            startTime = self.convertTime(race['jumpTime'][:-6])
-                            raceData.append({'round':raceNumber, 'name': LOC, 'start_time':startTime.isoformat(),'entrants':horces, 'race_id':race_identidyer})
-                        except Exception as e:
-                            self.local_print(e)
-            except Exception as e:
-                self.local_print(e)
+            #try:
+            if location['raceType'] == 4 and location['state'] in AustralianStates:
+                LOC = location['meetingName']
+                races = self.getRaces(dayCode,LOC)
+                for race in races['races']:
+                    #try:
+                    raceNumber = race['raceNumber']
+                    
+                    race_identidyer = {'race_id':race['eventId']}
+                    
+                    horces = self.get_entrants(race_identidyer)
+                    startTime = self.convertTime(race['jumpTime'][:-6])
+                    raceData.append({'round':raceNumber, 'name': LOC, 'start_time':startTime.isoformat(),'entrants':horces, 'race_id':race_identidyer})
+                    #except Exception as e:
+                    #    self.local_print(e)
+            #except Exception as e:
+            #    self.local_print(e)
         return raceData
 
     def get_entrants(self,race_identidyer):
         horces = []
         raceCard = self.getRaceCard(race_identidyer['race_id'])
+        if raceCard == None:
+            return None
+        
         record_time = datetime.now()
         for horce in raceCard['runners']:
-            try:
-                NAME = horce['name']
-                ODDS = -1
-                for odd in horce['odds']:
-                    if odd['product']['betType'] == 'Win':
-                        ODDS = odd['value']
-                        break
-                horces.append({'name':NAME,'odds':ODDS,'scratched':horce['isEliminated'] == False,'record_time':record_time.isoformat()})
-            except Exception as e:
-                self.local_print(e)
+            #try:
+            NAME = horce['name']
+            ODDS = -1
+            for odd in horce['odds']:
+                if odd['product']['betType'] == 'Win':
+                    ODDS = odd['value']
+                    break
+            horces.append({'name':NAME,'odds':ODDS,'scratched':horce['isEliminated'] == False,'record_time':record_time.isoformat()})
+            #except Exception as e:
+            #    self.local_print(e)
         return horces

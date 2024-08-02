@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 import os
-from datetime import datetime,timedelta
+from datetime import datetime,timedelta,timezone
 import dataManagement
 from abstract_task import task
 
@@ -17,15 +17,15 @@ class scraper(task):
         }
                     
     def init(self,data):
-        try:
-            data = self.aquireOdds(data)
-            if self.next_run_procedure == None:
-                self.establish_next_run(data)
-        except Exception as e:
-            self.next_run_time = datetime.now() + timedelta(hours=1) 
-            print(f"""{self.platformName}: {e}""")
-        finally:
-            return {'data':data, 'platform': self.platformName, 'sport': self.sport}
+        #try:
+        data = self.aquireOdds(data)
+        if self.next_run_procedure == None:
+            self.establish_next_run(data)
+        #except Exception as e:
+        #    self.next_run_time = datetime.now() + timedelta(hours=1) 
+        #    print(f"""{self.platformName}: {e}""")
+        #finally:
+        return {'data':data, 'platform': self.platformName, 'sport': self.sport}
     
     def get_flex_date_status(self):
         return self.flex_dates
@@ -34,13 +34,26 @@ class scraper(task):
         return self.next_run_time
         
     def establish_next_run(self,data):
-        curr_date = datetime.now()
+        curr_date = datetime.now().astimezone(timezone.utc)
         if data == None:
             return curr_date + timedelta(hours=1) 
         
         next_race = None
         for race in data:
-            race_start_time_obj = datetime.strptime(race['start_time'], '%Y-%m-%dT%H:%M:%S')
+            ###gpt generated
+            start_time_str = race['start_time']
+            if '+' in start_time_str or 'Z' in start_time_str:
+                try:
+                    race_start_time_obj = datetime.strptime(start_time_str, '%Y-%m-%dT%H:%M:%S%z')
+                except ValueError as e:
+                    print(f"Error parsing date with timezone: {e}")
+            else:
+                try:
+                    race_start_time_obj = datetime.strptime(start_time_str, '%Y-%m-%dT%H:%M:%S')
+                except ValueError as e:
+                    print(f"Error parsing date without timezone: {e}")
+            ###
+            race_start_time_obj:datetime = race_start_time_obj.astimezone(timezone.utc)
             if next_race == None:
                 next_race = race_start_time_obj
                 continue
@@ -62,8 +75,9 @@ class scraper(task):
     
     def get_race_by_id(self,race_id):
         data = self.get_entrants(race_id)
-        if len(data) == 2:
-            data = data[0]
+        if not data == None:
+            if len(data) == 2:
+                data = data[0]
         return {'data':data, 'platform': self.platformName, 'sport': self.sport}
     
     

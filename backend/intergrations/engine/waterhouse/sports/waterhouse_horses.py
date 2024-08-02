@@ -96,38 +96,31 @@ class waterhouse_horses(scraper):
         race_profile = []
         meets = self.get_race_meets(curr_time)['data']
         for meet in meets:
-            try:
-                if not meet['country'] == 'AU':
-                    continue
-                
-                LOC:str = meet['name']
-                LOC = LOC.split(" ")
-                NEW_LOC = []
-                for txt in LOC:
-                    txt = list(txt.lower())
-                    txt[0] = txt[0].upper()
-                    txt = ''.join(txt)
-                    NEW_LOC.append(txt)
-                LOC = ' '.join(NEW_LOC)    
-                    
-                for race in meet['races']:
-                    try:
-                        if not 'gallops' in race['race_site_link']:
-                            break
-                        race_identifyer = {'race_id':race['id']}
-
-                        sydney_time = datetime.strptime(race['start_date'], '%Y-%m-%d %H:%M:%S')
-                        sydney_time = sydney_tz.localize(sydney_time)
-                        START_TIME = sydney_time.astimezone(utc_tz)
-
-                        entrants = self.collect_entrants(race_identifyer)
-
-                        race_profile.append({'round':race['number'], 'name': f'{LOC}', 'start_time': START_TIME.isoformat(),'entrants':entrants, 'race_id':race_identifyer})
-                    except Exception as e:
-                        continue
-            except Exception as e:
-                print(e)
+            #try:
+            if not meet['country'] == 'AU':
                 continue
+            
+            LOC:str = meet['name']
+            LOC = LOC.split(" ")
+            NEW_LOC = []
+            for txt in LOC:
+                txt = list(txt.lower())
+                txt[0] = txt[0].upper()
+                txt = ''.join(txt)
+                NEW_LOC.append(txt)
+            LOC = ' '.join(NEW_LOC)    
+                
+            for race in meet['races']:
+                if not 'gallops' in race['race_site_link']:
+                    break
+                race_identifyer = {'race_id':race['id']}
+                
+                sydney_time = datetime.strptime(race['start_date'], '%Y-%m-%d %H:%M:%S')
+                sydney_time = sydney_tz.localize(sydney_time)
+                START_TIME = sydney_time.astimezone(utc_tz)
+                
+                entrants = self.get_entrants(race_identifyer)
+                race_profile.append({'round':race['number'], 'name': f'{LOC}', 'start_time': START_TIME.isoformat(),'entrants':entrants, 'race_id':race_identifyer})
         return race_profile     
                 
     def get_entrants(self,race_identifyer):
@@ -135,15 +128,15 @@ class waterhouse_horses(scraper):
         record_time = datetime.now()
         entrants = []
         for entrant in race_card['data']['selections']:
-            try:
-                NAME = entrant['name']
-                ODDS = -1
-                if len(entrant['prices']) > 1:
-                    if isinstance(entrant['prices'],list):
-                        ODDS = entrant['prices'][0]['win_odds']
-                    else:
-                        ODDS = entrant['prices']['0']['win_odds']
-                entrants.append({'name':NAME,'odds':ODDS,'scratched':(not entrant['scratching_time']==None),'record_time':record_time.isoformat()})
-            except Exception as e:
-                continue
+            #try:
+            NAME = entrant['name']
+            ODDS = -1
+            if len(entrant['prices']) > 1:
+                if isinstance(entrant['prices'],list):
+                    ODDS = entrant['prices'][0]['win_odds']
+                else:
+                    ODDS = entrant['prices']['0']['win_odds']
+            entrants.append({'name':NAME,'odds':ODDS,'scratched':(not entrant['scratching_time']==None),'record_time':record_time.isoformat()})
+            #except Exception as e:
+            #    continue
         return entrants

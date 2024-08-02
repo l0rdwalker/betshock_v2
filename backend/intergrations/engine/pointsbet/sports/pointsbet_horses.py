@@ -75,45 +75,48 @@ class pointsbet_horses(scraper):
 
     def aquireOdds(self,race_date_obj:timedelta):
         raceData = []
-        try:
-            venues = self.getVenues()[0]['meetings']
-        except Exception as e:
-            self.local_print(e)
-            return raceData    
+        #try:
+        venues = self.getVenues()[0]['meetings']
+        #except Exception as e:
+        #    self.local_print(e)
+        #    return raceData    
         
         for venue in venues:
-            try:
-                if venue['racingType'] == 1 and venue['countryName'] == 'Australia':
-                    LOC = venue['venue']
-                    for race in venue['races']:
-                        try:
-                            raceNumber = race['raceNumber']
-                            raceId = race['raceId']
-                            
-                            race_identifyer = {'race_id':raceId}
-                            
-                            horces,startTime = self.get_entrants(race_identifyer)
-                            raceData.append({'round':raceNumber,'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer})
-                        except Exception as e:
-                            self.local_print(e)
-            except Exception as e:
-                self.local_print(e)
-                continue
+            #try:
+            if venue['racingType'] == 1 and venue['countryName'] == 'Australia':
+               LOC = venue['venue']
+               for race in venue['races']:
+                   #try:
+                  raceNumber = race['raceNumber']
+                  raceId = race['raceId']
+                  
+                  race_identifyer = {'race_id':raceId}
+                  
+                  horces,startTime = self.get_entrants(race_identifyer)
+                  raceData.append({'round':raceNumber,'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer})
+                   #except Exception as e:
+                   #    self.local_print(e)
+            #except Exception as e:
+            #    self.local_print(e)
+            #    continue
         return raceData 
             
     def get_entrants(self,race_id_json):
         horces = []
         raceCard = self.getRaceCard(race_id_json['race_id'])
+        if raceCard == None:
+            return horces
+        
         startTime = self.convertTime(raceCard["advertisedStartTimeUtc"])
         read_time = datetime.now()
         for entrant in raceCard['runners']:
-            try:
-                NAME = entrant["runnerName"]
-                ODDS = -1
-                if entrant["isScratched"] == False:
-                    if 'current' in entrant['fluctuations']:
-                        ODDS = entrant['fluctuations']['current']
-                horces.append({'name':NAME,'odds':ODDS,'scratched':entrant["isScratched"],'record_time':read_time.isoformat()})
-            except Exception as e:
-                self.local_print(e)
+            #try:
+            NAME = entrant["runnerName"]
+            ODDS = -1
+            if entrant["isScratched"] == False:
+                if 'current' in entrant['fluctuations']:
+                    ODDS = entrant['fluctuations']['current']
+            horces.append({'name':NAME,'odds':ODDS,'scratched':entrant["isScratched"],'record_time':read_time.isoformat()})
+            #except Exception as e:
+            #    self.local_print(e)
         return horces,startTime

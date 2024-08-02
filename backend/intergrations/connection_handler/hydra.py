@@ -1,7 +1,7 @@
 import requests
 import docker
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import subprocess
 import os
 from threading import Lock
@@ -26,9 +26,9 @@ class hydra():
             port_entry = {'http': f'http://localhost:{entry["port"]}','https': f'http://localhost:{entry["port"]}',}
             
             entry['proxy_config'] = port_entry
-            entry['succesful'] = 0
+            entry['successful'] = 0
             entry['failed'] = 0
-            entry['black_list'] = set()
+            entry['black_list'] = {}
             entry['status'] = self.test_connection(port_entry)
             
             self.connections[entry['location']] = entry
@@ -50,13 +50,13 @@ class hydra():
         for loc, connection_details in self.connections.items():
             self.poke_docker_container(connection_details['container_id'])
             
-            for platform in connection_details['black_list']:
-                if curr_time - platform[1] < timedelta(days=1):
-                    connection_details['black_list'].remove(platform)
+            for platform,black_list_time in connection_details['black_list'].items():
+                if curr_time - black_list_time > timedelta(days=1):
+                    del connection_details['black_list'][platform]
                     
             connection_details['status'] = self.test_connection(connection_details['proxy_config'])
     
-    def perform_get_request(self,platform,url,params,headers):
+    def perform_get_request(self,platform,url,headers,params=None,retry=True):
         min_calls = None
         min_tunnel = None
         curr_time = datetime.now()
@@ -70,18 +70,28 @@ class hydra():
             elif connection_details['successful'] < min_calls:
                 min_calls = connection_details['successful']
                 min_tunnel = connection_details
+        if platform in connection_details['black_list'] or connection_details['status'] == False:
+            return None
         
-        responce = requests.get(url=url,params=params,headers=headers,proxies=min_tunnel['proxy_config'])
+        if headers == None:
+            responce = requests.get(url=url,params=params,proxies=min_tunnel['proxy_config'])
+        else:
+            responce = requests.get(url=url,params=params,headers=headers,proxies=min_tunnel['proxy_config'])
+            
         if not responce.status_code == 200:
-            min_tunnel['black_list'].add((platform,datetime.now()))
+            min_tunnel['black_list'][platform] = datetime.now().astimezone(timezone.utc)
+            print(f"{platform} has been black_listed from {min_tunnel['location']}\n")
             with self.lock:
                 min_tunnel['failed'] += 1
-            return None
+            if retry:
+                return self.perform_get_request(platform,url,headers,params,retry=False)
+            else:
+                return None
         with self.lock:
             min_tunnel['successful'] += 1
             
         if self.reveise_connections < curr_time:
             self.revise_connections()
             
-        return json.loads(responce)
+        return json.loads(responce.text)
 

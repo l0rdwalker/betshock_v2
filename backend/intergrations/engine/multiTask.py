@@ -20,6 +20,11 @@ class multitask(multitask_common):
     
     def trigger_post_scrape(self,postTask,data):
         postTask['driver'].init(data)
+        
+    def init(self,data=None):
+        data = self.run_core_functions()
+        post_task_data = self.run_core_functions(data)
+        self.configure_next_run(data)
     
     def configure_next_run(self,data):
         current_time = datetime.now().astimezone(timezone.utc)

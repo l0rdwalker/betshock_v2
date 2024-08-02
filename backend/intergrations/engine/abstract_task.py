@@ -2,7 +2,12 @@ from abc import ABC, abstractmethod
 import os
 from datetime import datetime,timedelta,timezone
 import dataManagement
-from ..connection_handler.hydra import hydra
+from arbie.sports.database.databaseOperations import databaseOperations
+
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...')))
+from connection_handler.hydra import hydra
 
 class task(ABC):
     def __init__(self,attributes,database,router) -> None:
@@ -11,7 +16,7 @@ class task(ABC):
         self.operation = None
         self.next_run_time = datetime.now().astimezone(timezone.utc)
         
-        self.database = database
+        self.database:databaseOperations = database
         self.router:hydra = router
     
     @abstractmethod

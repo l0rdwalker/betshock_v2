@@ -58,6 +58,7 @@ class tab_horses(scraper):
         }
 
         response = self.router.perform_get_request(
+            self.platformName,
             url=url,
             headers=headers,
             params=querystring
@@ -107,51 +108,45 @@ class tab_horses(scraper):
         AustralianStates = ['ACT','NSW','NT','QLD','SA','TAS','VIC','WA']
         raceData = []
         
-        try:
-            venues = self.getVenues(set_date)
-        except Exception as e:
-            self.local_print(e)
-            return raceData
+        venues = self.getVenues(set_date)
+
         if not 'meetings' in venues:
             return raceData
         elif not 'R' in venues['meetings']:
             return raceData
         
         for venue in venues['meetings']['R']:
-            try:
-                name:str = venue['meetingName']
-                prelimName = name.split('(')
-                if prelimName[1].replace(')','') in AustralianStates:
-                    name = prelimName[0].strip()
-                    location = venue['venueMnemonic']
-                    meetingDate = venue['meetingDate']
-                    races = self.getRaces(meetingDate,location)
-                    for race in races['races']:
-                        raceNumber = race['number']
-                        
-                        race_identifyer = {'meeting_date':meetingDate,'location':location,'round':raceNumber}
-                        
-                        horces,startTime = self.get_entrants(race_identifyer)
-                        raceData.append({'round':raceNumber, 'name': f'{name}', 'start_time': startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer})
-            except Exception as e:
-                self.local_print(e)
-                continue
+            name:str = venue['meetingName']
+            prelimName = name.split('(')
+            if prelimName[1].replace(')','') in AustralianStates:
+                name = prelimName[0].strip()
+                location = venue['venueMnemonic']
+                meetingDate = venue['meetingDate']
+                races = self.getRaces(meetingDate,location)
+                for race in races['races']:
+                    raceNumber = race['number']
+                    
+                    race_identifyer = {'meeting_date':meetingDate,'location':location,'round':raceNumber}
+                    
+                    horces,startTime = self.get_entrants(race_identifyer)
+                    if horces == None:
+                        continue
+                    
+                    raceData.append({'round':raceNumber, 'name': f'{name}', 'start_time': startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer})
         return raceData
 
     def get_entrants(self,race_identifyer):
         horces = []
         race = self.getRaceCard(race_identifyer['meeting_date'],race_identifyer['location'],race_identifyer['round'])
+        if race == None:
+            return None,None
         
         record_time = datetime.now()
         
         startTime = self.convertTime(race['raceDetail']['summary']['startTime'])
         entrants = race['raceDetail']['runners']
         for entrant in entrants:
-            try:
-                NAME = entrant['runnerName']
-                ODDS = entrant['fixedOdds']['returnWin']
-                horces.append({'name':NAME,'odds':ODDS,'scratched':('cratched' in entrant['fixedOdds']['bettingStatus']),'record_time':record_time.isoformat()})
-            except Exception as e:
-                self.local_print(e)
-                continue
+            NAME = entrant['runnerName']
+            ODDS = entrant['fixedOdds']['returnWin']
+            horces.append({'name':NAME,'odds':ODDS,'scratched':('cratched' in entrant['fixedOdds']['bettingStatus']),'record_time':record_time.isoformat()})
         return horces,startTime
