@@ -9,8 +9,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_task import task
 
 class arbie_updateMarkets(task):
-    def __init__(self, attributes, database_obj) -> None:
-        super().__init__(attributes, database_obj)
+    def __init__(self, attributes, database_obj, router) -> None:
+        super().__init__(attributes, database_obj, router)
         self.operation = 'arbie_updateMarkets'
         
     def get_next_run(self):

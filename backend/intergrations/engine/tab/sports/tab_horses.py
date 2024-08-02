@@ -8,8 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class tab_horses(scraper):
-    def __init__(self,attributes,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self,attributes,database,router) -> None:
+        super().__init__(attributes,database,router)
         self.flex_dates = True
     
     def getVenues(self,date:datetime):
@@ -27,9 +27,15 @@ class tab_horses(scraper):
             "retry-count": "2",
             "if-none-match": "W/\"17b86ba2a5f21a9aeaf1b08ad24df49b\""
         }
-        response = requests.get(url, headers=headers, params=querystring)
-        response = response.text
-        return json.loads(response)
+        
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=url,
+            headers=headers, 
+            params=querystring
+        )
+
+        return response
 
     def getRaces(self,date,location):
         url = f"https://api.beta.tab.com.au/v1/bff-racing/{date}/R/{location}"
@@ -51,9 +57,13 @@ class tab_horses(scraper):
             "retry-count": "2"
         }
 
-        response = requests.get(url, headers=headers, params=querystring)
-        response = response.text
-        return json.loads(response)
+        response = self.router.perform_get_request(
+            url=url,
+            headers=headers,
+            params=querystring
+        )
+        
+        return response
 
     def getRaceCard(self,date,location,raceNum):
         url = f"https://api.beta.tab.com.au/v1/bff-racing/{date}/R/{location}/{raceNum}"
@@ -73,9 +83,15 @@ class tab_horses(scraper):
             "retry-count": "2",
             "if-none-match": "W/\"4fdb3c03186dc0f9b11ee9af738a67f6\""
         }
-        response = requests.get(url, headers=headers, params=querystring)
-        response = response.text
-        return json.loads(response)
+        
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=url,
+            headers=headers, 
+            params=querystring
+        )
+        
+        return response
     
     def convertTime(self,timeTxt):
         startTime = datetime.fromisoformat(timeTxt.replace('Z', '+00:00'))

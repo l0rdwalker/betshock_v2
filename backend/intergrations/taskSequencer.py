@@ -1,11 +1,13 @@
 import os
 import json
 import dataManagement as dm
+from connection_handler.hydra import hydra
 from datetime import datetime, timedelta, timezone
 from priorityQueue import queue
 from engine.multiTask import multitask
 from engine.better import better
 from threading import Thread, Lock
+import threading
 from engine.arbie.sports.database.databaseOperations import databaseOperations
 
 
@@ -19,14 +21,16 @@ class taskSchedular:
         self.functions = []
         self.threads = []
         self.currentDatetime = datetime.now()
+        
         self.database = databaseOperations()
         self.database.initConnection()
+        self.router = hydra()
 
         self.log('Initalizeing task schedular')
         sportObjectsDir = os.path.join(self.file,'engine')
         for platform in [entry for entry in os.listdir(sportObjectsDir) if os.path.isdir(os.path.join(sportObjectsDir,entry))]:
             try:
-                platformDriver = dm.getModuleByPath(os.path.join(sportObjectsDir,platform),platform,self.database)
+                platformDriver = dm.getModuleByPath(os.path.join(sportObjectsDir,platform),platform,self.database,self.router)
                 for function in platformDriver.getFunctions():
                     self.functions.append(function)
                 self.log(f'Successfully imported {platform} dependencys')
@@ -38,6 +42,9 @@ class taskSchedular:
         
     def get_database_obj(self):
         return self.database
+    
+    def get_router_obj(self):
+        return self.router
 
     def step(self) -> None:
         self.threads = []
@@ -50,15 +57,39 @@ class taskSchedular:
                 
     def allocate_tasks(self):
         self.currentDatetime = datetime.now().astimezone(timezone.utc)
+        
+        task_to_run = None
         with self.lock:
             self.tasks = sorted(self.tasks, key=lambda x: x[0])
-        if self.tasks[0] != None:
-            if self.tasks[0][0] < self.currentDatetime:
-                with self.lock:
-                    priority,currentTask = self.tasks.pop(0)
-                mextRun = self.performTask(currentTask)
-                with self.lock:
-                    self.tasks.append((mextRun,currentTask))
+            if len(self.tasks) > 0:
+                task_to_run = self.tasks.pop(0)[1]
+        
+        if not task_to_run == None:
+            next_run = self.performTask(task_to_run)
+            with self.lock:
+                self.tasks.append((next_run,task_to_run))
+        
+        #thread_id = threading.current_thread().ident
+        #print(f"Hello! I am {thread_id}")
+        #self.currentDatetime = datetime.now().astimezone(timezone.utc)
+        #zero_flag = False
+        #with self.lock:
+        #    print(f"I am {thread_id}! I am about to sort the tasks")
+        #    self.tasks = sorted(self.tasks, key=lambda x: x[0])
+        #    print(f"I am {thread_id}! I am about to set the zero flag")
+        #    zero_flag = len(self.tasks) == 0
+        #print(f"I am {thread_id}! I am now going to check the status of the zero flag")
+        #if zero_flag:
+        #    print(f"I am {thread_id}! The zero flag is set, I am going to return.")
+        #    return None
+        #
+        #if self.tasks[0] != None:
+        #    if self.tasks[0][0] < self.currentDatetime:
+        #        with self.lock:
+        #            priority,currentTask = self.tasks.pop(0)
+        #        mextRun = self.performTask(currentTask)
+        #        with self.lock:
+        #            self.tasks.append((mextRun,currentTask))
             
     def performTask(self,currentTask):
         try:

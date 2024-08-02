@@ -6,8 +6,8 @@ from multiTask_common import multitask_common
 from better import better
 
 class betters(multitask_common):
-    def __init__(self,attributes,scraping_functions,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self,attributes,scraping_functions,database,router) -> None:
+        super().__init__(attributes,database,router)
         
         better_configs = self.database.get_better_configs()
         if len(better_configs) > 0:

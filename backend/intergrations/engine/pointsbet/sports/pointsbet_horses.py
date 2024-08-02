@@ -8,8 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class pointsbet_horses(scraper):
-    def __init__(self,attributes,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self,attributes,database,router) -> None:
+        super().__init__(attributes,database,router)
         self.flex_dates = False
     
     def getVenues(self):
@@ -32,9 +32,12 @@ class pointsbet_horses(scraper):
             "accept-encoding": "gzip, deflate, br",
             "accept-language": "en-US,en;q=0.9",
         }
-        response = requests.get(url, headers=headers, params=querystring)
-        response = response.text
-        response = json.loads(response)
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=url,
+            headers=headers,
+            params=querystring
+        )
         return response
 
     def getRaceCard(self,id):
@@ -54,9 +57,13 @@ class pointsbet_horses(scraper):
             "accept-encoding": "gzip, deflate, br",
             "accept-language": "en-US,en;q=0.9",
         }
-        response = requests.get(url, headers=headers)
-        response = response.text
-        response = json.loads(response)
+        
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=url,
+            headers=headers
+        )
+        
         return response
     
     def convertTime(self,timeTxt):

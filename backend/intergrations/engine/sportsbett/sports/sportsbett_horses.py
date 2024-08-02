@@ -8,20 +8,24 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class sportsbett_horses(scraper):
-    def __init__(self,attributes,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self,attributes,database,router) -> None:
+        super().__init__(attributes,database,router)
         self.marketTypes = ['Win or Place']
         self.flex_dates = True
 
-    def getter(welf,url):
+    def getter(self,url):
         headers = {
             "accept": "application/json",
             "content-type": "application/json",
             "host": "gwapi.sportsbet.com.au",
             "accept-encoding": "gzip"
         }
-        data = requests.get(url, headers=headers).text
-        return json.loads(data)
+        responce = self.router.perform_get_request(
+            platform=self.platformName,
+            url=url,
+            headers=headers
+        )
+        return responce
 
     def conditionalDrillDown(self,array,key,searchValue):
         def compareItems(subject,searchTerms):

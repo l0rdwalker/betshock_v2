@@ -9,8 +9,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class waterhouse_horses(scraper):
-    def __init__(self,attributes,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self,attributes,database,router) -> None:
+        super().__init__(attributes,database,router)
         self.flex_dates = True
 
     def get_race_meets(self,date_obj:datetime):
@@ -39,14 +39,15 @@ class waterhouse_horses(scraper):
             'date': date_obj.strftime('%Y-%m-%d')
         }
 
-        response = requests.get(
+        
+        response = self.router.perform_get_request(
+            self.platformName,
             'https://api.robwaterhouse.com/api/v2/combined/meetings/races',
-            params=params,
-            headers=headers,
+            params,
+            headers
         )
 
-        test = json.loads(response.text)
-        return test
+        return response
 
     def get_race_card(self,race_id):
         headers = {
@@ -74,13 +75,13 @@ class waterhouse_horses(scraper):
             'race_id': f'{race_id}',
         }
 
-        response = requests.get(
-            'https://api.robwaterhouse.com/api/v2/combined/race/selections',
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url='https://api.robwaterhouse.com/api/v2/combined/race/selections',
             params=params,
             headers=headers
         )
         
-        response = json.loads(response.text)
         return response
 
 

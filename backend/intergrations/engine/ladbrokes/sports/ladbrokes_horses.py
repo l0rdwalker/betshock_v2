@@ -8,8 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class ladbrokes_horses(scraper):
-    def __init__(self,attributes,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self,attributes,database,router) -> None:
+        super().__init__(attributes,database,router)
         self.globalUrl = "https://api.ladbrokes.com.au/graphql"
 
     def getAllMarkets(self):
@@ -38,8 +38,14 @@ class ladbrokes_horses(scraper):
             'timezone': 'Australia/Sydney',
         }
 
-        response = requests.get('https://api.ladbrokes.com.au/v2/racing/meeting', params=params, headers=headers)
-        return json.loads(response.text)
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url='https://api.ladbrokes.com.au/v2/racing/meeting', 
+            params=params, 
+            headers=headers
+        )
+        
+        return response
 
     def get_race_details(self,id):
         headers = {
@@ -62,8 +68,14 @@ class ladbrokes_horses(scraper):
             'method': 'racecard',
             'id': f'{id}',
         }
-        response = requests.get('https://api.ladbrokes.com.au/rest/v1/racing/', params=params, headers=headers)
-        return json.loads(response.text)
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url='https://api.ladbrokes.com.au/rest/v1/racing/', 
+            params=params, 
+            headers=headers
+        )
+        
+        return response
         
     def getRaceRoundDetails(self,id:str):
         id = id.replace('RacingMarket:','')
@@ -82,9 +94,14 @@ class ladbrokes_horses(scraper):
             "accept-encoding": "gzip",
             "user-agent": "okhttp/4.9.2"
         }
-        response = requests.get(url, headers=headers, params=querystring).text
-        data = json.loads(response)['data']['race']['finalFieldMarket']['nodes'][0]
-        return data
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=url, 
+            headers=headers, 
+            params=querystring
+        )['data']['race']['finalFieldMarket']['nodes'][0]
+        
+        return response
 
     def find_associated_odds(self,prices,searchID):
         winID = '940b8704-e497-4a76-b390-00918ff7d282'

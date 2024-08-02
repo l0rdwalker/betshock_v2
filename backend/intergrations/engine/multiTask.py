@@ -11,8 +11,8 @@ import threading
 from multiTask_common import multitask_common
 
 class multitask(multitask_common):
-    def __init__(self, attributes, database) -> None:
-        super().__init__(attributes, database)
+    def __init__(self, attributes, database, router) -> None:
+        super().__init__(attributes, database, router)
     
     def triggerDriver(self,driver,params):
         data = driver.init(params)

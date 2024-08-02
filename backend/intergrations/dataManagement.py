@@ -16,7 +16,7 @@ def readCache(path):
     except:
         return []
     
-def getModuleByPath(path,name,database_obj,additionalAttributes=None):
+def getModuleByPath(path,name,database_obj,router,additionalAttributes=None):
     fileName = name+'.py'
     moduleFilePath = os.path.join(path,fileName)
 
@@ -28,6 +28,6 @@ def getModuleByPath(path,name,database_obj,additionalAttributes=None):
     classInstance = getattr(module,name)
 
     if additionalAttributes == None:
-        return classInstance(database_obj)
+        return classInstance(database_obj,router)
     else:
-        return classInstance(additionalAttributes,database_obj)
+        return classInstance(additionalAttributes,database_obj,router)

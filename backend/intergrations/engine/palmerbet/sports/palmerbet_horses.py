@@ -8,8 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class palmerbet_horses(scraper):
-    def __init__(self,attributes,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self,attributes,database,router) -> None:
+        super().__init__(attributes,database,router)
         self.flex_dates = True
     
     def cacheData(self,data):
@@ -39,13 +39,13 @@ class palmerbet_horses(scraper):
         params = {
             'channel': 'website',
         }
-        response = requests.get(
-            f'https://fixture.palmerbet.online/fixtures/racing/{date.strftime("%Y-%m-%d")}/HorseRacing',
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=f'https://fixture.palmerbet.online/fixtures/racing/{date.strftime("%Y-%m-%d")}/HorseRacing',
             params=params,
-            headers=headers,
+            headers=headers
         )
-        response = response.text
-        return json.loads(response)
+        return response
 
     def get_race_card(self,id):
         headers = {
@@ -68,12 +68,14 @@ class palmerbet_horses(scraper):
             'channel': 'website',
         }
 
-        response = requests.get(
-            f'https://fixture.palmerbet.online/fixtures/racing/HorseRacing/markets/{id}',
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=f'https://fixture.palmerbet.online/fixtures/racing/HorseRacing/markets/{id}',
             params=params,
-            headers=headers,
+            headers=headers
         )
-        return json.loads(response.text)
+        
+        return response
 
     def get_prelim_race_card(self,link):
         headers = {
@@ -96,12 +98,14 @@ class palmerbet_horses(scraper):
             'channel': 'website',
         }
 
-        response = requests.get(
-            f'https://fixture.palmerbet.online/{link}',
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=f'https://fixture.palmerbet.online/{link}',
             params=params,
-            headers=headers,
+            headers=headers
         )
-        return json.loads(response.text)
+        
+        return response
 
     def conditionalDrillDown(self,array,key,searchValue):
             def compareItems(subject,searchTerms):

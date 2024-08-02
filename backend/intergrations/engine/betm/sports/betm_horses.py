@@ -27,8 +27,13 @@ class betm_horses(scraper):
             'x-client-version': '5.18.0',
         }
 
-        response = requests.get('https://api.betm.com.au/v1/fixtures/races/today/T', headers=headers)
-        return json.loads(response.text)
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url='https://api.betm.com.au/v1/fixtures/races/today/T',
+            headers=headers
+        )
+        
+        return response
 
     def getRaceCard(self,id):
         headers = {
@@ -51,8 +56,14 @@ class betm_horses(scraper):
         params = {
             'is_future': 'false',
         }
-        response = requests.get(f'https://api.betm.com.au/v1/fixtures/races/{id}', params=params, headers=headers)
-        return json.loads(response.text)
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=f'https://api.betm.com.au/v1/fixtures/races/{id}', 
+            params=params, 
+            headers=headers
+        )
+        
+        return response
 
     def convertTime(self,timeTxt):
         startTime = datetime.strptime(timeTxt, '%Y-%m-%dT%H:%M:%SZ')

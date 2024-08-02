@@ -8,8 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class boombet_horses(scraper):
-    def __init__(self, attributes, database) -> None:
-        super().__init__(attributes, database)
+    def __init__(self, attributes, database, router) -> None:
+        super().__init__(attributes, database, router)
         self.flex_dates = True
     
     def getVenues(self):
@@ -28,9 +28,11 @@ class boombet_horses(scraper):
             "user-agent": "Dalvik/2.1.0 (Linux; U; Android 12; Pixel 3 Build/SP1A.210812.016.B1)",
             "host": "sb-saturn.azurefd.net"
         }
-        response = requests.get(url, headers=headers)
-        response = response.text
-        response = json.loads(response)
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=url,
+            headers=headers
+        )
         return response
 
     def getRaces(self,day,location):
@@ -47,9 +49,11 @@ class boombet_horses(scraper):
             "user-agent": "Dalvik/2.1.0 (Linux; U; Android 12; Pixel 3 Build/SP1A.210812.016.B1)",
             "host": "sb-saturn.azurefd.net"
         }
-        response = requests.get(url, headers=headers)
-        response = response.text
-        response = json.loads(response)
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=url,
+            headers=headers
+        )
         return response
 
     def getRaceCard(self,id):
@@ -68,9 +72,12 @@ class boombet_horses(scraper):
             "host": "sb-saturn.azurefd.net"
         }
 
-        response = requests.get(url, headers=headers)
-        response = response.text
-        response = json.loads(response)
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=url,
+            headers=headers
+        )
+        
         return response
     
     def convertTime(self,timeTxt):

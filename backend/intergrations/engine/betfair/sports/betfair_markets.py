@@ -28,12 +28,12 @@ class betfair_markets(scraper):
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
         }
 
-        response = requests.get(
-            f'https://ero.betfair.com.au/www/sports/exchange/readonly/v1/bymarket?_ak=nzIFcwyWhrlwYMrh&alt=json&currencyCode=AUD&locale=en&marketIds={market_id}&rollupLimit=25&rollupModel=STAKE&types=MARKET_STATE,MARKET_RATES,MARKET_DESCRIPTION,EVENT,RUNNER_DESCRIPTION,RUNNER_STATE,RUNNER_EXCHANGE_PRICES_BEST,RUNNER_METADATA,MARKET_LICENCE,MARKET_LINE_RANGE_INFO',
-            headers=headers,
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=f'https://ero.betfair.com.au/www/sports/exchange/readonly/v1/bymarket?_ak=nzIFcwyWhrlwYMrh&alt=json&currencyCode=AUD&locale=en&marketIds={market_id}&rollupLimit=25&rollupModel=STAKE&types=MARKET_STATE,MARKET_RATES,MARKET_DESCRIPTION,EVENT,RUNNER_DESCRIPTION,RUNNER_STATE,RUNNER_EXCHANGE_PRICES_BEST,RUNNER_METADATA,MARKET_LICENCE,MARKET_LINE_RANGE_INFO',
+            headers=headers
         )
 
-        response = json.loads(response.text)
         return response
 
     def get_day_races(self):
@@ -64,13 +64,14 @@ class betfair_markets(scraper):
             'raceId': '33437480.0534',
         }
 
-        response = requests.get(
-            'https://apieds.betfair.com.au/api/eds/racing-navigation/v1',
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url='https://apieds.betfair.com.au/api/eds/racing-navigation/v1',
             params=params,
-            headers=headers,
+            headers=headers, 
         )
-        response = response.text
-        return json.loads(response)
+        
+        return response
 
     def aquireOdds(self,race_date_obj:timedelta):
         curr = datetime.now()

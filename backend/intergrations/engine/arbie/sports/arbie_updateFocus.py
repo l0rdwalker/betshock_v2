@@ -10,8 +10,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_task import task
 
 class arbie_updateFocus(task):
-    def __init__(self, attributes,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self, attributes, database, router) -> None:
+        super().__init__(attributes, database, router)
         self.operation = 'arbUpdateFocus'
         
     def get_next_run(self):

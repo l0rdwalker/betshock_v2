@@ -9,8 +9,8 @@ from abstract_task import task
 from datetime import datetime,timedelta,timezone
 
 class multitask_common(task):
-    def __init__(self,attributes,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self,attributes,database,router) -> None:
+        super().__init__(attributes,database,router)
         self.functions = []
         self.postTasks = []
         

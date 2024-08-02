@@ -8,8 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...'
 from abstract_scraper import scraper
 
 class playup_horses(scraper):
-    def __init__(self,attributes,database) -> None:
-        super().__init__(attributes,database)
+    def __init__(self,attributes,database,router) -> None:
+        super().__init__(attributes,database,router)
         self.flex_dates = True
     
     def get_meets(self,date:datetime):
@@ -31,11 +31,13 @@ class playup_horses(scraper):
             'x-request-id': '082433eeb73549c88eee139fa1a8599e',
         }
 
-        response = requests.get(
-            f'https://www.sportsbet.com.au/apigw/sportsbook-racing/Sportsbook/Racing/AllRacing/{date.strftime("%Y-%m-%d")}',
-            headers=headers,
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=f'https://www.sportsbet.com.au/apigw/sportsbook-racing/Sportsbook/Racing/AllRacing/{date.strftime("%Y-%m-%d")}',
+            headers=headers
         )
-        return json.loads(response.text)
+        
+        return response
 
     def get_race_card(self,id):
         headers = {
@@ -59,13 +61,14 @@ class playup_horses(scraper):
             'classId': '1',
         }
 
-        response = requests.get(
-            f'https://www.sportsbet.com.au/apigw/sportsbook-racing/{id}',
+        response = self.router.perform_get_request(
+            platform=self.platformName,
+            url=f'https://www.sportsbet.com.au/apigw/sportsbook-racing/{id}',
             params=params,
-            headers=headers,
+            headers=headers
         )
-        response = response.text
-        return json.loads(response)
+        
+        return response
     
     def convertTime(self,data):
         startTime = datetime.fromtimestamp(data, tz=timezone.utc)
