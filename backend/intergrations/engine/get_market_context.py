@@ -10,7 +10,7 @@ import json
 import threading
 from multiTask_common import multitask_common
 
-class multitask(multitask_common):
+class get_market_context(multitask_common):
     def __init__(self, attributes, database, router) -> None:
         super().__init__(attributes, database, router)
     
@@ -49,9 +49,12 @@ class multitask(multitask_common):
                     break
         
         if set_date == False:
-            for date in system_dates:
-                if date > current_time:
-                    self.next_run = date-timedelta(hours=1)
-                    break
+            sydney_tz = pytz.timezone('Australia/Sydney')
+            current_utc_time = datetime.now().replace(tzinfo=pytz.utc)
+            current_sydney_time = current_utc_time.astimezone(sydney_tz)
+            next_day_sydney_time = current_sydney_time + timedelta(days=1)
+            next_day_sydney_time_at_five_am = next_day_sydney_time.replace(hour=5, minute=0, second=0, microsecond=0)
+            self.next_run = next_day_sydney_time_at_five_am.astimezone(pytz.utc)
+        
     
 

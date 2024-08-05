@@ -1,5 +1,5 @@
 from taskSequencer import taskSchedular
-from engine.multiTask import multitask
+from backend.intergrations.engine.get_market_context import multitask
 from engine.betters import betters
 from datetime import datetime, timedelta
 
@@ -25,8 +25,8 @@ for function in date_programable_horse_functions:
     limited_horses_operation_nxt_day.add_function(function,timedelta(days=1))
 limited_horses_operation_nxt_day.add_post_task(complete_race_updater[0])
 
-#task_schedular.enqueue(all_horses_operation_cur_day)
-#task_schedular.enqueue(limited_horses_operation_nxt_day)
+task_schedular.enqueue(all_horses_operation_cur_day)
+task_schedular.enqueue(limited_horses_operation_nxt_day)
 
 new_bets = betters(('arbie','horses'),all_horse_platforms,database_obj,router_obj)
 individual_bets = new_bets.getFunctions()

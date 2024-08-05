@@ -20,6 +20,8 @@ class betters(multitask_common):
             self.add_function(better_instance,datetime.now().astimezone(timezone.utc))
                     
     def configure_next_run(self):
+        natural_betting_window = datetime.now().astimezone(timezone.utcoffset())
+        
         self.next_run = datetime.now() + timedelta(seconds=1)
     
     def init(self,data=None):

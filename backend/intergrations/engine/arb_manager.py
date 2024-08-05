@@ -7,6 +7,12 @@ class arb_manager():
     def __init__(self) -> None:
         pass
     
+    def clear_arb(self):
+        pass
+    
+    def set_arb(self):
+        pass
+    
     def calculate_best_arb(self,race_id):
         pass
         #opened_new_connection = False

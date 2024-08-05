@@ -4,7 +4,7 @@ import dataManagement as dm
 from connection_handler.hydra import hydra
 from datetime import datetime, timedelta, timezone
 from priorityQueue import queue
-from engine.multiTask import multitask
+from backend.intergrations.engine.get_market_context import multitask
 from engine.better import better
 from threading import Thread, Lock
 import threading
@@ -12,15 +12,18 @@ from engine.arbie.sports.database.databaseOperations import databaseOperations
 
 
 class taskSchedular:
-    def __init__(self,max_threads=3) -> None:
+    def __init__(self,max_threads=3,utx_offset=10) -> None:
         self.file = os.path.dirname(os.path.abspath(__file__))
         
         self.max_threads = max_threads
         self.lock = Lock()
+        self.threads = []
+        
         self.tasks = []
         self.functions = []
-        self.threads = []
+        
         self.currentDatetime = datetime.now()
+        self.utc_hours_offset = utx_offset #set to sydney local time
         
         self.database = databaseOperations()
         self.database.initConnection()
@@ -59,6 +62,14 @@ class taskSchedular:
             self.threads.append(thread)
         for thread in self.threads:
             thread.join()
+            
+    def analyse_next_run_request(self):
+        sydney_current_time = self.currentDatetime + timedelta(hours=self.utc_hours_offset)
+        
+        start_time_window = sydney_current_time.replace(hour=5)
+        #end_time_window = sydney_current_time.replace(hour=)
+        
+        pass
                 
     def allocate_tasks(self):
         while True:
@@ -77,13 +88,13 @@ class taskSchedular:
                     self.tasks.append((next_run,task_to_run))
             
     def performTask(self,currentTask):
-        #try:
-        self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
-        data = currentTask['driver'].init(currentTask['data'])
-        self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
-        #except Exception as e:
-        #    self.log(e,error=True)
-        #    self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
+        try:
+            self.log(f"starting {currentTask['type']} on {currentTask['platform']}.")
+            data = currentTask['driver'].init(currentTask['data'])
+            self.log(f"{currentTask['type']} on {currentTask['platform']} succeeded.")
+        except Exception as e:
+            self.log(e,error=True)
+            self.log(f"{currentTask['type']} on {currentTask['platform']} failed.",error=True)
         return currentTask['driver'].get_next_run()
 
     def contains_key(self,key_value,search_data):
