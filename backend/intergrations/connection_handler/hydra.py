@@ -70,13 +70,19 @@ class hydra():
             elif connection_details['successful'] < min_calls:
                 min_calls = connection_details['successful']
                 min_tunnel = connection_details
+        
         if platform in connection_details['black_list'] or connection_details['status'] == False:
             return None
-        
-        if headers == None:
-            responce = requests.get(url=url,params=params,proxies=min_tunnel['proxy_config'])
+        elif min_tunnel == None:
+            if headers == None:
+                responce = requests.get(url=url,params=params)
+            else:
+                responce = requests.get(url=url,params=params,headers=headers)
         else:
-            responce = requests.get(url=url,params=params,headers=headers,proxies=min_tunnel['proxy_config'])
+            if headers == None:
+                responce = requests.get(url=url,params=params,proxies=min_tunnel['proxy_config'])
+            else:
+                responce = requests.get(url=url,params=params,headers=headers,proxies=min_tunnel['proxy_config'])
             
         if not responce.status_code == 200:
             min_tunnel['black_list'][platform] = datetime.now().astimezone(timezone.utc)

@@ -18,13 +18,16 @@ class task(ABC):
         
         self.database:databaseOperations = database
         self.router:hydra = router
+        
+    @abstractmethod
+    def configure_next_run(self,data):
+        pass
+
+    def get_next_run(self):
+        return self.next_run_time
     
     @abstractmethod
     def init(self,data=None):
-        pass
-    
-    @abstractmethod
-    def get_next_run(self):
         pass
     
     def get_function_config(self):

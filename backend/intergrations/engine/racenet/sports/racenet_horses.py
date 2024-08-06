@@ -7,7 +7,11 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...')))
 from abstract_scraper import scraper
 
-class racenet_markets(scraper):
+class racenet_horses(scraper):
+    def __init__(self, attributes, database, router) -> None:
+        super().__init__(attributes, database, router)
+        self.flex_dates = True
+    
     def get_bookmaker_prices(self,market_id):
         headers = {
             'accept': 'application/json, text/plain, */*',
@@ -110,7 +114,7 @@ class racenet_markets(scraper):
 
         return response
 
-    def aquireOdds(self,race_date_obj:timedelta):
+    def get_all_meets(self,race_date_obj:timedelta):
         curr = datetime.now()
         if isinstance(race_date_obj, timedelta):
             curr += race_date_obj
@@ -127,34 +131,58 @@ class racenet_markets(scraper):
             for race in meet['events']:
                 ROUND = race['eventNumber']
                 START_TIME = race['startTime']
+                
                 race_id = {'race_id':race['id'],'start_time':START_TIME,'round':ROUND,'name':LOC}
                 
-                entrants = self.get_entrants(race_id)
-                race_profile.extend(entrants)
+                ENTRANTS = self.get_entrants(race_id)
+                race_profile.extend(ENTRANTS)
         
         return race_profile
 
     def get_entrants(self,race_identifyer):
-        platform_entrants = self.get_race_card(race_identifyer['race_id'])
-        platform_prices = self.get_bookmaker_prices(race_identifyer['race_id'])
-        record_time = datetime.now()
-        
-        name_id_cache = {}
-        platform_entrants = platform_entrants['data']['event']['selections']
-        for entrant in platform_entrants:
-            name_id_cache[entrant['id']] = {'name':entrant['competitor']['name'],'scratched':entrant['status']=='SCRATCHED'}
-        
-        platform_offerings = {}
-        for price in platform_prices['odds']:
-            if price['betType'] == 'fixed-win':
-                if not price['bookmakerId'] in platform_offerings:
-                    platform_offerings[price['bookmakerId']] = {'start_time':race_identifyer['start_time'],'name':race_identifyer['name'],'round':race_identifyer['round'],'race_id':race_identifyer,'entrants':[]}
-                platform_offerings[price['bookmakerId']]['entrants'].append(
-                    {'name':name_id_cache[str(price['selectionId'])]['name'],'odds':price['price']['value'],'scratched':name_id_cache[str(price['selectionId'])]['scratched'],'record_time':record_time.isoformat()}
-                )
-
         dist_to_list = []
-        for key, entry in platform_offerings.items():
-            dist_to_list.append(entry)
+        
+        try:
+            platform_entrants = self.get_race_card(race_identifyer['race_id'])
+            platform_prices = self.get_bookmaker_prices(race_identifyer['race_id'])
+            record_time = datetime.now()        
             
+            name_id_cache = {}
+            platform_entrants = platform_entrants['data']['event']['selections']
+            for entrant in platform_entrants:
+                name_id_cache[entrant['id']] = {'name':entrant['competitor']['name'],'scratched':entrant['status']=='SCRATCHED'}
+            
+            platform_name_memoization = {}
+            platform_offerings = {}
+            for price in platform_prices['odds']:
+                if price['betType'] == 'fixed-win':
+                    entrant = self.create_entrant_entry(
+                            entrant_name=name_id_cache[str(price['selectionId'])]['name'],
+                            odds=price['price']['value'],
+                            scratched=name_id_cache[str(price['selectionId'])]['scratched'],
+                            record_time=record_time
+                        )
+                    if not price['bookmakerId'] in platform_name_memoization:
+                        platform_name_memoization[price['bookmakerId']] = set()
+                    
+                    if not str(price['selectionId']) in platform_name_memoization[price['bookmakerId']]:
+                        if not price['bookmakerId'] in platform_offerings:
+                            platform_offerings[price['bookmakerId']] = [entrant]
+                        else:
+                            platform_offerings[price['bookmakerId']].append(entrant)
+                        platform_name_memoization[price['bookmakerId']].add(str(price['selectionId']))
+
+                        
+            for key, entry in platform_offerings.items():
+                race_entry = self.create_race_entry(
+                    race_identifyer=race_identifyer,
+                    track_name=race_identifyer['name'],
+                    round=race_identifyer['round'],
+                    start_time=race_identifyer['start_time'],
+                    entrants=entry,
+                    platform=key
+                )
+                dist_to_list.append(race_entry)
+        except:
+            return dist_to_list   
         return dist_to_list

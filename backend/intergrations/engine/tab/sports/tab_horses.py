@@ -93,14 +93,8 @@ class tab_horses(scraper):
         )
         
         return response
-    
-    def convertTime(self,timeTxt):
-        startTime = datetime.fromisoformat(timeTxt.replace('Z', '+00:00'))
-        startTime = startTime.astimezone(ZoneInfo("Australia/Sydney"))
-        startTime = startTime.replace(tzinfo=None)    
-        return startTime
 
-    def aquireOdds(self,race_date_obj:timedelta):
+    def get_all_meets(self,race_date_obj:timedelta):
         set_date = datetime.now()
         if isinstance(race_date_obj,timedelta):
             set_date = set_date+race_date_obj
@@ -119,20 +113,24 @@ class tab_horses(scraper):
             name:str = venue['meetingName']
             prelimName = name.split('(')
             if prelimName[1].replace(')','') in AustralianStates:
-                name = prelimName[0].strip()
+                NAME = prelimName[0].strip()
                 location = venue['venueMnemonic']
                 meetingDate = venue['meetingDate']
                 races = self.getRaces(meetingDate,location)
                 for race in races['races']:
-                    raceNumber = race['number']
+                    ROUND = race['number']
+                    RACE_ID = {'meeting_date':meetingDate,'location':location,'round':ROUND}
                     
-                    race_identifyer = {'meeting_date':meetingDate,'location':location,'round':raceNumber}
-                    
-                    horces,startTime = self.get_entrants(race_identifyer)
-                    if horces == None:
+                    ENTRANTS,START_TIME = self.get_entrants(RACE_ID)
+                    if ENTRANTS == None:
                         continue
                     
-                    raceData.append({'round':raceNumber, 'name': f'{name}', 'start_time': startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer})
+                    raceData.append(self.create_race_entry(
+                        track_name=NAME,
+                        round=ROUND,
+                        start_time=START_TIME,
+                        entrants=ENTRANTS,
+                        race_identifyer=RACE_ID))
         return raceData
 
     def get_entrants(self,race_identifyer):
@@ -142,11 +140,9 @@ class tab_horses(scraper):
             return None,None
         
         record_time = datetime.now()
-        
-        startTime = self.convertTime(race['raceDetail']['summary']['startTime'])
         entrants = race['raceDetail']['runners']
         for entrant in entrants:
             NAME = entrant['runnerName']
             ODDS = entrant['fixedOdds']['returnWin']
-            horces.append({'name':NAME,'odds':ODDS,'scratched':('cratched' in entrant['fixedOdds']['bettingStatus']),'record_time':record_time.isoformat()})
-        return horces,startTime
+            horces.append(self.create_entrant_entry(entrant_name=NAME,odds=ODDS,scratched=('cratched' in entrant['fixedOdds']['bettingStatus']),record_time=record_time))
+        return horces,race['raceDetail']['summary']['startTime']

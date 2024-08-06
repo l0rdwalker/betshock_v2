@@ -8,53 +8,96 @@ from datetime import datetime,timedelta,timezone
 import pytz
 import json
 import threading
+import math
 from multiTask_common import multitask_common
 
 class get_market_context(multitask_common):
     def __init__(self, attributes, database, router) -> None:
         super().__init__(attributes, database, router)
-    
-    def triggerDriver(self,driver,params):
-        data = driver.init(params)
-        return data
-    
-    def trigger_post_scrape(self,postTask,data):
-        postTask['driver'].init(data)
         
     def init(self,data=None):
-        data = self.run_core_functions()
-        post_task_data = self.run_core_functions(data)
-        self.configure_next_run(data)
-    
-    def configure_next_run(self,data):
-        current_time = datetime.now().astimezone(timezone.utc)
-        current_time
-        system_dates = []
+        task_data = self.run_all_tasks(None)
+        self.configure_next_run(None)
+        self.push_to_database(task_data)
         
-        for platform_entry in data:
-            for race in platform_entry['data']:
-                time_instance = datetime.fromisoformat(race['start_time'])
-                time_instance = time_instance.astimezone(timezone.utc)
-                system_dates.append(time_instance)
+    def push_to_database(self,data):
+        race_start_times = {}
+        scratched_horses = {}
+        
+        for platform_data in data:
+            for race in platform_data:
+                platform_id = self.database.impose_platform(race['platform'])
+                track_id = self.database.impose_track(race['name'])
+                race_id = self.database.impose_race(track_id,race['start_time'],race['round'])
+                self.database.impose_platform_race_identifyer(race['race_id'],race['platform'],race_id)
+                for entrant in race['entrants']:
+                    horse_name = entrant['name'].replace("'","").strip().lower()
+                    horse_id = self.database.impose_horse(horse_name)
+                    entrant_id = self.database.impose_entrant(horse_id,race_id,entrant['scratched'])
+                    self.database.impose_odds(entrant_id,platform_id,entrant['odds'],entrant['record_time'])
+                    
+                    if not str(entrant_id) in scratched_horses:
+                        scratched_horses[str(entrant_id)] = {'scratched':0,'not_scratched':0}
+                    if entrant['scratched']:
+                        scratched_horses[str(entrant_id)]['scratched'] += 1
+                    else:
+                        scratched_horses[str(entrant_id)]['not_scratched'] += 1
+                    
+                if not str(race_id) in race_start_times:
+                    race_start_times[str(race_id)] = [race['start_time']]
+                else:
+                    race_start_times[str(race_id)].append(race['start_time'])
 
-        system_dates = sorted(system_dates)
-        set_date = False
-        for date in system_dates:
-            time_difference = date - current_time
-            time_dif_delt = timedelta(hours=1)
-            if time_difference > timedelta(0):
-                if time_difference < time_dif_delt:
-                    self.next_run = current_time + timedelta(minutes=30)
-                    set_date = True
-                    break
+        self.correct_race_start_time(race_start_times)
+        self.correct_scratched(scratched_horses)
+
+    def correct_scratched(self,scratched_horses):
+        for entrant_id,value in scratched_horses.items():
+            if value['scratched'] > value['not_scratched']:
+                self.database.update_scratched(entrant_id,1)
+            else:
+                self.database.update_scratched(entrant_id,0)
         
-        if set_date == False:
+    def correct_race_start_time(self,date_race_store):
+        for race_id,date_list in date_race_store.items():
+            date_occurence = {}
+            for date in date_list:
+                if not date in date_occurence:
+                    date_occurence[date] = 1
+                else:
+                    date_occurence[date] += 1
+            frequent_date = None
+            frequency = 0
+            for date,date_frequency in date_occurence.items():
+                if frequent_date == None or date_frequency > frequency:
+                    frequency = date_frequency
+                    frequent_date = date
+            self.database.correct_race_start_time(race_id,frequent_date)
+        
+    def configure_next_run(self,data):
+        current_time = datetime.now().replace(tzinfo=timezone.utc)
+        
+        smallest_timedelta = None
+        for function in self.functions:
+            desired_next_run:datetime = function[0]['driver'].get_next_run()
+            if desired_next_run == None:
+                continue
+            timedelta_difference = desired_next_run - current_time
+            if smallest_timedelta == None:
+                smallest_timedelta = timedelta_difference
+            elif timedelta_difference < smallest_timedelta:
+                smallest_timedelta = timedelta_difference
+            
+        if not smallest_timedelta == None:
+            self.next_run_time = current_time+smallest_timedelta
+        else:
             sydney_tz = pytz.timezone('Australia/Sydney')
-            current_utc_time = datetime.now().replace(tzinfo=pytz.utc)
-            current_sydney_time = current_utc_time.astimezone(sydney_tz)
-            next_day_sydney_time = current_sydney_time + timedelta(days=1)
-            next_day_sydney_time_at_five_am = next_day_sydney_time.replace(hour=5, minute=0, second=0, microsecond=0)
-            self.next_run = next_day_sydney_time_at_five_am.astimezone(pytz.utc)
+            utc_tz = pytz.utc
+            sydney_time = current_time.astimezone(sydney_tz)
+            sydney_time = sydney_time.replace(hour=5, minute=0, second=0, microsecond=0)
+            sydney_time += timedelta(days=1)
+            self.next_run_time = sydney_time.astimezone(utc_tz)
+
         
     
 

@@ -87,7 +87,7 @@ class boombet_horses(scraper):
         startTime = startTime.replace(tzinfo=None)    
         return startTime
 
-    def aquireOdds(self,race_date_obj:timedelta):
+    def get_all_meets(self,race_date_obj:timedelta):
         set_date = datetime.now()
         if isinstance(race_date_obj,timedelta):
             set_date += race_date_obj
@@ -108,43 +108,54 @@ class boombet_horses(scraper):
             raise Exception('Current day not found')
         dayCode = todaysData['day']
         
-        raceData = []
+        race_profile = []
         for location in todaysData['raceMeetings']:
-            #try:
-            if location['raceType'] == 4 and location['state'] in AustralianStates:
-                LOC = location['meetingName']
-                races = self.getRaces(dayCode,LOC)
-                for race in races['races']:
-                    #try:
-                    raceNumber = race['raceNumber']
-                    
-                    race_identidyer = {'race_id':race['eventId']}
-                    
-                    horces = self.get_entrants(race_identidyer)
-                    startTime = self.convertTime(race['jumpTime'][:-6])
-                    raceData.append({'round':raceNumber, 'name': LOC, 'start_time':startTime.isoformat(),'entrants':horces, 'race_id':race_identidyer})
-                    #except Exception as e:
-                    #    self.local_print(e)
-            #except Exception as e:
-            #    self.local_print(e)
-        return raceData
+            try:
+                if location['raceType'] == 4 and location['state'] in AustralianStates:
+                    LOC = location['meetingName']
+                    races = self.getRaces(dayCode,LOC)
+                    for race in races['races']:
+                        try:
+                            ROUND = race['raceNumber']
+
+                            race_identidyer = {'race_id':race['eventId']}
+
+                            ENTRANTS = self.get_entrants(race_identidyer)
+                            START_TIME = self.convertTime(race['jumpTime'][:-6])
+                            race_profile.append(self.create_race_entry(
+                                track_name=LOC,
+                                round=ROUND,
+                                entrants=ENTRANTS,
+                                start_time=START_TIME,
+                                race_identifyer=race_identidyer
+                            ))
+                        except Exception as e:
+                            self.local_print(e)
+            except Exception as e:
+                self.local_print(e)
+        return race_profile
 
     def get_entrants(self,race_identidyer):
-        horces = []
+        ENTRANTS = []
         raceCard = self.getRaceCard(race_identidyer['race_id'])
         if raceCard == None:
             return None
         
         record_time = datetime.now()
         for horce in raceCard['runners']:
-            #try:
-            NAME = horce['name']
-            ODDS = -1
-            for odd in horce['odds']:
-                if odd['product']['betType'] == 'Win':
-                    ODDS = odd['value']
-                    break
-            horces.append({'name':NAME,'odds':ODDS,'scratched':horce['isEliminated'] == False,'record_time':record_time.isoformat()})
-            #except Exception as e:
-            #    self.local_print(e)
-        return horces
+            try:
+                NAME = horce['name']
+                ODDS = -1
+                for odd in horce['odds']:
+                    if odd['product']['betType'] == 'Win':
+                        ODDS = odd['value']
+                        break
+                ENTRANTS.append(self.create_entrant_entry(
+                    entrant_name=NAME,
+                    odds=ODDS,
+                    scratched=(horce['isEliminated'] == False),
+                    record_time=record_time
+                ))
+            except Exception as e:
+                self.local_print(e)
+        return ENTRANTS

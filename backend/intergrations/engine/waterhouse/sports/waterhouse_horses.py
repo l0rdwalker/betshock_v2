@@ -85,7 +85,7 @@ class waterhouse_horses(scraper):
         return response
 
 
-    def aquireOdds(self,datetime_param:datetime):
+    def get_all_meets(self,datetime_param:datetime):
         curr_time = datetime.now()
         if isinstance(datetime_param,datetime):
             curr_time += datetime_param
@@ -96,7 +96,6 @@ class waterhouse_horses(scraper):
         race_profile = []
         meets = self.get_race_meets(curr_time)['data']
         for meet in meets:
-            #try:
             if not meet['country'] == 'AU':
                 continue
             
@@ -115,12 +114,10 @@ class waterhouse_horses(scraper):
                     break
                 race_identifyer = {'race_id':race['id']}
                 
-                sydney_time = datetime.strptime(race['start_date'], '%Y-%m-%d %H:%M:%S')
-                sydney_time = sydney_tz.localize(sydney_time)
-                START_TIME = sydney_time.astimezone(utc_tz)
+                START_TIME = datetime.strptime(race['start_date'], '%Y-%m-%d %H:%M:%S')
                 
                 entrants = self.get_entrants(race_identifyer)
-                race_profile.append({'round':race['number'], 'name': f'{LOC}', 'start_time': START_TIME.isoformat(),'entrants':entrants, 'race_id':race_identifyer})
+                race_profile.append(self.create_race_entry(START_TIME,race['number'],LOC,race_identifyer,entrants))
         return race_profile     
                 
     def get_entrants(self,race_identifyer):
@@ -128,15 +125,15 @@ class waterhouse_horses(scraper):
         record_time = datetime.now()
         entrants = []
         for entrant in race_card['data']['selections']:
-            #try:
-            NAME = entrant['name']
-            ODDS = -1
-            if len(entrant['prices']) > 1:
-                if isinstance(entrant['prices'],list):
-                    ODDS = entrant['prices'][0]['win_odds']
-                else:
-                    ODDS = entrant['prices']['0']['win_odds']
-            entrants.append({'name':NAME,'odds':ODDS,'scratched':(not entrant['scratching_time']==None),'record_time':record_time.isoformat()})
-            #except Exception as e:
-            #    continue
+            try:
+                NAME = entrant['name']
+                ODDS = -1
+                if len(entrant['prices']) > 1:
+                    if isinstance(entrant['prices'],list):
+                        ODDS = entrant['prices'][0]['win_odds']
+                    else:
+                        ODDS = entrant['prices']['0']['win_odds']
+                entrants.append(self.create_entrant_entry(NAME,ODDS,(not entrant['scratching_time']==None),record_time.isoformat()))
+            except Exception as e:
+                continue
         return entrants

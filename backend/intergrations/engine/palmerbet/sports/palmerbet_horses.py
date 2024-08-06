@@ -117,44 +117,42 @@ class palmerbet_horses(scraper):
                 testElement = item[key]
                 if compareItems(testElement,searchValue):
                     return item
-                
-    def convertTime(self,timeTxt):
-        startTime = datetime.strptime(timeTxt, '%Y-%m-%dT%H:%M:%SZ')
-        startTime = startTime.replace(tzinfo=timezone.utc)
-        startTime = startTime.astimezone(ZoneInfo("Australia/Sydney"))
-        startTime = startTime.replace(tzinfo=None)    
-        return startTime
 
-    def aquireOdds(self,race_date_obj:timedelta):
+    def get_all_meets(self,race_date_obj:timedelta):
         set_date = datetime.now()
         if isinstance(race_date_obj,timedelta):
             set_date += race_date_obj
         
-        races = []
+        race_profile = []
         data = self.getVenus(set_date)
         for meeting in data['meetings']:
             if 'country' in meeting:
                 if (meeting["country"] == 'AU'):
-                    venueName = meeting['venue']['title']
+                    TRACK_NAME = meeting['venue']['title']
                     for race in meeting['races']:
-                        #try:
-                        race_identifyer = {'race_id':race['_links'][0]['href']}
-                        
-                        horces = self.get_entrants(race_identifyer)
-                        startTime = self.convertTime(race['startTime'])
-                        
-                        tempData = {'round':race['number'], 'name': venueName, 'start_time': startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer}
-                        races.append(tempData)
-                        #except Exception as e:
-                        #    self.local_print(e)
-                        #    continue
-        return races
+                        try:
+                            race_identifyer = {'race_id':race['_links'][0]['href']}
+
+                            ENTRANTS = self.get_entrants(race_identifyer)
+                            START_TIME = race['startTime']
+                            
+                            race_profile.append(self.create_race_entry(
+                                track_name=TRACK_NAME,
+                                round=race['number'],
+                                race_identifyer=race_identifyer,
+                                entrants=ENTRANTS,
+                                start_time=START_TIME
+                            ))
+                        except Exception as e:
+                            self.local_print(e)
+                            continue
+        return race_profile
 
     def get_entrants(self,race_identifyer):
-        horces = []
+        ENTRANTS = []
         prelim_data = self.get_prelim_race_card(race_identifyer['race_id'])
         if prelim_data == None:
-            return horces
+            return ENTRANTS
         
         record_time = datetime.now()
         win_price_id = None
@@ -166,7 +164,7 @@ class palmerbet_horses(scraper):
         if win_price_id != None:
             entrants = self.get_race_card(win_price_id)
             if entrants == None:
-                return horces
+                return ENTRANTS
             entrants = entrants['market']['outcomes']
             for entrant in entrants:
                 NAME = entrant['title']
@@ -176,5 +174,10 @@ class palmerbet_horses(scraper):
                         if 'priceSnapshot' in price:
                             ODDS = price['priceSnapshot']['current']
                         break
-                horces.append({'name':NAME,'odds':ODDS,'scratched':not entrant["status"]=='Active','record_time':record_time.isoformat()})
-        return horces
+                ENTRANTS.append(self.create_entrant_entry(
+                    entrant_name=NAME,
+                    odds=ODDS,
+                    scratched=(not entrant["status"]=='Active'),
+                    record_time=record_time
+                ))
+        return ENTRANTS

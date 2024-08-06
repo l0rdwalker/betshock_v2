@@ -73,33 +73,38 @@ class pointsbet_horses(scraper):
         startTime = startTime.replace(tzinfo=None)    
         return startTime
 
-    def aquireOdds(self,race_date_obj:timedelta):
-        raceData = []
-        #try:
-        venues = self.getVenues()[0]['meetings']
-        #except Exception as e:
-        #    self.local_print(e)
-        #    return raceData    
+    def get_all_meets(self,race_date_obj:timedelta):
+        race_profile = []
+        try:
+            venues = self.getVenues()[0]['meetings']
+        except Exception as e:
+            self.local_print(e)
+            return race_profile    
         
         for venue in venues:
-            #try:
-            if venue['racingType'] == 1 and venue['countryName'] == 'Australia':
-               LOC = venue['venue']
-               for race in venue['races']:
-                   #try:
-                  raceNumber = race['raceNumber']
-                  raceId = race['raceId']
-                  
-                  race_identifyer = {'race_id':raceId}
-                  
-                  horces,startTime = self.get_entrants(race_identifyer)
-                  raceData.append({'round':raceNumber,'name': f'{LOC}', 'start_time':startTime.isoformat(),'entrants':horces, 'race_id':race_identifyer})
-                   #except Exception as e:
-                   #    self.local_print(e)
-            #except Exception as e:
-            #    self.local_print(e)
-            #    continue
-        return raceData 
+            try:
+                if venue['racingType'] == 1 and venue['countryName'] == 'Australia':
+                    LOC = venue['venue']
+                    for race in venue['races']:
+                        try:
+                            ROUND = race['raceNumber']
+                            raceId = race['raceId']
+                            race_identifyer = {'race_id':raceId}
+
+                            ENTRANTS,START_TIME = self.get_entrants(race_identifyer)
+                            race_profile.append(self.create_race_entry(
+                                track_name=LOC,
+                                round=ROUND,
+                                start_time=START_TIME,
+                                entrants=ENTRANTS,
+                                race_identifyer=race_identifyer
+                            ))
+                        except Exception as e:
+                            self.local_print(e)
+            except Exception as e:
+                self.local_print(e)
+                continue
+        return race_profile 
             
     def get_entrants(self,race_id_json):
         horces = []
@@ -107,16 +112,21 @@ class pointsbet_horses(scraper):
         if raceCard == None:
             return horces
         
-        startTime = self.convertTime(raceCard["advertisedStartTimeUtc"])
+        START_TIME = self.convertTime(raceCard["advertisedStartTimeUtc"])
         read_time = datetime.now()
         for entrant in raceCard['runners']:
-            #try:
-            NAME = entrant["runnerName"]
-            ODDS = -1
-            if entrant["isScratched"] == False:
-                if 'current' in entrant['fluctuations']:
-                    ODDS = entrant['fluctuations']['current']
-            horces.append({'name':NAME,'odds':ODDS,'scratched':entrant["isScratched"],'record_time':read_time.isoformat()})
-            #except Exception as e:
-            #    self.local_print(e)
-        return horces,startTime
+            try:
+                NAME = entrant["runnerName"]
+                ODDS = -1
+                if entrant["isScratched"] == False:
+                    if 'current' in entrant['fluctuations']:
+                        ODDS = entrant['fluctuations']['current']
+                horces.append(self.create_entrant_entry(
+                    entrant_name=NAME,
+                    odds=ODDS,
+                    scratched=entrant["isScratched"],
+                    record_time=read_time
+                ))
+            except Exception as e:
+                self.local_print(e)
+        return horces,START_TIME

@@ -70,14 +70,8 @@ class playup_horses(scraper):
         
         return response
     
-    def convertTime(self,data):
-        startTime = datetime.fromtimestamp(data, tz=timezone.utc)
-        startTime = startTime.astimezone(ZoneInfo("Australia/Sydney"))
-        startTime = startTime.replace(tzinfo=None)    
-        return startTime    
-
-    def aquireOdds(self,race_date_obj:timedelta):
-        raceData = []
+    def get_all_meets(self,race_date_obj:timedelta):
+        race_profile = []
         set_date = datetime.now()
         if isinstance(race_date_obj,timedelta):
             set_date += race_date_obj
@@ -92,22 +86,28 @@ class playup_horses(scraper):
             break
         
         for meet in meets['meetings']:
-            #try:
-            if not meet['regionName'] == 'Australia':
+            try:
+                if not meet['regionName'] == 'Australia':
+                    continue
+                LOC = meet['name']
+                for event in meet['events']:
+                    ROUND = event['raceNumber']
+                    START_TIME = datetime.fromtimestamp(event['startTime'])
+
+                    race_identifyer = {'race_id':event['httpLink']}
+                    ENTRANTS = self.get_entrants(race_identifyer)
+                    
+                    race_profile.append(self.create_race_entry(
+                        track_name=LOC,
+                        round=ROUND,
+                        race_identifyer=race_identifyer,
+                        entrants=ENTRANTS,
+                        start_time=START_TIME
+                    ))    
+            except Exception as e:
+                self.local_print(e)
                 continue
-            LOC = meet['name']
-            for event in meet['events']:
-                round = event['raceNumber']
-                start_time = datetime.fromtimestamp(event['startTime'])
-                
-                race_identifyer = {'race_id':event['httpLink']}
-                
-                entrants = self.get_entrants(race_identifyer)
-                raceData.append({'round':round,'name': f'{LOC}', 'start_time':start_time.isoformat(),'entrants':entrants, 'race_id':race_identifyer})
-            #except Exception as e:
-            #    self.local_print(e)
-            #    continue
-        return raceData
+        return race_profile
     
     def get_entrants(self,race_identifyer):
         entrants = []
@@ -118,16 +118,21 @@ class playup_horses(scraper):
         for market in race_card['markets']:
             if market['name'] == 'Win or Place' and market['international'] == False:
                 for entrant in market['selections']:
-                    #try:
-                    NAME = entrant['name']
-                    for price in entrant['prices']:
-                        if price['priceCode'] == 'L':
-                            ODDS = -1
-                            if 'winPrice' in price:
-                                ODDS = price['winPriceNum'] / price['winPriceDen']
-                                ODDS += 1
-                            entrants.append({'name':NAME,'odds':ODDS,'scratched':entrant['result']=='V','record_time':record_time.isoformat()})
-                    #except Exception as e:
-                    #    self.local_print(e)
-                    #    continue
+                    try:
+                        NAME = entrant['name']
+                        for price in entrant['prices']:
+                            if price['priceCode'] == 'L':
+                                ODDS = -1
+                                if 'winPrice' in price:
+                                    ODDS = price['winPriceNum'] / price['winPriceDen']
+                                    ODDS += 1
+                                entrants.append(self.create_entrant_entry(
+                                    entrant_name=NAME,
+                                    odds=ODDS,
+                                    scratched=(entrant['result']=='V'),
+                                    record_time=record_time
+                                ))
+                    except Exception as e:
+                        self.local_print(e)
+                        continue
         return entrants

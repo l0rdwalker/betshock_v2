@@ -114,13 +114,6 @@ class ladbrokes_horses(scraper):
                 return odds
         return -1
 
-    def convertTime(self,timeTxt):
-        startTime = datetime.strptime(timeTxt, '%Y-%m-%dT%H:%M:%S.%fZ')
-        startTime = startTime.replace(tzinfo=timezone.utc)
-        startTime = startTime.astimezone(ZoneInfo("Australia/Sydney"))
-        startTime = startTime.replace(tzinfo=None)    
-        return startTime
-
     def collectOdds(self,entrys,prices):
         horces = []
         for hourse in entrys:
@@ -134,29 +127,35 @@ class ladbrokes_horses(scraper):
                 continue
         return horces
 
-    def aquireOdds(self,race_date_obj:timedelta):
+    def get_all_meets(self,race_date_obj:timedelta):
         markets = self.getAllMarkets()
-        race_data = []
+        race_profile = []
         
         for event in markets['meetings'].items():
-            #try:
+            try:
                 event = event[1]
                 if (event['category_id'] == '4a2788f8-e825-4d36-9894-efd4baf1cfae'):
                     if (not event['country'] == 'AUS'):
                         continue
                     LOC = event['name']
-                    round = 1
+                    ROUND = 1
                     for race_id in event['race_ids']:
                         race_identidyer = {'race_id':race_id}
-                        entrants,START_TIME = self.get_entrants(race_identidyer)
-                        if (len(entrants) > 0 and not START_TIME == None):
-                            race_data.append({'round': round,'name': f'{LOC}','start_time':START_TIME.isoformat(),'entrants':entrants,'race_id':race_identidyer})
-                            round += 1
-            #except Exception as e:
-            #    print(f'ladbrokes: {e}')
-            #    continue
+                        ENTRANTS,START_TIME = self.get_entrants(race_identidyer)
+                        if (len(ENTRANTS) > 0 and not START_TIME == None):
+                            race_profile.append(self.create_race_entry(
+                                track_name=LOC,
+                                round=ROUND,
+                                race_identifyer=race_identidyer,
+                                entrants=ENTRANTS,
+                                start_time=START_TIME
+                            ))
+                            ROUND += 1
+            except Exception as e:
+                print(f'ladbrokes: {e}')
+                continue
 
-        return race_data
+        return race_profile
     
     def get_entrants(self,race_identifyer):
         race_details = self.get_race_details(race_identifyer['race_id'])
@@ -170,12 +169,17 @@ class ladbrokes_horses(scraper):
         
         entrants = []
         for key,entrant in race_details['data']['entrants'].items():
-            #try:
+            try:
                 if "barrier" in entrant:
                     HORSE_NAME = entrant['name']
                     ODDS = self.find_associated_odds(race_details['data']['prices'],entrant['id'])
                     if (ODDS != -1):
-                        entrants.append({'name':HORSE_NAME,'odds':ODDS, 'scratched':'is_scratched' in entrant, 'record_time':read_time.isoformat()})
-            #except Exception as e:
-            #    self.local_print(e)
+                        entrants.append(self.create_entrant_entry(
+                            entrant_name=HORSE_NAME,
+                            odds=ODDS,
+                            scratched=('is_scratched' in entrant),
+                            record_time=read_time
+                        ))
+            except Exception as e:
+                self.local_print(e)
         return entrants, START_TIME

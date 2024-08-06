@@ -71,19 +71,18 @@ class databaseOperations:
         """)[0][0]
     
     def impose_horse(self,horse_name):
-        return self.pushQuery(f"""
-        WITH ins AS (
-            INSERT INTO public.horse(
-                name, sex, parent_1, parent_2)
-            VALUES ('{horse_name}', 'n/a', 'n/a', 'n/a')
-                ON CONFLICT DO NOTHING
-            RETURNING horse_id
-        )
-        SELECT horse_id FROM ins
-            UNION ALL
-        SELECT horse_id FROM public.horse WHERE name = '{horse_name}'
-            LIMIT 1;
-        """)[0][0]
+        existing_data = self.pushQuery(f"""
+            SELECT * FROM horse WHERE name = '{horse_name}';
+                                       """)
+        if len(existing_data) == 0:
+            return self.pushQuery(f"""
+                INSERT INTO public.horse(
+                    name, sex, parent_1, parent_2)
+                VALUES ('{horse_name}', 'n/a', 'n/a', 'n/a')
+                    ON CONFLICT DO NOTHING
+                RETURNING horse_id
+            """)[0][0]
+        return existing_data[0][0]
     
     def impose_race(self,track_id,start_time:datetime,round):
         existing_race = self.pushQuery(f"""
@@ -91,6 +90,7 @@ class databaseOperations:
                 track_id = {track_id} AND DATE(start_time) = DATE('{start_time}') AND round={round}
             LIMIT 1; 
         """)
+        
         if (len(existing_race) == 0):
             return self.pushQuery(f"""
             WITH ins AS (
@@ -164,7 +164,7 @@ class databaseOperations:
             return None
         existing_entry = self.pushQuery(f"""
             SELECT odds FROM odds WHERE entrant_id={entrant_id} AND platform_name='{platform_name}' ORDER BY record_time DESC LIMIT 1;
-                                        """)
+            """)
         
         apply_update = False
         if len(existing_entry) == 0:

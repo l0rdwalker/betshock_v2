@@ -7,7 +7,7 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '...')))
 from abstract_scraper import scraper
 
-class sportsbett_horses(scraper):
+class sportsbet_horses(scraper):
     def __init__(self,attributes,database,router) -> None:
         super().__init__(attributes,database,router)
         self.marketTypes = ['Win or Place']
@@ -40,43 +40,41 @@ class sportsbett_horses(scraper):
                     return item
         except Exception as e:
             return None
-            
-    def convertTime(self,timeTxt):
-        startTime = datetime.fromtimestamp(timeTxt,tz=timezone.utc)
-        startTime = startTime.astimezone(ZoneInfo("Australia/Sydney"))
-        startTime = startTime.replace(tzinfo=None)    
-        return startTime
 
-    def aquireOdds(self,race_date_obj:timedelta):
+    def get_all_meets(self,race_date_obj:timedelta):
         set_date = datetime.now()
         if isinstance(race_date_obj,timedelta):
             set_date += race_date_obj
         
         todaysDate = (set_date).strftime("%Y-%m-%d")
         races = []
-        #try:
-        data = self.getter(f"https://gwapi.sportsbet.com.au/sportsbook-racing/Sportsbook/Racing/AllRacing/{todaysDate}")
-        if data == None:
-            return races
-        data = data['dates'][0]['sections']
-        meetings = self.conditionalDrillDown(data,'raceType','horse')['meetings']
-        for meeting in meetings:
-            if meeting['regionName'] == 'Australia':
-                for event in meeting['events']:
-                    #try:
-                    race_identidyer = {'race_id':event['httpLink']}
-                    
-                    teams = self.get_entrants(race_identidyer)
-                    if teams == None:
-                        continue
-                    
-                    if (len(teams) > 0):
-                        startTime = self.convertTime(event['startTime'])
-                        races.append({'name': meeting['name'], 'round': event['raceNumber'],'start_time': startTime.isoformat(),'entrants':teams, 'race_id':race_identidyer})
-                    #except Exception as e:
-                    #    self.local_print(e)
-        #except Exception as e:
-        #    self.local_print(e)
+        try:
+            data = self.getter(f"https://gwapi.sportsbet.com.au/sportsbook-racing/Sportsbook/Racing/AllRacing/{todaysDate}")
+            if data == None:
+                return races
+            data = data['dates'][0]['sections']
+            meetings = self.conditionalDrillDown(data,'raceType','horse')['meetings']
+            for meeting in meetings:
+                if meeting['regionName'] == 'Australia':
+                    for event in meeting['events']:
+                        try:
+                            race_identidyer = {'race_id':event['httpLink']}
+                            ENTRANTS = self.get_entrants(race_identidyer)
+                            if ENTRANTS == None:
+                                continue
+                            if (len(ENTRANTS) > 0):
+                                START_TIME = datetime.fromtimestamp(event['startTime'])
+                                races.append(self.create_race_entry(
+                                    track_name=meeting['name'],
+                                    round=event['raceNumber'],
+                                    start_time=START_TIME,
+                                    entrants=ENTRANTS,
+                                    race_identifyer=race_identidyer
+                                ))
+                        except Exception as e:
+                            self.local_print(e)
+        except Exception as e:
+            self.local_print(e)
         return races
 
     def get_entrants(self,race_identidyer):
@@ -100,5 +98,10 @@ class sportsbett_horses(scraper):
                 return None
             if ('winPrice' in prices):
                 WIN_ODDS = self.conditionalDrillDown(hourse['prices'],'priceCode','L')['winPrice']
-                horses.append({'name':HOURSENAME,'odds':WIN_ODDS,'scratched':hourse['result'] == 'V', 'record_time':record_time.isoformat()})
+                horses.append(self.create_entrant_entry(
+                    entrant_name=HOURSENAME,
+                    odds=WIN_ODDS,
+                    scratched=(hourse['result'] == 'V'),
+                    record_time=record_time
+                ))
         return horses
