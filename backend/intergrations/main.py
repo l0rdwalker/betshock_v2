@@ -9,7 +9,7 @@ router_obj = task_schedular.get_router_obj()
 
 complete_race_updater = task_schedular.searchFunctions({'type':'arbUpdate'})
 date_programable_horse_functions = task_schedular.searchFunctions({'sport':'horses','flex_dates' : True})
-non_date_programable_horse_functions = task_schedular.searchFunctions({'sport':'horses','flex_dates' : False, 'platform':'racenet'})
+non_date_programable_horse_functions = task_schedular.searchFunctions({'sport':'horses','flex_dates' : False})
 
 all_horse_platforms = []
 all_horse_platforms.extend(date_programable_horse_functions)

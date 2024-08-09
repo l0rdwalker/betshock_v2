@@ -79,13 +79,13 @@ class taskSchedular:
                     self.tasks.append((next_run,task_to_run))
             
     def perform_task(self,current_task):
-        try:
-           self.log(f"starting {current_task['type']} on {current_task['platform']}.")
-           current_task['driver'].init(current_task['data'])
-           self.log(f"{current_task['type']} on {current_task['platform']} succeeded.")
-        except Exception as e:
-            self.log(e,error=True)
-            self.log(f"{current_task['type']} on {current_task['platform']} failed.",error=True)
+        #try:
+        self.log(f"starting {current_task['type']} on {current_task['platform']}.")
+        current_task['driver'].init(current_task['data'])
+        self.log(f"{current_task['type']} on {current_task['platform']} succeeded.")
+        #except Exception as e:
+        #    self.log(e,error=True)
+        #    self.log(f"{current_task['type']} on {current_task['platform']} failed.",error=True)
         return current_task['driver'].get_next_run()
 
     def contains_key(self,key_value,search_data):

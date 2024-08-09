@@ -20,10 +20,40 @@ class get_market_context(multitask_common):
         self.configure_next_run(None)
         self.push_to_database(task_data)
         
+    def attempt_unify_meets(self,data):
+        races_track_names = {}
+        
+        for platform_data in data:
+            for race in platform_data:
+                race_name = race['name'].strip().lower()
+                words = race_name.split()
+
+                for word in words:
+                    if word not in races_track_names:
+                        races_track_names[word] = set()
+                        races_track_names[word].add(race['name'])
+
+                name_candidates = []
+                for word in words:
+                    name_candidates.extend(races_track_names[word])
+
+                frequency = {}
+                for candidate in name_candidates:
+                    frequency[candidate] = frequency.get(candidate, 0) + 1
+
+                selected_name = max(frequency, key=frequency.get)
+                race['name'] = selected_name
+                
+                for word in words:
+                    races_track_names[word].add(race['name'])
+
+        return data
+                
     def push_to_database(self,data):
         self.local_print("Uploading data to database")
         race_start_times = {}
         scratched_horses = {}
+        data = self.attempt_unify_meets(data)
         
         for platform_data in data:
             for race in platform_data:
@@ -83,9 +113,10 @@ class get_market_context(multitask_common):
         smallest_timedelta = None
         for function in self.functions:
             desired_next_run:datetime = function[0]['driver'].get_next_run()
-            desired_next_run = desired_next_run.replace(tzinfo=timezone.utc)
             if desired_next_run == None:
                 continue
+            desired_next_run = desired_next_run.replace(tzinfo=timezone.utc)
+
             timedelta_difference = desired_next_run - current_time
             if smallest_timedelta == None:
                 smallest_timedelta = timedelta_difference

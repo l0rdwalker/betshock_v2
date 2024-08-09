@@ -146,18 +146,16 @@ class databaseOperations:
                        """)
     
     def impose_track(self,track_name):
-        return self.pushQuery(f"""
-        WITH ins AS (
-            INSERT INTO public.track(track_name, track_type, address)
-                VALUES ('{track_name}', 'n/a', 'n/a')
-            ON CONFLICT DO NOTHING
-                RETURNING track_id
-        )
-        SELECT track_id FROM ins
-            UNION ALL
-        SELECT track_id FROM public.track WHERE track_name = '{track_name}'
-            LIMIT 1;
-        """)[0][0]
+        existing_track = self.pushQuery(f"""
+            SELECT track_id FROM track WHERE track_name = '{track_name}';                  
+        """)
+        if len(existing_track) == 0:
+            return self.pushQuery(f"""
+            INSERT INTO public.track(
+                track_name)
+            VALUES ('{track_name}') RETURNING track_id;
+            """)[0][0]
+        return existing_track[0][0]
         
     def impose_odds(self,entrant_id,platform_name,odds,record_time):
         if odds == -1:
