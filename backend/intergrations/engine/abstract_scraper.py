@@ -23,23 +23,20 @@ class scraper(task):
         
     def configure_next_run(self, data):
         cur_time = datetime.now().astimezone(timezone.utc)
-        closest_utc_date = None
         closest_utc_timedelta = None
         for race in data:
-            race_start_time = datetime.strptime(race['start_time'], '%Y-%m-%dT%H:%M:%S.%fZ')
+            race_start_time = datetime.fromisoformat(race['start_time'])
             race_start_time = race_start_time.replace(tzinfo=timezone.utc)
             if race_start_time > cur_time:
                 timedelta_difference = race_start_time-cur_time
                 if closest_utc_timedelta == None:
                     closest_utc_timedelta = timedelta_difference
-                    closest_utc_date = race_start_time
                 elif closest_utc_timedelta < timedelta_difference:
                     closest_utc_timedelta = timedelta_difference
-                    closest_utc_date = race_start_time
         if closest_utc_timedelta == None:
             self.next_run_time = None
         else:
-            self.next_run_time = cur_time + timedelta(hours=2)
+            self.next_run_time = cur_time + timedelta(hours=5)
         
     @abstractmethod
     def get_all_meets(self,data):

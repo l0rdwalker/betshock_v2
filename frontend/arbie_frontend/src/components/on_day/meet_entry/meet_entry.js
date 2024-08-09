@@ -1,8 +1,9 @@
 import React , {useState, useEffect} from 'react';
-import './meet_entry.css'
 
 import RoundSelect from './round_select/round_select';
 import Australia from './flags/australia';
+
+import './meet_entry.css'
 
 const MeetEntry = (props) => {
   const [track_name,set_track_name] = useState(props.race_data['Track_name']);

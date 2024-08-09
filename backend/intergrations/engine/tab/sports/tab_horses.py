@@ -122,6 +122,8 @@ class tab_horses(scraper):
                     RACE_ID = {'meeting_date':meetingDate,'location':location,'round':ROUND}
                     
                     ENTRANTS,START_TIME = self.get_entrants(RACE_ID)
+                    START_TIME:datetime = datetime.fromisoformat(START_TIME.replace('Z', '+00:00'))
+                    START_TIME = START_TIME.isoformat()
                     if ENTRANTS == None:
                         continue
                     

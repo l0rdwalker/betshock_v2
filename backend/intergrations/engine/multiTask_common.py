@@ -17,11 +17,13 @@ class multitask_common(task):
         self.name = 'Arbie'
 
     def run_all_tasks(self,data=None):
+        self.local_print(f"Starting thread pool")
         with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.functions)) as executor:
             tasks = []
             for task_idx in range(0,len(self.functions)):
                 tasks.append((self.functions[task_idx][0]['driver'],self.functions[task_idx][1]))
             data = list(executor.map(lambda args: args[0].init(args[1]), tasks))
+        self.local_print(f"Thread pool completed")
         return data
     
     def add_function(self,function:task,function_parameter=None):

@@ -17,6 +17,29 @@ func Get_Day_Races_Internal(c *gin.Context) {
 }
 
 func Get_Next_2_go(c *gin.Context) {
-	//t, err := time.Parse(time.RFC3339, "2020-06-27T09:34:01Z") //In place of getting the current date
 	db.Get_Next_2_Go_Races(c)
+}
+
+func Get_Race_View(c *gin.Context) {
+	race_id, err := strconv.Atoi(c.Param("race_id"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "bad parameter"})
+	}
+
+	possible_races := db.Get_Race_Details(c, race_id)
+	var race *db.Complete_Race
+	if len(possible_races) > 0 {
+		race = &possible_races[0]
+	} else {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "bad parameter"})
+		return
+	}
+
+	entrants := db.Get_Race_Entrants(c, race_id)
+	for idx := range entrants {
+		entrants[idx].Prices = db.Get_Platform_Offerings(c, entrants[idx].Entrant_id)
+	}
+
+	race.Entrants = entrants
+	c.IndentedJSON(http.StatusOK, race)
 }

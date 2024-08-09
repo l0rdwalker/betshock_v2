@@ -21,6 +21,7 @@ class get_market_context(multitask_common):
         self.push_to_database(task_data)
         
     def push_to_database(self,data):
+        self.local_print("Uploading data to database")
         race_start_times = {}
         scratched_horses = {}
         
@@ -50,6 +51,7 @@ class get_market_context(multitask_common):
 
         self.correct_race_start_time(race_start_times)
         self.correct_scratched(scratched_horses)
+        self.local_print("Finished uploading to database")
 
     def correct_scratched(self,scratched_horses):
         for entrant_id,value in scratched_horses.items():
@@ -75,11 +77,13 @@ class get_market_context(multitask_common):
             self.database.correct_race_start_time(race_id,frequent_date)
         
     def configure_next_run(self,data):
+        self.local_print("Configuring when_next_run")
         current_time = datetime.now().replace(tzinfo=timezone.utc)
         
         smallest_timedelta = None
         for function in self.functions:
             desired_next_run:datetime = function[0]['driver'].get_next_run()
+            desired_next_run = desired_next_run.replace(tzinfo=timezone.utc)
             if desired_next_run == None:
                 continue
             timedelta_difference = desired_next_run - current_time
@@ -97,6 +101,7 @@ class get_market_context(multitask_common):
             sydney_time = sydney_time.replace(hour=5, minute=0, second=0, microsecond=0)
             sydney_time += timedelta(days=1)
             self.next_run_time = sydney_time.astimezone(utc_tz)
+        self.local_print("Completed when_next_run")
 
         
     

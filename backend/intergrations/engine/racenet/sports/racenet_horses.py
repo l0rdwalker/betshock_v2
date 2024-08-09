@@ -120,8 +120,16 @@ class racenet_horses(scraper):
             curr += race_date_obj
             
         race_profile = []
-        meets = self.get_day_races(curr)
-        meets = meets['data']['meetingsGrouped']
+        for x in range(0,5):
+            try:
+                meets = self.get_day_races(curr)
+                meets = meets['data']['meetingsGrouped']
+                break
+            except Exception as e:
+                self.local_print(f"Was no able to pull data. Attempt {x+1}")
+                if x+1 >= 5:
+                    return race_profile
+            
         for entry in meets:
             if entry['group'] == 'Australia':
                 meets = entry
@@ -130,9 +138,9 @@ class racenet_horses(scraper):
             LOC = meet['name']
             for race in meet['events']:
                 ROUND = race['eventNumber']
-                START_TIME = race['startTime']
+                START_TIME = datetime.strptime(race['startTime'], '%Y-%m-%dT%H:%M:%S.%fZ')
                 
-                race_id = {'race_id':race['id'],'start_time':START_TIME,'round':ROUND,'name':LOC}
+                race_id = {'race_id':race['id'],'start_time':START_TIME.isoformat(),'round':ROUND,'name':LOC}
                 
                 ENTRANTS = self.get_entrants(race_id)
                 race_profile.extend(ENTRANTS)

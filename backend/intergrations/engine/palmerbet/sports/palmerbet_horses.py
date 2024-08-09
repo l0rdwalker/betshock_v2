@@ -135,6 +135,8 @@ class palmerbet_horses(scraper):
 
                             ENTRANTS = self.get_entrants(race_identifyer)
                             START_TIME = race['startTime']
+                            START_TIME:datetime = datetime.fromisoformat(START_TIME.replace('Z', '+00:00'))
+                            START_TIME = START_TIME.isoformat()
                             
                             race_profile.append(self.create_race_entry(
                                 track_name=TRACK_NAME,

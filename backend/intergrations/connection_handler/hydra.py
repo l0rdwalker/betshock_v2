@@ -19,6 +19,7 @@ class hydra():
         
         self.connections = {}
         self.lock = Lock()
+        self.print_lock = Lock()
         self.reveise_connections = datetime.now() + timedelta(hours=5)
         
         for entry in docker_containers:
@@ -36,7 +37,7 @@ class hydra():
     def test_connection(self,proxy):
         response = requests.get('https://api.bigdatacloud.net/data/client-ip', proxies=proxy)
         if response.status_code == 200:
-            print(response.text)
+            self.local_print(response.text)
             return True
         return False
     
@@ -86,7 +87,7 @@ class hydra():
             
         if not responce.status_code == 200:
             min_tunnel['black_list'][platform] = datetime.now().astimezone(timezone.utc)
-            print(f"{platform} has been black_listed from {min_tunnel['location']}\n")
+            self.local_print(f"{platform} has been black_listed from {min_tunnel['location']}")
             with self.lock:
                 min_tunnel['failed'] += 1
             if retry:
@@ -100,4 +101,8 @@ class hydra():
             self.revise_connections()
             
         return json.loads(responce.text)
+    
+    def local_print(self,msg):
+        with self.print_lock:
+            print(f"hydra: {msg}")
 

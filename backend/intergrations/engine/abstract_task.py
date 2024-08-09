@@ -18,6 +18,12 @@ class task(ABC):
         
         self.database:databaseOperations = database
         self.router:hydra = router
+    
+    def set_operation_name(self,name:str):
+        self.operation = name
+    
+    def get_operaton_name(self):
+        return self.operation
         
     @abstractmethod
     def configure_next_run(self,data):
@@ -38,5 +44,5 @@ class task(ABC):
         }
     
     def local_print(self,msg:str):
-        print(f"{self.platformName}:{msg}")
+        print(f"{self.platformName}: {msg}")
         
