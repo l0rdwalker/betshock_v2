@@ -5,7 +5,7 @@ import CounterTime from '../../counter_time/counter_time';
 
 const Next2GoTile = (props) => {
   const [name, set_name] = useState(props.race_data['Track_name']);
-  const [round, set_round] = useState(props.race_data['Round'] )
+  const [round, set_round] = useState(props.race_data['Round']);
   const [key, setKey] = useState(props.race_data['Start_time']);
 
   let title = name + " R" + round.toString()

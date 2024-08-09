@@ -3,7 +3,7 @@ import Next2GoTile from './next_2_go_tile/next_2_go_tile.js'
 
 import './next_2_go.css'
 
-const Next2go = () => {
+const Next2go = (props) => {
   const [data,setData] = useState([]);
 
   useEffect(() => {

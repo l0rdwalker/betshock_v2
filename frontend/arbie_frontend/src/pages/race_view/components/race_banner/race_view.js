@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 
 import TrackImage from '../../../../static_resources/temp_track.jpg'
 
-import './race_header.css'
+import './race_view.css'
 
 const RaceHeader = (props) => {
   const [race_title,set_race_title] = useState("");

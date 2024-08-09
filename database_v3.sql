@@ -65,7 +65,9 @@ CREATE TABLE weather (
 );
 
 CREATE TABLE platforms (
-    platform_name varchar(80) PRIMARY KEY
+    platform_name varchar(80) PRIMARY KEY,
+    theme_color character varying(14),
+    PRIMARY KEY (platform_name)
 );
 
 CREATE TABLE odds (

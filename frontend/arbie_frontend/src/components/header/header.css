@@ -5,15 +5,32 @@
     background-color: var(--primary-background-color);
 
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
+}
 
+.header_partition {
+    flex:1;
+
+    display: flex;
+    align-items: center;
+}
+
+.home_header {
+    justify-content: start;
+}
+.controls_header {
+    justify-content: end;
+}
+
+.force_width {
+    max-width: 80px;
 }
 
 .header_icon_wpr {
     margin-right: 10px;
 
-    width: 150px;
+    width: fit-content;
     height: fit-content;
 
     display: flex;
@@ -25,7 +42,7 @@
 
 .icon_wpr {
     flex: 1;
-    width: 25px;
+    width: fit-content;
     height: fit-content;
 
     display: flex;

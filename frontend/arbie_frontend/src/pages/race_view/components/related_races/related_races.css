@@ -1,0 +1,14 @@
+
+
+
+.related_races_wpr {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+
+

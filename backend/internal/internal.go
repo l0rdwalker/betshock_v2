@@ -43,3 +43,11 @@ func Get_Race_View(c *gin.Context) {
 	race.Entrants = entrants
 	c.IndentedJSON(http.StatusOK, race)
 }
+
+func Get_Other_Meet_Races(c *gin.Context) {
+	race_id, err := strconv.Atoi(c.Param("race_id"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "bad parameter"})
+	}
+	db.Get_Related_Race_Rounds(c, race_id)
+}

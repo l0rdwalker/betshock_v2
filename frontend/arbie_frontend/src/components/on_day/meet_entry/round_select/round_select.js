@@ -23,7 +23,7 @@ const RoundSelect = (props) => {
   }
 
   return (
-    <div onClick={()=>navigate(`/race/${race_data['Race_id']}`)} class={'round_select_container'}>
+    <div style={{height: props.height}} onClick={()=>navigate(`/race/${race_data['Race_id']}`)} class={'round_select_container'}>
       <div class='padded_content'>
         
         <div class='vertical_divide'>

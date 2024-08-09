@@ -12,14 +12,16 @@ import (
 )
 
 type Price struct {
-	Platform_name string    `json:"Platform"`
-	Record_time   time.Time `json:"Record_time"`
-	Price         float32   `json:"Price"`
+	Platform_name   string    `json:"Platform"`
+	Record_time     time.Time `json:"Record_time"`
+	Price           float32   `json:"Price"`
+	Platform_colour string    `json:"Platform_colour"`
 }
 
 type Entrant struct {
 	Entrant_name string  `json:"Entrant_name"`
 	Entrant_id   int     `json:"Entrant_id"`
+	Is_scratched int     `json:"Is_scratched"`
 	Prices       []Price `json:"Prices"`
 }
 
@@ -136,6 +138,25 @@ func Get_Day_Races(c *gin.Context, date int) {
 	c.JSON(http.StatusOK, races)
 }
 
+func Get_Related_Race_Rounds(c *gin.Context, race_id int) {
+	race_id_str := strconv.Itoa(race_id)
+	rows := exec_query("SELECT track.track_name,race.round,race.start_time,race.race_id FROM race JOIN track ON race.track_id = track.track_id WHERE DATE(race.start_time) in (SELECT DATE(start_time) FROM race WHERE race_id = "+race_id_str+") AND race.track_id in (SELECT race.track_id FROM race WHERE race_id = "+race_id_str+") ORDER BY race.round;", c)
+	races := make([]Race, 0)
+	if rows != nil {
+		for rows.Next() {
+			var cur_race Race
+			if err := rows.Scan(&cur_race.Track_name, &cur_race.Round, &cur_race.Start_time, &cur_race.Race_id); err != nil {
+				rows.Close()
+				return
+			}
+			races = append(races, cur_race)
+		}
+		rows.Close()
+	}
+
+	c.JSON(http.StatusOK, races)
+}
+
 func Get_Race_Details(c *gin.Context, race_id int) []Complete_Race {
 	race_id_str := strconv.Itoa(race_id)
 	rows := exec_query("SELECT track.track_name, race.round, race.start_time, race.race_id FROM race JOIN track ON race.track_id = track.track_id WHERE race.race_id = "+race_id_str+";", c)
@@ -161,12 +182,12 @@ func Get_Race_Details(c *gin.Context, race_id int) []Complete_Race {
 
 func Get_Race_Entrants(c *gin.Context, race_id int) []Entrant {
 	race_id_str := strconv.Itoa(race_id)
-	rows := exec_query("SELECT entrant.entrant_id,horse.name FROM race JOIN entrant ON race.race_id = entrant.race_id JOIN horse ON horse.horse_id = entrant.horse_id WHERE race.race_id = "+race_id_str+";", c)
+	rows := exec_query("SELECT entrant.entrant_id, horse.name, entrant.is_scratched FROM race JOIN entrant ON race.race_id = entrant.race_id JOIN horse ON horse.horse_id = entrant.horse_id WHERE race.race_id = "+race_id_str+";", c)
 
 	entrants := make([]Entrant, 0)
 	for rows.Next() {
 		var entrant Entrant
-		if err := rows.Scan(&entrant.Entrant_id, &entrant.Entrant_name); err != nil {
+		if err := rows.Scan(&entrant.Entrant_id, &entrant.Entrant_name, &entrant.Is_scratched); err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"message": "Failed to scan row"})
 			return nil
 		}
@@ -208,12 +229,12 @@ func Get_Platform_Offerings(c *gin.Context, entrant_id int) []Price {
 
 func Get_Current_Platform_Price(c *gin.Context, platform_name string, entrant_id int) Price {
 	entrant_id_str := strconv.Itoa(entrant_id)
-	rows := exec_query("SELECT platform_name, odds, record_time FROM odds WHERE odds.entrant_id = "+entrant_id_str+" AND odds.platform_name = '"+platform_name+"' ORDER BY odds.record_time DESC LIMIT 1;", c)
+	rows := exec_query("SELECT odds.platform_name, odds.odds, odds.record_time, platforms.theme_color FROM odds JOIN platforms ON odds.platform_name = platforms.platform_name WHERE odds.entrant_id = "+entrant_id_str+" AND odds.platform_name = '"+platform_name+"' ORDER BY odds.record_time DESC LIMIT 1;", c)
 
 	var set bool = false
 	var platform_price Price
 	for rows.Next() {
-		if err := rows.Scan(&platform_price.Platform_name, &platform_price.Price, &platform_price.Record_time); err != nil {
+		if err := rows.Scan(&platform_price.Platform_name, &platform_price.Price, &platform_price.Record_time, &platform_price.Platform_colour); err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"message": "Failed to scan row"})
 		}
 		set = true

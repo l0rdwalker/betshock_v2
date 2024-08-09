@@ -1,0 +1,32 @@
+
+.platform_name_table {
+    writing-mode: vertical-lr;
+    background-color: rgb(139, 130, 70);
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    color: white;
+}
+
+
+.entrant_name_table {
+    width: 200px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    background-color: var(--primary-background-color);
+}
+
+.entrant_name_table p {
+    color: white;
+    margin-left: 10px;
+}
+
+.price_entry {
+    text-align: center;
+    background-color: white;
+}
+
+.disable {
+    opacity: 0.2;
+}
