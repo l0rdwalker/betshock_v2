@@ -4,6 +4,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import NewOddsTable from './components/new_odds_table/new_odds_table';
 import RaceHeader from './components/race_banner/race_view';
 import RelatedRace from './components/related_races/related_races';
+import EntrantGraphs from '../analytics/components/graphs/graphs';
 
 import './race_view.css'
 
@@ -23,6 +24,7 @@ const RaceView = (props) => {
       <RelatedRace race_id={race_id} />
       <RaceHeader track_name={`${race_data['Track_name']} R${race_data['Round']}`}/>
       <NewOddsTable entrants={race_data['Entrants']} />
+      <EntrantGraphs race_id={race_id} />
     </>
   );
 }

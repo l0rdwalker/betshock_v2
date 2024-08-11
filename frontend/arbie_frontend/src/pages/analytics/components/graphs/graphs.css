@@ -1,0 +1,12 @@
+.entrant_line_graph_wpr {
+    width: 100%;
+    height: fit-content;
+
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}

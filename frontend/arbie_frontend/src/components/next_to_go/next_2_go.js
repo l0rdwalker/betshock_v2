@@ -15,10 +15,6 @@ const Next2go = (props) => {
     .catch(error => console.error(error))
   },[]);
 
-  useEffect(() => {
-    console.log(data,'pop');
-  },[data]);
-
   return (
     <div class='next_2_go_container'>
         <div class='next_2_go_header'>

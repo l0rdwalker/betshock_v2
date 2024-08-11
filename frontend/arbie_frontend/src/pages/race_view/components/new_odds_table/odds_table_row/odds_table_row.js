@@ -18,7 +18,6 @@ const OddsTableRow = (props) => {
   }
 
   useEffect(() => {
-    console.log(props.entrant);
     const entrant_name = props.entrant['Entrant_name'];
     const price_options = props.entrant['Prices'];
     const platform_template = props.platform_ordering;

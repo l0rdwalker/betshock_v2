@@ -8,7 +8,6 @@ import {BrowserRouter, Routes, Route, Link, NavLink} from 'react-router-dom';
 import Home from './pages/home/home';
 import RaceView from './pages/race_view/race_view';
 import race_entrant_details from './pages/race_view/race_view'
-import Footer from './components/footer/footer';
 
 import './index.css';
 import './master_style.css'

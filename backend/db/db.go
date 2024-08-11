@@ -33,6 +33,21 @@ type Complete_Race struct {
 	Entrants   []Entrant `json:"Entrants"`
 }
 
+type Price_Instance struct {
+	Odds        float32   `json:"Odds"`
+	Record_time time.Time `json:"Record_time"`
+}
+
+type Platform_Entrant_Series struct {
+	Platform_name   string           `json:"Platform_name"`
+	Platform_colour string           `json:"Platform_colour"`
+	Prices          []Price_Instance `json:"Prices"`
+}
+
+type Entrant_Platform_Price_History struct {
+	Platform_name string `json:"Platform_name"`
+}
+
 type Race struct {
 	Track_name string    `json:"Track_name"`
 	Round      int       `json:"Round"`
@@ -201,6 +216,44 @@ func Get_Race_Entrants(c *gin.Context, race_id int) []Entrant {
 	}
 
 	return entrants
+}
+
+func Get_Entrant_Timeseries_Prices(c *gin.Context, entrant_id int) []Platform_Entrant_Series {
+	entrant_id_str := strconv.Itoa(entrant_id)
+	rows := exec_query("SELECT odds.platform_name, platforms.theme_color FROM odds JOIN platforms ON odds.platform_name = platforms.platform_name WHERE odds.entrant_id = "+entrant_id_str+" GROUP BY odds.platform_name, platforms.theme_color;", c)
+
+	platform_offerings := make([]Platform_Entrant_Series, 0)
+	for rows.Next() {
+		var cur_platform Platform_Entrant_Series
+		if err := rows.Scan(&cur_platform.Platform_name, &cur_platform.Platform_colour); err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"message": "Failed to scan row"})
+			rows.Close()
+			return nil
+		}
+		historic_entrant_platform_offerings := exec_query("SELECT odds, record_time FROM odds WHERE entrant_id="+entrant_id_str+" AND platform_name='"+cur_platform.Platform_name+"' ORDER BY record_time ASC;", c)
+		price_instances := make([]Price_Instance, 0)
+		for historic_entrant_platform_offerings.Next() {
+			var cur_price Price_Instance
+			if err := historic_entrant_platform_offerings.Scan(&cur_price.Odds, &cur_price.Record_time); err != nil {
+				c.JSON(http.StatusInternalServerError, gin.H{"message": "Failed to scan row"})
+				historic_entrant_platform_offerings.Close()
+				return nil
+			}
+			price_instances = append(price_instances, cur_price)
+		}
+		cur_platform.Prices = price_instances
+		platform_offerings = append(platform_offerings, cur_platform)
+
+		historic_entrant_platform_offerings.Close()
+	}
+	rows.Close()
+
+	if err := rows.Err(); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"message": "Error occurred during row iteration"})
+		return nil
+	}
+
+	return platform_offerings
 }
 
 func Get_Platform_Offerings(c *gin.Context, entrant_id int) []Price {

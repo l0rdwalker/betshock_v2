@@ -24,5 +24,7 @@ func main() {
 	router.GET("/get_day_races/:date", internal.Get_Day_Races_Internal)
 	router.GET("/get_race_details/:race_id", internal.Get_Race_View)
 	router.GET("/get_related_races/:race_id", internal.Get_Other_Meet_Races)
+	router.GET("/get_race_entrants/:race_id", internal.Get_Race_Entrants)
+	router.GET("/get_entrant_price_history/:entrant_id", internal.Get_Entrant_Price_History)
 	router.Run("localhost:8080")
 }

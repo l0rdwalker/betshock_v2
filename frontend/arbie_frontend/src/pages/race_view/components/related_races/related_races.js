@@ -14,9 +14,7 @@ const RelatedRace = (props) => {
   },[props.race_id]);
 
   useEffect(() => {
-
     const round_selections = document.getElementsByClassName('other_meet_races');
-    console.log(round_selections);
   },[other_meet_races]);
 
   return (

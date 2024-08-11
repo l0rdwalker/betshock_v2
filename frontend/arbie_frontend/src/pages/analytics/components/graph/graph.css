@@ -1,0 +1,26 @@
+.entrant_graph_wpr {
+    flex: 1;
+    height: fit-content;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 50%;
+}
+
+
+.entrant_graph_header {
+    height: 30px;
+    background-color: var(--primary-background-color);
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.entrant_graph_header p {
+    color: white;
+    width: fit-content;
+    font-weight: 540;
+}
