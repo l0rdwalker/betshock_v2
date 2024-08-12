@@ -4,7 +4,6 @@ import concurrent.futures
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from abstract_platform import platformManager
-from alive_progress import alive_bar
 from abstract_task import task
 from datetime import datetime,timedelta,timezone
 

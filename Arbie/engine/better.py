@@ -3,7 +3,6 @@ import concurrent.futures
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from abstract_platform import platformManager
-from alive_progress import alive_bar
 from datetime import datetime,timedelta,timezone
 import json
 from multiTask_common import multitask_common
