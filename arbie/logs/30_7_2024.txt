@@ -1,0 +1,2281 @@
+
+30_7_2024:8_29_29: Initalizeing task schedular
+30_7_2024:8_29_29: Successfully imported arbie dependencys
+30_7_2024:8_29_29: Successfully imported betfair dependencys
+30_7_2024:8_29_29: Successfully imported betm dependencys
+30_7_2024:8_29_29: Successfully imported boombet dependencys
+30_7_2024:8_29_29: Successfully imported ladbrokes dependencys
+30_7_2024:8_29_29: Successfully imported palmerbet dependencys
+30_7_2024:8_29_29: Successfully imported playup dependencys
+30_7_2024:8_29_29: Successfully imported pointsbet dependencys
+30_7_2024:8_29_29: Successfully imported sportsbett dependencys
+30_7_2024:8_29_29: Successfully imported tab dependencys
+30_7_2024:8_29_29: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_29_30: starting multiTask on Arbie.
+30_7_2024:8_29_38: multiTask on Arbie succeeded.
+30_7_2024:8_29_38: starting multiTask on Arbie.
+30_7_2024:8_31_44: multiTask on Arbie succeeded.
+30_7_2024:8_31_44: starting multiTask on Arbie.
+30_7_2024:8_34_22: multiTask on Arbie succeeded.
+30_7_2024:8_34_22: starting multiTask on Arbie.
+30_7_2024:8_35_57: Initalizeing task schedular
+30_7_2024:8_35_58: Successfully imported arbie dependencys
+30_7_2024:8_35_58: Successfully imported betfair dependencys
+30_7_2024:8_35_58: Successfully imported betm dependencys
+30_7_2024:8_35_58: Successfully imported boombet dependencys
+30_7_2024:8_35_58: Successfully imported ladbrokes dependencys
+30_7_2024:8_35_58: Successfully imported palmerbet dependencys
+30_7_2024:8_35_58: Successfully imported playup dependencys
+30_7_2024:8_35_58: Successfully imported pointsbet dependencys
+30_7_2024:8_35_58: Successfully imported sportsbett dependencys
+30_7_2024:8_35_58: Successfully imported tab dependencys
+30_7_2024:8_35_58: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_35_58: starting multiTask on Arbie.
+30_7_2024:8_37_32: Initalizeing task schedular
+30_7_2024:8_37_32: Successfully imported arbie dependencys
+30_7_2024:8_37_32: Successfully imported betfair dependencys
+30_7_2024:8_37_32: Successfully imported betm dependencys
+30_7_2024:8_37_32: Successfully imported boombet dependencys
+30_7_2024:8_37_32: Successfully imported ladbrokes dependencys
+30_7_2024:8_37_32: Successfully imported palmerbet dependencys
+30_7_2024:8_37_32: Successfully imported playup dependencys
+30_7_2024:8_37_32: Successfully imported pointsbet dependencys
+30_7_2024:8_37_32: Successfully imported sportsbett dependencys
+30_7_2024:8_37_32: Successfully imported tab dependencys
+30_7_2024:8_37_32: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_37_32: starting multiTask on Arbie.
+30_7_2024:8_38_58: Initalizeing task schedular
+30_7_2024:8_38_58: Successfully imported arbie dependencys
+30_7_2024:8_38_58: Successfully imported betfair dependencys
+30_7_2024:8_38_59: Successfully imported betm dependencys
+30_7_2024:8_38_59: Successfully imported boombet dependencys
+30_7_2024:8_38_59: Successfully imported ladbrokes dependencys
+30_7_2024:8_38_59: Successfully imported palmerbet dependencys
+30_7_2024:8_38_59: Successfully imported playup dependencys
+30_7_2024:8_38_59: Successfully imported pointsbet dependencys
+30_7_2024:8_38_59: Successfully imported sportsbett dependencys
+30_7_2024:8_38_59: Successfully imported tab dependencys
+30_7_2024:8_38_59: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_38_59: starting multiTask on Arbie.
+30_7_2024:8_39_6: multiTask on Arbie succeeded.
+30_7_2024:8_39_6: starting multiTask on Arbie.
+30_7_2024:8_39_20: Initalizeing task schedular
+30_7_2024:8_39_20: Successfully imported arbie dependencys
+30_7_2024:8_39_20: Successfully imported betfair dependencys
+30_7_2024:8_39_20: Successfully imported betm dependencys
+30_7_2024:8_39_20: Successfully imported boombet dependencys
+30_7_2024:8_39_20: Successfully imported ladbrokes dependencys
+30_7_2024:8_39_20: Successfully imported palmerbet dependencys
+30_7_2024:8_39_20: Successfully imported playup dependencys
+30_7_2024:8_39_20: Successfully imported pointsbet dependencys
+30_7_2024:8_39_20: Successfully imported sportsbett dependencys
+30_7_2024:8_39_20: Successfully imported tab dependencys
+30_7_2024:8_39_20: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_39_21: starting multiTask on Arbie.
+30_7_2024:8_39_49: Initalizeing task schedular
+30_7_2024:8_39_49: Successfully imported arbie dependencys
+30_7_2024:8_39_49: Successfully imported betfair dependencys
+30_7_2024:8_39_49: Successfully imported betm dependencys
+30_7_2024:8_39_49: Successfully imported boombet dependencys
+30_7_2024:8_39_49: Successfully imported ladbrokes dependencys
+30_7_2024:8_39_49: Successfully imported palmerbet dependencys
+30_7_2024:8_39_49: Successfully imported playup dependencys
+30_7_2024:8_39_49: Successfully imported pointsbet dependencys
+30_7_2024:8_39_49: Successfully imported sportsbett dependencys
+30_7_2024:8_39_49: Successfully imported tab dependencys
+30_7_2024:8_39_49: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_40_55: Initalizeing task schedular
+30_7_2024:8_40_55: Successfully imported arbie dependencys
+30_7_2024:8_40_55: Successfully imported betfair dependencys
+30_7_2024:8_40_55: Successfully imported betm dependencys
+30_7_2024:8_40_55: Successfully imported boombet dependencys
+30_7_2024:8_40_55: Successfully imported ladbrokes dependencys
+30_7_2024:8_40_55: Successfully imported palmerbet dependencys
+30_7_2024:8_40_55: Successfully imported playup dependencys
+30_7_2024:8_40_55: Successfully imported pointsbet dependencys
+30_7_2024:8_40_55: Successfully imported sportsbett dependencys
+30_7_2024:8_40_55: Successfully imported tab dependencys
+30_7_2024:8_40_55: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_42_57: Initalizeing task schedular
+30_7_2024:8_42_58: Successfully imported arbie dependencys
+30_7_2024:8_42_58: Successfully imported betfair dependencys
+30_7_2024:8_42_58: Successfully imported betm dependencys
+30_7_2024:8_42_58: Successfully imported boombet dependencys
+30_7_2024:8_42_58: Successfully imported ladbrokes dependencys
+30_7_2024:8_42_58: Successfully imported palmerbet dependencys
+30_7_2024:8_42_58: Successfully imported playup dependencys
+30_7_2024:8_42_58: Successfully imported pointsbet dependencys
+30_7_2024:8_42_58: Successfully imported sportsbett dependencys
+30_7_2024:8_42_58: Successfully imported tab dependencys
+30_7_2024:8_42_58: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_43_9: Initalizeing task schedular
+30_7_2024:8_43_10: Successfully imported arbie dependencys
+30_7_2024:8_43_10: Successfully imported betfair dependencys
+30_7_2024:8_43_10: Successfully imported betm dependencys
+30_7_2024:8_43_10: Successfully imported boombet dependencys
+30_7_2024:8_43_10: Successfully imported ladbrokes dependencys
+30_7_2024:8_43_10: Successfully imported palmerbet dependencys
+30_7_2024:8_43_10: Successfully imported playup dependencys
+30_7_2024:8_43_10: Successfully imported pointsbet dependencys
+30_7_2024:8_43_10: Successfully imported sportsbett dependencys
+30_7_2024:8_43_10: Successfully imported tab dependencys
+30_7_2024:8_43_10: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_48_2: Initalizeing task schedular
+30_7_2024:8_48_2: Successfully imported arbie dependencys
+30_7_2024:8_48_2: Successfully imported betfair dependencys
+30_7_2024:8_48_2: Successfully imported betm dependencys
+30_7_2024:8_48_2: Successfully imported boombet dependencys
+30_7_2024:8_48_3: Successfully imported ladbrokes dependencys
+30_7_2024:8_48_3: Successfully imported palmerbet dependencys
+30_7_2024:8_48_3: Successfully imported playup dependencys
+30_7_2024:8_48_3: Successfully imported pointsbet dependencys
+30_7_2024:8_48_3: Successfully imported sportsbett dependencys
+30_7_2024:8_48_3: Successfully imported tab dependencys
+30_7_2024:8_48_3: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_49_5: Initalizeing task schedular
+30_7_2024:8_49_5: Successfully imported arbie dependencys
+30_7_2024:8_49_5: Successfully imported betfair dependencys
+30_7_2024:8_49_5: Successfully imported betm dependencys
+30_7_2024:8_49_5: Successfully imported boombet dependencys
+30_7_2024:8_49_5: Successfully imported ladbrokes dependencys
+30_7_2024:8_49_5: Successfully imported palmerbet dependencys
+30_7_2024:8_49_5: Successfully imported playup dependencys
+30_7_2024:8_49_5: Successfully imported pointsbet dependencys
+30_7_2024:8_49_5: Successfully imported sportsbett dependencys
+30_7_2024:8_49_5: Successfully imported tab dependencys
+30_7_2024:8_49_5: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_49_10: starting multiTask on Arbie.
+30_7_2024:8_49_17: multiTask on Arbie succeeded.
+30_7_2024:8_49_17: starting multiTask on Arbie.
+30_7_2024:8_51_42: multiTask on Arbie succeeded.
+30_7_2024:8_51_42: starting multiTask on Arbie.
+30_7_2024:8_54_12: multiTask on Arbie succeeded.
+30_7_2024:8_54_12: starting multiTask on Arbie.
+30_7_2024:8_55_20: Initalizeing task schedular
+30_7_2024:8_55_20: Successfully imported arbie dependencys
+30_7_2024:8_55_20: Successfully imported betfair dependencys
+30_7_2024:8_55_20: Successfully imported betm dependencys
+30_7_2024:8_55_20: Successfully imported boombet dependencys
+30_7_2024:8_55_20: Successfully imported ladbrokes dependencys
+30_7_2024:8_55_20: Successfully imported palmerbet dependencys
+30_7_2024:8_55_20: Successfully imported playup dependencys
+30_7_2024:8_55_20: Successfully imported pointsbet dependencys
+30_7_2024:8_55_20: Successfully imported sportsbett dependencys
+30_7_2024:8_55_20: Successfully imported tab dependencys
+30_7_2024:8_55_20: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_55_21: starting multiTask on Arbie.
+30_7_2024:8_55_23: multiTask on Arbie succeeded.
+30_7_2024:8_55_23: starting multiTask on Arbie.
+30_7_2024:8_56_40: multiTask on Arbie succeeded.
+30_7_2024:8_56_40: starting multiTask on Arbie.
+30_7_2024:8_57_45: multiTask on Arbie succeeded.
+30_7_2024:8_57_45: starting multiTask on Arbie.
+30_7_2024:8_58_55: multiTask on Arbie succeeded.
+30_7_2024:8_58_55: starting multiTask on Arbie.
+30_7_2024:8_58_56: multiTask on Arbie succeeded.
+30_7_2024:8_59_1: starting multiTask on Arbie.
+30_7_2024:8_59_2: multiTask on Arbie succeeded.
+30_7_2024:8_59_7: starting multiTask on Arbie.
+30_7_2024:8_59_8: multiTask on Arbie succeeded.
+30_7_2024:8_59_52: Initalizeing task schedular
+30_7_2024:8_59_53: Successfully imported arbie dependencys
+30_7_2024:8_59_53: Successfully imported betfair dependencys
+30_7_2024:8_59_53: Successfully imported betm dependencys
+30_7_2024:8_59_53: Successfully imported boombet dependencys
+30_7_2024:8_59_53: Successfully imported ladbrokes dependencys
+30_7_2024:8_59_53: Successfully imported palmerbet dependencys
+30_7_2024:8_59_53: Successfully imported playup dependencys
+30_7_2024:8_59_53: Successfully imported pointsbet dependencys
+30_7_2024:8_59_53: Successfully imported sportsbett dependencys
+30_7_2024:8_59_53: Successfully imported tab dependencys
+30_7_2024:8_59_53: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:8_59_53: starting multiTask on Arbie.
+30_7_2024:8_59_56: multiTask on Arbie succeeded.
+30_7_2024:8_59_56: starting multiTask on Arbie.
+30_7_2024:9_1_2: multiTask on Arbie succeeded.
+30_7_2024:9_1_2: starting multiTask on Arbie.
+30_7_2024:9_2_45: multiTask on Arbie succeeded.
+30_7_2024:9_2_45: starting multiTask on Arbie.
+30_7_2024:9_3_48: Initalizeing task schedular
+30_7_2024:9_3_48: Successfully imported arbie dependencys
+30_7_2024:9_3_48: Successfully imported betfair dependencys
+30_7_2024:9_3_48: Successfully imported betm dependencys
+30_7_2024:9_3_48: Successfully imported boombet dependencys
+30_7_2024:9_3_48: Successfully imported ladbrokes dependencys
+30_7_2024:9_3_48: Successfully imported palmerbet dependencys
+30_7_2024:9_3_48: Successfully imported playup dependencys
+30_7_2024:9_3_48: Successfully imported pointsbet dependencys
+30_7_2024:9_3_48: Successfully imported sportsbett dependencys
+30_7_2024:9_3_48: Successfully imported tab dependencys
+30_7_2024:9_3_48: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_3_49: starting multiTask on Arbie.
+30_7_2024:9_3_50: multiTask on Arbie succeeded.
+30_7_2024:9_3_50: starting multiTask on Arbie.
+30_7_2024:9_5_1: multiTask on Arbie succeeded.
+30_7_2024:9_5_1: starting multiTask on Arbie.
+30_7_2024:9_7_17: Initalizeing task schedular
+30_7_2024:9_7_18: Successfully imported arbie dependencys
+30_7_2024:9_7_18: Successfully imported betfair dependencys
+30_7_2024:9_7_18: Successfully imported betm dependencys
+30_7_2024:9_7_18: Successfully imported boombet dependencys
+30_7_2024:9_7_18: Successfully imported ladbrokes dependencys
+30_7_2024:9_7_18: Successfully imported palmerbet dependencys
+30_7_2024:9_7_18: Successfully imported playup dependencys
+30_7_2024:9_7_18: Successfully imported pointsbet dependencys
+30_7_2024:9_7_18: Successfully imported sportsbett dependencys
+30_7_2024:9_7_18: Successfully imported tab dependencys
+30_7_2024:9_7_18: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_7_18: starting multiTask on Arbie.
+30_7_2024:9_7_19: multiTask on Arbie succeeded.
+30_7_2024:9_7_19: starting multiTask on Arbie.
+30_7_2024:9_8_0: Initalizeing task schedular
+30_7_2024:9_8_0: Successfully imported arbie dependencys
+30_7_2024:9_8_0: Successfully imported betfair dependencys
+30_7_2024:9_8_0: Successfully imported betm dependencys
+30_7_2024:9_8_0: Successfully imported boombet dependencys
+30_7_2024:9_8_0: Successfully imported ladbrokes dependencys
+30_7_2024:9_8_0: Successfully imported palmerbet dependencys
+30_7_2024:9_8_0: Successfully imported playup dependencys
+30_7_2024:9_8_0: Successfully imported pointsbet dependencys
+30_7_2024:9_8_0: Successfully imported sportsbett dependencys
+30_7_2024:9_8_0: Successfully imported tab dependencys
+30_7_2024:9_8_0: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_8_1: starting multiTask on Arbie.
+30_7_2024:9_8_3: multiTask on Arbie succeeded.
+30_7_2024:9_8_3: starting multiTask on Arbie.
+30_7_2024:9_8_37: multiTask on Arbie succeeded.
+30_7_2024:9_8_37: starting multiTask on Arbie.
+30_7_2024:9_9_42: Initalizeing task schedular
+30_7_2024:9_9_42: Successfully imported arbie dependencys
+30_7_2024:9_9_42: Successfully imported betfair dependencys
+30_7_2024:9_9_42: Successfully imported betm dependencys
+30_7_2024:9_9_42: Successfully imported boombet dependencys
+30_7_2024:9_9_42: Successfully imported ladbrokes dependencys
+30_7_2024:9_9_42: Successfully imported palmerbet dependencys
+30_7_2024:9_9_42: Successfully imported playup dependencys
+30_7_2024:9_9_42: Successfully imported pointsbet dependencys
+30_7_2024:9_9_42: Successfully imported sportsbett dependencys
+30_7_2024:9_9_42: Successfully imported tab dependencys
+30_7_2024:9_9_42: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_13_10: Initalizeing task schedular
+30_7_2024:9_13_10: Successfully imported arbie dependencys
+30_7_2024:9_13_10: Successfully imported betfair dependencys
+30_7_2024:9_13_10: Successfully imported betm dependencys
+30_7_2024:9_13_10: Successfully imported boombet dependencys
+30_7_2024:9_13_10: Successfully imported ladbrokes dependencys
+30_7_2024:9_13_10: Successfully imported palmerbet dependencys
+30_7_2024:9_13_10: Successfully imported playup dependencys
+30_7_2024:9_13_10: Successfully imported pointsbet dependencys
+30_7_2024:9_13_10: Successfully imported sportsbett dependencys
+30_7_2024:9_13_10: Successfully imported tab dependencys
+30_7_2024:9_13_10: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_13_21: Initalizeing task schedular
+30_7_2024:9_13_21: Successfully imported arbie dependencys
+30_7_2024:9_13_21: Successfully imported betfair dependencys
+30_7_2024:9_13_21: Successfully imported betm dependencys
+30_7_2024:9_13_21: Successfully imported boombet dependencys
+30_7_2024:9_13_21: Successfully imported ladbrokes dependencys
+30_7_2024:9_13_21: Successfully imported palmerbet dependencys
+30_7_2024:9_13_21: Successfully imported playup dependencys
+30_7_2024:9_13_21: Successfully imported pointsbet dependencys
+30_7_2024:9_13_21: Successfully imported sportsbett dependencys
+30_7_2024:9_13_21: Successfully imported tab dependencys
+30_7_2024:9_13_21: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_13_51: Initalizeing task schedular
+30_7_2024:9_13_51: Successfully imported arbie dependencys
+30_7_2024:9_13_51: Successfully imported betfair dependencys
+30_7_2024:9_13_51: Successfully imported betm dependencys
+30_7_2024:9_13_51: Successfully imported boombet dependencys
+30_7_2024:9_13_51: Successfully imported ladbrokes dependencys
+30_7_2024:9_13_51: Successfully imported palmerbet dependencys
+30_7_2024:9_13_51: Successfully imported playup dependencys
+30_7_2024:9_13_51: Successfully imported pointsbet dependencys
+30_7_2024:9_13_51: Successfully imported sportsbett dependencys
+30_7_2024:9_13_51: Successfully imported tab dependencys
+30_7_2024:9_13_51: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_13_59: Initalizeing task schedular
+30_7_2024:9_13_59: Successfully imported arbie dependencys
+30_7_2024:9_13_59: Successfully imported betfair dependencys
+30_7_2024:9_13_59: Successfully imported betm dependencys
+30_7_2024:9_13_59: Successfully imported boombet dependencys
+30_7_2024:9_13_59: Successfully imported ladbrokes dependencys
+30_7_2024:9_13_59: Successfully imported palmerbet dependencys
+30_7_2024:9_13_59: Successfully imported playup dependencys
+30_7_2024:9_13_59: Successfully imported pointsbet dependencys
+30_7_2024:9_13_59: Successfully imported sportsbett dependencys
+30_7_2024:9_13_59: Successfully imported tab dependencys
+30_7_2024:9_13_59: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_13_59: starting multiTask on Arbie.
+30_7_2024:9_14_32: multiTask on Arbie succeeded.
+30_7_2024:9_14_32: starting multiTask on Arbie.
+30_7_2024:9_16_30: Initalizeing task schedular
+30_7_2024:9_16_30: Successfully imported arbie dependencys
+30_7_2024:9_16_30: Successfully imported betfair dependencys
+30_7_2024:9_16_30: Successfully imported betm dependencys
+30_7_2024:9_16_30: Successfully imported boombet dependencys
+30_7_2024:9_16_30: Successfully imported ladbrokes dependencys
+30_7_2024:9_16_30: Successfully imported palmerbet dependencys
+30_7_2024:9_16_30: Successfully imported playup dependencys
+30_7_2024:9_16_30: Successfully imported pointsbet dependencys
+30_7_2024:9_16_30: Successfully imported sportsbett dependencys
+30_7_2024:9_16_30: Successfully imported tab dependencys
+30_7_2024:9_16_30: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_16_30: starting multiTask on Arbie.
+30_7_2024:9_19_47: Initalizeing task schedular
+30_7_2024:9_19_47: Successfully imported arbie dependencys
+30_7_2024:9_19_47: Successfully imported betfair dependencys
+30_7_2024:9_19_47: Successfully imported betm dependencys
+30_7_2024:9_19_47: Successfully imported boombet dependencys
+30_7_2024:9_19_47: Successfully imported ladbrokes dependencys
+30_7_2024:9_19_47: Successfully imported palmerbet dependencys
+30_7_2024:9_19_47: Successfully imported playup dependencys
+30_7_2024:9_19_47: Successfully imported pointsbet dependencys
+30_7_2024:9_19_47: Successfully imported sportsbett dependencys
+30_7_2024:9_19_47: Successfully imported tab dependencys
+30_7_2024:9_19_47: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_19_47: starting multiTask on Arbie.
+30_7_2024:9_21_7: Initalizeing task schedular
+30_7_2024:9_21_7: Successfully imported arbie dependencys
+30_7_2024:9_21_7: Successfully imported betfair dependencys
+30_7_2024:9_21_7: Successfully imported betm dependencys
+30_7_2024:9_21_7: Successfully imported boombet dependencys
+30_7_2024:9_21_7: Successfully imported ladbrokes dependencys
+30_7_2024:9_21_7: Successfully imported palmerbet dependencys
+30_7_2024:9_21_7: Successfully imported playup dependencys
+30_7_2024:9_21_7: Successfully imported pointsbet dependencys
+30_7_2024:9_21_7: Successfully imported sportsbett dependencys
+30_7_2024:9_21_7: Successfully imported tab dependencys
+30_7_2024:9_21_7: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_21_7: starting multiTask on Arbie.
+30_7_2024:9_22_16: multiTask on Arbie succeeded.
+30_7_2024:9_22_16: starting multiTask on Arbie.
+30_7_2024:9_23_38: Initalizeing task schedular
+30_7_2024:9_23_38: Successfully imported arbie dependencys
+30_7_2024:9_23_38: Successfully imported betfair dependencys
+30_7_2024:9_23_38: Successfully imported betm dependencys
+30_7_2024:9_23_38: Successfully imported boombet dependencys
+30_7_2024:9_23_38: Successfully imported ladbrokes dependencys
+30_7_2024:9_23_38: Successfully imported palmerbet dependencys
+30_7_2024:9_23_38: Successfully imported playup dependencys
+30_7_2024:9_23_38: Successfully imported pointsbet dependencys
+30_7_2024:9_23_38: Successfully imported sportsbett dependencys
+30_7_2024:9_23_38: Successfully imported tab dependencys
+30_7_2024:9_23_38: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_23_38: starting multiTask on Arbie.
+30_7_2024:9_27_26: Initalizeing task schedular
+30_7_2024:9_27_26: Successfully imported arbie dependencys
+30_7_2024:9_27_26: Successfully imported betfair dependencys
+30_7_2024:9_27_26: Successfully imported betm dependencys
+30_7_2024:9_27_26: Successfully imported boombet dependencys
+30_7_2024:9_27_26: Successfully imported ladbrokes dependencys
+30_7_2024:9_27_26: Successfully imported palmerbet dependencys
+30_7_2024:9_27_26: Successfully imported playup dependencys
+30_7_2024:9_27_26: Successfully imported pointsbet dependencys
+30_7_2024:9_27_26: Successfully imported sportsbett dependencys
+30_7_2024:9_27_26: Successfully imported tab dependencys
+30_7_2024:9_27_26: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_27_26: starting multiTask on Arbie.
+30_7_2024:9_28_4: multiTask on Arbie succeeded.
+30_7_2024:9_28_4: starting multiTask on Arbie.
+30_7_2024:9_28_33: Initalizeing task schedular
+30_7_2024:9_28_33: Successfully imported arbie dependencys
+30_7_2024:9_28_33: Successfully imported betfair dependencys
+30_7_2024:9_28_33: Successfully imported betm dependencys
+30_7_2024:9_28_33: Successfully imported boombet dependencys
+30_7_2024:9_28_33: Successfully imported ladbrokes dependencys
+30_7_2024:9_28_33: Successfully imported palmerbet dependencys
+30_7_2024:9_28_33: Successfully imported playup dependencys
+30_7_2024:9_28_33: Successfully imported pointsbet dependencys
+30_7_2024:9_28_33: Successfully imported sportsbett dependencys
+30_7_2024:9_28_33: Successfully imported tab dependencys
+30_7_2024:9_28_33: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_28_33: starting multiTask on Arbie.
+30_7_2024:9_29_6: multiTask on Arbie succeeded.
+30_7_2024:9_29_6: starting multiTask on Arbie.
+30_7_2024:9_29_19: Initalizeing task schedular
+30_7_2024:9_29_19: Successfully imported arbie dependencys
+30_7_2024:9_29_19: Successfully imported betfair dependencys
+30_7_2024:9_29_19: Successfully imported betm dependencys
+30_7_2024:9_29_19: Successfully imported boombet dependencys
+30_7_2024:9_29_19: Successfully imported ladbrokes dependencys
+30_7_2024:9_29_19: Successfully imported palmerbet dependencys
+30_7_2024:9_29_19: Successfully imported playup dependencys
+30_7_2024:9_29_19: Successfully imported pointsbet dependencys
+30_7_2024:9_29_19: Successfully imported sportsbett dependencys
+30_7_2024:9_29_19: Successfully imported tab dependencys
+30_7_2024:9_29_19: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_29_19: starting multiTask on Arbie.
+30_7_2024:9_29_39: Initalizeing task schedular
+30_7_2024:9_29_39: Successfully imported arbie dependencys
+30_7_2024:9_29_39: Successfully imported betfair dependencys
+30_7_2024:9_29_39: Successfully imported betm dependencys
+30_7_2024:9_29_39: Successfully imported boombet dependencys
+30_7_2024:9_29_39: Successfully imported ladbrokes dependencys
+30_7_2024:9_29_39: Successfully imported palmerbet dependencys
+30_7_2024:9_29_39: Successfully imported playup dependencys
+30_7_2024:9_29_39: Successfully imported pointsbet dependencys
+30_7_2024:9_29_39: Successfully imported sportsbett dependencys
+30_7_2024:9_29_39: Successfully imported tab dependencys
+30_7_2024:9_29_39: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_29_39: starting multiTask on Arbie.
+30_7_2024:9_30_20: multiTask on Arbie succeeded.
+30_7_2024:9_30_20: starting multiTask on Arbie.
+30_7_2024:9_31_11: Initalizeing task schedular
+30_7_2024:9_31_12: Successfully imported arbie dependencys
+30_7_2024:9_31_12: Successfully imported betfair dependencys
+30_7_2024:9_31_12: Successfully imported betm dependencys
+30_7_2024:9_31_12: Successfully imported boombet dependencys
+30_7_2024:9_31_12: Successfully imported ladbrokes dependencys
+30_7_2024:9_31_12: Successfully imported palmerbet dependencys
+30_7_2024:9_31_12: Successfully imported playup dependencys
+30_7_2024:9_31_12: Successfully imported pointsbet dependencys
+30_7_2024:9_31_12: Successfully imported sportsbett dependencys
+30_7_2024:9_31_12: Successfully imported tab dependencys
+30_7_2024:9_31_12: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_31_12: starting multiTask on Arbie.
+30_7_2024:9_31_57: multiTask on Arbie succeeded.
+30_7_2024:9_31_57: starting multiTask on Arbie.
+30_7_2024:9_33_43: Initalizeing task schedular
+30_7_2024:9_33_43: Successfully imported arbie dependencys
+30_7_2024:9_33_43: Successfully imported betfair dependencys
+30_7_2024:9_33_43: Successfully imported betm dependencys
+30_7_2024:9_33_43: Successfully imported boombet dependencys
+30_7_2024:9_33_43: Successfully imported ladbrokes dependencys
+30_7_2024:9_33_43: Successfully imported palmerbet dependencys
+30_7_2024:9_33_43: Successfully imported playup dependencys
+30_7_2024:9_33_43: Successfully imported pointsbet dependencys
+30_7_2024:9_33_43: Successfully imported sportsbett dependencys
+30_7_2024:9_33_43: Successfully imported tab dependencys
+30_7_2024:9_33_43: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_33_43: starting multiTask on Arbie.
+30_7_2024:9_34_26: multiTask on Arbie succeeded.
+30_7_2024:9_34_26: starting multiTask on Arbie.
+30_7_2024:9_37_12: Initalizeing task schedular
+30_7_2024:9_37_13: Successfully imported arbie dependencys
+30_7_2024:9_37_13: Successfully imported betfair dependencys
+30_7_2024:9_37_13: Successfully imported betm dependencys
+30_7_2024:9_37_13: Successfully imported boombet dependencys
+30_7_2024:9_37_13: Successfully imported ladbrokes dependencys
+30_7_2024:9_37_13: Successfully imported palmerbet dependencys
+30_7_2024:9_37_13: Successfully imported playup dependencys
+30_7_2024:9_37_13: Successfully imported pointsbet dependencys
+30_7_2024:9_37_13: Successfully imported sportsbett dependencys
+30_7_2024:9_37_13: Successfully imported tab dependencys
+30_7_2024:9_37_13: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_37_13: starting multiTask on Arbie.
+30_7_2024:9_37_53: multiTask on Arbie succeeded.
+30_7_2024:9_37_53: starting multiTask on Arbie.
+30_7_2024:9_38_22: Initalizeing task schedular
+30_7_2024:9_38_22: Successfully imported arbie dependencys
+30_7_2024:9_38_22: Successfully imported betfair dependencys
+30_7_2024:9_38_22: Successfully imported betm dependencys
+30_7_2024:9_38_22: Successfully imported boombet dependencys
+30_7_2024:9_38_22: Successfully imported ladbrokes dependencys
+30_7_2024:9_38_22: Successfully imported palmerbet dependencys
+30_7_2024:9_38_22: Successfully imported playup dependencys
+30_7_2024:9_38_22: Successfully imported pointsbet dependencys
+30_7_2024:9_38_22: Successfully imported sportsbett dependencys
+30_7_2024:9_38_22: Successfully imported tab dependencys
+30_7_2024:9_38_22: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_38_22: starting multiTask on Arbie.
+30_7_2024:9_38_43: Initalizeing task schedular
+30_7_2024:9_38_44: Successfully imported arbie dependencys
+30_7_2024:9_38_44: Successfully imported betfair dependencys
+30_7_2024:9_38_44: Successfully imported betm dependencys
+30_7_2024:9_38_44: Successfully imported boombet dependencys
+30_7_2024:9_38_44: Successfully imported ladbrokes dependencys
+30_7_2024:9_38_44: Successfully imported palmerbet dependencys
+30_7_2024:9_38_44: Successfully imported playup dependencys
+30_7_2024:9_38_44: Successfully imported pointsbet dependencys
+30_7_2024:9_38_44: Successfully imported sportsbett dependencys
+30_7_2024:9_38_44: Successfully imported tab dependencys
+30_7_2024:9_38_44: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_38_44: starting multiTask on Arbie.
+30_7_2024:9_39_16: Initalizeing task schedular
+30_7_2024:9_39_16: Successfully imported arbie dependencys
+30_7_2024:9_39_16: Successfully imported betfair dependencys
+30_7_2024:9_39_16: Successfully imported betm dependencys
+30_7_2024:9_39_16: Successfully imported boombet dependencys
+30_7_2024:9_39_16: Successfully imported ladbrokes dependencys
+30_7_2024:9_39_16: Successfully imported palmerbet dependencys
+30_7_2024:9_39_16: Successfully imported playup dependencys
+30_7_2024:9_39_16: Successfully imported pointsbet dependencys
+30_7_2024:9_39_16: Successfully imported sportsbett dependencys
+30_7_2024:9_39_16: Successfully imported tab dependencys
+30_7_2024:9_39_16: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_39_16: starting multiTask on Arbie.
+30_7_2024:9_39_28: Initalizeing task schedular
+30_7_2024:9_39_28: Successfully imported arbie dependencys
+30_7_2024:9_39_28: Successfully imported betfair dependencys
+30_7_2024:9_39_28: Successfully imported betm dependencys
+30_7_2024:9_39_28: Successfully imported boombet dependencys
+30_7_2024:9_39_28: Successfully imported ladbrokes dependencys
+30_7_2024:9_39_28: Successfully imported palmerbet dependencys
+30_7_2024:9_39_28: Successfully imported playup dependencys
+30_7_2024:9_39_28: Successfully imported pointsbet dependencys
+30_7_2024:9_39_28: Successfully imported sportsbett dependencys
+30_7_2024:9_39_28: Successfully imported tab dependencys
+30_7_2024:9_39_28: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_39_28: starting multiTask on Arbie.
+30_7_2024:9_40_39: Initalizeing task schedular
+30_7_2024:9_40_39: Successfully imported arbie dependencys
+30_7_2024:9_40_39: Successfully imported betfair dependencys
+30_7_2024:9_40_39: Successfully imported betm dependencys
+30_7_2024:9_40_39: Successfully imported boombet dependencys
+30_7_2024:9_40_39: Successfully imported ladbrokes dependencys
+30_7_2024:9_40_39: Successfully imported palmerbet dependencys
+30_7_2024:9_40_39: Successfully imported playup dependencys
+30_7_2024:9_40_39: Successfully imported pointsbet dependencys
+30_7_2024:9_40_39: Successfully imported sportsbett dependencys
+30_7_2024:9_40_39: Successfully imported tab dependencys
+30_7_2024:9_40_39: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_40_39: starting multiTask on Arbie.
+30_7_2024:9_41_16: Initalizeing task schedular
+30_7_2024:9_41_16: Successfully imported arbie dependencys
+30_7_2024:9_41_16: Successfully imported betfair dependencys
+30_7_2024:9_41_16: Successfully imported betm dependencys
+30_7_2024:9_41_16: Successfully imported boombet dependencys
+30_7_2024:9_41_16: Successfully imported ladbrokes dependencys
+30_7_2024:9_41_16: Successfully imported palmerbet dependencys
+30_7_2024:9_41_16: Successfully imported playup dependencys
+30_7_2024:9_41_16: Successfully imported pointsbet dependencys
+30_7_2024:9_41_16: Successfully imported sportsbett dependencys
+30_7_2024:9_41_16: Successfully imported tab dependencys
+30_7_2024:9_41_16: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_41_16: starting multiTask on Arbie.
+30_7_2024:9_41_48: Initalizeing task schedular
+30_7_2024:9_41_48: Successfully imported arbie dependencys
+30_7_2024:9_41_48: Successfully imported betfair dependencys
+30_7_2024:9_41_48: Successfully imported betm dependencys
+30_7_2024:9_41_48: Successfully imported boombet dependencys
+30_7_2024:9_41_48: Successfully imported ladbrokes dependencys
+30_7_2024:9_41_48: Successfully imported palmerbet dependencys
+30_7_2024:9_41_48: Successfully imported playup dependencys
+30_7_2024:9_41_48: Successfully imported pointsbet dependencys
+30_7_2024:9_41_48: Successfully imported sportsbett dependencys
+30_7_2024:9_41_48: Successfully imported tab dependencys
+30_7_2024:9_41_48: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_41_48: starting multiTask on Arbie.
+30_7_2024:9_46_58: Initalizeing task schedular
+30_7_2024:9_46_58: Successfully imported arbie dependencys
+30_7_2024:9_46_58: Successfully imported betfair dependencys
+30_7_2024:9_46_58: Successfully imported betm dependencys
+30_7_2024:9_46_58: Successfully imported boombet dependencys
+30_7_2024:9_46_58: Successfully imported ladbrokes dependencys
+30_7_2024:9_46_58: Successfully imported palmerbet dependencys
+30_7_2024:9_46_58: Successfully imported playup dependencys
+30_7_2024:9_46_58: Successfully imported pointsbet dependencys
+30_7_2024:9_46_58: Successfully imported sportsbett dependencys
+30_7_2024:9_46_58: Successfully imported tab dependencys
+30_7_2024:9_46_58: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_46_58: starting multiTask on Arbie.
+30_7_2024:9_47_39: multiTask on Arbie succeeded.
+30_7_2024:9_48_15: Initalizeing task schedular
+30_7_2024:9_48_15: Successfully imported arbie dependencys
+30_7_2024:9_48_15: Successfully imported betfair dependencys
+30_7_2024:9_48_15: Successfully imported betm dependencys
+30_7_2024:9_48_15: Successfully imported boombet dependencys
+30_7_2024:9_48_15: Successfully imported ladbrokes dependencys
+30_7_2024:9_48_15: Successfully imported palmerbet dependencys
+30_7_2024:9_48_15: Successfully imported playup dependencys
+30_7_2024:9_48_15: Successfully imported pointsbet dependencys
+30_7_2024:9_48_15: Successfully imported sportsbett dependencys
+30_7_2024:9_48_15: Successfully imported tab dependencys
+30_7_2024:9_48_15: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_48_15: starting multiTask on Arbie.
+30_7_2024:9_50_44: Initalizeing task schedular
+30_7_2024:9_50_44: Successfully imported arbie dependencys
+30_7_2024:9_50_44: Successfully imported betfair dependencys
+30_7_2024:9_50_44: Successfully imported betm dependencys
+30_7_2024:9_50_44: Successfully imported boombet dependencys
+30_7_2024:9_50_44: Successfully imported ladbrokes dependencys
+30_7_2024:9_50_44: Successfully imported palmerbet dependencys
+30_7_2024:9_50_44: Successfully imported playup dependencys
+30_7_2024:9_50_44: Successfully imported pointsbet dependencys
+30_7_2024:9_50_44: Successfully imported sportsbett dependencys
+30_7_2024:9_50_44: Successfully imported tab dependencys
+30_7_2024:9_50_44: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_50_44: starting multiTask on Arbie.
+30_7_2024:9_52_25: Initalizeing task schedular
+30_7_2024:9_52_26: Successfully imported arbie dependencys
+30_7_2024:9_52_26: Successfully imported betfair dependencys
+30_7_2024:9_52_26: Successfully imported betm dependencys
+30_7_2024:9_52_26: Successfully imported boombet dependencys
+30_7_2024:9_52_26: Successfully imported ladbrokes dependencys
+30_7_2024:9_52_26: Successfully imported palmerbet dependencys
+30_7_2024:9_52_26: Successfully imported playup dependencys
+30_7_2024:9_52_26: Successfully imported pointsbet dependencys
+30_7_2024:9_52_26: Successfully imported sportsbett dependencys
+30_7_2024:9_52_26: Successfully imported tab dependencys
+30_7_2024:9_52_26: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_52_26: starting multiTask on Arbie.
+30_7_2024:9_53_28: multiTask on Arbie succeeded.
+30_7_2024:9_53_51: Initalizeing task schedular
+30_7_2024:9_53_51: Successfully imported arbie dependencys
+30_7_2024:9_53_51: Successfully imported betfair dependencys
+30_7_2024:9_53_51: Successfully imported betm dependencys
+30_7_2024:9_53_51: Successfully imported boombet dependencys
+30_7_2024:9_53_51: Successfully imported ladbrokes dependencys
+30_7_2024:9_53_51: Successfully imported palmerbet dependencys
+30_7_2024:9_53_51: Successfully imported playup dependencys
+30_7_2024:9_53_51: Successfully imported pointsbet dependencys
+30_7_2024:9_53_51: Successfully imported sportsbett dependencys
+30_7_2024:9_53_51: Successfully imported tab dependencys
+30_7_2024:9_53_51: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:9_53_51: starting multiTask on Arbie.
+30_7_2024:9_54_33: multiTask on Arbie succeeded.
+30_7_2024:9_54_33: starting multiTask on Arbie.
+30_7_2024:10_2_42: Initalizeing task schedular
+30_7_2024:10_2_43: Successfully imported arbie dependencys
+30_7_2024:10_2_43: Successfully imported betfair dependencys
+30_7_2024:10_2_43: Successfully imported betm dependencys
+30_7_2024:10_2_43: Successfully imported boombet dependencys
+30_7_2024:10_2_43: Successfully imported ladbrokes dependencys
+30_7_2024:10_2_43: Successfully imported palmerbet dependencys
+30_7_2024:10_2_43: Successfully imported playup dependencys
+30_7_2024:10_2_43: Successfully imported pointsbet dependencys
+30_7_2024:10_2_43: Successfully imported sportsbett dependencys
+30_7_2024:10_2_43: Successfully imported tab dependencys
+30_7_2024:10_2_43: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:10_2_43: starting multiTask on Arbie.
+30_7_2024:10_4_10: multiTask on Arbie succeeded.
+30_7_2024:10_4_10: starting multiTask on Arbie.
+30_7_2024:10_4_56: Initalizeing task schedular
+30_7_2024:10_4_56: Successfully imported arbie dependencys
+30_7_2024:10_4_56: Successfully imported betfair dependencys
+30_7_2024:10_4_56: Successfully imported betm dependencys
+30_7_2024:10_4_56: Successfully imported boombet dependencys
+30_7_2024:10_4_56: Successfully imported ladbrokes dependencys
+30_7_2024:10_4_56: Successfully imported palmerbet dependencys
+30_7_2024:10_4_56: Successfully imported playup dependencys
+30_7_2024:10_4_56: Successfully imported pointsbet dependencys
+30_7_2024:10_4_56: Successfully imported sportsbett dependencys
+30_7_2024:10_4_56: Successfully imported tab dependencys
+30_7_2024:10_4_56: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:10_4_56: starting multiTask on Arbie.
+30_7_2024:10_5_54: multiTask on Arbie succeeded.
+30_7_2024:10_5_54: starting multiTask on Arbie.
+30_7_2024:10_6_21: multiTask on Arbie succeeded.
+30_7_2024:10_6_26: starting multiTask on Arbie.
+30_7_2024:10_6_29: multiTask on Arbie succeeded.
+30_7_2024:10_6_34: starting multiTask on Arbie.
+30_7_2024:10_6_37: multiTask on Arbie succeeded.
+30_7_2024:10_6_42: starting multiTask on Arbie.
+30_7_2024:10_6_45: multiTask on Arbie succeeded.
+30_7_2024:10_6_50: starting multiTask on Arbie.
+30_7_2024:10_6_53: multiTask on Arbie succeeded.
+30_7_2024:10_6_58: starting multiTask on Arbie.
+30_7_2024:10_7_1: multiTask on Arbie succeeded.
+30_7_2024:10_7_6: starting multiTask on Arbie.
+30_7_2024:10_7_8: multiTask on Arbie succeeded.
+30_7_2024:10_7_13: starting multiTask on Arbie.
+30_7_2024:10_7_16: multiTask on Arbie succeeded.
+30_7_2024:10_7_21: starting multiTask on Arbie.
+30_7_2024:10_7_24: multiTask on Arbie succeeded.
+30_7_2024:10_7_29: starting multiTask on Arbie.
+30_7_2024:10_7_33: multiTask on Arbie succeeded.
+30_7_2024:10_7_38: starting multiTask on Arbie.
+30_7_2024:10_7_41: multiTask on Arbie succeeded.
+30_7_2024:10_7_46: starting multiTask on Arbie.
+30_7_2024:10_7_49: multiTask on Arbie succeeded.
+30_7_2024:10_7_54: starting multiTask on Arbie.
+30_7_2024:10_7_56: multiTask on Arbie succeeded.
+30_7_2024:10_8_1: starting multiTask on Arbie.
+30_7_2024:10_8_4: multiTask on Arbie succeeded.
+30_7_2024:10_8_9: starting multiTask on Arbie.
+30_7_2024:10_8_12: multiTask on Arbie succeeded.
+30_7_2024:10_8_17: starting multiTask on Arbie.
+30_7_2024:10_8_20: multiTask on Arbie succeeded.
+30_7_2024:10_8_25: starting multiTask on Arbie.
+30_7_2024:10_8_27: multiTask on Arbie succeeded.
+30_7_2024:10_8_32: starting multiTask on Arbie.
+30_7_2024:10_8_36: multiTask on Arbie succeeded.
+30_7_2024:10_8_41: starting multiTask on Arbie.
+30_7_2024:10_8_46: multiTask on Arbie succeeded.
+30_7_2024:10_8_51: starting multiTask on Arbie.
+30_7_2024:10_8_54: multiTask on Arbie succeeded.
+30_7_2024:10_8_59: starting multiTask on Arbie.
+30_7_2024:10_9_2: multiTask on Arbie succeeded.
+30_7_2024:10_9_7: starting multiTask on Arbie.
+30_7_2024:10_9_9: multiTask on Arbie succeeded.
+30_7_2024:10_9_14: starting multiTask on Arbie.
+30_7_2024:10_9_17: multiTask on Arbie succeeded.
+30_7_2024:10_9_22: starting multiTask on Arbie.
+30_7_2024:10_9_25: multiTask on Arbie succeeded.
+30_7_2024:10_9_30: starting multiTask on Arbie.
+30_7_2024:10_9_34: multiTask on Arbie succeeded.
+30_7_2024:10_9_53: starting multiTask on Arbie.
+30_7_2024:10_10_1: multiTask on Arbie succeeded.
+30_7_2024:10_10_6: starting multiTask on Arbie.
+30_7_2024:10_10_14: multiTask on Arbie succeeded.
+30_7_2024:10_10_19: starting multiTask on Arbie.
+30_7_2024:10_10_27: multiTask on Arbie succeeded.
+30_7_2024:10_10_32: starting multiTask on Arbie.
+30_7_2024:10_10_40: multiTask on Arbie succeeded.
+30_7_2024:10_10_45: starting multiTask on Arbie.
+30_7_2024:10_10_53: multiTask on Arbie succeeded.
+30_7_2024:10_10_58: starting multiTask on Arbie.
+30_7_2024:10_11_3: multiTask on Arbie succeeded.
+30_7_2024:10_11_8: starting multiTask on Arbie.
+30_7_2024:10_11_16: multiTask on Arbie succeeded.
+30_7_2024:10_11_21: starting multiTask on Arbie.
+30_7_2024:10_11_29: multiTask on Arbie succeeded.
+30_7_2024:10_11_34: starting multiTask on Arbie.
+30_7_2024:10_11_42: multiTask on Arbie succeeded.
+30_7_2024:10_11_47: starting multiTask on Arbie.
+30_7_2024:10_11_55: multiTask on Arbie succeeded.
+30_7_2024:10_12_0: starting multiTask on Arbie.
+30_7_2024:10_12_8: multiTask on Arbie succeeded.
+30_7_2024:10_12_13: starting multiTask on Arbie.
+30_7_2024:10_12_21: multiTask on Arbie succeeded.
+30_7_2024:10_12_26: starting multiTask on Arbie.
+30_7_2024:10_12_31: multiTask on Arbie succeeded.
+30_7_2024:10_12_36: starting multiTask on Arbie.
+30_7_2024:10_12_44: multiTask on Arbie succeeded.
+30_7_2024:10_12_49: starting multiTask on Arbie.
+30_7_2024:10_12_57: multiTask on Arbie succeeded.
+30_7_2024:10_13_2: starting multiTask on Arbie.
+30_7_2024:10_13_10: multiTask on Arbie succeeded.
+30_7_2024:10_13_15: starting multiTask on Arbie.
+30_7_2024:10_13_23: multiTask on Arbie succeeded.
+30_7_2024:10_13_28: starting multiTask on Arbie.
+30_7_2024:10_13_37: multiTask on Arbie succeeded.
+30_7_2024:10_13_42: starting multiTask on Arbie.
+30_7_2024:10_13_50: multiTask on Arbie succeeded.
+30_7_2024:10_13_55: starting multiTask on Arbie.
+30_7_2024:10_14_1: multiTask on Arbie succeeded.
+30_7_2024:10_14_6: starting multiTask on Arbie.
+30_7_2024:10_14_14: multiTask on Arbie succeeded.
+30_7_2024:10_14_19: starting multiTask on Arbie.
+30_7_2024:10_14_27: multiTask on Arbie succeeded.
+30_7_2024:10_14_32: starting multiTask on Arbie.
+30_7_2024:10_14_43: multiTask on Arbie succeeded.
+30_7_2024:10_14_48: starting multiTask on Arbie.
+30_7_2024:10_14_56: multiTask on Arbie succeeded.
+30_7_2024:10_15_1: starting multiTask on Arbie.
+30_7_2024:10_15_10: multiTask on Arbie succeeded.
+30_7_2024:10_15_15: starting multiTask on Arbie.
+30_7_2024:10_15_23: multiTask on Arbie succeeded.
+30_7_2024:10_15_28: starting multiTask on Arbie.
+30_7_2024:10_15_33: multiTask on Arbie succeeded.
+30_7_2024:10_15_38: starting multiTask on Arbie.
+30_7_2024:10_15_46: multiTask on Arbie succeeded.
+30_7_2024:10_15_51: starting multiTask on Arbie.
+30_7_2024:10_15_59: multiTask on Arbie succeeded.
+30_7_2024:10_16_4: starting multiTask on Arbie.
+30_7_2024:10_16_12: multiTask on Arbie succeeded.
+30_7_2024:10_16_17: starting multiTask on Arbie.
+30_7_2024:10_16_25: multiTask on Arbie succeeded.
+30_7_2024:10_16_30: starting multiTask on Arbie.
+30_7_2024:10_16_38: multiTask on Arbie succeeded.
+30_7_2024:10_16_43: starting multiTask on Arbie.
+30_7_2024:10_16_51: multiTask on Arbie succeeded.
+30_7_2024:10_16_56: starting multiTask on Arbie.
+30_7_2024:10_17_5: multiTask on Arbie succeeded.
+30_7_2024:10_17_10: starting multiTask on Arbie.
+30_7_2024:10_17_18: multiTask on Arbie succeeded.
+30_7_2024:10_17_23: starting multiTask on Arbie.
+30_7_2024:10_17_32: multiTask on Arbie succeeded.
+30_7_2024:10_17_37: starting multiTask on Arbie.
+30_7_2024:10_17_45: multiTask on Arbie succeeded.
+30_7_2024:10_17_50: starting multiTask on Arbie.
+30_7_2024:10_18_10: multiTask on Arbie succeeded.
+30_7_2024:10_18_15: starting multiTask on Arbie.
+30_7_2024:10_18_23: multiTask on Arbie succeeded.
+30_7_2024:10_18_28: starting multiTask on Arbie.
+30_7_2024:10_18_36: multiTask on Arbie succeeded.
+30_7_2024:10_18_41: starting multiTask on Arbie.
+30_7_2024:10_18_47: multiTask on Arbie succeeded.
+30_7_2024:10_18_52: starting multiTask on Arbie.
+30_7_2024:10_19_0: multiTask on Arbie succeeded.
+30_7_2024:10_19_5: starting multiTask on Arbie.
+30_7_2024:10_19_13: multiTask on Arbie succeeded.
+30_7_2024:10_19_18: starting multiTask on Arbie.
+30_7_2024:10_19_26: multiTask on Arbie succeeded.
+30_7_2024:10_19_31: starting multiTask on Arbie.
+30_7_2024:10_19_38: multiTask on Arbie succeeded.
+30_7_2024:10_19_43: starting multiTask on Arbie.
+30_7_2024:10_19_51: multiTask on Arbie succeeded.
+30_7_2024:10_19_56: starting multiTask on Arbie.
+30_7_2024:10_20_4: multiTask on Arbie succeeded.
+30_7_2024:10_20_9: starting multiTask on Arbie.
+30_7_2024:10_20_17: multiTask on Arbie succeeded.
+30_7_2024:10_20_22: starting multiTask on Arbie.
+30_7_2024:10_20_30: multiTask on Arbie succeeded.
+30_7_2024:10_20_35: starting multiTask on Arbie.
+30_7_2024:10_20_43: multiTask on Arbie succeeded.
+30_7_2024:10_20_48: starting multiTask on Arbie.
+30_7_2024:10_20_56: multiTask on Arbie succeeded.
+30_7_2024:10_21_1: starting multiTask on Arbie.
+30_7_2024:10_21_21: multiTask on Arbie succeeded.
+30_7_2024:10_21_26: starting multiTask on Arbie.
+30_7_2024:10_21_34: multiTask on Arbie succeeded.
+30_7_2024:10_21_39: starting multiTask on Arbie.
+30_7_2024:10_21_47: multiTask on Arbie succeeded.
+30_7_2024:10_21_52: starting multiTask on Arbie.
+30_7_2024:10_21_59: multiTask on Arbie succeeded.
+30_7_2024:10_22_4: starting multiTask on Arbie.
+30_7_2024:10_22_12: multiTask on Arbie succeeded.
+30_7_2024:10_22_17: starting multiTask on Arbie.
+30_7_2024:10_22_22: multiTask on Arbie succeeded.
+30_7_2024:10_22_27: starting multiTask on Arbie.
+30_7_2024:10_22_35: multiTask on Arbie succeeded.
+30_7_2024:10_22_40: starting multiTask on Arbie.
+30_7_2024:10_22_45: multiTask on Arbie succeeded.
+30_7_2024:10_22_50: starting multiTask on Arbie.
+30_7_2024:10_22_58: multiTask on Arbie succeeded.
+30_7_2024:10_23_3: starting multiTask on Arbie.
+30_7_2024:10_23_11: multiTask on Arbie succeeded.
+30_7_2024:10_23_16: starting multiTask on Arbie.
+30_7_2024:10_23_24: multiTask on Arbie succeeded.
+30_7_2024:10_23_29: starting multiTask on Arbie.
+30_7_2024:10_23_37: multiTask on Arbie succeeded.
+30_7_2024:10_23_42: starting multiTask on Arbie.
+30_7_2024:10_23_50: multiTask on Arbie succeeded.
+30_7_2024:10_23_55: starting multiTask on Arbie.
+30_7_2024:10_24_3: multiTask on Arbie succeeded.
+30_7_2024:10_24_8: starting multiTask on Arbie.
+30_7_2024:10_24_16: multiTask on Arbie succeeded.
+30_7_2024:10_24_21: starting multiTask on Arbie.
+30_7_2024:10_24_28: multiTask on Arbie succeeded.
+30_7_2024:10_24_33: starting multiTask on Arbie.
+30_7_2024:10_24_41: multiTask on Arbie succeeded.
+30_7_2024:10_24_46: starting multiTask on Arbie.
+30_7_2024:10_24_51: multiTask on Arbie succeeded.
+30_7_2024:10_24_56: starting multiTask on Arbie.
+30_7_2024:10_25_4: multiTask on Arbie succeeded.
+30_7_2024:10_25_9: starting multiTask on Arbie.
+30_7_2024:10_25_17: multiTask on Arbie succeeded.
+30_7_2024:10_25_22: starting multiTask on Arbie.
+30_7_2024:10_25_27: multiTask on Arbie succeeded.
+30_7_2024:10_25_32: starting multiTask on Arbie.
+30_7_2024:10_25_40: multiTask on Arbie succeeded.
+30_7_2024:10_25_45: starting multiTask on Arbie.
+30_7_2024:10_25_53: multiTask on Arbie succeeded.
+30_7_2024:10_25_58: starting multiTask on Arbie.
+30_7_2024:10_26_6: multiTask on Arbie succeeded.
+30_7_2024:10_26_11: starting multiTask on Arbie.
+30_7_2024:10_26_19: multiTask on Arbie succeeded.
+30_7_2024:10_26_24: starting multiTask on Arbie.
+30_7_2024:10_26_32: multiTask on Arbie succeeded.
+30_7_2024:10_26_37: starting multiTask on Arbie.
+30_7_2024:10_26_42: multiTask on Arbie succeeded.
+30_7_2024:10_26_47: starting multiTask on Arbie.
+30_7_2024:10_26_55: multiTask on Arbie succeeded.
+30_7_2024:10_27_0: starting multiTask on Arbie.
+30_7_2024:10_27_8: multiTask on Arbie succeeded.
+30_7_2024:10_27_13: starting multiTask on Arbie.
+30_7_2024:10_27_21: multiTask on Arbie succeeded.
+30_7_2024:10_27_26: starting multiTask on Arbie.
+30_7_2024:10_27_34: multiTask on Arbie succeeded.
+30_7_2024:10_27_39: starting multiTask on Arbie.
+30_7_2024:10_27_47: multiTask on Arbie succeeded.
+30_7_2024:10_27_52: starting multiTask on Arbie.
+30_7_2024:10_28_0: multiTask on Arbie succeeded.
+30_7_2024:10_28_5: starting multiTask on Arbie.
+30_7_2024:10_28_13: multiTask on Arbie succeeded.
+30_7_2024:10_28_18: starting multiTask on Arbie.
+30_7_2024:10_28_26: multiTask on Arbie succeeded.
+30_7_2024:10_28_31: starting multiTask on Arbie.
+30_7_2024:10_28_39: multiTask on Arbie succeeded.
+30_7_2024:10_28_44: starting multiTask on Arbie.
+30_7_2024:10_28_53: multiTask on Arbie succeeded.
+30_7_2024:10_28_58: starting multiTask on Arbie.
+30_7_2024:10_29_6: multiTask on Arbie succeeded.
+30_7_2024:10_29_11: starting multiTask on Arbie.
+30_7_2024:10_29_19: multiTask on Arbie succeeded.
+30_7_2024:10_29_24: starting multiTask on Arbie.
+30_7_2024:10_29_29: multiTask on Arbie succeeded.
+30_7_2024:10_29_34: starting multiTask on Arbie.
+30_7_2024:10_29_42: multiTask on Arbie succeeded.
+30_7_2024:10_29_47: starting multiTask on Arbie.
+30_7_2024:10_29_56: multiTask on Arbie succeeded.
+30_7_2024:10_30_1: starting multiTask on Arbie.
+30_7_2024:10_30_9: multiTask on Arbie succeeded.
+30_7_2024:10_30_14: starting multiTask on Arbie.
+30_7_2024:10_30_19: multiTask on Arbie succeeded.
+30_7_2024:10_30_24: starting multiTask on Arbie.
+30_7_2024:10_30_32: multiTask on Arbie succeeded.
+30_7_2024:10_30_37: starting multiTask on Arbie.
+30_7_2024:10_30_45: multiTask on Arbie succeeded.
+30_7_2024:10_30_50: starting multiTask on Arbie.
+30_7_2024:10_30_59: multiTask on Arbie succeeded.
+30_7_2024:10_31_4: starting multiTask on Arbie.
+30_7_2024:10_31_12: multiTask on Arbie succeeded.
+30_7_2024:10_31_17: starting multiTask on Arbie.
+30_7_2024:10_31_25: multiTask on Arbie succeeded.
+30_7_2024:10_31_30: starting multiTask on Arbie.
+30_7_2024:10_31_38: multiTask on Arbie succeeded.
+30_7_2024:10_31_43: starting multiTask on Arbie.
+30_7_2024:10_31_51: multiTask on Arbie succeeded.
+30_7_2024:10_31_56: starting multiTask on Arbie.
+30_7_2024:10_32_5: multiTask on Arbie succeeded.
+30_7_2024:10_32_10: starting multiTask on Arbie.
+30_7_2024:10_32_21: multiTask on Arbie succeeded.
+30_7_2024:10_32_26: starting multiTask on Arbie.
+30_7_2024:10_32_34: multiTask on Arbie succeeded.
+30_7_2024:10_32_39: starting multiTask on Arbie.
+30_7_2024:10_32_47: multiTask on Arbie succeeded.
+30_7_2024:10_32_52: starting multiTask on Arbie.
+30_7_2024:10_33_0: multiTask on Arbie succeeded.
+30_7_2024:10_33_5: starting multiTask on Arbie.
+30_7_2024:10_33_14: multiTask on Arbie succeeded.
+30_7_2024:10_33_19: starting multiTask on Arbie.
+30_7_2024:10_33_24: multiTask on Arbie succeeded.
+30_7_2024:10_33_29: starting multiTask on Arbie.
+30_7_2024:10_33_37: multiTask on Arbie succeeded.
+30_7_2024:10_33_42: starting multiTask on Arbie.
+30_7_2024:10_33_50: multiTask on Arbie succeeded.
+30_7_2024:10_33_55: starting multiTask on Arbie.
+30_7_2024:10_34_4: multiTask on Arbie succeeded.
+30_7_2024:10_34_9: starting multiTask on Arbie.
+30_7_2024:10_34_17: multiTask on Arbie succeeded.
+30_7_2024:10_34_22: starting multiTask on Arbie.
+30_7_2024:10_34_30: multiTask on Arbie succeeded.
+30_7_2024:10_34_35: starting multiTask on Arbie.
+30_7_2024:10_34_46: multiTask on Arbie succeeded.
+30_7_2024:10_34_51: starting multiTask on Arbie.
+30_7_2024:10_34_59: multiTask on Arbie succeeded.
+30_7_2024:10_35_4: starting multiTask on Arbie.
+30_7_2024:10_35_12: multiTask on Arbie succeeded.
+30_7_2024:10_35_17: starting multiTask on Arbie.
+30_7_2024:10_35_25: multiTask on Arbie succeeded.
+30_7_2024:10_35_30: starting multiTask on Arbie.
+30_7_2024:10_35_39: multiTask on Arbie succeeded.
+30_7_2024:10_35_44: starting multiTask on Arbie.
+30_7_2024:10_35_52: multiTask on Arbie succeeded.
+30_7_2024:10_35_57: starting multiTask on Arbie.
+30_7_2024:10_36_5: multiTask on Arbie succeeded.
+30_7_2024:10_36_10: starting multiTask on Arbie.
+30_7_2024:10_36_18: multiTask on Arbie succeeded.
+30_7_2024:10_36_23: starting multiTask on Arbie.
+30_7_2024:10_36_31: multiTask on Arbie succeeded.
+30_7_2024:10_36_36: starting multiTask on Arbie.
+30_7_2024:10_36_41: multiTask on Arbie succeeded.
+30_7_2024:10_36_46: starting multiTask on Arbie.
+30_7_2024:10_36_51: multiTask on Arbie succeeded.
+30_7_2024:10_36_56: starting multiTask on Arbie.
+30_7_2024:10_37_4: multiTask on Arbie succeeded.
+30_7_2024:10_37_9: starting multiTask on Arbie.
+30_7_2024:10_37_17: multiTask on Arbie succeeded.
+30_7_2024:10_37_22: starting multiTask on Arbie.
+30_7_2024:10_37_29: multiTask on Arbie succeeded.
+30_7_2024:10_37_34: starting multiTask on Arbie.
+30_7_2024:10_37_42: multiTask on Arbie succeeded.
+30_7_2024:10_37_47: starting multiTask on Arbie.
+30_7_2024:10_37_55: multiTask on Arbie succeeded.
+30_7_2024:10_38_0: starting multiTask on Arbie.
+30_7_2024:10_38_8: multiTask on Arbie succeeded.
+30_7_2024:10_38_13: starting multiTask on Arbie.
+30_7_2024:10_38_21: multiTask on Arbie succeeded.
+30_7_2024:10_38_26: starting multiTask on Arbie.
+30_7_2024:10_38_31: multiTask on Arbie succeeded.
+30_7_2024:10_38_36: starting multiTask on Arbie.
+30_7_2024:10_38_44: multiTask on Arbie succeeded.
+30_7_2024:10_38_49: starting multiTask on Arbie.
+30_7_2024:10_38_56: multiTask on Arbie succeeded.
+30_7_2024:10_39_1: starting multiTask on Arbie.
+30_7_2024:10_39_9: multiTask on Arbie succeeded.
+30_7_2024:10_39_14: starting multiTask on Arbie.
+30_7_2024:10_39_22: multiTask on Arbie succeeded.
+30_7_2024:10_39_27: starting multiTask on Arbie.
+30_7_2024:10_39_35: multiTask on Arbie succeeded.
+30_7_2024:10_39_40: starting multiTask on Arbie.
+30_7_2024:10_39_48: multiTask on Arbie succeeded.
+30_7_2024:10_39_53: starting multiTask on Arbie.
+30_7_2024:10_39_58: multiTask on Arbie succeeded.
+30_7_2024:10_40_3: starting multiTask on Arbie.
+30_7_2024:10_40_11: multiTask on Arbie succeeded.
+30_7_2024:10_40_16: starting multiTask on Arbie.
+30_7_2024:10_40_24: multiTask on Arbie succeeded.
+30_7_2024:10_40_29: starting multiTask on Arbie.
+30_7_2024:10_40_37: multiTask on Arbie succeeded.
+30_7_2024:10_40_42: starting multiTask on Arbie.
+30_7_2024:10_40_50: multiTask on Arbie succeeded.
+30_7_2024:10_40_55: starting multiTask on Arbie.
+30_7_2024:10_41_7: multiTask on Arbie succeeded.
+30_7_2024:10_41_12: starting multiTask on Arbie.
+30_7_2024:10_41_20: multiTask on Arbie succeeded.
+30_7_2024:10_41_25: starting multiTask on Arbie.
+30_7_2024:10_41_30: multiTask on Arbie succeeded.
+30_7_2024:10_41_35: starting multiTask on Arbie.
+30_7_2024:10_41_44: multiTask on Arbie succeeded.
+30_7_2024:10_41_49: starting multiTask on Arbie.
+30_7_2024:10_41_57: multiTask on Arbie succeeded.
+30_7_2024:10_42_2: starting multiTask on Arbie.
+30_7_2024:10_42_6: multiTask on Arbie succeeded.
+30_7_2024:10_42_11: starting multiTask on Arbie.
+30_7_2024:10_42_19: multiTask on Arbie succeeded.
+30_7_2024:10_42_24: starting multiTask on Arbie.
+30_7_2024:10_42_32: multiTask on Arbie succeeded.
+30_7_2024:10_42_37: starting multiTask on Arbie.
+30_7_2024:10_42_46: multiTask on Arbie succeeded.
+30_7_2024:10_42_51: starting multiTask on Arbie.
+30_7_2024:10_43_0: multiTask on Arbie succeeded.
+30_7_2024:10_43_5: starting multiTask on Arbie.
+30_7_2024:10_43_10: multiTask on Arbie succeeded.
+30_7_2024:10_43_15: starting multiTask on Arbie.
+30_7_2024:10_43_23: multiTask on Arbie succeeded.
+30_7_2024:10_43_28: starting multiTask on Arbie.
+30_7_2024:10_43_36: multiTask on Arbie succeeded.
+30_7_2024:10_43_41: starting multiTask on Arbie.
+30_7_2024:10_43_46: multiTask on Arbie succeeded.
+30_7_2024:10_43_51: starting multiTask on Arbie.
+30_7_2024:10_43_59: multiTask on Arbie succeeded.
+30_7_2024:10_44_4: starting multiTask on Arbie.
+30_7_2024:10_44_12: multiTask on Arbie succeeded.
+30_7_2024:10_44_17: starting multiTask on Arbie.
+30_7_2024:10_44_25: multiTask on Arbie succeeded.
+30_7_2024:10_44_30: starting multiTask on Arbie.
+30_7_2024:10_44_39: multiTask on Arbie succeeded.
+30_7_2024:10_44_44: starting multiTask on Arbie.
+30_7_2024:10_44_52: multiTask on Arbie succeeded.
+30_7_2024:10_44_57: starting multiTask on Arbie.
+30_7_2024:10_45_5: multiTask on Arbie succeeded.
+30_7_2024:10_45_10: starting multiTask on Arbie.
+30_7_2024:10_45_18: multiTask on Arbie succeeded.
+30_7_2024:10_45_23: starting multiTask on Arbie.
+30_7_2024:10_45_31: multiTask on Arbie succeeded.
+30_7_2024:10_45_36: starting multiTask on Arbie.
+30_7_2024:10_45_44: multiTask on Arbie succeeded.
+30_7_2024:10_45_49: starting multiTask on Arbie.
+30_7_2024:10_45_58: multiTask on Arbie succeeded.
+30_7_2024:10_46_3: starting multiTask on Arbie.
+30_7_2024:10_46_11: multiTask on Arbie succeeded.
+30_7_2024:10_46_16: starting multiTask on Arbie.
+30_7_2024:10_46_24: multiTask on Arbie succeeded.
+30_7_2024:10_46_29: starting multiTask on Arbie.
+30_7_2024:10_46_37: multiTask on Arbie succeeded.
+30_7_2024:10_46_42: starting multiTask on Arbie.
+30_7_2024:10_46_50: multiTask on Arbie succeeded.
+30_7_2024:10_46_55: starting multiTask on Arbie.
+30_7_2024:10_47_0: multiTask on Arbie succeeded.
+30_7_2024:10_47_5: starting multiTask on Arbie.
+30_7_2024:10_47_13: multiTask on Arbie succeeded.
+30_7_2024:10_47_18: starting multiTask on Arbie.
+30_7_2024:10_47_26: multiTask on Arbie succeeded.
+30_7_2024:10_47_31: starting multiTask on Arbie.
+30_7_2024:10_47_39: multiTask on Arbie succeeded.
+30_7_2024:10_47_44: starting multiTask on Arbie.
+30_7_2024:10_47_52: multiTask on Arbie succeeded.
+30_7_2024:10_47_57: starting multiTask on Arbie.
+30_7_2024:10_48_5: multiTask on Arbie succeeded.
+30_7_2024:10_48_10: starting multiTask on Arbie.
+30_7_2024:10_48_18: multiTask on Arbie succeeded.
+30_7_2024:10_48_23: starting multiTask on Arbie.
+30_7_2024:10_48_31: multiTask on Arbie succeeded.
+30_7_2024:10_48_36: starting multiTask on Arbie.
+30_7_2024:10_48_44: multiTask on Arbie succeeded.
+30_7_2024:10_48_49: starting multiTask on Arbie.
+30_7_2024:10_48_57: multiTask on Arbie succeeded.
+30_7_2024:10_49_2: starting multiTask on Arbie.
+30_7_2024:10_49_10: multiTask on Arbie succeeded.
+30_7_2024:10_49_15: starting multiTask on Arbie.
+30_7_2024:10_49_23: multiTask on Arbie succeeded.
+30_7_2024:10_49_28: starting multiTask on Arbie.
+30_7_2024:10_49_36: multiTask on Arbie succeeded.
+30_7_2024:10_49_41: starting multiTask on Arbie.
+30_7_2024:10_49_49: multiTask on Arbie succeeded.
+30_7_2024:10_49_54: starting multiTask on Arbie.
+30_7_2024:10_50_2: multiTask on Arbie succeeded.
+30_7_2024:10_50_7: starting multiTask on Arbie.
+30_7_2024:10_50_16: multiTask on Arbie succeeded.
+30_7_2024:10_50_21: starting multiTask on Arbie.
+30_7_2024:10_50_29: multiTask on Arbie succeeded.
+30_7_2024:10_50_34: starting multiTask on Arbie.
+30_7_2024:10_50_42: multiTask on Arbie succeeded.
+30_7_2024:10_50_47: starting multiTask on Arbie.
+30_7_2024:10_50_52: multiTask on Arbie succeeded.
+30_7_2024:10_50_57: starting multiTask on Arbie.
+30_7_2024:10_51_17: multiTask on Arbie succeeded.
+30_7_2024:10_51_22: starting multiTask on Arbie.
+30_7_2024:10_51_30: multiTask on Arbie succeeded.
+30_7_2024:10_51_35: starting multiTask on Arbie.
+30_7_2024:10_51_43: multiTask on Arbie succeeded.
+30_7_2024:10_51_48: starting multiTask on Arbie.
+30_7_2024:10_51_53: multiTask on Arbie succeeded.
+30_7_2024:10_51_58: starting multiTask on Arbie.
+30_7_2024:10_52_3: multiTask on Arbie succeeded.
+30_7_2024:10_52_8: starting multiTask on Arbie.
+30_7_2024:10_52_17: multiTask on Arbie succeeded.
+30_7_2024:10_52_22: starting multiTask on Arbie.
+30_7_2024:10_52_30: multiTask on Arbie succeeded.
+30_7_2024:10_52_35: starting multiTask on Arbie.
+30_7_2024:10_52_43: multiTask on Arbie succeeded.
+30_7_2024:10_52_48: starting multiTask on Arbie.
+30_7_2024:10_52_56: multiTask on Arbie succeeded.
+30_7_2024:10_53_1: starting multiTask on Arbie.
+30_7_2024:10_53_9: multiTask on Arbie succeeded.
+30_7_2024:10_53_14: starting multiTask on Arbie.
+30_7_2024:10_53_26: multiTask on Arbie succeeded.
+30_7_2024:10_53_31: starting multiTask on Arbie.
+30_7_2024:10_53_39: multiTask on Arbie succeeded.
+30_7_2024:10_53_44: starting multiTask on Arbie.
+30_7_2024:10_53_55: multiTask on Arbie succeeded.
+30_7_2024:10_54_0: starting multiTask on Arbie.
+30_7_2024:10_54_8: multiTask on Arbie succeeded.
+30_7_2024:10_54_13: starting multiTask on Arbie.
+30_7_2024:10_54_21: multiTask on Arbie succeeded.
+30_7_2024:10_54_26: starting multiTask on Arbie.
+30_7_2024:10_54_34: multiTask on Arbie succeeded.
+30_7_2024:10_54_39: starting multiTask on Arbie.
+30_7_2024:10_54_48: multiTask on Arbie succeeded.
+30_7_2024:10_54_53: starting multiTask on Arbie.
+30_7_2024:10_55_0: multiTask on Arbie succeeded.
+30_7_2024:10_55_28: starting multiTask on Arbie.
+30_7_2024:10_55_31: multiTask on Arbie succeeded.
+30_7_2024:10_55_36: starting multiTask on Arbie.
+30_7_2024:10_55_43: multiTask on Arbie succeeded.
+30_7_2024:10_55_48: starting multiTask on Arbie.
+30_7_2024:10_55_51: multiTask on Arbie succeeded.
+30_7_2024:10_55_56: starting multiTask on Arbie.
+30_7_2024:10_56_0: multiTask on Arbie succeeded.
+30_7_2024:10_56_5: starting multiTask on Arbie.
+30_7_2024:10_56_9: multiTask on Arbie succeeded.
+30_7_2024:10_56_14: starting multiTask on Arbie.
+30_7_2024:10_56_17: multiTask on Arbie succeeded.
+30_7_2024:10_56_22: starting multiTask on Arbie.
+30_7_2024:10_56_33: multiTask on Arbie succeeded.
+30_7_2024:10_56_38: starting multiTask on Arbie.
+30_7_2024:10_56_50: multiTask on Arbie succeeded.
+30_7_2024:10_56_55: starting multiTask on Arbie.
+30_7_2024:11_10_47: Initalizeing task schedular
+30_7_2024:11_10_47: Successfully imported arbie dependencys
+30_7_2024:11_10_47: Successfully imported betfair dependencys
+30_7_2024:11_10_47: Successfully imported betm dependencys
+30_7_2024:11_10_47: Successfully imported boombet dependencys
+30_7_2024:11_10_47: Successfully imported ladbrokes dependencys
+30_7_2024:11_10_47: Successfully imported palmerbet dependencys
+30_7_2024:11_10_47: Successfully imported playup dependencys
+30_7_2024:11_10_47: Successfully imported pointsbet dependencys
+30_7_2024:11_10_47: Successfully imported sportsbett dependencys
+30_7_2024:11_10_47: Successfully imported tab dependencys
+30_7_2024:11_10_47: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_10_47: starting multiTask on Arbie.
+30_7_2024:11_10_47: starting multiTask on Arbie.
+30_7_2024:11_10_47: starting multiTask on Arbie.
+30_7_2024:11_10_47: 'NoneType' object is not iterable
+30_7_2024:11_10_47: multiTask on Arbie failed.
+30_7_2024:11_10_47: 'NoneType' object is not iterable
+30_7_2024:11_10_47: multiTask on Arbie failed.
+30_7_2024:11_11_33: Initalizeing task schedular
+30_7_2024:11_11_33: Successfully imported arbie dependencys
+30_7_2024:11_11_33: Successfully imported betfair dependencys
+30_7_2024:11_11_33: Successfully imported betm dependencys
+30_7_2024:11_11_33: Successfully imported boombet dependencys
+30_7_2024:11_11_33: Successfully imported ladbrokes dependencys
+30_7_2024:11_11_33: Successfully imported palmerbet dependencys
+30_7_2024:11_11_33: Successfully imported playup dependencys
+30_7_2024:11_11_33: Successfully imported pointsbet dependencys
+30_7_2024:11_11_33: Successfully imported sportsbett dependencys
+30_7_2024:11_11_33: Successfully imported tab dependencys
+30_7_2024:11_11_33: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_11_33: starting multiTask on Arbie.
+30_7_2024:11_11_33: starting multiTask on Arbie.
+30_7_2024:11_11_33: starting multiTask on Arbie.
+30_7_2024:11_11_33: 'NoneType' object is not iterable
+30_7_2024:11_11_33: 'NoneType' object is not iterable
+30_7_2024:11_11_33: multiTask on Arbie failed.
+30_7_2024:11_11_33: multiTask on Arbie failed.
+30_7_2024:11_12_9: Initalizeing task schedular
+30_7_2024:11_12_9: Successfully imported arbie dependencys
+30_7_2024:11_12_9: Successfully imported betfair dependencys
+30_7_2024:11_12_9: Successfully imported betm dependencys
+30_7_2024:11_12_9: Successfully imported boombet dependencys
+30_7_2024:11_12_9: Successfully imported ladbrokes dependencys
+30_7_2024:11_12_9: Successfully imported palmerbet dependencys
+30_7_2024:11_12_9: Successfully imported playup dependencys
+30_7_2024:11_12_9: Successfully imported pointsbet dependencys
+30_7_2024:11_12_9: Successfully imported sportsbett dependencys
+30_7_2024:11_12_9: Successfully imported tab dependencys
+30_7_2024:11_12_9: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_12_9: starting multiTask on Arbie.
+30_7_2024:11_12_9: starting multiTask on Arbie.
+30_7_2024:11_12_9: starting multiTask on Arbie.
+30_7_2024:11_12_9: 'NoneType' object is not iterable
+30_7_2024:11_12_9: 'NoneType' object is not iterable
+30_7_2024:11_12_9: multiTask on Arbie failed.
+30_7_2024:11_12_9: multiTask on Arbie failed.
+30_7_2024:11_12_31: Initalizeing task schedular
+30_7_2024:11_12_31: Successfully imported arbie dependencys
+30_7_2024:11_12_31: Successfully imported betfair dependencys
+30_7_2024:11_12_31: Successfully imported betm dependencys
+30_7_2024:11_12_31: Successfully imported boombet dependencys
+30_7_2024:11_12_31: Successfully imported ladbrokes dependencys
+30_7_2024:11_12_31: Successfully imported palmerbet dependencys
+30_7_2024:11_12_31: Successfully imported playup dependencys
+30_7_2024:11_12_31: Successfully imported pointsbet dependencys
+30_7_2024:11_12_31: Successfully imported sportsbett dependencys
+30_7_2024:11_12_31: Successfully imported tab dependencys
+30_7_2024:11_12_31: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_12_36: starting multiTask on Arbie.
+30_7_2024:11_13_7: Initalizeing task schedular
+30_7_2024:11_13_7: Successfully imported arbie dependencys
+30_7_2024:11_13_7: Successfully imported betfair dependencys
+30_7_2024:11_13_7: Successfully imported betm dependencys
+30_7_2024:11_13_7: Successfully imported boombet dependencys
+30_7_2024:11_13_7: Successfully imported ladbrokes dependencys
+30_7_2024:11_13_7: Successfully imported palmerbet dependencys
+30_7_2024:11_13_7: Successfully imported playup dependencys
+30_7_2024:11_13_7: Successfully imported pointsbet dependencys
+30_7_2024:11_13_7: Successfully imported sportsbett dependencys
+30_7_2024:11_13_7: Successfully imported tab dependencys
+30_7_2024:11_13_7: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_13_11: starting multiTask on Arbie.
+30_7_2024:11_13_12: 'NoneType' object is not iterable
+30_7_2024:11_13_12: multiTask on Arbie failed.
+30_7_2024:11_13_12: starting multiTask on Arbie.
+30_7_2024:11_13_12: 'NoneType' object is not iterable
+30_7_2024:11_13_12: multiTask on Arbie failed.
+30_7_2024:11_13_23: Initalizeing task schedular
+30_7_2024:11_13_24: Successfully imported arbie dependencys
+30_7_2024:11_13_24: Successfully imported betfair dependencys
+30_7_2024:11_13_24: Successfully imported betm dependencys
+30_7_2024:11_13_24: Successfully imported boombet dependencys
+30_7_2024:11_13_24: Successfully imported ladbrokes dependencys
+30_7_2024:11_13_24: Successfully imported palmerbet dependencys
+30_7_2024:11_13_24: Successfully imported playup dependencys
+30_7_2024:11_13_24: Successfully imported pointsbet dependencys
+30_7_2024:11_13_24: Successfully imported sportsbett dependencys
+30_7_2024:11_13_24: Successfully imported tab dependencys
+30_7_2024:11_13_24: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_13_39: Initalizeing task schedular
+30_7_2024:11_13_40: Successfully imported arbie dependencys
+30_7_2024:11_13_40: Successfully imported betfair dependencys
+30_7_2024:11_13_40: Successfully imported betm dependencys
+30_7_2024:11_13_40: Successfully imported boombet dependencys
+30_7_2024:11_13_40: Successfully imported ladbrokes dependencys
+30_7_2024:11_13_40: Successfully imported palmerbet dependencys
+30_7_2024:11_13_40: Successfully imported playup dependencys
+30_7_2024:11_13_40: Successfully imported pointsbet dependencys
+30_7_2024:11_13_40: Successfully imported sportsbett dependencys
+30_7_2024:11_13_40: Successfully imported tab dependencys
+30_7_2024:11_13_40: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_13_40: starting multiTask on Arbie.
+30_7_2024:11_13_46: multiTask on Arbie succeeded.
+30_7_2024:11_13_46: starting multiTask on Arbie.
+30_7_2024:11_13_55: Initalizeing task schedular
+30_7_2024:11_13_56: Successfully imported arbie dependencys
+30_7_2024:11_13_56: Successfully imported betfair dependencys
+30_7_2024:11_13_56: Successfully imported betm dependencys
+30_7_2024:11_13_56: Successfully imported boombet dependencys
+30_7_2024:11_13_56: Successfully imported ladbrokes dependencys
+30_7_2024:11_13_56: Successfully imported palmerbet dependencys
+30_7_2024:11_13_56: Successfully imported playup dependencys
+30_7_2024:11_13_56: Successfully imported pointsbet dependencys
+30_7_2024:11_13_56: Successfully imported sportsbett dependencys
+30_7_2024:11_13_56: Successfully imported tab dependencys
+30_7_2024:11_13_56: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_13_56: starting multiTask on Arbie.
+30_7_2024:11_13_56: starting multiTask on Arbie.
+30_7_2024:11_13_56: starting multiTask on Arbie.
+30_7_2024:11_14_2: arbie_reviseDates.init() takes from 1 to 2 positional arguments but 3 were given
+30_7_2024:11_14_2: multiTask on Arbie failed.
+30_7_2024:11_14_2: arbie_reviseDates.init() takes from 1 to 2 positional arguments but 3 were given
+30_7_2024:11_14_2: multiTask on Arbie failed.
+30_7_2024:11_14_2: multiTask on Arbie succeeded.
+30_7_2024:11_14_2: starting multiTask on Arbie.
+30_7_2024:11_14_2: starting multiTask on Arbie.
+30_7_2024:11_15_12: Initalizeing task schedular
+30_7_2024:11_15_12: Successfully imported arbie dependencys
+30_7_2024:11_15_12: Successfully imported betfair dependencys
+30_7_2024:11_15_12: Successfully imported betm dependencys
+30_7_2024:11_15_12: Successfully imported boombet dependencys
+30_7_2024:11_15_12: Successfully imported ladbrokes dependencys
+30_7_2024:11_15_12: Successfully imported palmerbet dependencys
+30_7_2024:11_15_12: Successfully imported playup dependencys
+30_7_2024:11_15_12: Successfully imported pointsbet dependencys
+30_7_2024:11_15_12: Successfully imported sportsbett dependencys
+30_7_2024:11_15_12: Successfully imported tab dependencys
+30_7_2024:11_15_12: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_15_12: starting multiTask on Arbie.
+30_7_2024:11_15_12: starting multiTask on Arbie.
+30_7_2024:11_15_12: starting multiTask on Arbie.
+30_7_2024:11_15_19: arbie_reviseDates.init() takes from 1 to 2 positional arguments but 3 were given
+30_7_2024:11_15_19: multiTask on Arbie failed.
+30_7_2024:11_15_19: arbie_reviseDates.init() takes from 1 to 2 positional arguments but 3 were given
+30_7_2024:11_15_19: multiTask on Arbie failed.
+30_7_2024:11_15_19: multiTask on Arbie succeeded.
+30_7_2024:11_15_19: starting multiTask on Arbie.
+30_7_2024:11_15_19: starting multiTask on Arbie.
+30_7_2024:11_15_45: Initalizeing task schedular
+30_7_2024:11_15_45: Successfully imported arbie dependencys
+30_7_2024:11_15_45: Successfully imported betfair dependencys
+30_7_2024:11_15_45: Successfully imported betm dependencys
+30_7_2024:11_15_45: Successfully imported boombet dependencys
+30_7_2024:11_15_45: Successfully imported ladbrokes dependencys
+30_7_2024:11_15_45: Successfully imported palmerbet dependencys
+30_7_2024:11_15_45: Successfully imported playup dependencys
+30_7_2024:11_15_45: Successfully imported pointsbet dependencys
+30_7_2024:11_15_45: Successfully imported sportsbett dependencys
+30_7_2024:11_15_45: Successfully imported tab dependencys
+30_7_2024:11_15_45: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_15_45: starting multiTask on Arbie.
+30_7_2024:11_15_45: starting multiTask on Arbie.
+30_7_2024:11_15_45: starting multiTask on Arbie.
+30_7_2024:11_17_4: Initalizeing task schedular
+30_7_2024:11_17_4: Successfully imported arbie dependencys
+30_7_2024:11_17_4: Successfully imported betfair dependencys
+30_7_2024:11_17_4: Successfully imported betm dependencys
+30_7_2024:11_17_4: Successfully imported boombet dependencys
+30_7_2024:11_17_4: Successfully imported ladbrokes dependencys
+30_7_2024:11_17_4: Successfully imported palmerbet dependencys
+30_7_2024:11_17_4: Successfully imported playup dependencys
+30_7_2024:11_17_4: Successfully imported pointsbet dependencys
+30_7_2024:11_17_4: Successfully imported sportsbett dependencys
+30_7_2024:11_17_4: Successfully imported tab dependencys
+30_7_2024:11_17_4: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_17_34: Initalizeing task schedular
+30_7_2024:11_17_34: Successfully imported arbie dependencys
+30_7_2024:11_17_34: Successfully imported betfair dependencys
+30_7_2024:11_17_34: Successfully imported betm dependencys
+30_7_2024:11_17_34: Successfully imported boombet dependencys
+30_7_2024:11_17_34: Successfully imported ladbrokes dependencys
+30_7_2024:11_17_34: Successfully imported palmerbet dependencys
+30_7_2024:11_17_34: Successfully imported playup dependencys
+30_7_2024:11_17_34: Successfully imported pointsbet dependencys
+30_7_2024:11_17_34: Successfully imported sportsbett dependencys
+30_7_2024:11_17_34: Successfully imported tab dependencys
+30_7_2024:11_17_34: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_17_46: starting multiTask on Arbie.
+30_7_2024:11_17_46: starting multiTask on Arbie.
+30_7_2024:11_17_46: starting multiTask on Arbie.
+30_7_2024:11_17_50: multiTask on Arbie succeeded.
+30_7_2024:11_18_44: multiTask on Arbie succeeded.
+30_7_2024:11_18_45: starting multiTask on Arbie.
+30_7_2024:11_18_51: multiTask on Arbie succeeded.
+30_7_2024:11_18_51: starting multiTask on Arbie.
+30_7_2024:11_18_58: multiTask on Arbie succeeded.
+30_7_2024:11_18_58: starting multiTask on Arbie.
+30_7_2024:11_19_4: multiTask on Arbie succeeded.
+30_7_2024:11_19_4: starting multiTask on Arbie.
+30_7_2024:11_19_10: Initalizeing task schedular
+30_7_2024:11_19_11: Successfully imported arbie dependencys
+30_7_2024:11_19_11: Successfully imported betfair dependencys
+30_7_2024:11_19_11: Successfully imported betm dependencys
+30_7_2024:11_19_11: Successfully imported boombet dependencys
+30_7_2024:11_19_11: Successfully imported ladbrokes dependencys
+30_7_2024:11_19_11: Successfully imported palmerbet dependencys
+30_7_2024:11_19_11: Successfully imported playup dependencys
+30_7_2024:11_19_11: Successfully imported pointsbet dependencys
+30_7_2024:11_19_11: Successfully imported sportsbett dependencys
+30_7_2024:11_19_11: Successfully imported tab dependencys
+30_7_2024:11_19_11: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_19_15: starting multiTask on Arbie.
+30_7_2024:11_19_15: starting multiTask on Arbie.
+30_7_2024:11_19_15: starting multiTask on Arbie.
+30_7_2024:11_19_19: multiTask on Arbie succeeded.
+30_7_2024:11_20_51: Initalizeing task schedular
+30_7_2024:11_20_52: Successfully imported arbie dependencys
+30_7_2024:11_20_52: Successfully imported betfair dependencys
+30_7_2024:11_20_52: Successfully imported betm dependencys
+30_7_2024:11_20_52: Successfully imported boombet dependencys
+30_7_2024:11_20_52: Successfully imported ladbrokes dependencys
+30_7_2024:11_20_52: Successfully imported palmerbet dependencys
+30_7_2024:11_20_52: Successfully imported playup dependencys
+30_7_2024:11_20_52: Successfully imported pointsbet dependencys
+30_7_2024:11_20_52: Successfully imported sportsbett dependencys
+30_7_2024:11_20_52: Successfully imported tab dependencys
+30_7_2024:11_20_52: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_20_52: starting multiTask on Arbie.
+30_7_2024:11_20_52: starting multiTask on Arbie.
+30_7_2024:11_20_52: starting multiTask on Arbie.
+30_7_2024:11_22_7: Initalizeing task schedular
+30_7_2024:11_22_7: Successfully imported arbie dependencys
+30_7_2024:11_22_7: Successfully imported betfair dependencys
+30_7_2024:11_22_7: Successfully imported betm dependencys
+30_7_2024:11_22_7: Successfully imported boombet dependencys
+30_7_2024:11_22_7: Successfully imported ladbrokes dependencys
+30_7_2024:11_22_7: Successfully imported palmerbet dependencys
+30_7_2024:11_22_7: Successfully imported playup dependencys
+30_7_2024:11_22_7: Successfully imported pointsbet dependencys
+30_7_2024:11_22_7: Successfully imported sportsbett dependencys
+30_7_2024:11_22_7: Successfully imported tab dependencys
+30_7_2024:11_22_7: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_22_7: starting multiTask on Arbie.
+30_7_2024:11_22_29: Initalizeing task schedular
+30_7_2024:11_22_29: Successfully imported arbie dependencys
+30_7_2024:11_22_29: Successfully imported betfair dependencys
+30_7_2024:11_22_29: Successfully imported betm dependencys
+30_7_2024:11_22_29: Successfully imported boombet dependencys
+30_7_2024:11_22_29: Successfully imported ladbrokes dependencys
+30_7_2024:11_22_29: Successfully imported palmerbet dependencys
+30_7_2024:11_22_29: Successfully imported playup dependencys
+30_7_2024:11_22_29: Successfully imported pointsbet dependencys
+30_7_2024:11_22_29: Successfully imported sportsbett dependencys
+30_7_2024:11_22_29: Successfully imported tab dependencys
+30_7_2024:11_22_29: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_22_29: starting multiTask on Arbie.
+30_7_2024:11_22_36: multiTask on Arbie succeeded.
+30_7_2024:11_22_36: starting multiTask on Arbie.
+30_7_2024:11_22_43: arbie_reviseDates.init() takes from 1 to 2 positional arguments but 3 were given
+30_7_2024:11_22_43: multiTask on Arbie failed.
+30_7_2024:11_22_43: starting multiTask on Arbie.
+30_7_2024:11_22_58: Initalizeing task schedular
+30_7_2024:11_22_58: Successfully imported arbie dependencys
+30_7_2024:11_22_58: Successfully imported betfair dependencys
+30_7_2024:11_22_58: Successfully imported betm dependencys
+30_7_2024:11_22_58: Successfully imported boombet dependencys
+30_7_2024:11_22_58: Successfully imported ladbrokes dependencys
+30_7_2024:11_22_58: Successfully imported palmerbet dependencys
+30_7_2024:11_22_58: Successfully imported playup dependencys
+30_7_2024:11_22_58: Successfully imported pointsbet dependencys
+30_7_2024:11_22_58: Successfully imported sportsbett dependencys
+30_7_2024:11_22_58: Successfully imported tab dependencys
+30_7_2024:11_22_58: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_22_58: starting multiTask on Arbie.
+30_7_2024:11_23_2: multiTask on Arbie succeeded.
+30_7_2024:11_23_2: starting multiTask on Arbie.
+30_7_2024:11_23_9: arbie_reviseDates.init() takes from 1 to 2 positional arguments but 3 were given
+30_7_2024:11_23_9: multiTask on Arbie failed.
+30_7_2024:11_23_9: starting multiTask on Arbie.
+30_7_2024:11_23_12: arbie_reviseDates.init() takes from 1 to 2 positional arguments but 3 were given
+30_7_2024:11_23_12: multiTask on Arbie failed.
+30_7_2024:11_23_12: starting multiTask on Arbie.
+30_7_2024:11_23_16: arbie_reviseDates.init() takes from 1 to 2 positional arguments but 3 were given
+30_7_2024:11_23_16: multiTask on Arbie failed.
+30_7_2024:11_23_16: starting multiTask on Arbie.
+30_7_2024:11_23_19: Initalizeing task schedular
+30_7_2024:11_23_19: Successfully imported arbie dependencys
+30_7_2024:11_23_19: Successfully imported betfair dependencys
+30_7_2024:11_23_19: Successfully imported betm dependencys
+30_7_2024:11_23_19: Successfully imported boombet dependencys
+30_7_2024:11_23_19: Successfully imported ladbrokes dependencys
+30_7_2024:11_23_19: Successfully imported palmerbet dependencys
+30_7_2024:11_23_19: Successfully imported playup dependencys
+30_7_2024:11_23_19: Successfully imported pointsbet dependencys
+30_7_2024:11_23_19: Successfully imported sportsbett dependencys
+30_7_2024:11_23_19: Successfully imported tab dependencys
+30_7_2024:11_23_19: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_23_19: starting multiTask on Arbie.
+30_7_2024:11_23_23: multiTask on Arbie succeeded.
+30_7_2024:11_23_23: starting multiTask on Arbie.
+30_7_2024:11_23_30: multiTask on Arbie succeeded.
+30_7_2024:11_23_30: starting multiTask on Arbie.
+30_7_2024:11_23_33: multiTask on Arbie succeeded.
+30_7_2024:11_23_33: starting multiTask on Arbie.
+30_7_2024:11_24_31: Initalizeing task schedular
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_24_31: starting multiTask on Arbie.
+30_7_2024:11_24_31: max_workers must be greater than 0
+30_7_2024:11_24_31: multiTask on Arbie failed.
+30_7_2024:11_24_31: starting multiTask on Arbie.
+30_7_2024:11_24_31: max_workers must be greater than 0
+30_7_2024:11_24_31: multiTask on Arbie failed.
+30_7_2024:11_24_31: starting multiTask on Arbie.
+30_7_2024:11_24_32: max_workers must be greater than 0
+30_7_2024:11_24_32: multiTask on Arbie failed.
+30_7_2024:11_24_32: starting multiTask on Arbie.
+30_7_2024:11_24_32: max_workers must be greater than 0
+30_7_2024:11_24_32: multiTask on Arbie failed.
+30_7_2024:11_24_32: starting multiTask on Arbie.
+30_7_2024:11_24_32: max_workers must be greater than 0
+30_7_2024:11_24_32: multiTask on Arbie failed.
+30_7_2024:11_24_32: starting multiTask on Arbie.
+30_7_2024:11_24_32: max_workers must be greater than 0
+30_7_2024:11_24_32: multiTask on Arbie failed.
+30_7_2024:11_24_32: starting multiTask on Arbie.
+30_7_2024:11_24_32: max_workers must be greater than 0
+30_7_2024:11_24_32: multiTask on Arbie failed.
+30_7_2024:11_24_32: starting multiTask on Arbie.
+30_7_2024:11_24_32: max_workers must be greater than 0
+30_7_2024:11_24_32: multiTask on Arbie failed.
+30_7_2024:11_24_32: starting multiTask on Arbie.
+30_7_2024:11_24_33: max_workers must be greater than 0
+30_7_2024:11_24_33: multiTask on Arbie failed.
+30_7_2024:11_24_33: starting multiTask on Arbie.
+30_7_2024:11_24_33: max_workers must be greater than 0
+30_7_2024:11_24_33: multiTask on Arbie failed.
+30_7_2024:11_24_33: starting multiTask on Arbie.
+30_7_2024:11_24_33: max_workers must be greater than 0
+30_7_2024:11_24_33: multiTask on Arbie failed.
+30_7_2024:11_24_33: starting multiTask on Arbie.
+30_7_2024:11_24_33: max_workers must be greater than 0
+30_7_2024:11_24_33: multiTask on Arbie failed.
+30_7_2024:11_24_33: starting multiTask on Arbie.
+30_7_2024:11_24_33: max_workers must be greater than 0
+30_7_2024:11_24_33: multiTask on Arbie failed.
+30_7_2024:11_24_33: starting multiTask on Arbie.
+30_7_2024:11_24_33: max_workers must be greater than 0
+30_7_2024:11_24_33: multiTask on Arbie failed.
+30_7_2024:11_24_33: starting multiTask on Arbie.
+30_7_2024:11_24_34: max_workers must be greater than 0
+30_7_2024:11_24_34: multiTask on Arbie failed.
+30_7_2024:11_24_34: starting multiTask on Arbie.
+30_7_2024:11_24_34: max_workers must be greater than 0
+30_7_2024:11_24_34: multiTask on Arbie failed.
+30_7_2024:11_24_34: starting multiTask on Arbie.
+30_7_2024:11_24_34: max_workers must be greater than 0
+30_7_2024:11_24_34: multiTask on Arbie failed.
+30_7_2024:11_24_34: starting multiTask on Arbie.
+30_7_2024:11_24_34: max_workers must be greater than 0
+30_7_2024:11_24_34: multiTask on Arbie failed.
+30_7_2024:11_24_34: starting multiTask on Arbie.
+30_7_2024:11_24_34: max_workers must be greater than 0
+30_7_2024:11_24_34: multiTask on Arbie failed.
+30_7_2024:11_24_34: starting multiTask on Arbie.
+30_7_2024:11_24_34: max_workers must be greater than 0
+30_7_2024:11_24_34: multiTask on Arbie failed.
+30_7_2024:11_24_34: starting multiTask on Arbie.
+30_7_2024:11_24_35: max_workers must be greater than 0
+30_7_2024:11_24_35: multiTask on Arbie failed.
+30_7_2024:11_24_35: starting multiTask on Arbie.
+30_7_2024:11_24_35: max_workers must be greater than 0
+30_7_2024:11_24_35: multiTask on Arbie failed.
+30_7_2024:11_24_35: starting multiTask on Arbie.
+30_7_2024:11_24_35: max_workers must be greater than 0
+30_7_2024:11_24_35: multiTask on Arbie failed.
+30_7_2024:11_24_35: starting multiTask on Arbie.
+30_7_2024:11_25_3: Initalizeing task schedular
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_3: starting multiTask on Arbie.
+30_7_2024:11_25_3: max_workers must be greater than 0
+30_7_2024:11_25_3: multiTask on Arbie failed.
+30_7_2024:11_25_3: starting multiTask on Arbie.
+30_7_2024:11_25_3: max_workers must be greater than 0
+30_7_2024:11_25_3: multiTask on Arbie failed.
+30_7_2024:11_25_3: starting multiTask on Arbie.
+30_7_2024:11_25_3: max_workers must be greater than 0
+30_7_2024:11_25_3: multiTask on Arbie failed.
+30_7_2024:11_25_3: starting multiTask on Arbie.
+30_7_2024:11_25_3: max_workers must be greater than 0
+30_7_2024:11_25_3: multiTask on Arbie failed.
+30_7_2024:11_25_3: starting multiTask on Arbie.
+30_7_2024:11_25_4: max_workers must be greater than 0
+30_7_2024:11_25_4: multiTask on Arbie failed.
+30_7_2024:11_25_4: starting multiTask on Arbie.
+30_7_2024:11_25_4: max_workers must be greater than 0
+30_7_2024:11_25_4: multiTask on Arbie failed.
+30_7_2024:11_25_4: starting multiTask on Arbie.
+30_7_2024:11_25_4: max_workers must be greater than 0
+30_7_2024:11_25_4: multiTask on Arbie failed.
+30_7_2024:11_25_4: starting multiTask on Arbie.
+30_7_2024:11_25_4: max_workers must be greater than 0
+30_7_2024:11_25_4: multiTask on Arbie failed.
+30_7_2024:11_25_4: starting multiTask on Arbie.
+30_7_2024:11_25_4: max_workers must be greater than 0
+30_7_2024:11_25_4: multiTask on Arbie failed.
+30_7_2024:11_25_4: starting multiTask on Arbie.
+30_7_2024:11_25_4: max_workers must be greater than 0
+30_7_2024:11_25_4: multiTask on Arbie failed.
+30_7_2024:11_25_4: starting multiTask on Arbie.
+30_7_2024:11_25_4: max_workers must be greater than 0
+30_7_2024:11_25_4: multiTask on Arbie failed.
+30_7_2024:11_25_4: starting multiTask on Arbie.
+30_7_2024:11_25_5: max_workers must be greater than 0
+30_7_2024:11_25_5: multiTask on Arbie failed.
+30_7_2024:11_25_5: starting multiTask on Arbie.
+30_7_2024:11_25_5: max_workers must be greater than 0
+30_7_2024:11_25_5: multiTask on Arbie failed.
+30_7_2024:11_25_5: starting multiTask on Arbie.
+30_7_2024:11_25_5: max_workers must be greater than 0
+30_7_2024:11_25_5: multiTask on Arbie failed.
+30_7_2024:11_25_5: starting multiTask on Arbie.
+30_7_2024:11_25_5: max_workers must be greater than 0
+30_7_2024:11_25_5: multiTask on Arbie failed.
+30_7_2024:11_25_5: starting multiTask on Arbie.
+30_7_2024:11_25_5: max_workers must be greater than 0
+30_7_2024:11_25_5: multiTask on Arbie failed.
+30_7_2024:11_25_5: starting multiTask on Arbie.
+30_7_2024:11_25_5: max_workers must be greater than 0
+30_7_2024:11_25_5: multiTask on Arbie failed.
+30_7_2024:11_25_5: starting multiTask on Arbie.
+30_7_2024:11_25_6: max_workers must be greater than 0
+30_7_2024:11_25_6: multiTask on Arbie failed.
+30_7_2024:11_25_6: starting multiTask on Arbie.
+30_7_2024:11_25_6: max_workers must be greater than 0
+30_7_2024:11_25_6: multiTask on Arbie failed.
+30_7_2024:11_25_6: starting multiTask on Arbie.
+30_7_2024:11_25_34: Initalizeing task schedular
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_25_34: starting multiTask on Arbie.
+30_7_2024:11_25_34: max_workers must be greater than 0
+30_7_2024:11_25_34: multiTask on Arbie failed.
+30_7_2024:11_25_34: starting multiTask on Arbie.
+30_7_2024:11_25_34: max_workers must be greater than 0
+30_7_2024:11_25_34: multiTask on Arbie failed.
+30_7_2024:11_25_34: starting multiTask on Arbie.
+30_7_2024:11_25_35: max_workers must be greater than 0
+30_7_2024:11_25_35: multiTask on Arbie failed.
+30_7_2024:11_25_35: starting multiTask on Arbie.
+30_7_2024:11_25_35: max_workers must be greater than 0
+30_7_2024:11_25_35: multiTask on Arbie failed.
+30_7_2024:11_25_35: starting multiTask on Arbie.
+30_7_2024:11_25_35: max_workers must be greater than 0
+30_7_2024:11_25_35: multiTask on Arbie failed.
+30_7_2024:11_25_35: starting multiTask on Arbie.
+30_7_2024:11_25_35: max_workers must be greater than 0
+30_7_2024:11_25_35: multiTask on Arbie failed.
+30_7_2024:11_25_35: starting multiTask on Arbie.
+30_7_2024:11_25_35: max_workers must be greater than 0
+30_7_2024:11_25_35: multiTask on Arbie failed.
+30_7_2024:11_25_35: starting multiTask on Arbie.
+30_7_2024:11_25_35: max_workers must be greater than 0
+30_7_2024:11_25_35: multiTask on Arbie failed.
+30_7_2024:11_25_35: starting multiTask on Arbie.
+30_7_2024:11_25_36: max_workers must be greater than 0
+30_7_2024:11_25_36: multiTask on Arbie failed.
+30_7_2024:11_25_36: starting multiTask on Arbie.
+30_7_2024:11_25_36: max_workers must be greater than 0
+30_7_2024:11_25_36: multiTask on Arbie failed.
+30_7_2024:11_25_36: starting multiTask on Arbie.
+30_7_2024:11_25_36: max_workers must be greater than 0
+30_7_2024:11_25_36: multiTask on Arbie failed.
+30_7_2024:11_25_36: starting multiTask on Arbie.
+30_7_2024:11_25_36: max_workers must be greater than 0
+30_7_2024:11_25_36: multiTask on Arbie failed.
+30_7_2024:11_25_36: starting multiTask on Arbie.
+30_7_2024:11_25_36: max_workers must be greater than 0
+30_7_2024:11_25_36: multiTask on Arbie failed.
+30_7_2024:11_25_36: starting multiTask on Arbie.
+30_7_2024:11_25_36: max_workers must be greater than 0
+30_7_2024:11_25_36: multiTask on Arbie failed.
+30_7_2024:11_25_36: starting multiTask on Arbie.
+30_7_2024:11_25_37: max_workers must be greater than 0
+30_7_2024:11_25_37: multiTask on Arbie failed.
+30_7_2024:11_25_37: starting multiTask on Arbie.
+30_7_2024:11_25_37: max_workers must be greater than 0
+30_7_2024:11_25_37: multiTask on Arbie failed.
+30_7_2024:11_25_37: starting multiTask on Arbie.
+30_7_2024:11_25_37: max_workers must be greater than 0
+30_7_2024:11_25_37: multiTask on Arbie failed.
+30_7_2024:11_25_37: starting multiTask on Arbie.
+30_7_2024:11_25_37: max_workers must be greater than 0
+30_7_2024:11_25_37: multiTask on Arbie failed.
+30_7_2024:11_25_37: starting multiTask on Arbie.
+30_7_2024:11_25_37: max_workers must be greater than 0
+30_7_2024:11_25_37: multiTask on Arbie failed.
+30_7_2024:11_25_37: starting multiTask on Arbie.
+30_7_2024:11_25_37: max_workers must be greater than 0
+30_7_2024:11_25_37: multiTask on Arbie failed.
+30_7_2024:11_25_37: starting multiTask on Arbie.
+30_7_2024:11_26_10: Initalizeing task schedular
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: module 'importlib' has no attribute 'machinery'
+30_7_2024:11_26_10: starting multiTask on Arbie.
+30_7_2024:11_26_10: max_workers must be greater than 0
+30_7_2024:11_26_10: multiTask on Arbie failed.
+30_7_2024:11_26_10: starting multiTask on Arbie.
+30_7_2024:11_26_10: max_workers must be greater than 0
+30_7_2024:11_26_10: multiTask on Arbie failed.
+30_7_2024:11_26_10: starting multiTask on Arbie.
+30_7_2024:11_26_10: max_workers must be greater than 0
+30_7_2024:11_26_10: multiTask on Arbie failed.
+30_7_2024:11_26_10: starting multiTask on Arbie.
+30_7_2024:11_26_11: max_workers must be greater than 0
+30_7_2024:11_26_11: multiTask on Arbie failed.
+30_7_2024:11_26_11: starting multiTask on Arbie.
+30_7_2024:11_26_11: max_workers must be greater than 0
+30_7_2024:11_26_11: multiTask on Arbie failed.
+30_7_2024:11_26_11: starting multiTask on Arbie.
+30_7_2024:11_26_11: max_workers must be greater than 0
+30_7_2024:11_26_11: multiTask on Arbie failed.
+30_7_2024:11_26_11: starting multiTask on Arbie.
+30_7_2024:11_26_11: max_workers must be greater than 0
+30_7_2024:11_26_11: multiTask on Arbie failed.
+30_7_2024:11_26_11: starting multiTask on Arbie.
+30_7_2024:11_26_11: max_workers must be greater than 0
+30_7_2024:11_26_11: multiTask on Arbie failed.
+30_7_2024:11_26_11: starting multiTask on Arbie.
+30_7_2024:11_26_11: max_workers must be greater than 0
+30_7_2024:11_26_11: multiTask on Arbie failed.
+30_7_2024:11_26_11: starting multiTask on Arbie.
+30_7_2024:11_26_11: max_workers must be greater than 0
+30_7_2024:11_26_11: multiTask on Arbie failed.
+30_7_2024:11_26_11: starting multiTask on Arbie.
+30_7_2024:11_26_12: max_workers must be greater than 0
+30_7_2024:11_26_12: multiTask on Arbie failed.
+30_7_2024:11_26_12: starting multiTask on Arbie.
+30_7_2024:11_26_12: max_workers must be greater than 0
+30_7_2024:11_26_12: multiTask on Arbie failed.
+30_7_2024:11_26_12: starting multiTask on Arbie.
+30_7_2024:11_26_12: max_workers must be greater than 0
+30_7_2024:11_26_12: multiTask on Arbie failed.
+30_7_2024:11_26_12: starting multiTask on Arbie.
+30_7_2024:11_26_12: max_workers must be greater than 0
+30_7_2024:11_26_12: multiTask on Arbie failed.
+30_7_2024:11_26_12: starting multiTask on Arbie.
+30_7_2024:11_26_12: max_workers must be greater than 0
+30_7_2024:11_26_12: multiTask on Arbie failed.
+30_7_2024:11_26_12: starting multiTask on Arbie.
+30_7_2024:11_26_33: Initalizeing task schedular
+30_7_2024:11_26_33: Successfully imported arbie dependencys
+30_7_2024:11_26_33: Successfully imported betfair dependencys
+30_7_2024:11_26_33: Successfully imported betm dependencys
+30_7_2024:11_26_33: Successfully imported boombet dependencys
+30_7_2024:11_26_33: Successfully imported ladbrokes dependencys
+30_7_2024:11_26_33: Successfully imported palmerbet dependencys
+30_7_2024:11_26_33: Successfully imported playup dependencys
+30_7_2024:11_26_33: Successfully imported pointsbet dependencys
+30_7_2024:11_26_33: Successfully imported sportsbett dependencys
+30_7_2024:11_26_33: Successfully imported tab dependencys
+30_7_2024:11_26_33: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_26_33: starting multiTask on Arbie.
+30_7_2024:11_26_40: multiTask on Arbie succeeded.
+30_7_2024:11_26_45: starting multiTask on Arbie.
+30_7_2024:11_26_52: multiTask on Arbie succeeded.
+30_7_2024:11_26_57: starting multiTask on Arbie.
+30_7_2024:11_27_4: multiTask on Arbie succeeded.
+30_7_2024:11_27_9: starting multiTask on Arbie.
+30_7_2024:11_28_29: Initalizeing task schedular
+30_7_2024:11_28_29: Successfully imported arbie dependencys
+30_7_2024:11_28_29: Successfully imported betfair dependencys
+30_7_2024:11_28_29: Successfully imported betm dependencys
+30_7_2024:11_28_29: Successfully imported boombet dependencys
+30_7_2024:11_28_29: Successfully imported ladbrokes dependencys
+30_7_2024:11_28_29: Successfully imported palmerbet dependencys
+30_7_2024:11_28_29: Successfully imported playup dependencys
+30_7_2024:11_28_29: Successfully imported pointsbet dependencys
+30_7_2024:11_28_29: Successfully imported sportsbett dependencys
+30_7_2024:11_28_29: Successfully imported tab dependencys
+30_7_2024:11_28_29: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_28_29: starting multiTask on Arbie.
+30_7_2024:11_28_36: multiTask on Arbie succeeded.
+30_7_2024:11_28_41: starting multiTask on Arbie.
+30_7_2024:11_28_47: multiTask on Arbie succeeded.
+30_7_2024:11_28_52: starting multiTask on Arbie.
+30_7_2024:11_28_56: multiTask on Arbie succeeded.
+30_7_2024:11_29_1: starting multiTask on Arbie.
+30_7_2024:11_29_8: multiTask on Arbie succeeded.
+30_7_2024:11_29_13: starting multiTask on Arbie.
+30_7_2024:11_29_19: multiTask on Arbie succeeded.
+30_7_2024:11_29_24: starting multiTask on Arbie.
+30_7_2024:11_29_31: multiTask on Arbie succeeded.
+30_7_2024:11_29_36: starting multiTask on Arbie.
+30_7_2024:11_29_42: multiTask on Arbie succeeded.
+30_7_2024:11_29_47: starting multiTask on Arbie.
+30_7_2024:11_29_54: multiTask on Arbie succeeded.
+30_7_2024:11_29_59: starting multiTask on Arbie.
+30_7_2024:11_30_6: multiTask on Arbie succeeded.
+30_7_2024:11_30_11: starting multiTask on Arbie.
+30_7_2024:11_30_17: multiTask on Arbie succeeded.
+30_7_2024:11_30_22: starting multiTask on Arbie.
+30_7_2024:11_30_26: multiTask on Arbie succeeded.
+30_7_2024:11_30_31: starting multiTask on Arbie.
+30_7_2024:11_30_37: multiTask on Arbie succeeded.
+30_7_2024:11_30_42: starting multiTask on Arbie.
+30_7_2024:11_30_46: multiTask on Arbie succeeded.
+30_7_2024:11_30_51: starting multiTask on Arbie.
+30_7_2024:11_30_57: multiTask on Arbie succeeded.
+30_7_2024:11_31_1: Initalizeing task schedular
+30_7_2024:11_31_1: Successfully imported arbie dependencys
+30_7_2024:11_31_1: Successfully imported betfair dependencys
+30_7_2024:11_31_1: Successfully imported betm dependencys
+30_7_2024:11_31_1: Successfully imported boombet dependencys
+30_7_2024:11_31_1: Successfully imported ladbrokes dependencys
+30_7_2024:11_31_1: Successfully imported palmerbet dependencys
+30_7_2024:11_31_2: Successfully imported playup dependencys
+30_7_2024:11_31_2: Successfully imported pointsbet dependencys
+30_7_2024:11_31_2: Successfully imported sportsbett dependencys
+30_7_2024:11_31_2: Successfully imported tab dependencys
+30_7_2024:11_31_2: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_31_2: starting multiTask on Arbie.
+30_7_2024:11_31_8: multiTask on Arbie succeeded.
+30_7_2024:11_31_13: starting multiTask on Arbie.
+30_7_2024:11_31_20: multiTask on Arbie succeeded.
+30_7_2024:11_31_25: starting multiTask on Arbie.
+30_7_2024:11_31_31: multiTask on Arbie succeeded.
+30_7_2024:11_31_36: starting multiTask on Arbie.
+30_7_2024:11_31_43: multiTask on Arbie succeeded.
+30_7_2024:11_31_48: starting multiTask on Arbie.
+30_7_2024:11_31_55: multiTask on Arbie succeeded.
+30_7_2024:11_32_0: starting multiTask on Arbie.
+30_7_2024:11_32_6: multiTask on Arbie succeeded.
+30_7_2024:11_32_11: starting multiTask on Arbie.
+30_7_2024:11_32_18: multiTask on Arbie succeeded.
+30_7_2024:11_32_23: starting multiTask on Arbie.
+30_7_2024:11_32_26: multiTask on Arbie succeeded.
+30_7_2024:11_32_31: starting multiTask on Arbie.
+30_7_2024:11_32_35: multiTask on Arbie succeeded.
+30_7_2024:11_32_40: starting multiTask on Arbie.
+30_7_2024:11_32_46: multiTask on Arbie succeeded.
+30_7_2024:11_32_51: starting multiTask on Arbie.
+30_7_2024:11_32_58: multiTask on Arbie succeeded.
+30_7_2024:11_33_3: starting multiTask on Arbie.
+30_7_2024:11_33_7: multiTask on Arbie succeeded.
+30_7_2024:11_33_12: starting multiTask on Arbie.
+30_7_2024:11_33_18: multiTask on Arbie succeeded.
+30_7_2024:11_33_23: starting multiTask on Arbie.
+30_7_2024:11_33_33: multiTask on Arbie succeeded.
+30_7_2024:11_33_38: starting multiTask on Arbie.
+30_7_2024:11_33_45: multiTask on Arbie succeeded.
+30_7_2024:11_33_50: starting multiTask on Arbie.
+30_7_2024:11_33_53: multiTask on Arbie succeeded.
+30_7_2024:11_33_58: starting multiTask on Arbie.
+30_7_2024:11_34_5: multiTask on Arbie succeeded.
+30_7_2024:11_34_10: starting multiTask on Arbie.
+30_7_2024:11_34_17: multiTask on Arbie succeeded.
+30_7_2024:11_34_22: starting multiTask on Arbie.
+30_7_2024:11_34_28: multiTask on Arbie succeeded.
+30_7_2024:11_34_33: starting multiTask on Arbie.
+30_7_2024:11_34_40: multiTask on Arbie succeeded.
+30_7_2024:11_34_45: starting multiTask on Arbie.
+30_7_2024:11_34_52: multiTask on Arbie succeeded.
+30_7_2024:11_34_57: starting multiTask on Arbie.
+30_7_2024:11_35_3: multiTask on Arbie succeeded.
+30_7_2024:11_35_8: starting multiTask on Arbie.
+30_7_2024:11_35_15: multiTask on Arbie succeeded.
+30_7_2024:11_35_20: starting multiTask on Arbie.
+30_7_2024:11_35_26: multiTask on Arbie succeeded.
+30_7_2024:11_35_31: starting multiTask on Arbie.
+30_7_2024:11_35_35: multiTask on Arbie succeeded.
+30_7_2024:11_35_40: starting multiTask on Arbie.
+30_7_2024:11_35_44: multiTask on Arbie succeeded.
+30_7_2024:11_35_49: starting multiTask on Arbie.
+30_7_2024:11_35_55: multiTask on Arbie succeeded.
+30_7_2024:11_36_0: starting multiTask on Arbie.
+30_7_2024:11_36_7: multiTask on Arbie succeeded.
+30_7_2024:11_36_12: starting multiTask on Arbie.
+30_7_2024:11_36_18: multiTask on Arbie succeeded.
+30_7_2024:11_36_23: starting multiTask on Arbie.
+30_7_2024:11_36_30: multiTask on Arbie succeeded.
+30_7_2024:11_36_35: starting multiTask on Arbie.
+30_7_2024:11_36_42: multiTask on Arbie succeeded.
+30_7_2024:11_36_47: starting multiTask on Arbie.
+30_7_2024:11_36_51: multiTask on Arbie succeeded.
+30_7_2024:11_36_56: starting multiTask on Arbie.
+30_7_2024:11_36_59: multiTask on Arbie succeeded.
+30_7_2024:11_37_4: starting multiTask on Arbie.
+30_7_2024:11_37_11: multiTask on Arbie succeeded.
+30_7_2024:11_37_16: starting multiTask on Arbie.
+30_7_2024:11_37_20: multiTask on Arbie succeeded.
+30_7_2024:11_37_25: starting multiTask on Arbie.
+30_7_2024:11_37_31: multiTask on Arbie succeeded.
+30_7_2024:11_37_36: starting multiTask on Arbie.
+30_7_2024:11_37_43: multiTask on Arbie succeeded.
+30_7_2024:11_37_48: starting multiTask on Arbie.
+30_7_2024:11_37_54: multiTask on Arbie succeeded.
+30_7_2024:11_37_59: starting multiTask on Arbie.
+30_7_2024:11_38_6: multiTask on Arbie succeeded.
+30_7_2024:11_38_11: starting multiTask on Arbie.
+30_7_2024:11_38_18: multiTask on Arbie succeeded.
+30_7_2024:11_38_23: starting multiTask on Arbie.
+30_7_2024:11_38_29: multiTask on Arbie succeeded.
+30_7_2024:11_38_34: starting multiTask on Arbie.
+30_7_2024:11_38_41: multiTask on Arbie succeeded.
+30_7_2024:11_38_46: starting multiTask on Arbie.
+30_7_2024:11_38_52: multiTask on Arbie succeeded.
+30_7_2024:11_38_57: starting multiTask on Arbie.
+30_7_2024:11_39_4: multiTask on Arbie succeeded.
+30_7_2024:11_39_9: starting multiTask on Arbie.
+30_7_2024:11_39_16: multiTask on Arbie succeeded.
+30_7_2024:11_39_21: starting multiTask on Arbie.
+30_7_2024:11_39_27: multiTask on Arbie succeeded.
+30_7_2024:11_39_32: starting multiTask on Arbie.
+30_7_2024:11_39_39: multiTask on Arbie succeeded.
+30_7_2024:11_39_44: starting multiTask on Arbie.
+30_7_2024:11_40_1: multiTask on Arbie succeeded.
+30_7_2024:11_40_6: starting multiTask on Arbie.
+30_7_2024:11_40_13: multiTask on Arbie succeeded.
+30_7_2024:11_40_18: starting multiTask on Arbie.
+30_7_2024:11_40_21: multiTask on Arbie succeeded.
+30_7_2024:11_40_26: starting multiTask on Arbie.
+30_7_2024:11_40_33: multiTask on Arbie succeeded.
+30_7_2024:11_40_38: starting multiTask on Arbie.
+30_7_2024:11_40_45: multiTask on Arbie succeeded.
+30_7_2024:11_40_50: starting multiTask on Arbie.
+30_7_2024:11_40_56: multiTask on Arbie succeeded.
+30_7_2024:11_41_1: starting multiTask on Arbie.
+30_7_2024:11_41_5: multiTask on Arbie succeeded.
+30_7_2024:11_41_10: starting multiTask on Arbie.
+30_7_2024:11_41_17: multiTask on Arbie succeeded.
+30_7_2024:11_41_22: starting multiTask on Arbie.
+30_7_2024:11_41_28: multiTask on Arbie succeeded.
+30_7_2024:11_41_33: starting multiTask on Arbie.
+30_7_2024:11_41_43: multiTask on Arbie succeeded.
+30_7_2024:11_41_48: starting multiTask on Arbie.
+30_7_2024:11_41_55: multiTask on Arbie succeeded.
+30_7_2024:11_42_0: starting multiTask on Arbie.
+30_7_2024:11_42_6: multiTask on Arbie succeeded.
+30_7_2024:11_42_11: starting multiTask on Arbie.
+30_7_2024:11_42_15: multiTask on Arbie succeeded.
+30_7_2024:11_42_20: starting multiTask on Arbie.
+30_7_2024:11_42_24: multiTask on Arbie succeeded.
+30_7_2024:11_42_29: starting multiTask on Arbie.
+30_7_2024:11_42_35: multiTask on Arbie succeeded.
+30_7_2024:11_42_40: starting multiTask on Arbie.
+30_7_2024:11_42_44: multiTask on Arbie succeeded.
+30_7_2024:11_42_49: starting multiTask on Arbie.
+30_7_2024:11_42_55: multiTask on Arbie succeeded.
+30_7_2024:11_43_0: starting multiTask on Arbie.
+30_7_2024:11_43_7: multiTask on Arbie succeeded.
+30_7_2024:11_43_12: starting multiTask on Arbie.
+30_7_2024:11_43_18: multiTask on Arbie succeeded.
+30_7_2024:11_43_23: starting multiTask on Arbie.
+30_7_2024:11_43_30: multiTask on Arbie succeeded.
+30_7_2024:11_43_35: starting multiTask on Arbie.
+30_7_2024:11_43_42: multiTask on Arbie succeeded.
+30_7_2024:11_43_47: starting multiTask on Arbie.
+30_7_2024:11_43_53: multiTask on Arbie succeeded.
+30_7_2024:11_43_58: starting multiTask on Arbie.
+30_7_2024:11_44_2: multiTask on Arbie succeeded.
+30_7_2024:11_44_7: starting multiTask on Arbie.
+30_7_2024:11_44_14: multiTask on Arbie succeeded.
+30_7_2024:11_44_19: starting multiTask on Arbie.
+30_7_2024:11_44_25: multiTask on Arbie succeeded.
+30_7_2024:11_44_30: starting multiTask on Arbie.
+30_7_2024:11_44_37: multiTask on Arbie succeeded.
+30_7_2024:11_44_42: starting multiTask on Arbie.
+30_7_2024:11_44_46: multiTask on Arbie succeeded.
+30_7_2024:11_44_51: starting multiTask on Arbie.
+30_7_2024:11_45_1: multiTask on Arbie succeeded.
+30_7_2024:11_45_6: starting multiTask on Arbie.
+30_7_2024:11_45_12: multiTask on Arbie succeeded.
+30_7_2024:11_45_17: starting multiTask on Arbie.
+30_7_2024:11_45_24: multiTask on Arbie succeeded.
+30_7_2024:11_45_29: starting multiTask on Arbie.
+30_7_2024:11_45_35: multiTask on Arbie succeeded.
+30_7_2024:11_45_40: starting multiTask on Arbie.
+30_7_2024:11_45_44: multiTask on Arbie succeeded.
+30_7_2024:11_45_49: starting multiTask on Arbie.
+30_7_2024:11_45_56: multiTask on Arbie succeeded.
+30_7_2024:11_46_1: starting multiTask on Arbie.
+30_7_2024:11_46_7: multiTask on Arbie succeeded.
+30_7_2024:11_46_12: starting multiTask on Arbie.
+30_7_2024:11_46_19: multiTask on Arbie succeeded.
+30_7_2024:11_46_24: starting multiTask on Arbie.
+30_7_2024:11_46_30: multiTask on Arbie succeeded.
+30_7_2024:11_46_35: starting multiTask on Arbie.
+30_7_2024:11_46_42: multiTask on Arbie succeeded.
+30_7_2024:11_46_47: starting multiTask on Arbie.
+30_7_2024:11_46_54: multiTask on Arbie succeeded.
+30_7_2024:11_46_59: starting multiTask on Arbie.
+30_7_2024:11_47_8: multiTask on Arbie succeeded.
+30_7_2024:11_47_13: starting multiTask on Arbie.
+30_7_2024:11_47_23: multiTask on Arbie succeeded.
+30_7_2024:11_47_28: starting multiTask on Arbie.
+30_7_2024:11_47_35: multiTask on Arbie succeeded.
+30_7_2024:11_47_40: starting multiTask on Arbie.
+30_7_2024:11_47_59: multiTask on Arbie succeeded.
+30_7_2024:11_48_4: starting multiTask on Arbie.
+30_7_2024:11_48_11: multiTask on Arbie succeeded.
+30_7_2024:11_48_16: starting multiTask on Arbie.
+30_7_2024:11_48_22: multiTask on Arbie succeeded.
+30_7_2024:11_48_27: starting multiTask on Arbie.
+30_7_2024:11_48_34: multiTask on Arbie succeeded.
+30_7_2024:11_48_39: starting multiTask on Arbie.
+30_7_2024:11_48_45: multiTask on Arbie succeeded.
+30_7_2024:11_48_50: starting multiTask on Arbie.
+30_7_2024:11_48_57: multiTask on Arbie succeeded.
+30_7_2024:11_49_2: starting multiTask on Arbie.
+30_7_2024:11_49_9: multiTask on Arbie succeeded.
+30_7_2024:11_49_14: starting multiTask on Arbie.
+30_7_2024:11_49_20: multiTask on Arbie succeeded.
+30_7_2024:11_49_25: starting multiTask on Arbie.
+30_7_2024:11_49_32: multiTask on Arbie succeeded.
+30_7_2024:11_49_37: starting multiTask on Arbie.
+30_7_2024:11_49_44: multiTask on Arbie succeeded.
+30_7_2024:11_49_49: starting multiTask on Arbie.
+30_7_2024:11_49_53: multiTask on Arbie succeeded.
+30_7_2024:11_49_58: starting multiTask on Arbie.
+30_7_2024:11_50_4: multiTask on Arbie succeeded.
+30_7_2024:11_50_9: starting multiTask on Arbie.
+30_7_2024:11_50_16: multiTask on Arbie succeeded.
+30_7_2024:11_50_21: starting multiTask on Arbie.
+30_7_2024:11_50_24: Initalizeing task schedular
+30_7_2024:11_50_24: Successfully imported arbie dependencys
+30_7_2024:11_50_24: Successfully imported betfair dependencys
+30_7_2024:11_50_24: Successfully imported betm dependencys
+30_7_2024:11_50_24: Successfully imported boombet dependencys
+30_7_2024:11_50_24: Successfully imported ladbrokes dependencys
+30_7_2024:11_50_24: Successfully imported palmerbet dependencys
+30_7_2024:11_50_24: Successfully imported playup dependencys
+30_7_2024:11_50_24: Successfully imported pointsbet dependencys
+30_7_2024:11_50_24: Successfully imported sportsbett dependencys
+30_7_2024:11_50_24: Successfully imported tab dependencys
+30_7_2024:11_50_24: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_52_33: Initalizeing task schedular
+30_7_2024:11_52_33: Successfully imported arbie dependencys
+30_7_2024:11_52_33: Successfully imported betfair dependencys
+30_7_2024:11_52_33: Successfully imported betm dependencys
+30_7_2024:11_52_33: Successfully imported boombet dependencys
+30_7_2024:11_52_33: Successfully imported ladbrokes dependencys
+30_7_2024:11_52_33: Successfully imported palmerbet dependencys
+30_7_2024:11_52_33: Successfully imported playup dependencys
+30_7_2024:11_52_33: Successfully imported pointsbet dependencys
+30_7_2024:11_52_33: Successfully imported sportsbett dependencys
+30_7_2024:11_52_33: Successfully imported tab dependencys
+30_7_2024:11_52_33: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:11_53_33: Initalizeing task schedular
+30_7_2024:11_53_33: Successfully imported arbie dependencys
+30_7_2024:11_53_33: Successfully imported betfair dependencys
+30_7_2024:11_53_33: Successfully imported betm dependencys
+30_7_2024:11_53_33: Successfully imported boombet dependencys
+30_7_2024:11_53_33: Successfully imported ladbrokes dependencys
+30_7_2024:11_53_33: Successfully imported palmerbet dependencys
+30_7_2024:11_53_33: Successfully imported playup dependencys
+30_7_2024:11_53_33: Successfully imported pointsbet dependencys
+30_7_2024:11_53_33: Successfully imported sportsbett dependencys
+30_7_2024:11_53_33: Successfully imported tab dependencys
+30_7_2024:11_53_33: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:12_41_3: Initalizeing task schedular
+30_7_2024:12_41_23: Initalizeing task schedular
+30_7_2024:12_41_34: platformManager.__init__() takes 1 positional argument but 2 were given
+30_7_2024:12_42_39: Initalizeing task schedular
+30_7_2024:12_43_9: arbie_reviseDates.__init__() takes 2 positional arguments but 3 were given
+30_7_2024:12_50_59: Initalizeing task schedular
+30_7_2024:12_51_2: Can't instantiate abstract class arbie_reviseDates with abstract method get_function_config
+30_7_2024:12_51_21: Initalizeing task schedular
+30_7_2024:12_52_43: Initalizeing task schedular
+30_7_2024:12_54_27: Initalizeing task schedular
+30_7_2024:12_57_13: Initalizeing task schedular
+30_7_2024:12_58_42: Successfully imported arbie dependencys
+30_7_2024:13_0_14: Initalizeing task schedular
+30_7_2024:13_0_37: Successfully imported arbie dependencys
+30_7_2024:13_1_28: Initalizeing task schedular
+30_7_2024:13_1_34: Successfully imported arbie dependencys
+30_7_2024:13_1_46: Successfully imported betfair dependencys
+30_7_2024:13_4_0: Initalizeing task schedular
+30_7_2024:13_4_6: Successfully imported arbie dependencys
+30_7_2024:13_4_10: Successfully imported betfair dependencys
+30_7_2024:13_4_26: Successfully imported betm dependencys
+30_7_2024:13_5_32: Initalizeing task schedular
+30_7_2024:13_5_32: Successfully imported arbie dependencys
+30_7_2024:13_5_32: Successfully imported betfair dependencys
+30_7_2024:13_5_32: Successfully imported betm dependencys
+30_7_2024:13_5_32: Successfully imported boombet dependencys
+30_7_2024:13_5_32: Successfully imported ladbrokes dependencys
+30_7_2024:13_5_32: Successfully imported palmerbet dependencys
+30_7_2024:13_5_32: Successfully imported playup dependencys
+30_7_2024:13_5_32: Successfully imported pointsbet dependencys
+30_7_2024:13_5_32: Successfully imported sportsbett dependencys
+30_7_2024:13_5_32: Successfully imported tab dependencys
+30_7_2024:13_7_56: Initalizeing task schedular
+30_7_2024:13_7_57: Successfully imported arbie dependencys
+30_7_2024:13_7_57: Successfully imported betfair dependencys
+30_7_2024:13_7_57: Successfully imported betm dependencys
+30_7_2024:13_7_57: Successfully imported boombet dependencys
+30_7_2024:13_7_57: Successfully imported ladbrokes dependencys
+30_7_2024:13_7_57: Successfully imported palmerbet dependencys
+30_7_2024:13_7_57: Successfully imported playup dependencys
+30_7_2024:13_7_57: Successfully imported pointsbet dependencys
+30_7_2024:13_7_57: Successfully imported sportsbett dependencys
+30_7_2024:13_7_57: Successfully imported tab dependencys
+30_7_2024:13_7_57: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_15_32: Initalizeing task schedular
+30_7_2024:13_15_32: Successfully imported arbie dependencys
+30_7_2024:13_15_32: Successfully imported betfair dependencys
+30_7_2024:13_15_32: Successfully imported betm dependencys
+30_7_2024:13_15_32: Successfully imported boombet dependencys
+30_7_2024:13_15_32: Successfully imported ladbrokes dependencys
+30_7_2024:13_15_32: Successfully imported palmerbet dependencys
+30_7_2024:13_15_32: Successfully imported playup dependencys
+30_7_2024:13_15_32: Successfully imported pointsbet dependencys
+30_7_2024:13_15_32: Successfully imported sportsbett dependencys
+30_7_2024:13_15_32: Successfully imported tab dependencys
+30_7_2024:13_15_32: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_16_4: Initalizeing task schedular
+30_7_2024:13_16_8: Successfully imported arbie dependencys
+30_7_2024:13_16_8: Successfully imported betfair dependencys
+30_7_2024:13_16_8: Successfully imported betm dependencys
+30_7_2024:13_16_8: Successfully imported boombet dependencys
+30_7_2024:13_16_8: Successfully imported ladbrokes dependencys
+30_7_2024:13_16_8: Successfully imported palmerbet dependencys
+30_7_2024:13_16_8: Successfully imported playup dependencys
+30_7_2024:13_16_8: Successfully imported pointsbet dependencys
+30_7_2024:13_16_8: Successfully imported sportsbett dependencys
+30_7_2024:13_16_8: Successfully imported tab dependencys
+30_7_2024:13_16_8: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_21_45: Initalizeing task schedular
+30_7_2024:13_21_45: Successfully imported arbie dependencys
+30_7_2024:13_21_45: Successfully imported betfair dependencys
+30_7_2024:13_21_45: Successfully imported betm dependencys
+30_7_2024:13_21_45: Successfully imported boombet dependencys
+30_7_2024:13_21_45: Successfully imported ladbrokes dependencys
+30_7_2024:13_21_45: Successfully imported palmerbet dependencys
+30_7_2024:13_21_45: Successfully imported playup dependencys
+30_7_2024:13_21_45: Successfully imported pointsbet dependencys
+30_7_2024:13_21_45: Successfully imported sportsbett dependencys
+30_7_2024:13_21_45: Successfully imported tab dependencys
+30_7_2024:13_21_45: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_24_17: Initalizeing task schedular
+30_7_2024:13_24_17: Successfully imported arbie dependencys
+30_7_2024:13_24_17: Successfully imported betfair dependencys
+30_7_2024:13_24_17: Successfully imported betm dependencys
+30_7_2024:13_24_17: Successfully imported boombet dependencys
+30_7_2024:13_24_17: Successfully imported ladbrokes dependencys
+30_7_2024:13_24_17: Successfully imported palmerbet dependencys
+30_7_2024:13_24_17: Successfully imported playup dependencys
+30_7_2024:13_24_17: Successfully imported pointsbet dependencys
+30_7_2024:13_24_17: Successfully imported sportsbett dependencys
+30_7_2024:13_24_17: Successfully imported tab dependencys
+30_7_2024:13_24_17: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_24_44: Initalizeing task schedular
+30_7_2024:13_24_44: Successfully imported arbie dependencys
+30_7_2024:13_24_44: Successfully imported betfair dependencys
+30_7_2024:13_24_44: Successfully imported betm dependencys
+30_7_2024:13_24_44: Successfully imported boombet dependencys
+30_7_2024:13_24_44: Successfully imported ladbrokes dependencys
+30_7_2024:13_24_44: Successfully imported palmerbet dependencys
+30_7_2024:13_24_44: Successfully imported playup dependencys
+30_7_2024:13_24_44: Successfully imported pointsbet dependencys
+30_7_2024:13_24_44: Successfully imported sportsbett dependencys
+30_7_2024:13_24_44: Successfully imported tab dependencys
+30_7_2024:13_24_44: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_24_54: 'multitask' object is not subscriptable
+30_7_2024:13_24_54: 'multitask' object is not subscriptable
+30_7_2024:13_25_25: Initalizeing task schedular
+30_7_2024:13_25_26: Successfully imported arbie dependencys
+30_7_2024:13_25_26: Successfully imported betfair dependencys
+30_7_2024:13_25_26: Successfully imported betm dependencys
+30_7_2024:13_25_26: Successfully imported boombet dependencys
+30_7_2024:13_25_26: Successfully imported ladbrokes dependencys
+30_7_2024:13_25_26: Successfully imported palmerbet dependencys
+30_7_2024:13_25_26: Successfully imported playup dependencys
+30_7_2024:13_25_26: Successfully imported pointsbet dependencys
+30_7_2024:13_25_26: Successfully imported sportsbett dependencys
+30_7_2024:13_25_26: Successfully imported tab dependencys
+30_7_2024:13_25_26: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_25_26: 'multitask' object is not subscriptable
+30_7_2024:13_25_37: Initalizeing task schedular
+30_7_2024:13_25_37: Successfully imported arbie dependencys
+30_7_2024:13_25_37: Successfully imported betfair dependencys
+30_7_2024:13_25_37: Successfully imported betm dependencys
+30_7_2024:13_25_37: Successfully imported boombet dependencys
+30_7_2024:13_25_37: Successfully imported ladbrokes dependencys
+30_7_2024:13_25_37: Successfully imported palmerbet dependencys
+30_7_2024:13_25_37: Successfully imported playup dependencys
+30_7_2024:13_25_37: Successfully imported pointsbet dependencys
+30_7_2024:13_25_37: Successfully imported sportsbett dependencys
+30_7_2024:13_25_37: Successfully imported tab dependencys
+30_7_2024:13_25_37: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_26_36: Initalizeing task schedular
+30_7_2024:13_26_37: Successfully imported arbie dependencys
+30_7_2024:13_26_37: Successfully imported betfair dependencys
+30_7_2024:13_26_37: Successfully imported betm dependencys
+30_7_2024:13_26_37: Successfully imported boombet dependencys
+30_7_2024:13_26_37: Successfully imported ladbrokes dependencys
+30_7_2024:13_26_37: Successfully imported palmerbet dependencys
+30_7_2024:13_26_37: Successfully imported playup dependencys
+30_7_2024:13_26_37: Successfully imported pointsbet dependencys
+30_7_2024:13_26_37: Successfully imported sportsbett dependencys
+30_7_2024:13_26_37: Successfully imported tab dependencys
+30_7_2024:13_26_37: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_26_46: starting multiTask on Arbie.
+30_7_2024:13_31_12: multiTask on Arbie succeeded.
+30_7_2024:13_33_57: Initalizeing task schedular
+30_7_2024:13_33_57: Successfully imported arbie dependencys
+30_7_2024:13_33_57: Successfully imported betfair dependencys
+30_7_2024:13_33_57: Successfully imported betm dependencys
+30_7_2024:13_33_57: Successfully imported boombet dependencys
+30_7_2024:13_33_57: Successfully imported ladbrokes dependencys
+30_7_2024:13_33_57: Successfully imported palmerbet dependencys
+30_7_2024:13_33_57: Successfully imported playup dependencys
+30_7_2024:13_33_57: Successfully imported pointsbet dependencys
+30_7_2024:13_33_57: Successfully imported sportsbett dependencys
+30_7_2024:13_33_57: Successfully imported tab dependencys
+30_7_2024:13_33_57: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:13_33_57: starting multiTask on Arbie.
+30_7_2024:13_36_35: multiTask on Arbie succeeded.
+30_7_2024:13_36_35: starting multiTask on Arbie.
+30_7_2024:14_15_47: Initalizeing task schedular
+30_7_2024:14_15_48: Successfully imported arbie dependencys
+30_7_2024:14_15_48: Successfully imported betfair dependencys
+30_7_2024:14_15_48: Successfully imported betm dependencys
+30_7_2024:14_15_48: Successfully imported boombet dependencys
+30_7_2024:14_15_48: Successfully imported ladbrokes dependencys
+30_7_2024:14_15_48: Successfully imported palmerbet dependencys
+30_7_2024:14_15_48: Successfully imported playup dependencys
+30_7_2024:14_15_48: Successfully imported pointsbet dependencys
+30_7_2024:14_15_48: Successfully imported sportsbett dependencys
+30_7_2024:14_15_48: Successfully imported tab dependencys
+30_7_2024:14_15_48: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:14_21_9: Initalizeing task schedular
+30_7_2024:14_21_9: Successfully imported arbie dependencys
+30_7_2024:14_21_9: Successfully imported betfair dependencys
+30_7_2024:14_21_9: Successfully imported betm dependencys
+30_7_2024:14_21_9: Successfully imported boombet dependencys
+30_7_2024:14_21_9: Successfully imported ladbrokes dependencys
+30_7_2024:14_21_9: Successfully imported palmerbet dependencys
+30_7_2024:14_21_9: Successfully imported playup dependencys
+30_7_2024:14_21_9: Successfully imported pointsbet dependencys
+30_7_2024:14_21_9: Successfully imported sportsbett dependencys
+30_7_2024:14_21_9: Successfully imported tab dependencys
+30_7_2024:14_21_9: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:14_21_57: Initalizeing task schedular
+30_7_2024:14_21_57: Successfully imported arbie dependencys
+30_7_2024:14_21_57: Successfully imported betfair dependencys
+30_7_2024:14_21_57: Successfully imported betm dependencys
+30_7_2024:14_21_57: Successfully imported boombet dependencys
+30_7_2024:14_21_57: Successfully imported ladbrokes dependencys
+30_7_2024:14_21_57: Successfully imported palmerbet dependencys
+30_7_2024:14_21_57: Successfully imported playup dependencys
+30_7_2024:14_21_57: Successfully imported pointsbet dependencys
+30_7_2024:14_21_57: Successfully imported sportsbett dependencys
+30_7_2024:14_21_57: Successfully imported tab dependencys
+30_7_2024:14_21_57: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:14_23_7: Initalizeing task schedular
+30_7_2024:14_23_7: Successfully imported arbie dependencys
+30_7_2024:14_23_7: Successfully imported betfair dependencys
+30_7_2024:14_23_7: Successfully imported betm dependencys
+30_7_2024:14_23_7: Successfully imported boombet dependencys
+30_7_2024:14_23_7: Successfully imported ladbrokes dependencys
+30_7_2024:14_23_7: Successfully imported palmerbet dependencys
+30_7_2024:14_23_7: Successfully imported playup dependencys
+30_7_2024:14_23_7: Successfully imported pointsbet dependencys
+30_7_2024:14_23_7: Successfully imported sportsbett dependencys
+30_7_2024:14_23_7: Successfully imported tab dependencys
+30_7_2024:14_23_7: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:14_23_42: Initalizeing task schedular
+30_7_2024:14_23_42: Successfully imported arbie dependencys
+30_7_2024:14_23_42: Successfully imported betfair dependencys
+30_7_2024:14_23_42: Successfully imported betm dependencys
+30_7_2024:14_23_42: Successfully imported boombet dependencys
+30_7_2024:14_23_42: Successfully imported ladbrokes dependencys
+30_7_2024:14_23_42: Successfully imported palmerbet dependencys
+30_7_2024:14_23_42: Successfully imported playup dependencys
+30_7_2024:14_23_42: Successfully imported pointsbet dependencys
+30_7_2024:14_23_42: Successfully imported sportsbett dependencys
+30_7_2024:14_23_42: Successfully imported tab dependencys
+30_7_2024:14_23_42: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+30_7_2024:14_24_23: Initalizeing task schedular
+30_7_2024:14_24_24: Successfully imported arbie dependencys
+30_7_2024:14_24_24: Successfully imported betfair dependencys
+30_7_2024:14_24_24: Successfully imported betm dependencys
+30_7_2024:14_24_24: Successfully imported boombet dependencys
+30_7_2024:14_24_24: Successfully imported ladbrokes dependencys
+30_7_2024:14_24_24: Successfully imported palmerbet dependencys
+30_7_2024:14_24_24: Successfully imported playup dependencys
+30_7_2024:14_24_24: Successfully imported pointsbet dependencys
+30_7_2024:14_24_24: Successfully imported sportsbett dependencys
+30_7_2024:14_24_24: Successfully imported tab dependencys
+30_7_2024:14_24_24: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'

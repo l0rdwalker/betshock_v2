@@ -1,0 +1,9 @@
+
+24_7_2024:0_0_56: starting multiTask on Arbie.
+24_7_2024:0_1_37: multiTask on Arbie succeeded.
+24_7_2024:0_1_50: starting multiTask on Arbie.
+24_7_2024:0_2_22: multiTask on Arbie succeeded.
+24_7_2024:0_6_37: starting multiTask on Arbie.
+24_7_2024:0_7_23: multiTask on Arbie succeeded.
+24_7_2024:0_7_23: starting multiTask on Arbie.
+24_7_2024:0_7_55: multiTask on Arbie succeeded.

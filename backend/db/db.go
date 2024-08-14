@@ -11,6 +11,16 @@ import (
 	_ "github.com/lib/pq"
 )
 
+const (
+	host     = "127.0.0.1"
+	port     = 5432
+	user     = "postgres"
+	password = "test"
+	dbname   = "arbie_v3.1"
+)
+
+var GLOBAL_DB_OBJ *sql.DB
+
 type Price struct {
 	Platform_name   string    `json:"Platform"`
 	Record_time     time.Time `json:"Record_time"`
@@ -59,16 +69,6 @@ type On_day_meet struct {
 	Track_name string `json:"Track_name"`
 	Races      []Race `json:"Races"`
 }
-
-const (
-	host     = "127.0.0.1"
-	port     = 5432
-	user     = "postgres"
-	password = "test"
-	dbname   = "arbie_v3.1"
-)
-
-var GLOBAL_DB_OBJ *sql.DB
 
 func init() {
 	open_connection()

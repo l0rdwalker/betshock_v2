@@ -1,0 +1,40 @@
+
+31_7_2024:17_35_47: Initalizeing task schedular
+31_7_2024:17_35_55: Successfully imported arbie dependencys
+31_7_2024:17_36_4: Successfully imported betfair dependencys
+31_7_2024:17_36_4: Successfully imported betm dependencys
+31_7_2024:17_36_4: Successfully imported boombet dependencys
+31_7_2024:17_36_4: Successfully imported ladbrokes dependencys
+31_7_2024:17_36_4: Successfully imported palmerbet dependencys
+31_7_2024:17_36_4: Successfully imported playup dependencys
+31_7_2024:17_36_4: Successfully imported pointsbet dependencys
+31_7_2024:17_36_4: Successfully imported sportsbett dependencys
+31_7_2024:17_36_4: Successfully imported tab dependencys
+31_7_2024:17_36_4: module 'waterhouse' has no attribute 'waterhouse'
+31_7_2024:17_36_4: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+31_7_2024:17_36_27: Initalizeing task schedular
+31_7_2024:17_36_28: Successfully imported arbie dependencys
+31_7_2024:17_36_28: Successfully imported betfair dependencys
+31_7_2024:17_36_28: Successfully imported betm dependencys
+31_7_2024:17_36_28: Successfully imported boombet dependencys
+31_7_2024:17_36_28: Successfully imported ladbrokes dependencys
+31_7_2024:17_36_28: Successfully imported palmerbet dependencys
+31_7_2024:17_36_28: Successfully imported playup dependencys
+31_7_2024:17_36_28: Successfully imported pointsbet dependencys
+31_7_2024:17_36_28: Successfully imported sportsbett dependencys
+31_7_2024:17_36_28: Successfully imported tab dependencys
+31_7_2024:17_36_28: Can't instantiate abstract class waterhouse_horses with abstract method get_entrants
+31_7_2024:17_36_28: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+31_7_2024:17_36_41: Initalizeing task schedular
+31_7_2024:17_36_41: Successfully imported arbie dependencys
+31_7_2024:17_36_41: Successfully imported betfair dependencys
+31_7_2024:17_36_41: Successfully imported betm dependencys
+31_7_2024:17_36_41: Successfully imported boombet dependencys
+31_7_2024:17_36_41: Successfully imported ladbrokes dependencys
+31_7_2024:17_36_41: Successfully imported palmerbet dependencys
+31_7_2024:17_36_41: Successfully imported playup dependencys
+31_7_2024:17_36_41: Successfully imported pointsbet dependencys
+31_7_2024:17_36_41: Successfully imported sportsbett dependencys
+31_7_2024:17_36_41: Successfully imported tab dependencys
+31_7_2024:17_36_41: Successfully imported waterhouse dependencys
+31_7_2024:17_36_41: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'

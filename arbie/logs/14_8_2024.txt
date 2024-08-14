@@ -1,0 +1,34 @@
+
+14_8_2024:17_22_20: Initalizeing task schedular
+14_8_2024:17_22_20: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+14_8_2024:17_22_20: Successfully imported betfair dependencys
+14_8_2024:17_22_20: Successfully imported betm dependencys
+14_8_2024:17_22_20: Successfully imported boombet dependencys
+14_8_2024:17_22_20: Successfully imported ladbrokes dependencys
+14_8_2024:17_22_20: Successfully imported palmerbet dependencys
+14_8_2024:17_22_20: Successfully imported playup dependencys
+14_8_2024:17_22_20: Successfully imported pointsbet dependencys
+14_8_2024:17_22_20: Successfully imported racenet dependencys
+14_8_2024:17_22_20: Successfully imported sportsbet dependencys
+14_8_2024:17_22_20: Successfully imported tab dependencys
+14_8_2024:17_22_20: Successfully imported waterhouse dependencys
+14_8_2024:17_22_20: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\arbie\\engine\\__pycache__\\__pycache__.py'
+14_8_2024:17_22_20: starting GET-TODAY-RACES on Arbie.
+14_8_2024:17_23_39: Initalizeing task schedular
+14_8_2024:17_23_39: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+14_8_2024:17_23_39: Successfully imported betfair dependencys
+14_8_2024:17_23_39: Successfully imported betm dependencys
+14_8_2024:17_23_39: Successfully imported boombet dependencys
+14_8_2024:17_23_39: Successfully imported ladbrokes dependencys
+14_8_2024:17_23_39: Successfully imported palmerbet dependencys
+14_8_2024:17_23_39: Successfully imported playup dependencys
+14_8_2024:17_23_39: Successfully imported pointsbet dependencys
+14_8_2024:17_23_39: Successfully imported racenet dependencys
+14_8_2024:17_23_39: Successfully imported sportsbet dependencys
+14_8_2024:17_23_39: Successfully imported tab dependencys
+14_8_2024:17_23_39: Successfully imported waterhouse dependencys
+14_8_2024:17_23_39: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\arbie\\engine\\__pycache__\\__pycache__.py'
+14_8_2024:17_23_39: starting GET-TODAY-RACES on Arbie.
+14_8_2024:17_25_32: GET-TODAY-RACES on Arbie succeeded.
+14_8_2024:17_25_32: starting GET-TOMMOROW-RACES on Arbie.
+14_8_2024:17_26_48: GET-TOMMOROW-RACES on Arbie succeeded.

@@ -1,0 +1,583 @@
+
+18_7_2024:12_30_15: Initalizeing task schedular
+18_7_2024:12_30_20: No module named 'bs4'
+18_7_2024:12_30_25: Successfully imported betfair dependencys
+18_7_2024:12_30_29: Successfully imported betm dependencys
+18_7_2024:12_30_40: Successfully imported boombet dependencys
+18_7_2024:12_30_40: Successfully imported diamondbet dependencys
+18_7_2024:12_30_40: Successfully imported ladbrokes dependencys
+18_7_2024:12_30_40: Successfully imported neds dependencys
+18_7_2024:12_30_40: Successfully imported palmerbet dependencys
+18_7_2024:12_30_40: Successfully imported playup dependencys
+18_7_2024:12_30_40: Successfully imported pointsbet dependencys
+18_7_2024:12_30_40: Successfully imported sportsbett dependencys
+18_7_2024:12_30_40: Successfully imported tab dependencys
+18_7_2024:12_30_40: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:12_30_52: starting multiTask on Arbie.
+18_7_2024:12_31_31: multiTask on Arbie succeeded.
+18_7_2024:12_32_44: Initalizeing task schedular
+18_7_2024:12_32_44: No module named 'bs4'
+18_7_2024:12_32_44: Successfully imported betfair dependencys
+18_7_2024:12_32_44: Successfully imported betm dependencys
+18_7_2024:12_32_44: Successfully imported boombet dependencys
+18_7_2024:12_32_44: Successfully imported diamondbet dependencys
+18_7_2024:12_32_44: Successfully imported ladbrokes dependencys
+18_7_2024:12_32_44: Successfully imported neds dependencys
+18_7_2024:12_32_44: Successfully imported palmerbet dependencys
+18_7_2024:12_32_44: Successfully imported playup dependencys
+18_7_2024:12_32_44: Successfully imported pointsbet dependencys
+18_7_2024:12_32_44: Successfully imported sportsbett dependencys
+18_7_2024:12_32_44: Successfully imported tab dependencys
+18_7_2024:12_32_44: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:12_32_44: starting multiTask on Arbie.
+18_7_2024:12_33_28: multiTask on Arbie succeeded.
+18_7_2024:12_36_2: Initalizeing task schedular
+18_7_2024:12_36_2: No module named 'bs4'
+18_7_2024:12_36_2: Successfully imported betfair dependencys
+18_7_2024:12_36_2: Successfully imported betm dependencys
+18_7_2024:12_36_2: Successfully imported boombet dependencys
+18_7_2024:12_36_2: Successfully imported diamondbet dependencys
+18_7_2024:12_36_2: Successfully imported ladbrokes dependencys
+18_7_2024:12_36_2: Successfully imported neds dependencys
+18_7_2024:12_36_2: Successfully imported palmerbet dependencys
+18_7_2024:12_36_2: Successfully imported playup dependencys
+18_7_2024:12_36_2: Successfully imported pointsbet dependencys
+18_7_2024:12_36_2: Successfully imported sportsbett dependencys
+18_7_2024:12_36_2: Successfully imported tab dependencys
+18_7_2024:12_36_2: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:12_43_31: Initalizeing task schedular
+18_7_2024:12_43_31: No module named 'bs4'
+18_7_2024:12_43_31: Successfully imported betfair dependencys
+18_7_2024:12_43_31: Successfully imported betm dependencys
+18_7_2024:12_43_31: Successfully imported boombet dependencys
+18_7_2024:12_43_31: Successfully imported diamondbet dependencys
+18_7_2024:12_43_31: Successfully imported ladbrokes dependencys
+18_7_2024:12_43_31: Successfully imported neds dependencys
+18_7_2024:12_43_31: Successfully imported palmerbet dependencys
+18_7_2024:12_43_31: Successfully imported playup dependencys
+18_7_2024:12_43_31: Successfully imported pointsbet dependencys
+18_7_2024:12_43_31: Successfully imported sportsbett dependencys
+18_7_2024:12_43_31: Successfully imported tab dependencys
+18_7_2024:12_43_31: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:12_43_42: starting multiTask on Arbie.
+18_7_2024:12_44_22: multiTask on Arbie succeeded.
+18_7_2024:12_44_43: 'taskSchedular' object has no attribute 'processData'
+18_7_2024:12_46_16: multiTask on Arbie failed.
+18_7_2024:14_5_39: Initalizeing task schedular
+18_7_2024:14_5_39: No module named 'bs4'
+18_7_2024:14_5_39: Successfully imported betfair dependencys
+18_7_2024:14_5_39: Successfully imported betm dependencys
+18_7_2024:14_5_39: Successfully imported boombet dependencys
+18_7_2024:14_5_39: Successfully imported diamondbet dependencys
+18_7_2024:14_5_39: Successfully imported ladbrokes dependencys
+18_7_2024:14_5_39: Successfully imported neds dependencys
+18_7_2024:14_5_39: Successfully imported palmerbet dependencys
+18_7_2024:14_5_39: Successfully imported playup dependencys
+18_7_2024:14_5_39: Successfully imported pointsbet dependencys
+18_7_2024:14_5_39: Successfully imported sportsbett dependencys
+18_7_2024:14_5_39: Successfully imported tab dependencys
+18_7_2024:14_5_39: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_5_39: starting multiTask on Arbie.
+18_7_2024:14_6_17: multiTask on Arbie succeeded.
+18_7_2024:14_6_30: Initalizeing task schedular
+18_7_2024:14_6_30: No module named 'bs4'
+18_7_2024:14_6_30: Successfully imported betfair dependencys
+18_7_2024:14_6_30: Successfully imported betm dependencys
+18_7_2024:14_6_30: Successfully imported boombet dependencys
+18_7_2024:14_6_30: Successfully imported diamondbet dependencys
+18_7_2024:14_6_30: Successfully imported ladbrokes dependencys
+18_7_2024:14_6_30: Successfully imported neds dependencys
+18_7_2024:14_6_30: Successfully imported palmerbet dependencys
+18_7_2024:14_6_30: Successfully imported playup dependencys
+18_7_2024:14_6_30: Successfully imported pointsbet dependencys
+18_7_2024:14_6_30: Successfully imported sportsbett dependencys
+18_7_2024:14_6_30: Successfully imported tab dependencys
+18_7_2024:14_6_30: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_6_30: starting multiTask on Arbie.
+18_7_2024:14_7_11: multiTask on Arbie succeeded.
+18_7_2024:14_12_24: Initalizeing task schedular
+18_7_2024:14_12_24: No module named 'bs4'
+18_7_2024:14_12_24: Successfully imported betfair dependencys
+18_7_2024:14_12_24: Successfully imported betm dependencys
+18_7_2024:14_12_24: Successfully imported boombet dependencys
+18_7_2024:14_12_24: Successfully imported diamondbet dependencys
+18_7_2024:14_12_24: Successfully imported ladbrokes dependencys
+18_7_2024:14_12_24: Successfully imported neds dependencys
+18_7_2024:14_12_24: Successfully imported palmerbet dependencys
+18_7_2024:14_12_24: Successfully imported playup dependencys
+18_7_2024:14_12_24: Successfully imported pointsbet dependencys
+18_7_2024:14_12_24: Successfully imported sportsbett dependencys
+18_7_2024:14_12_24: Successfully imported tab dependencys
+18_7_2024:14_12_24: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_12_24: starting multiTask on Arbie.
+18_7_2024:14_13_17: multiTask on Arbie succeeded.
+18_7_2024:14_24_2: Initalizeing task schedular
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: No module named 'requests'
+18_7_2024:14_24_2: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_24_2: starting multiTask on Arbie.
+18_7_2024:14_24_3: max_workers must be greater than 0
+18_7_2024:14_24_3: multiTask on Arbie failed.
+18_7_2024:14_24_3: starting multiTask on Arbie.
+18_7_2024:14_24_3: max_workers must be greater than 0
+18_7_2024:14_24_3: multiTask on Arbie failed.
+18_7_2024:14_24_3: starting multiTask on Arbie.
+18_7_2024:14_24_3: max_workers must be greater than 0
+18_7_2024:14_24_3: multiTask on Arbie failed.
+18_7_2024:14_24_3: starting multiTask on Arbie.
+18_7_2024:14_24_3: max_workers must be greater than 0
+18_7_2024:14_24_3: multiTask on Arbie failed.
+18_7_2024:14_24_3: starting multiTask on Arbie.
+18_7_2024:14_24_3: max_workers must be greater than 0
+18_7_2024:14_24_3: multiTask on Arbie failed.
+18_7_2024:14_24_3: starting multiTask on Arbie.
+18_7_2024:14_24_3: max_workers must be greater than 0
+18_7_2024:14_24_3: multiTask on Arbie failed.
+18_7_2024:14_24_3: starting multiTask on Arbie.
+18_7_2024:14_24_3: max_workers must be greater than 0
+18_7_2024:14_24_3: multiTask on Arbie failed.
+18_7_2024:14_24_3: starting multiTask on Arbie.
+18_7_2024:14_24_3: max_workers must be greater than 0
+18_7_2024:14_24_3: multiTask on Arbie failed.
+18_7_2024:14_24_3: starting multiTask on Arbie.
+18_7_2024:14_24_3: max_workers must be greater than 0
+18_7_2024:14_24_3: multiTask on Arbie failed.
+18_7_2024:14_24_3: starting multiTask on Arbie.
+18_7_2024:14_24_4: max_workers must be greater than 0
+18_7_2024:14_24_4: multiTask on Arbie failed.
+18_7_2024:14_24_4: starting multiTask on Arbie.
+18_7_2024:14_24_4: max_workers must be greater than 0
+18_7_2024:14_24_4: multiTask on Arbie failed.
+18_7_2024:14_24_4: starting multiTask on Arbie.
+18_7_2024:14_24_4: max_workers must be greater than 0
+18_7_2024:14_24_4: multiTask on Arbie failed.
+18_7_2024:14_24_4: starting multiTask on Arbie.
+18_7_2024:14_24_4: max_workers must be greater than 0
+18_7_2024:14_24_4: multiTask on Arbie failed.
+18_7_2024:14_24_4: starting multiTask on Arbie.
+18_7_2024:14_24_4: max_workers must be greater than 0
+18_7_2024:14_24_4: multiTask on Arbie failed.
+18_7_2024:14_24_4: starting multiTask on Arbie.
+18_7_2024:14_24_4: max_workers must be greater than 0
+18_7_2024:14_24_4: multiTask on Arbie failed.
+18_7_2024:14_24_4: starting multiTask on Arbie.
+18_7_2024:14_24_4: max_workers must be greater than 0
+18_7_2024:14_24_4: multiTask on Arbie failed.
+18_7_2024:14_24_4: starting multiTask on Arbie.
+18_7_2024:14_24_4: max_workers must be greater than 0
+18_7_2024:14_24_4: multiTask on Arbie failed.
+18_7_2024:14_24_4: starting multiTask on Arbie.
+18_7_2024:14_24_4: max_workers must be greater than 0
+18_7_2024:14_24_4: multiTask on Arbie failed.
+18_7_2024:14_24_4: starting multiTask on Arbie.
+18_7_2024:14_24_5: max_workers must be greater than 0
+18_7_2024:14_24_5: multiTask on Arbie failed.
+18_7_2024:14_24_5: starting multiTask on Arbie.
+18_7_2024:14_24_5: max_workers must be greater than 0
+18_7_2024:14_24_5: multiTask on Arbie failed.
+18_7_2024:14_24_5: starting multiTask on Arbie.
+18_7_2024:14_24_5: max_workers must be greater than 0
+18_7_2024:14_24_5: multiTask on Arbie failed.
+18_7_2024:14_24_5: starting multiTask on Arbie.
+18_7_2024:14_24_5: max_workers must be greater than 0
+18_7_2024:14_24_5: multiTask on Arbie failed.
+18_7_2024:14_24_5: starting multiTask on Arbie.
+18_7_2024:14_24_5: max_workers must be greater than 0
+18_7_2024:14_24_5: multiTask on Arbie failed.
+18_7_2024:14_24_5: starting multiTask on Arbie.
+18_7_2024:14_24_5: max_workers must be greater than 0
+18_7_2024:14_24_5: multiTask on Arbie failed.
+18_7_2024:14_24_5: starting multiTask on Arbie.
+18_7_2024:14_24_5: max_workers must be greater than 0
+18_7_2024:14_24_5: multiTask on Arbie failed.
+18_7_2024:14_24_5: starting multiTask on Arbie.
+18_7_2024:14_24_5: max_workers must be greater than 0
+18_7_2024:14_24_5: multiTask on Arbie failed.
+18_7_2024:14_24_5: starting multiTask on Arbie.
+18_7_2024:14_24_29: Initalizeing task schedular
+18_7_2024:14_24_29: No module named 'bs4'
+18_7_2024:14_24_29: Successfully imported betfair dependencys
+18_7_2024:14_24_29: Successfully imported betm dependencys
+18_7_2024:14_24_29: Successfully imported boombet dependencys
+18_7_2024:14_24_29: Successfully imported diamondbet dependencys
+18_7_2024:14_24_29: Successfully imported ladbrokes dependencys
+18_7_2024:14_24_29: Successfully imported neds dependencys
+18_7_2024:14_24_29: Successfully imported palmerbet dependencys
+18_7_2024:14_24_29: Successfully imported playup dependencys
+18_7_2024:14_24_29: Successfully imported pointsbet dependencys
+18_7_2024:14_24_29: Successfully imported sportsbett dependencys
+18_7_2024:14_24_29: Successfully imported tab dependencys
+18_7_2024:14_24_29: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_24_29: starting multiTask on Arbie.
+18_7_2024:14_25_4: multiTask on Arbie succeeded.
+18_7_2024:14_26_0: Initalizeing task schedular
+18_7_2024:14_26_0: No module named 'bs4'
+18_7_2024:14_26_0: Successfully imported betfair dependencys
+18_7_2024:14_26_0: Successfully imported betm dependencys
+18_7_2024:14_26_0: Successfully imported boombet dependencys
+18_7_2024:14_26_0: Successfully imported diamondbet dependencys
+18_7_2024:14_26_0: Successfully imported ladbrokes dependencys
+18_7_2024:14_26_0: Successfully imported neds dependencys
+18_7_2024:14_26_0: Successfully imported palmerbet dependencys
+18_7_2024:14_26_0: Successfully imported playup dependencys
+18_7_2024:14_26_0: Successfully imported pointsbet dependencys
+18_7_2024:14_26_0: Successfully imported sportsbett dependencys
+18_7_2024:14_26_0: Successfully imported tab dependencys
+18_7_2024:14_26_0: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_26_0: starting multiTask on Arbie.
+18_7_2024:14_28_47: Initalizeing task schedular
+18_7_2024:14_28_47: No module named 'bs4'
+18_7_2024:14_28_47: Successfully imported betfair dependencys
+18_7_2024:14_28_47: Successfully imported betm dependencys
+18_7_2024:14_28_47: Successfully imported boombet dependencys
+18_7_2024:14_28_47: Successfully imported diamondbet dependencys
+18_7_2024:14_28_47: Successfully imported ladbrokes dependencys
+18_7_2024:14_28_47: Successfully imported neds dependencys
+18_7_2024:14_28_47: Successfully imported palmerbet dependencys
+18_7_2024:14_28_47: Successfully imported playup dependencys
+18_7_2024:14_28_47: Successfully imported pointsbet dependencys
+18_7_2024:14_28_47: Successfully imported sportsbett dependencys
+18_7_2024:14_28_47: Successfully imported tab dependencys
+18_7_2024:14_28_47: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_28_47: starting multiTask on Arbie.
+18_7_2024:14_29_22: multiTask on Arbie succeeded.
+18_7_2024:14_37_7: Initalizeing task schedular
+18_7_2024:14_37_7: No module named 'bs4'
+18_7_2024:14_37_7: Successfully imported betfair dependencys
+18_7_2024:14_37_7: Successfully imported betm dependencys
+18_7_2024:14_37_7: Successfully imported boombet dependencys
+18_7_2024:14_37_7: Successfully imported diamondbet dependencys
+18_7_2024:14_37_7: Successfully imported ladbrokes dependencys
+18_7_2024:14_37_7: Successfully imported neds dependencys
+18_7_2024:14_37_7: Successfully imported palmerbet dependencys
+18_7_2024:14_37_7: Successfully imported playup dependencys
+18_7_2024:14_37_7: Successfully imported pointsbet dependencys
+18_7_2024:14_37_7: Successfully imported sportsbett dependencys
+18_7_2024:14_37_7: Successfully imported tab dependencys
+18_7_2024:14_37_7: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_37_7: starting multiTask on Arbie.
+18_7_2024:14_37_39: multiTask on Arbie succeeded.
+18_7_2024:14_37_46: 'databaseOperations' object has no attribute 'conn'
+18_7_2024:14_37_49: multiTask on Arbie failed.
+18_7_2024:14_38_22: Initalizeing task schedular
+18_7_2024:14_38_22: No module named 'bs4'
+18_7_2024:14_38_22: Successfully imported betfair dependencys
+18_7_2024:14_38_22: Successfully imported betm dependencys
+18_7_2024:14_38_22: Successfully imported boombet dependencys
+18_7_2024:14_38_22: Successfully imported diamondbet dependencys
+18_7_2024:14_38_23: Successfully imported ladbrokes dependencys
+18_7_2024:14_38_23: Successfully imported neds dependencys
+18_7_2024:14_38_23: Successfully imported palmerbet dependencys
+18_7_2024:14_38_23: Successfully imported playup dependencys
+18_7_2024:14_38_23: Successfully imported pointsbet dependencys
+18_7_2024:14_38_23: Successfully imported sportsbett dependencys
+18_7_2024:14_38_23: Successfully imported tab dependencys
+18_7_2024:14_38_23: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_38_23: starting multiTask on Arbie.
+18_7_2024:14_38_59: multiTask on Arbie succeeded.
+18_7_2024:14_39_18: Initalizeing task schedular
+18_7_2024:14_39_19: No module named 'bs4'
+18_7_2024:14_39_19: Successfully imported betfair dependencys
+18_7_2024:14_39_19: Successfully imported betm dependencys
+18_7_2024:14_39_19: Successfully imported boombet dependencys
+18_7_2024:14_39_19: Successfully imported diamondbet dependencys
+18_7_2024:14_39_19: Successfully imported ladbrokes dependencys
+18_7_2024:14_39_19: Successfully imported neds dependencys
+18_7_2024:14_39_19: Successfully imported palmerbet dependencys
+18_7_2024:14_39_19: Successfully imported playup dependencys
+18_7_2024:14_39_19: Successfully imported pointsbet dependencys
+18_7_2024:14_39_19: Successfully imported sportsbett dependencys
+18_7_2024:14_39_19: Successfully imported tab dependencys
+18_7_2024:14_39_19: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_39_19: starting multiTask on Arbie.
+18_7_2024:14_39_52: multiTask on Arbie succeeded.
+18_7_2024:14_41_47: Initalizeing task schedular
+18_7_2024:14_41_47: No module named 'bs4'
+18_7_2024:14_41_47: Successfully imported betfair dependencys
+18_7_2024:14_41_47: Successfully imported betm dependencys
+18_7_2024:14_41_47: Successfully imported boombet dependencys
+18_7_2024:14_41_47: Successfully imported diamondbet dependencys
+18_7_2024:14_41_47: Successfully imported ladbrokes dependencys
+18_7_2024:14_41_47: Successfully imported neds dependencys
+18_7_2024:14_41_47: Successfully imported palmerbet dependencys
+18_7_2024:14_41_47: Successfully imported playup dependencys
+18_7_2024:14_41_47: Successfully imported pointsbet dependencys
+18_7_2024:14_41_47: Successfully imported sportsbett dependencys
+18_7_2024:14_41_47: Successfully imported tab dependencys
+18_7_2024:14_41_47: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_41_47: starting multiTask on Arbie.
+18_7_2024:14_42_20: multiTask on Arbie succeeded.
+18_7_2024:14_44_12: Initalizeing task schedular
+18_7_2024:14_44_12: No module named 'bs4'
+18_7_2024:14_44_12: Successfully imported betfair dependencys
+18_7_2024:14_44_12: Successfully imported betm dependencys
+18_7_2024:14_44_12: Successfully imported boombet dependencys
+18_7_2024:14_44_12: Successfully imported diamondbet dependencys
+18_7_2024:14_44_12: Successfully imported ladbrokes dependencys
+18_7_2024:14_44_12: Successfully imported neds dependencys
+18_7_2024:14_44_12: Successfully imported palmerbet dependencys
+18_7_2024:14_44_13: Successfully imported playup dependencys
+18_7_2024:14_44_13: Successfully imported pointsbet dependencys
+18_7_2024:14_44_13: Successfully imported sportsbett dependencys
+18_7_2024:14_44_13: Successfully imported tab dependencys
+18_7_2024:14_44_13: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_44_13: starting multiTask on Arbie.
+18_7_2024:14_44_47: multiTask on Arbie succeeded.
+18_7_2024:14_45_57: Initalizeing task schedular
+18_7_2024:14_45_57: No module named 'bs4'
+18_7_2024:14_45_57: Successfully imported betfair dependencys
+18_7_2024:14_45_57: Successfully imported betm dependencys
+18_7_2024:14_45_57: Successfully imported boombet dependencys
+18_7_2024:14_45_57: Successfully imported diamondbet dependencys
+18_7_2024:14_45_57: Successfully imported ladbrokes dependencys
+18_7_2024:14_45_57: Successfully imported neds dependencys
+18_7_2024:14_45_57: Successfully imported palmerbet dependencys
+18_7_2024:14_45_57: Successfully imported playup dependencys
+18_7_2024:14_45_57: Successfully imported pointsbet dependencys
+18_7_2024:14_45_57: Successfully imported sportsbett dependencys
+18_7_2024:14_45_57: Successfully imported tab dependencys
+18_7_2024:14_45_57: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_45_57: starting multiTask on Arbie.
+18_7_2024:14_46_33: multiTask on Arbie succeeded.
+18_7_2024:14_47_11: Initalizeing task schedular
+18_7_2024:14_47_11: No module named 'bs4'
+18_7_2024:14_47_11: Successfully imported betfair dependencys
+18_7_2024:14_47_11: Successfully imported betm dependencys
+18_7_2024:14_47_11: Successfully imported boombet dependencys
+18_7_2024:14_47_11: Successfully imported diamondbet dependencys
+18_7_2024:14_47_11: Successfully imported ladbrokes dependencys
+18_7_2024:14_47_11: Successfully imported neds dependencys
+18_7_2024:14_47_11: Successfully imported palmerbet dependencys
+18_7_2024:14_47_11: Successfully imported playup dependencys
+18_7_2024:14_47_11: Successfully imported pointsbet dependencys
+18_7_2024:14_47_11: Successfully imported sportsbett dependencys
+18_7_2024:14_47_11: Successfully imported tab dependencys
+18_7_2024:14_47_11: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_47_11: starting multiTask on Arbie.
+18_7_2024:14_47_44: multiTask on Arbie succeeded.
+18_7_2024:14_48_21: Initalizeing task schedular
+18_7_2024:14_48_21: No module named 'bs4'
+18_7_2024:14_48_21: Successfully imported betfair dependencys
+18_7_2024:14_48_21: Successfully imported betm dependencys
+18_7_2024:14_48_21: Successfully imported boombet dependencys
+18_7_2024:14_48_21: Successfully imported diamondbet dependencys
+18_7_2024:14_48_21: Successfully imported ladbrokes dependencys
+18_7_2024:14_48_21: Successfully imported neds dependencys
+18_7_2024:14_48_21: Successfully imported palmerbet dependencys
+18_7_2024:14_48_21: Successfully imported playup dependencys
+18_7_2024:14_48_21: Successfully imported pointsbet dependencys
+18_7_2024:14_48_21: Successfully imported sportsbett dependencys
+18_7_2024:14_48_21: Successfully imported tab dependencys
+18_7_2024:14_48_21: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_48_21: starting multiTask on Arbie.
+18_7_2024:14_48_56: multiTask on Arbie succeeded.
+18_7_2024:14_49_55: 'NoneType' object is not subscriptable
+18_7_2024:14_49_55: multiTask on Arbie failed.
+18_7_2024:14_50_39: Initalizeing task schedular
+18_7_2024:14_50_39: No module named 'bs4'
+18_7_2024:14_50_39: Successfully imported betfair dependencys
+18_7_2024:14_50_39: Successfully imported betm dependencys
+18_7_2024:14_50_39: Successfully imported boombet dependencys
+18_7_2024:14_50_39: Successfully imported diamondbet dependencys
+18_7_2024:14_50_39: Successfully imported ladbrokes dependencys
+18_7_2024:14_50_39: Successfully imported neds dependencys
+18_7_2024:14_50_39: Successfully imported palmerbet dependencys
+18_7_2024:14_50_39: Successfully imported playup dependencys
+18_7_2024:14_50_39: Successfully imported pointsbet dependencys
+18_7_2024:14_50_39: Successfully imported sportsbett dependencys
+18_7_2024:14_50_39: Successfully imported tab dependencys
+18_7_2024:14_50_39: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_50_39: starting multiTask on Arbie.
+18_7_2024:14_55_58: Initalizeing task schedular
+18_7_2024:14_55_58: No module named 'bs4'
+18_7_2024:14_55_58: Successfully imported betfair dependencys
+18_7_2024:14_55_58: Successfully imported betm dependencys
+18_7_2024:14_55_58: Successfully imported boombet dependencys
+18_7_2024:14_55_58: Successfully imported diamondbet dependencys
+18_7_2024:14_55_58: Successfully imported ladbrokes dependencys
+18_7_2024:14_55_58: Successfully imported neds dependencys
+18_7_2024:14_55_58: Successfully imported palmerbet dependencys
+18_7_2024:14_55_58: Successfully imported playup dependencys
+18_7_2024:14_55_58: Successfully imported pointsbet dependencys
+18_7_2024:14_55_58: Successfully imported sportsbett dependencys
+18_7_2024:14_55_58: Successfully imported tab dependencys
+18_7_2024:14_55_58: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:14_55_58: starting multiTask on Arbie.
+18_7_2024:14_56_31: multiTask on Arbie succeeded.
+18_7_2024:15_0_52: Initalizeing task schedular
+18_7_2024:15_0_52: No module named 'bs4'
+18_7_2024:15_0_52: Successfully imported betfair dependencys
+18_7_2024:15_0_52: Successfully imported betm dependencys
+18_7_2024:15_0_52: Successfully imported boombet dependencys
+18_7_2024:15_0_52: Successfully imported diamondbet dependencys
+18_7_2024:15_0_52: Successfully imported ladbrokes dependencys
+18_7_2024:15_0_52: Successfully imported neds dependencys
+18_7_2024:15_0_52: Successfully imported palmerbet dependencys
+18_7_2024:15_0_52: Successfully imported playup dependencys
+18_7_2024:15_0_52: Successfully imported pointsbet dependencys
+18_7_2024:15_0_52: Successfully imported sportsbett dependencys
+18_7_2024:15_0_52: Successfully imported tab dependencys
+18_7_2024:15_0_52: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_0_52: starting multiTask on Arbie.
+18_7_2024:15_1_26: multiTask on Arbie succeeded.
+18_7_2024:15_2_29: Initalizeing task schedular
+18_7_2024:15_2_29: No module named 'bs4'
+18_7_2024:15_2_29: Successfully imported betfair dependencys
+18_7_2024:15_2_29: Successfully imported betm dependencys
+18_7_2024:15_2_29: Successfully imported boombet dependencys
+18_7_2024:15_2_29: Successfully imported diamondbet dependencys
+18_7_2024:15_2_29: Successfully imported ladbrokes dependencys
+18_7_2024:15_2_29: Successfully imported neds dependencys
+18_7_2024:15_2_29: Successfully imported palmerbet dependencys
+18_7_2024:15_2_29: Successfully imported playup dependencys
+18_7_2024:15_2_29: Successfully imported pointsbet dependencys
+18_7_2024:15_2_29: Successfully imported sportsbett dependencys
+18_7_2024:15_2_30: Successfully imported tab dependencys
+18_7_2024:15_2_30: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_2_30: starting multiTask on Arbie.
+18_7_2024:15_3_4: multiTask on Arbie succeeded.
+18_7_2024:15_3_43: Initalizeing task schedular
+18_7_2024:15_3_43: No module named 'bs4'
+18_7_2024:15_3_43: Successfully imported betfair dependencys
+18_7_2024:15_3_43: Successfully imported betm dependencys
+18_7_2024:15_3_43: Successfully imported boombet dependencys
+18_7_2024:15_3_43: Successfully imported diamondbet dependencys
+18_7_2024:15_3_43: Successfully imported ladbrokes dependencys
+18_7_2024:15_3_43: Successfully imported neds dependencys
+18_7_2024:15_3_43: Successfully imported palmerbet dependencys
+18_7_2024:15_3_43: Successfully imported playup dependencys
+18_7_2024:15_3_43: Successfully imported pointsbet dependencys
+18_7_2024:15_3_43: Successfully imported sportsbett dependencys
+18_7_2024:15_3_43: Successfully imported tab dependencys
+18_7_2024:15_3_43: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_3_43: starting multiTask on Arbie.
+18_7_2024:15_4_18: multiTask on Arbie succeeded.
+18_7_2024:15_7_33: Initalizeing task schedular
+18_7_2024:15_7_34: No module named 'bs4'
+18_7_2024:15_7_34: Successfully imported betfair dependencys
+18_7_2024:15_7_34: Successfully imported betm dependencys
+18_7_2024:15_7_34: Successfully imported boombet dependencys
+18_7_2024:15_7_34: Successfully imported diamondbet dependencys
+18_7_2024:15_7_34: Successfully imported ladbrokes dependencys
+18_7_2024:15_7_34: Successfully imported neds dependencys
+18_7_2024:15_7_34: Successfully imported palmerbet dependencys
+18_7_2024:15_7_34: Successfully imported playup dependencys
+18_7_2024:15_7_34: Successfully imported pointsbet dependencys
+18_7_2024:15_7_34: Successfully imported sportsbett dependencys
+18_7_2024:15_7_34: Successfully imported tab dependencys
+18_7_2024:15_7_34: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_7_34: starting multiTask on Arbie.
+18_7_2024:15_8_12: multiTask on Arbie succeeded.
+18_7_2024:15_8_25: 'NoneType' object is not subscriptable
+18_7_2024:15_8_25: multiTask on Arbie failed.
+18_7_2024:15_8_57: Initalizeing task schedular
+18_7_2024:15_8_58: No module named 'bs4'
+18_7_2024:15_8_58: Successfully imported betfair dependencys
+18_7_2024:15_8_58: Successfully imported betm dependencys
+18_7_2024:15_8_58: Successfully imported boombet dependencys
+18_7_2024:15_8_58: Successfully imported diamondbet dependencys
+18_7_2024:15_8_58: Successfully imported ladbrokes dependencys
+18_7_2024:15_8_58: Successfully imported neds dependencys
+18_7_2024:15_8_58: Successfully imported palmerbet dependencys
+18_7_2024:15_8_58: Successfully imported playup dependencys
+18_7_2024:15_8_58: Successfully imported pointsbet dependencys
+18_7_2024:15_8_58: Successfully imported sportsbett dependencys
+18_7_2024:15_8_58: Successfully imported tab dependencys
+18_7_2024:15_8_58: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_8_58: starting multiTask on Arbie.
+18_7_2024:15_9_36: multiTask on Arbie succeeded.
+18_7_2024:15_19_44: Initalizeing task schedular
+18_7_2024:15_19_44: No module named 'bs4'
+18_7_2024:15_19_44: Successfully imported betfair dependencys
+18_7_2024:15_19_44: Successfully imported betm dependencys
+18_7_2024:15_19_44: Successfully imported boombet dependencys
+18_7_2024:15_19_44: Successfully imported diamondbet dependencys
+18_7_2024:15_19_44: Successfully imported ladbrokes dependencys
+18_7_2024:15_19_44: Successfully imported neds dependencys
+18_7_2024:15_19_44: Successfully imported palmerbet dependencys
+18_7_2024:15_19_44: Successfully imported playup dependencys
+18_7_2024:15_19_44: Successfully imported pointsbet dependencys
+18_7_2024:15_19_44: Successfully imported sportsbett dependencys
+18_7_2024:15_19_44: Successfully imported tab dependencys
+18_7_2024:15_19_44: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_19_44: starting multiTask on Arbie.
+18_7_2024:15_20_23: multiTask on Arbie succeeded.
+18_7_2024:15_21_10: 'NoneType' object is not subscriptable
+18_7_2024:15_21_10: multiTask on Arbie failed.
+18_7_2024:15_21_22: Initalizeing task schedular
+18_7_2024:15_21_22: No module named 'bs4'
+18_7_2024:15_21_22: Successfully imported betfair dependencys
+18_7_2024:15_21_23: Successfully imported betm dependencys
+18_7_2024:15_21_23: Successfully imported boombet dependencys
+18_7_2024:15_21_23: Successfully imported diamondbet dependencys
+18_7_2024:15_21_23: Successfully imported ladbrokes dependencys
+18_7_2024:15_21_23: Successfully imported neds dependencys
+18_7_2024:15_21_23: Successfully imported palmerbet dependencys
+18_7_2024:15_21_23: Successfully imported playup dependencys
+18_7_2024:15_21_23: Successfully imported pointsbet dependencys
+18_7_2024:15_21_23: Successfully imported sportsbett dependencys
+18_7_2024:15_21_23: Successfully imported tab dependencys
+18_7_2024:15_21_23: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_21_23: starting multiTask on Arbie.
+18_7_2024:15_22_0: multiTask on Arbie succeeded.
+18_7_2024:15_23_14: Initalizeing task schedular
+18_7_2024:15_23_14: No module named 'bs4'
+18_7_2024:15_23_14: Successfully imported betfair dependencys
+18_7_2024:15_23_14: Successfully imported betm dependencys
+18_7_2024:15_23_14: Successfully imported boombet dependencys
+18_7_2024:15_23_14: Successfully imported diamondbet dependencys
+18_7_2024:15_23_14: Successfully imported ladbrokes dependencys
+18_7_2024:15_23_14: Successfully imported neds dependencys
+18_7_2024:15_23_14: Successfully imported palmerbet dependencys
+18_7_2024:15_23_14: Successfully imported playup dependencys
+18_7_2024:15_23_14: Successfully imported pointsbet dependencys
+18_7_2024:15_23_14: Successfully imported sportsbett dependencys
+18_7_2024:15_23_14: Successfully imported tab dependencys
+18_7_2024:15_23_14: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_23_14: starting multiTask on Arbie.
+18_7_2024:15_23_49: multiTask on Arbie succeeded.
+18_7_2024:15_32_59: Initalizeing task schedular
+18_7_2024:15_32_59: No module named 'bs4'
+18_7_2024:15_32_59: Successfully imported betfair dependencys
+18_7_2024:15_32_59: Successfully imported betm dependencys
+18_7_2024:15_32_59: Successfully imported boombet dependencys
+18_7_2024:15_32_59: Successfully imported diamondbet dependencys
+18_7_2024:15_32_59: Successfully imported ladbrokes dependencys
+18_7_2024:15_32_59: Successfully imported neds dependencys
+18_7_2024:15_32_59: Successfully imported palmerbet dependencys
+18_7_2024:15_32_59: Successfully imported playup dependencys
+18_7_2024:15_32_59: Successfully imported pointsbet dependencys
+18_7_2024:15_32_59: Successfully imported sportsbett dependencys
+18_7_2024:15_32_59: Successfully imported tab dependencys
+18_7_2024:15_32_59: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_32_59: starting multiTask on Arbie.
+18_7_2024:15_33_33: multiTask on Arbie succeeded.
+18_7_2024:15_44_6: starting multiTask on Arbie.
+18_7_2024:15_44_42: multiTask on Arbie succeeded.
+18_7_2024:15_55_11: starting multiTask on Arbie.
+18_7_2024:15_55_47: multiTask on Arbie succeeded.
+18_7_2024:15_55_59: Initalizeing task schedular
+18_7_2024:15_55_59: No module named 'bs4'
+18_7_2024:15_55_59: Successfully imported betfair dependencys
+18_7_2024:15_55_59: Successfully imported betm dependencys
+18_7_2024:15_55_59: Successfully imported boombet dependencys
+18_7_2024:15_55_59: Successfully imported diamondbet dependencys
+18_7_2024:15_56_0: Successfully imported ladbrokes dependencys
+18_7_2024:15_56_0: Successfully imported neds dependencys
+18_7_2024:15_56_0: Successfully imported palmerbet dependencys
+18_7_2024:15_56_0: Successfully imported playup dependencys
+18_7_2024:15_56_0: Successfully imported pointsbet dependencys
+18_7_2024:15_56_0: Successfully imported sportsbett dependencys
+18_7_2024:15_56_0: Successfully imported tab dependencys
+18_7_2024:15_56_0: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+18_7_2024:15_56_0: starting multiTask on Arbie.

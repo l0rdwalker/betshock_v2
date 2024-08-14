@@ -1,0 +1,783 @@
+
+6_8_2024:7_50_52: Initalizeing task schedular
+6_8_2024:7_50_52: Successfully imported arbie dependencys
+6_8_2024:7_50_52: Successfully imported betfair dependencys
+6_8_2024:7_50_52: Successfully imported betm dependencys
+6_8_2024:7_50_52: Successfully imported boombet dependencys
+6_8_2024:7_50_52: Successfully imported ladbrokes dependencys
+6_8_2024:7_50_52: Successfully imported palmerbet dependencys
+6_8_2024:7_50_52: Successfully imported playup dependencys
+6_8_2024:7_50_52: Successfully imported pointsbet dependencys
+6_8_2024:7_50_52: Successfully imported racenet dependencys
+6_8_2024:7_50_52: Successfully imported sportsbett dependencys
+6_8_2024:7_50_52: Successfully imported tab dependencys
+6_8_2024:7_50_52: Successfully imported waterhouse dependencys
+6_8_2024:7_50_52: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:7_50_52: starting multiTask on Arbie.
+6_8_2024:7_54_37: Initalizeing task schedular
+6_8_2024:7_54_37: Successfully imported arbie dependencys
+6_8_2024:7_54_37: Successfully imported betfair dependencys
+6_8_2024:7_54_37: Successfully imported betm dependencys
+6_8_2024:7_54_37: Successfully imported boombet dependencys
+6_8_2024:7_54_37: Successfully imported ladbrokes dependencys
+6_8_2024:7_54_37: Successfully imported palmerbet dependencys
+6_8_2024:7_54_37: Successfully imported playup dependencys
+6_8_2024:7_54_37: Successfully imported pointsbet dependencys
+6_8_2024:7_54_37: Successfully imported racenet dependencys
+6_8_2024:7_54_37: Successfully imported sportsbett dependencys
+6_8_2024:7_54_37: Successfully imported tab dependencys
+6_8_2024:7_54_37: Successfully imported waterhouse dependencys
+6_8_2024:7_54_37: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:7_54_37: starting multiTask on Arbie.
+6_8_2024:7_56_26: Initalizeing task schedular
+6_8_2024:7_56_26: Successfully imported arbie dependencys
+6_8_2024:7_56_26: Successfully imported betfair dependencys
+6_8_2024:7_56_26: Successfully imported betm dependencys
+6_8_2024:7_56_26: Successfully imported boombet dependencys
+6_8_2024:7_56_26: Successfully imported ladbrokes dependencys
+6_8_2024:7_56_26: Successfully imported palmerbet dependencys
+6_8_2024:7_56_26: Successfully imported playup dependencys
+6_8_2024:7_56_26: Successfully imported pointsbet dependencys
+6_8_2024:7_56_26: Successfully imported racenet dependencys
+6_8_2024:7_56_26: Successfully imported sportsbett dependencys
+6_8_2024:7_56_26: Successfully imported tab dependencys
+6_8_2024:7_56_26: Successfully imported waterhouse dependencys
+6_8_2024:7_56_26: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:7_56_26: starting multiTask on Arbie.
+6_8_2024:8_1_0: Initalizeing task schedular
+6_8_2024:8_1_0: Successfully imported arbie dependencys
+6_8_2024:8_1_0: Successfully imported betfair dependencys
+6_8_2024:8_1_0: Successfully imported betm dependencys
+6_8_2024:8_1_0: Successfully imported boombet dependencys
+6_8_2024:8_1_0: Successfully imported ladbrokes dependencys
+6_8_2024:8_1_0: Successfully imported palmerbet dependencys
+6_8_2024:8_1_0: Successfully imported playup dependencys
+6_8_2024:8_1_0: Successfully imported pointsbet dependencys
+6_8_2024:8_1_0: Successfully imported racenet dependencys
+6_8_2024:8_1_0: Successfully imported sportsbett dependencys
+6_8_2024:8_1_0: Successfully imported tab dependencys
+6_8_2024:8_1_0: Successfully imported waterhouse dependencys
+6_8_2024:8_1_0: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:8_1_0: starting multiTask on Arbie.
+6_8_2024:8_6_42: Initalizeing task schedular
+6_8_2024:8_6_42: Successfully imported arbie dependencys
+6_8_2024:8_6_42: Successfully imported betfair dependencys
+6_8_2024:8_6_42: Successfully imported betm dependencys
+6_8_2024:8_6_42: Successfully imported boombet dependencys
+6_8_2024:8_6_42: Successfully imported ladbrokes dependencys
+6_8_2024:8_6_42: Successfully imported palmerbet dependencys
+6_8_2024:8_6_42: Successfully imported playup dependencys
+6_8_2024:8_6_42: Successfully imported pointsbet dependencys
+6_8_2024:8_6_42: Successfully imported racenet dependencys
+6_8_2024:8_6_42: Successfully imported sportsbett dependencys
+6_8_2024:8_6_42: Successfully imported tab dependencys
+6_8_2024:8_6_42: Successfully imported waterhouse dependencys
+6_8_2024:8_6_42: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:8_6_42: starting multiTask on Arbie.
+6_8_2024:8_10_32: Initalizeing task schedular
+6_8_2024:8_10_32: Successfully imported arbie dependencys
+6_8_2024:8_10_32: Successfully imported betfair dependencys
+6_8_2024:8_10_32: Successfully imported betm dependencys
+6_8_2024:8_10_32: Successfully imported boombet dependencys
+6_8_2024:8_10_32: Successfully imported ladbrokes dependencys
+6_8_2024:8_10_32: Successfully imported palmerbet dependencys
+6_8_2024:8_10_32: Successfully imported playup dependencys
+6_8_2024:8_10_32: Successfully imported pointsbet dependencys
+6_8_2024:8_10_32: Successfully imported racenet dependencys
+6_8_2024:8_10_32: Successfully imported sportsbett dependencys
+6_8_2024:8_10_32: Successfully imported tab dependencys
+6_8_2024:8_10_32: Successfully imported waterhouse dependencys
+6_8_2024:8_10_32: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:8_10_32: starting multiTask on Arbie.
+6_8_2024:8_12_7: multiTask on Arbie succeeded.
+6_8_2024:8_12_7: starting multiTask on Arbie.
+6_8_2024:8_13_24: multiTask on Arbie succeeded.
+6_8_2024:8_13_24: starting multiTask on Arbie.
+6_8_2024:8_18_58: Initalizeing task schedular
+6_8_2024:8_18_58: Successfully imported arbie dependencys
+6_8_2024:8_18_58: Successfully imported betfair dependencys
+6_8_2024:8_18_58: Successfully imported betm dependencys
+6_8_2024:8_18_58: Successfully imported boombet dependencys
+6_8_2024:8_18_58: Successfully imported ladbrokes dependencys
+6_8_2024:8_18_58: Successfully imported palmerbet dependencys
+6_8_2024:8_18_58: Successfully imported playup dependencys
+6_8_2024:8_18_58: Successfully imported pointsbet dependencys
+6_8_2024:8_18_58: Successfully imported racenet dependencys
+6_8_2024:8_18_58: Successfully imported sportsbett dependencys
+6_8_2024:8_18_58: Successfully imported tab dependencys
+6_8_2024:8_18_58: Successfully imported waterhouse dependencys
+6_8_2024:8_18_58: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:8_18_58: starting multiTask on Arbie.
+6_8_2024:8_40_11: Initalizeing task schedular
+6_8_2024:8_40_11: Successfully imported arbie dependencys
+6_8_2024:8_40_11: Successfully imported betfair dependencys
+6_8_2024:8_40_11: Successfully imported betm dependencys
+6_8_2024:8_40_11: Successfully imported boombet dependencys
+6_8_2024:8_40_11: Successfully imported ladbrokes dependencys
+6_8_2024:8_40_11: Successfully imported palmerbet dependencys
+6_8_2024:8_40_11: Successfully imported playup dependencys
+6_8_2024:8_40_11: Successfully imported pointsbet dependencys
+6_8_2024:8_40_11: Successfully imported racenet dependencys
+6_8_2024:8_40_11: Successfully imported sportsbett dependencys
+6_8_2024:8_40_11: Successfully imported tab dependencys
+6_8_2024:8_40_11: Successfully imported waterhouse dependencys
+6_8_2024:8_40_11: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:8_40_11: starting multiTask on Arbie.
+6_8_2024:8_40_38: Initalizeing task schedular
+6_8_2024:8_40_38: Successfully imported arbie dependencys
+6_8_2024:8_40_38: Successfully imported betfair dependencys
+6_8_2024:8_40_38: Successfully imported betm dependencys
+6_8_2024:8_40_38: Successfully imported boombet dependencys
+6_8_2024:8_40_38: Successfully imported ladbrokes dependencys
+6_8_2024:8_40_38: Successfully imported palmerbet dependencys
+6_8_2024:8_40_38: Successfully imported playup dependencys
+6_8_2024:8_40_38: Successfully imported pointsbet dependencys
+6_8_2024:8_40_38: Successfully imported racenet dependencys
+6_8_2024:8_40_38: Successfully imported sportsbett dependencys
+6_8_2024:8_40_38: Successfully imported tab dependencys
+6_8_2024:8_40_38: Successfully imported waterhouse dependencys
+6_8_2024:8_40_38: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:8_40_38: starting multiTask on Arbie.
+6_8_2024:8_42_2: multiTask on Arbie succeeded.
+6_8_2024:8_42_2: starting multiTask on Arbie.
+6_8_2024:8_42_54: Initalizeing task schedular
+6_8_2024:8_42_54: Successfully imported arbie dependencys
+6_8_2024:8_42_54: Successfully imported betfair dependencys
+6_8_2024:8_42_54: Successfully imported betm dependencys
+6_8_2024:8_42_54: Successfully imported boombet dependencys
+6_8_2024:8_42_54: Successfully imported ladbrokes dependencys
+6_8_2024:8_42_54: Successfully imported palmerbet dependencys
+6_8_2024:8_42_54: Successfully imported playup dependencys
+6_8_2024:8_42_54: Successfully imported pointsbet dependencys
+6_8_2024:8_42_54: Successfully imported racenet dependencys
+6_8_2024:8_42_54: Successfully imported sportsbett dependencys
+6_8_2024:8_42_54: Successfully imported tab dependencys
+6_8_2024:8_42_54: Successfully imported waterhouse dependencys
+6_8_2024:8_42_54: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:8_42_54: starting multiTask on Arbie.
+6_8_2024:8_47_4: multiTask on Arbie succeeded.
+6_8_2024:8_47_4: starting multiTask on Arbie.
+6_8_2024:8_50_16: Initalizeing task schedular
+6_8_2024:8_50_16: Successfully imported arbie dependencys
+6_8_2024:8_50_16: Successfully imported betfair dependencys
+6_8_2024:8_50_16: Successfully imported betm dependencys
+6_8_2024:8_50_16: Successfully imported boombet dependencys
+6_8_2024:8_50_16: Successfully imported ladbrokes dependencys
+6_8_2024:8_50_16: Successfully imported palmerbet dependencys
+6_8_2024:8_50_16: Successfully imported playup dependencys
+6_8_2024:8_50_16: Successfully imported pointsbet dependencys
+6_8_2024:8_50_16: Successfully imported racenet dependencys
+6_8_2024:8_50_16: Successfully imported sportsbett dependencys
+6_8_2024:8_50_16: Successfully imported tab dependencys
+6_8_2024:8_50_16: Successfully imported waterhouse dependencys
+6_8_2024:8_50_16: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:8_50_16: starting multiTask on Arbie.
+6_8_2024:9_5_56: Initalizeing task schedular
+6_8_2024:9_5_56: Successfully imported arbie dependencys
+6_8_2024:9_5_56: Successfully imported betfair dependencys
+6_8_2024:9_5_56: Successfully imported betm dependencys
+6_8_2024:9_5_56: Successfully imported boombet dependencys
+6_8_2024:9_5_56: Successfully imported ladbrokes dependencys
+6_8_2024:9_5_56: Successfully imported palmerbet dependencys
+6_8_2024:9_5_56: Successfully imported playup dependencys
+6_8_2024:9_5_56: Successfully imported pointsbet dependencys
+6_8_2024:9_5_56: Successfully imported racenet dependencys
+6_8_2024:9_5_56: Successfully imported sportsbett dependencys
+6_8_2024:9_5_56: Successfully imported tab dependencys
+6_8_2024:9_5_56: Successfully imported waterhouse dependencys
+6_8_2024:9_5_56: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:9_5_56: starting multiTask on Arbie.
+6_8_2024:9_15_18: Initalizeing task schedular
+6_8_2024:9_15_18: Successfully imported arbie dependencys
+6_8_2024:9_15_18: Successfully imported betfair dependencys
+6_8_2024:9_15_18: Successfully imported betm dependencys
+6_8_2024:9_15_18: Successfully imported boombet dependencys
+6_8_2024:9_15_18: Successfully imported ladbrokes dependencys
+6_8_2024:9_15_18: Successfully imported palmerbet dependencys
+6_8_2024:9_15_18: Successfully imported playup dependencys
+6_8_2024:9_15_18: Successfully imported pointsbet dependencys
+6_8_2024:9_15_18: Successfully imported racenet dependencys
+6_8_2024:9_15_18: Successfully imported sportsbett dependencys
+6_8_2024:9_15_18: Successfully imported tab dependencys
+6_8_2024:9_15_18: Successfully imported waterhouse dependencys
+6_8_2024:9_15_18: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:9_15_18: starting multiTask on Arbie.
+6_8_2024:9_18_10: multiTask on Arbie succeeded.
+6_8_2024:9_18_10: starting multiTask on Arbie.
+6_8_2024:9_23_34: Initalizeing task schedular
+6_8_2024:9_23_35: Successfully imported arbie dependencys
+6_8_2024:9_23_35: Successfully imported betfair dependencys
+6_8_2024:9_23_35: Successfully imported betm dependencys
+6_8_2024:9_23_35: Successfully imported boombet dependencys
+6_8_2024:9_23_35: Successfully imported ladbrokes dependencys
+6_8_2024:9_23_35: Successfully imported palmerbet dependencys
+6_8_2024:9_23_35: Successfully imported playup dependencys
+6_8_2024:9_23_35: Successfully imported pointsbet dependencys
+6_8_2024:9_23_35: Successfully imported racenet dependencys
+6_8_2024:9_23_35: Successfully imported sportsbett dependencys
+6_8_2024:9_23_35: Successfully imported tab dependencys
+6_8_2024:9_23_35: Successfully imported waterhouse dependencys
+6_8_2024:9_23_35: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:9_24_0: starting multiTask on Arbie.
+6_8_2024:9_24_47: Initalizeing task schedular
+6_8_2024:9_24_47: Successfully imported arbie dependencys
+6_8_2024:9_24_47: Successfully imported betfair dependencys
+6_8_2024:9_24_47: Successfully imported betm dependencys
+6_8_2024:9_24_47: Successfully imported boombet dependencys
+6_8_2024:9_24_47: Successfully imported ladbrokes dependencys
+6_8_2024:9_24_48: Successfully imported palmerbet dependencys
+6_8_2024:9_24_48: Successfully imported playup dependencys
+6_8_2024:9_24_48: Successfully imported pointsbet dependencys
+6_8_2024:9_24_48: Successfully imported racenet dependencys
+6_8_2024:9_24_48: Successfully imported sportsbett dependencys
+6_8_2024:9_24_48: Successfully imported tab dependencys
+6_8_2024:9_24_48: Successfully imported waterhouse dependencys
+6_8_2024:9_24_48: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:9_24_48: starting multiTask on Arbie.
+6_8_2024:9_26_15: Initalizeing task schedular
+6_8_2024:9_26_15: Successfully imported arbie dependencys
+6_8_2024:9_26_15: Successfully imported betfair dependencys
+6_8_2024:9_26_15: Successfully imported betm dependencys
+6_8_2024:9_26_15: Successfully imported boombet dependencys
+6_8_2024:9_26_16: Successfully imported ladbrokes dependencys
+6_8_2024:9_26_16: Successfully imported palmerbet dependencys
+6_8_2024:9_26_16: Successfully imported playup dependencys
+6_8_2024:9_26_16: Successfully imported pointsbet dependencys
+6_8_2024:9_26_16: Successfully imported racenet dependencys
+6_8_2024:9_26_16: Successfully imported sportsbett dependencys
+6_8_2024:9_26_16: Successfully imported tab dependencys
+6_8_2024:9_26_16: Successfully imported waterhouse dependencys
+6_8_2024:9_26_16: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:9_26_16: starting multiTask on Arbie.
+6_8_2024:9_29_37: Initalizeing task schedular
+6_8_2024:9_29_37: Successfully imported arbie dependencys
+6_8_2024:9_29_37: Successfully imported betfair dependencys
+6_8_2024:9_29_37: Successfully imported betm dependencys
+6_8_2024:9_29_37: Successfully imported boombet dependencys
+6_8_2024:9_29_37: Successfully imported ladbrokes dependencys
+6_8_2024:9_29_37: Successfully imported palmerbet dependencys
+6_8_2024:9_29_37: Successfully imported playup dependencys
+6_8_2024:9_29_37: Successfully imported pointsbet dependencys
+6_8_2024:9_29_37: Successfully imported racenet dependencys
+6_8_2024:9_29_37: Successfully imported sportsbett dependencys
+6_8_2024:9_29_37: Successfully imported tab dependencys
+6_8_2024:9_29_37: Successfully imported waterhouse dependencys
+6_8_2024:9_29_37: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:9_29_37: starting multiTask on Arbie.
+6_8_2024:9_30_45: Initalizeing task schedular
+6_8_2024:9_30_45: Successfully imported arbie dependencys
+6_8_2024:9_30_45: Successfully imported betfair dependencys
+6_8_2024:9_30_45: Successfully imported betm dependencys
+6_8_2024:9_30_45: Successfully imported boombet dependencys
+6_8_2024:9_30_45: Successfully imported ladbrokes dependencys
+6_8_2024:9_30_45: Successfully imported palmerbet dependencys
+6_8_2024:9_30_45: Successfully imported playup dependencys
+6_8_2024:9_30_45: Successfully imported pointsbet dependencys
+6_8_2024:9_30_45: Successfully imported racenet dependencys
+6_8_2024:9_30_45: Successfully imported sportsbett dependencys
+6_8_2024:9_30_45: Successfully imported tab dependencys
+6_8_2024:9_30_45: Successfully imported waterhouse dependencys
+6_8_2024:9_30_45: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:9_30_45: starting multiTask on Arbie.
+6_8_2024:9_32_16: Initalizeing task schedular
+6_8_2024:9_32_16: Successfully imported arbie dependencys
+6_8_2024:9_32_16: Successfully imported betfair dependencys
+6_8_2024:9_32_16: Successfully imported betm dependencys
+6_8_2024:9_32_16: Successfully imported boombet dependencys
+6_8_2024:9_32_16: Successfully imported ladbrokes dependencys
+6_8_2024:9_32_16: Successfully imported palmerbet dependencys
+6_8_2024:9_32_16: Successfully imported playup dependencys
+6_8_2024:9_32_16: Successfully imported pointsbet dependencys
+6_8_2024:9_32_16: Successfully imported racenet dependencys
+6_8_2024:9_32_16: Successfully imported sportsbett dependencys
+6_8_2024:9_32_16: Successfully imported tab dependencys
+6_8_2024:9_32_16: Successfully imported waterhouse dependencys
+6_8_2024:9_32_16: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:9_32_16: starting multiTask on Arbie.
+6_8_2024:9_33_57: Initalizeing task schedular
+6_8_2024:9_33_57: Successfully imported arbie dependencys
+6_8_2024:9_33_57: Successfully imported betfair dependencys
+6_8_2024:9_33_57: Successfully imported betm dependencys
+6_8_2024:9_33_57: Successfully imported boombet dependencys
+6_8_2024:9_33_57: Successfully imported ladbrokes dependencys
+6_8_2024:9_33_57: Successfully imported palmerbet dependencys
+6_8_2024:9_33_57: Successfully imported playup dependencys
+6_8_2024:9_33_57: Successfully imported pointsbet dependencys
+6_8_2024:9_33_57: Successfully imported racenet dependencys
+6_8_2024:9_33_57: Successfully imported sportsbett dependencys
+6_8_2024:9_33_57: Successfully imported tab dependencys
+6_8_2024:9_33_57: Successfully imported waterhouse dependencys
+6_8_2024:9_33_57: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:9_33_57: starting multiTask on Arbie.
+6_8_2024:9_34_49: multiTask on Arbie succeeded.
+6_8_2024:9_34_49: starting multiTask on Arbie.
+6_8_2024:9_35_43: multiTask on Arbie succeeded.
+6_8_2024:9_35_43: starting multiTask on Arbie.
+6_8_2024:9_36_27: multiTask on Arbie succeeded.
+6_8_2024:9_36_27: starting multiTask on Arbie.
+6_8_2024:9_37_12: multiTask on Arbie succeeded.
+6_8_2024:9_37_12: starting multiTask on Arbie.
+6_8_2024:9_37_57: multiTask on Arbie succeeded.
+6_8_2024:9_37_57: starting multiTask on Arbie.
+6_8_2024:9_38_38: multiTask on Arbie succeeded.
+6_8_2024:9_38_38: starting multiTask on Arbie.
+6_8_2024:9_39_25: multiTask on Arbie succeeded.
+6_8_2024:9_39_25: starting multiTask on Arbie.
+6_8_2024:9_40_10: multiTask on Arbie succeeded.
+6_8_2024:9_40_10: starting multiTask on Arbie.
+6_8_2024:9_41_1: multiTask on Arbie succeeded.
+6_8_2024:9_41_1: starting multiTask on Arbie.
+6_8_2024:9_41_48: multiTask on Arbie succeeded.
+6_8_2024:9_41_48: starting multiTask on Arbie.
+6_8_2024:9_42_38: multiTask on Arbie succeeded.
+6_8_2024:9_42_38: starting multiTask on Arbie.
+6_8_2024:9_43_26: multiTask on Arbie succeeded.
+6_8_2024:9_43_26: starting multiTask on Arbie.
+6_8_2024:12_5_46: Initalizeing task schedular
+6_8_2024:12_5_46: Successfully imported arbie dependencys
+6_8_2024:12_5_46: Successfully imported betfair dependencys
+6_8_2024:12_5_46: Successfully imported betm dependencys
+6_8_2024:12_5_46: Successfully imported boombet dependencys
+6_8_2024:12_5_46: Successfully imported ladbrokes dependencys
+6_8_2024:12_5_46: Successfully imported palmerbet dependencys
+6_8_2024:12_5_46: Successfully imported playup dependencys
+6_8_2024:12_5_46: Successfully imported pointsbet dependencys
+6_8_2024:12_5_46: Successfully imported racenet dependencys
+6_8_2024:12_5_46: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\sportsbett\\sportsbett.py'
+6_8_2024:12_5_46: Successfully imported tab dependencys
+6_8_2024:12_5_46: Successfully imported waterhouse dependencys
+6_8_2024:12_5_46: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_5_46: starting multiTask on Arbie.
+6_8_2024:12_6_24: Initalizeing task schedular
+6_8_2024:12_6_24: Successfully imported arbie dependencys
+6_8_2024:12_6_24: Successfully imported betfair dependencys
+6_8_2024:12_6_24: Successfully imported betm dependencys
+6_8_2024:12_6_24: Successfully imported boombet dependencys
+6_8_2024:12_6_24: Successfully imported ladbrokes dependencys
+6_8_2024:12_6_24: Successfully imported palmerbet dependencys
+6_8_2024:12_6_24: Successfully imported playup dependencys
+6_8_2024:12_6_24: Successfully imported pointsbet dependencys
+6_8_2024:12_6_24: Successfully imported racenet dependencys
+6_8_2024:12_6_24: Successfully imported sportsbet dependencys
+6_8_2024:12_6_24: Successfully imported tab dependencys
+6_8_2024:12_6_24: Successfully imported waterhouse dependencys
+6_8_2024:12_6_24: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_6_24: starting multiTask on Arbie.
+6_8_2024:12_7_23: multiTask on Arbie succeeded.
+6_8_2024:12_7_23: starting multiTask on Arbie.
+6_8_2024:12_19_40: Initalizeing task schedular
+6_8_2024:12_19_40: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_19_40: Successfully imported betfair dependencys
+6_8_2024:12_19_40: Successfully imported betm dependencys
+6_8_2024:12_19_40: Successfully imported boombet dependencys
+6_8_2024:12_19_40: Successfully imported ladbrokes dependencys
+6_8_2024:12_19_40: Successfully imported palmerbet dependencys
+6_8_2024:12_19_40: Successfully imported playup dependencys
+6_8_2024:12_19_40: Successfully imported pointsbet dependencys
+6_8_2024:12_19_40: Successfully imported racenet dependencys
+6_8_2024:12_19_40: Successfully imported sportsbet dependencys
+6_8_2024:12_19_40: Successfully imported tab dependencys
+6_8_2024:12_19_40: Successfully imported waterhouse dependencys
+6_8_2024:12_19_40: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_19_40: starting multiTask on Arbie.
+6_8_2024:12_20_13: multiTask on Arbie succeeded.
+6_8_2024:12_20_13: starting multiTask on Arbie.
+6_8_2024:12_20_46: Initalizeing task schedular
+6_8_2024:12_20_46: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_20_46: Successfully imported betfair dependencys
+6_8_2024:12_20_46: Successfully imported betm dependencys
+6_8_2024:12_20_46: Successfully imported boombet dependencys
+6_8_2024:12_20_46: Successfully imported ladbrokes dependencys
+6_8_2024:12_20_46: Successfully imported palmerbet dependencys
+6_8_2024:12_20_46: Successfully imported playup dependencys
+6_8_2024:12_20_46: Successfully imported pointsbet dependencys
+6_8_2024:12_20_46: Successfully imported racenet dependencys
+6_8_2024:12_20_46: Successfully imported sportsbet dependencys
+6_8_2024:12_20_46: Successfully imported tab dependencys
+6_8_2024:12_20_46: Successfully imported waterhouse dependencys
+6_8_2024:12_20_46: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_20_46: starting multiTask on Arbie.
+6_8_2024:12_21_14: multiTask on Arbie succeeded.
+6_8_2024:12_21_14: starting multiTask on Arbie.
+6_8_2024:12_21_43: Initalizeing task schedular
+6_8_2024:12_21_43: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_21_43: Successfully imported betfair dependencys
+6_8_2024:12_21_43: Successfully imported betm dependencys
+6_8_2024:12_21_43: Successfully imported boombet dependencys
+6_8_2024:12_21_43: Successfully imported ladbrokes dependencys
+6_8_2024:12_21_43: Successfully imported palmerbet dependencys
+6_8_2024:12_21_43: Successfully imported playup dependencys
+6_8_2024:12_21_43: Successfully imported pointsbet dependencys
+6_8_2024:12_21_43: Successfully imported racenet dependencys
+6_8_2024:12_21_43: Successfully imported sportsbet dependencys
+6_8_2024:12_21_43: Successfully imported tab dependencys
+6_8_2024:12_21_43: Successfully imported waterhouse dependencys
+6_8_2024:12_21_43: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_22_16: starting multiTask on Arbie.
+6_8_2024:12_22_35: Initalizeing task schedular
+6_8_2024:12_22_35: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_22_35: Successfully imported betfair dependencys
+6_8_2024:12_22_35: Successfully imported betm dependencys
+6_8_2024:12_22_35: Successfully imported boombet dependencys
+6_8_2024:12_22_35: Successfully imported ladbrokes dependencys
+6_8_2024:12_22_35: Successfully imported palmerbet dependencys
+6_8_2024:12_22_35: Successfully imported playup dependencys
+6_8_2024:12_22_35: Successfully imported pointsbet dependencys
+6_8_2024:12_22_35: Successfully imported racenet dependencys
+6_8_2024:12_22_35: Successfully imported sportsbet dependencys
+6_8_2024:12_22_35: Successfully imported tab dependencys
+6_8_2024:12_22_35: Successfully imported waterhouse dependencys
+6_8_2024:12_22_35: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_22_38: starting multiTask on Arbie.
+6_8_2024:12_22_50: Initalizeing task schedular
+6_8_2024:12_22_50: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_22_50: Successfully imported betfair dependencys
+6_8_2024:12_22_50: Successfully imported betm dependencys
+6_8_2024:12_22_50: Successfully imported boombet dependencys
+6_8_2024:12_22_50: Successfully imported ladbrokes dependencys
+6_8_2024:12_22_50: Successfully imported palmerbet dependencys
+6_8_2024:12_22_50: Successfully imported playup dependencys
+6_8_2024:12_22_50: Successfully imported pointsbet dependencys
+6_8_2024:12_22_50: Successfully imported racenet dependencys
+6_8_2024:12_22_50: Successfully imported sportsbet dependencys
+6_8_2024:12_22_50: Successfully imported tab dependencys
+6_8_2024:12_22_50: Successfully imported waterhouse dependencys
+6_8_2024:12_22_50: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_22_50: starting multiTask on Arbie.
+6_8_2024:12_24_0: Initalizeing task schedular
+6_8_2024:12_24_0: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_24_0: Successfully imported betfair dependencys
+6_8_2024:12_24_0: Successfully imported betm dependencys
+6_8_2024:12_24_0: Successfully imported boombet dependencys
+6_8_2024:12_24_0: Successfully imported ladbrokes dependencys
+6_8_2024:12_24_0: Successfully imported palmerbet dependencys
+6_8_2024:12_24_0: Successfully imported playup dependencys
+6_8_2024:12_24_0: Successfully imported pointsbet dependencys
+6_8_2024:12_24_0: Successfully imported racenet dependencys
+6_8_2024:12_24_0: Successfully imported sportsbet dependencys
+6_8_2024:12_24_0: Successfully imported tab dependencys
+6_8_2024:12_24_0: Successfully imported waterhouse dependencys
+6_8_2024:12_24_0: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_24_0: starting multiTask on Arbie.
+6_8_2024:12_24_51: Initalizeing task schedular
+6_8_2024:12_24_51: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_24_51: Successfully imported betfair dependencys
+6_8_2024:12_24_51: Successfully imported betm dependencys
+6_8_2024:12_24_51: Successfully imported boombet dependencys
+6_8_2024:12_24_51: Successfully imported ladbrokes dependencys
+6_8_2024:12_24_51: Successfully imported palmerbet dependencys
+6_8_2024:12_24_51: Successfully imported playup dependencys
+6_8_2024:12_24_51: Successfully imported pointsbet dependencys
+6_8_2024:12_24_51: Successfully imported racenet dependencys
+6_8_2024:12_24_51: Successfully imported sportsbet dependencys
+6_8_2024:12_24_51: Successfully imported tab dependencys
+6_8_2024:12_24_51: Successfully imported waterhouse dependencys
+6_8_2024:12_24_51: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_24_51: starting multiTask on Arbie.
+6_8_2024:12_25_29: Initalizeing task schedular
+6_8_2024:12_25_29: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_25_29: Successfully imported betfair dependencys
+6_8_2024:12_25_29: Successfully imported betm dependencys
+6_8_2024:12_25_29: Successfully imported boombet dependencys
+6_8_2024:12_25_29: Successfully imported ladbrokes dependencys
+6_8_2024:12_25_29: Successfully imported palmerbet dependencys
+6_8_2024:12_25_29: Successfully imported playup dependencys
+6_8_2024:12_25_29: Successfully imported pointsbet dependencys
+6_8_2024:12_25_29: Successfully imported racenet dependencys
+6_8_2024:12_25_29: Successfully imported sportsbet dependencys
+6_8_2024:12_25_29: Successfully imported tab dependencys
+6_8_2024:12_25_29: Successfully imported waterhouse dependencys
+6_8_2024:12_25_29: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_25_29: starting multiTask on Arbie.
+6_8_2024:12_26_29: Initalizeing task schedular
+6_8_2024:12_26_29: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_26_29: Successfully imported betfair dependencys
+6_8_2024:12_26_29: Successfully imported betm dependencys
+6_8_2024:12_26_29: Successfully imported boombet dependencys
+6_8_2024:12_26_29: Successfully imported ladbrokes dependencys
+6_8_2024:12_26_29: Successfully imported palmerbet dependencys
+6_8_2024:12_26_29: Successfully imported playup dependencys
+6_8_2024:12_26_29: Successfully imported pointsbet dependencys
+6_8_2024:12_26_29: Successfully imported racenet dependencys
+6_8_2024:12_26_29: Successfully imported sportsbet dependencys
+6_8_2024:12_26_29: Successfully imported tab dependencys
+6_8_2024:12_26_29: Successfully imported waterhouse dependencys
+6_8_2024:12_26_29: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_26_29: starting multiTask on Arbie.
+6_8_2024:12_29_9: Initalizeing task schedular
+6_8_2024:12_29_9: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_29_9: Successfully imported betfair dependencys
+6_8_2024:12_29_9: Successfully imported betm dependencys
+6_8_2024:12_29_9: Successfully imported boombet dependencys
+6_8_2024:12_29_9: Successfully imported ladbrokes dependencys
+6_8_2024:12_29_9: Successfully imported palmerbet dependencys
+6_8_2024:12_29_9: Successfully imported playup dependencys
+6_8_2024:12_29_9: Successfully imported pointsbet dependencys
+6_8_2024:12_29_9: Successfully imported racenet dependencys
+6_8_2024:12_29_9: Successfully imported sportsbet dependencys
+6_8_2024:12_29_9: Successfully imported tab dependencys
+6_8_2024:12_29_9: Successfully imported waterhouse dependencys
+6_8_2024:12_29_9: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_29_9: starting multiTask on Arbie.
+6_8_2024:12_30_12: Initalizeing task schedular
+6_8_2024:12_30_12: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_30_12: Successfully imported betfair dependencys
+6_8_2024:12_30_12: Successfully imported betm dependencys
+6_8_2024:12_30_12: Successfully imported boombet dependencys
+6_8_2024:12_30_12: Successfully imported ladbrokes dependencys
+6_8_2024:12_30_12: Successfully imported palmerbet dependencys
+6_8_2024:12_30_12: Successfully imported playup dependencys
+6_8_2024:12_30_12: Successfully imported pointsbet dependencys
+6_8_2024:12_30_12: Successfully imported racenet dependencys
+6_8_2024:12_30_12: Successfully imported sportsbet dependencys
+6_8_2024:12_30_12: Successfully imported tab dependencys
+6_8_2024:12_30_12: Successfully imported waterhouse dependencys
+6_8_2024:12_30_12: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_30_12: starting multiTask on Arbie.
+6_8_2024:12_36_46: Initalizeing task schedular
+6_8_2024:12_36_46: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_36_46: Successfully imported betfair dependencys
+6_8_2024:12_36_46: Successfully imported betm dependencys
+6_8_2024:12_36_46: Successfully imported boombet dependencys
+6_8_2024:12_36_46: Successfully imported ladbrokes dependencys
+6_8_2024:12_36_46: Successfully imported palmerbet dependencys
+6_8_2024:12_36_46: Successfully imported playup dependencys
+6_8_2024:12_36_46: Successfully imported pointsbet dependencys
+6_8_2024:12_36_46: Successfully imported racenet dependencys
+6_8_2024:12_36_46: Successfully imported sportsbet dependencys
+6_8_2024:12_36_46: Successfully imported tab dependencys
+6_8_2024:12_36_46: Successfully imported waterhouse dependencys
+6_8_2024:12_36_46: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_36_46: starting multiTask on Arbie.
+6_8_2024:12_38_8: Initalizeing task schedular
+6_8_2024:12_38_8: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_38_8: Successfully imported betfair dependencys
+6_8_2024:12_38_8: Successfully imported betm dependencys
+6_8_2024:12_38_8: Successfully imported boombet dependencys
+6_8_2024:12_38_8: Successfully imported ladbrokes dependencys
+6_8_2024:12_38_8: Successfully imported palmerbet dependencys
+6_8_2024:12_38_8: Successfully imported playup dependencys
+6_8_2024:12_38_8: Successfully imported pointsbet dependencys
+6_8_2024:12_38_8: Successfully imported racenet dependencys
+6_8_2024:12_38_8: Successfully imported sportsbet dependencys
+6_8_2024:12_38_8: Successfully imported tab dependencys
+6_8_2024:12_38_8: Successfully imported waterhouse dependencys
+6_8_2024:12_38_8: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_38_8: starting multiTask on Arbie.
+6_8_2024:12_39_18: Initalizeing task schedular
+6_8_2024:12_39_18: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_39_18: Successfully imported betfair dependencys
+6_8_2024:12_39_18: Successfully imported betm dependencys
+6_8_2024:12_39_18: Successfully imported boombet dependencys
+6_8_2024:12_39_18: Successfully imported ladbrokes dependencys
+6_8_2024:12_39_18: Successfully imported palmerbet dependencys
+6_8_2024:12_39_18: Successfully imported playup dependencys
+6_8_2024:12_39_18: Successfully imported pointsbet dependencys
+6_8_2024:12_39_18: Successfully imported racenet dependencys
+6_8_2024:12_39_18: Successfully imported sportsbet dependencys
+6_8_2024:12_39_18: Successfully imported tab dependencys
+6_8_2024:12_39_18: Successfully imported waterhouse dependencys
+6_8_2024:12_39_18: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_39_18: starting multiTask on Arbie.
+6_8_2024:12_53_31: Initalizeing task schedular
+6_8_2024:12_53_31: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_53_31: Successfully imported betfair dependencys
+6_8_2024:12_53_31: Successfully imported betm dependencys
+6_8_2024:12_53_31: Successfully imported boombet dependencys
+6_8_2024:12_53_31: Successfully imported ladbrokes dependencys
+6_8_2024:12_53_31: Successfully imported palmerbet dependencys
+6_8_2024:12_53_31: Successfully imported playup dependencys
+6_8_2024:12_53_31: Successfully imported pointsbet dependencys
+6_8_2024:12_53_31: Successfully imported racenet dependencys
+6_8_2024:12_53_31: Successfully imported sportsbet dependencys
+6_8_2024:12_53_31: Successfully imported tab dependencys
+6_8_2024:12_53_31: Successfully imported waterhouse dependencys
+6_8_2024:12_53_31: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_53_31: starting multiTask on Arbie.
+6_8_2024:12_53_58: list indices must be integers or slices, not str
+6_8_2024:12_53_58: multiTask on Arbie failed.
+6_8_2024:12_53_58: starting multiTask on Arbie.
+6_8_2024:12_54_21: Initalizeing task schedular
+6_8_2024:12_54_21: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_54_21: Successfully imported betfair dependencys
+6_8_2024:12_54_21: Successfully imported betm dependencys
+6_8_2024:12_54_21: Successfully imported boombet dependencys
+6_8_2024:12_54_21: Successfully imported ladbrokes dependencys
+6_8_2024:12_54_21: Successfully imported palmerbet dependencys
+6_8_2024:12_54_21: Successfully imported playup dependencys
+6_8_2024:12_54_21: Successfully imported pointsbet dependencys
+6_8_2024:12_54_21: Successfully imported racenet dependencys
+6_8_2024:12_54_21: Successfully imported sportsbet dependencys
+6_8_2024:12_54_21: Successfully imported tab dependencys
+6_8_2024:12_54_21: Successfully imported waterhouse dependencys
+6_8_2024:12_54_21: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_54_21: starting multiTask on Arbie.
+6_8_2024:12_54_50: list indices must be integers or slices, not str
+6_8_2024:12_54_59: Initalizeing task schedular
+6_8_2024:12_54_59: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_54_59: Successfully imported betfair dependencys
+6_8_2024:12_54_59: Successfully imported betm dependencys
+6_8_2024:12_54_59: Successfully imported boombet dependencys
+6_8_2024:12_54_59: Successfully imported ladbrokes dependencys
+6_8_2024:12_54_59: Successfully imported palmerbet dependencys
+6_8_2024:12_54_59: Successfully imported playup dependencys
+6_8_2024:12_54_59: Successfully imported pointsbet dependencys
+6_8_2024:12_54_59: Successfully imported racenet dependencys
+6_8_2024:12_54_59: Successfully imported sportsbet dependencys
+6_8_2024:12_54_59: Successfully imported tab dependencys
+6_8_2024:12_54_59: Successfully imported waterhouse dependencys
+6_8_2024:12_54_59: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_54_59: starting multiTask on Arbie.
+6_8_2024:12_55_42: Initalizeing task schedular
+6_8_2024:12_55_42: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_55_42: Successfully imported betfair dependencys
+6_8_2024:12_55_42: Successfully imported betm dependencys
+6_8_2024:12_55_42: Successfully imported boombet dependencys
+6_8_2024:12_55_42: Successfully imported ladbrokes dependencys
+6_8_2024:12_55_42: Successfully imported palmerbet dependencys
+6_8_2024:12_55_42: Successfully imported playup dependencys
+6_8_2024:12_55_42: Successfully imported pointsbet dependencys
+6_8_2024:12_55_42: Successfully imported racenet dependencys
+6_8_2024:12_55_42: Successfully imported sportsbet dependencys
+6_8_2024:12_55_42: Successfully imported tab dependencys
+6_8_2024:12_55_42: Successfully imported waterhouse dependencys
+6_8_2024:12_55_42: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_55_42: starting multiTask on Arbie.
+6_8_2024:12_56_32: multiTask on Arbie succeeded.
+6_8_2024:12_58_57: Initalizeing task schedular
+6_8_2024:12_58_57: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:12_58_57: Successfully imported betfair dependencys
+6_8_2024:12_58_57: Successfully imported betm dependencys
+6_8_2024:12_58_57: Successfully imported boombet dependencys
+6_8_2024:12_58_57: Successfully imported ladbrokes dependencys
+6_8_2024:12_58_57: Successfully imported palmerbet dependencys
+6_8_2024:12_58_57: Successfully imported playup dependencys
+6_8_2024:12_58_57: Successfully imported pointsbet dependencys
+6_8_2024:12_58_57: Successfully imported racenet dependencys
+6_8_2024:12_58_57: Successfully imported sportsbet dependencys
+6_8_2024:12_58_57: Successfully imported tab dependencys
+6_8_2024:12_58_57: Successfully imported waterhouse dependencys
+6_8_2024:12_58_57: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:12_58_57: starting multiTask on Arbie.
+6_8_2024:12_59_33: multiTask on Arbie succeeded.
+6_8_2024:13_19_54: Initalizeing task schedular
+6_8_2024:13_19_54: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:13_19_54: Successfully imported betfair dependencys
+6_8_2024:13_19_54: Successfully imported betm dependencys
+6_8_2024:13_19_54: Successfully imported boombet dependencys
+6_8_2024:13_19_54: Successfully imported ladbrokes dependencys
+6_8_2024:13_19_54: Successfully imported palmerbet dependencys
+6_8_2024:13_19_54: Successfully imported playup dependencys
+6_8_2024:13_19_54: Successfully imported pointsbet dependencys
+6_8_2024:13_19_54: Successfully imported racenet dependencys
+6_8_2024:13_19_54: Successfully imported sportsbet dependencys
+6_8_2024:13_19_54: Successfully imported tab dependencys
+6_8_2024:13_19_54: Successfully imported waterhouse dependencys
+6_8_2024:13_19_54: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:13_19_55: starting GET-TODAY RACES on Arbie.
+6_8_2024:13_20_31: can't subtract offset-naive and offset-aware datetimes
+6_8_2024:13_20_31: GET-TODAY RACES on Arbie failed.
+6_8_2024:13_20_31: starting GET-TOMMOROW RACES on Arbie.
+6_8_2024:13_23_25: Initalizeing task schedular
+6_8_2024:13_23_25: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:13_23_25: Successfully imported betfair dependencys
+6_8_2024:13_23_25: Successfully imported betm dependencys
+6_8_2024:13_23_25: Successfully imported boombet dependencys
+6_8_2024:13_23_25: Successfully imported ladbrokes dependencys
+6_8_2024:13_23_25: Successfully imported palmerbet dependencys
+6_8_2024:13_23_25: Successfully imported playup dependencys
+6_8_2024:13_23_25: Successfully imported pointsbet dependencys
+6_8_2024:13_23_25: Successfully imported racenet dependencys
+6_8_2024:13_23_25: Successfully imported sportsbet dependencys
+6_8_2024:13_23_25: Successfully imported tab dependencys
+6_8_2024:13_23_25: Successfully imported waterhouse dependencys
+6_8_2024:13_23_25: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:13_23_25: starting GET-TODAY-RACES on Arbie.
+6_8_2024:13_25_19: GET-TODAY-RACES on Arbie succeeded.
+6_8_2024:13_25_19: starting GET-TOMMOROW-RACES on Arbie.
+6_8_2024:13_29_8: Initalizeing task schedular
+6_8_2024:13_29_8: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:13_29_8: Successfully imported betfair dependencys
+6_8_2024:13_29_8: Successfully imported betm dependencys
+6_8_2024:13_29_8: Successfully imported boombet dependencys
+6_8_2024:13_29_8: Successfully imported ladbrokes dependencys
+6_8_2024:13_29_8: Successfully imported palmerbet dependencys
+6_8_2024:13_29_8: Successfully imported playup dependencys
+6_8_2024:13_29_8: Successfully imported pointsbet dependencys
+6_8_2024:13_29_8: Successfully imported racenet dependencys
+6_8_2024:13_29_8: Successfully imported sportsbet dependencys
+6_8_2024:13_29_8: Successfully imported tab dependencys
+6_8_2024:13_29_8: Successfully imported waterhouse dependencys
+6_8_2024:13_29_8: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:13_29_8: starting GET-TODAY-RACES on Arbie.
+6_8_2024:13_29_56: GET-TODAY-RACES on Arbie succeeded.
+6_8_2024:13_29_56: starting GET-TOMMOROW-RACES on Arbie.
+6_8_2024:13_30_54: GET-TOMMOROW-RACES on Arbie succeeded.
+6_8_2024:13_33_45: Initalizeing task schedular
+6_8_2024:13_33_45: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:13_33_45: Successfully imported betfair dependencys
+6_8_2024:13_33_45: Successfully imported betm dependencys
+6_8_2024:13_33_45: Successfully imported boombet dependencys
+6_8_2024:13_33_45: Successfully imported ladbrokes dependencys
+6_8_2024:13_33_45: Successfully imported palmerbet dependencys
+6_8_2024:13_33_45: Successfully imported playup dependencys
+6_8_2024:13_33_45: Successfully imported pointsbet dependencys
+6_8_2024:13_33_45: Successfully imported racenet dependencys
+6_8_2024:13_33_45: Successfully imported sportsbet dependencys
+6_8_2024:13_33_45: Successfully imported tab dependencys
+6_8_2024:13_33_45: Successfully imported waterhouse dependencys
+6_8_2024:13_33_45: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:13_33_45: starting GET-TODAY-RACES on Arbie.
+6_8_2024:13_34_28: GET-TODAY-RACES on Arbie succeeded.
+6_8_2024:13_34_28: starting GET-TOMMOROW-RACES on Arbie.
+6_8_2024:13_37_18: Initalizeing task schedular
+6_8_2024:13_37_18: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:13_37_18: Successfully imported betfair dependencys
+6_8_2024:13_37_18: Successfully imported betm dependencys
+6_8_2024:13_37_18: Successfully imported boombet dependencys
+6_8_2024:13_37_18: Successfully imported ladbrokes dependencys
+6_8_2024:13_37_18: Successfully imported palmerbet dependencys
+6_8_2024:13_37_18: Successfully imported playup dependencys
+6_8_2024:13_37_18: Successfully imported pointsbet dependencys
+6_8_2024:13_37_18: Successfully imported racenet dependencys
+6_8_2024:13_37_18: Successfully imported sportsbet dependencys
+6_8_2024:13_37_18: Successfully imported tab dependencys
+6_8_2024:13_37_18: Successfully imported waterhouse dependencys
+6_8_2024:13_37_18: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:13_37_18: starting GET-TODAY-RACES on Arbie.
+6_8_2024:13_38_4: GET-TODAY-RACES on Arbie succeeded.
+6_8_2024:13_38_4: starting GET-TOMMOROW-RACES on Arbie.
+6_8_2024:13_38_57: GET-TOMMOROW-RACES on Arbie succeeded.
+6_8_2024:13_42_59: Initalizeing task schedular
+6_8_2024:13_42_59: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:13_42_59: Successfully imported betfair dependencys
+6_8_2024:13_42_59: Successfully imported betm dependencys
+6_8_2024:13_42_59: Successfully imported boombet dependencys
+6_8_2024:13_42_59: Successfully imported ladbrokes dependencys
+6_8_2024:13_42_59: Successfully imported palmerbet dependencys
+6_8_2024:13_42_59: Successfully imported playup dependencys
+6_8_2024:13_42_59: Successfully imported pointsbet dependencys
+6_8_2024:13_42_59: Successfully imported racenet dependencys
+6_8_2024:13_42_59: Successfully imported sportsbet dependencys
+6_8_2024:13_42_59: Successfully imported tab dependencys
+6_8_2024:13_42_59: Successfully imported waterhouse dependencys
+6_8_2024:13_42_59: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:13_42_59: starting GET-TODAY-RACES on Arbie.
+6_8_2024:13_45_18: Initalizeing task schedular
+6_8_2024:13_45_18: Can't instantiate abstract class arbie_reviseDates with abstract method configure_next_run
+6_8_2024:13_45_18: Successfully imported betfair dependencys
+6_8_2024:13_45_18: Successfully imported betm dependencys
+6_8_2024:13_45_18: Successfully imported boombet dependencys
+6_8_2024:13_45_18: Successfully imported ladbrokes dependencys
+6_8_2024:13_45_18: Successfully imported palmerbet dependencys
+6_8_2024:13_45_18: Successfully imported playup dependencys
+6_8_2024:13_45_18: Successfully imported pointsbet dependencys
+6_8_2024:13_45_18: Successfully imported racenet dependencys
+6_8_2024:13_45_18: Successfully imported sportsbet dependencys
+6_8_2024:13_45_18: Successfully imported tab dependencys
+6_8_2024:13_45_18: Successfully imported waterhouse dependencys
+6_8_2024:13_45_18: [Errno 2] No such file or directory: 'C:\\Users\\William\\Desktop\\PersonalProjects\\Arbie\\Arbie 3.1\\betshock_v2\\backend\\intergrations\\engine\\__pycache__\\__pycache__.py'
+6_8_2024:13_45_18: starting GET-TODAY-RACES on Arbie.
+6_8_2024:13_46_2: GET-TODAY-RACES on Arbie succeeded.
+6_8_2024:13_46_2: starting GET-TOMMOROW-RACES on Arbie.
+6_8_2024:13_46_56: GET-TOMMOROW-RACES on Arbie succeeded.
